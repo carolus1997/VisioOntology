@@ -3,7 +3,7 @@ window.TreeView = window.TreeView || (() => {
 
     let chart;
 
-    async function init(containerId = 'tree-chart', jsonPath = '../data/class-hierarchy.json') {
+    async function init(containerId = 'tree-chart', jsonPath = 'data/class-hierarchy2.json'){
         const el = document.getElementById(containerId);
         chart = echarts.init(el, null, { renderer: 'canvas' });
 
@@ -305,7 +305,7 @@ window.TreeView = window.TreeView || (() => {
                 console.log(`[TreeView] Filtro raíz cambiado a: ${root}`);
 
                 try {
-                    const res = await fetch('../data/class-hierarchy.json');
+                    const res = await fetch('data/class-hierarchy2.json');
                     const fullData = await res.json();
 
                     function findNodeByName(node, name) {
