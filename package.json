@@ -1,0 +1,17 @@
+{
+  "type": "module",
+  "name": "echart",
+  "version": "1.0.0",
+  "description": "Visualización interactiva en modo oscuro basada en **Apache ECharts**, que representa las relaciones conceptuales de una ontología básica aplicada al dominio de la geointeligencia.",
+  "main": "ttl-to-json.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "n3": "^1.26.0"
+  }
+}

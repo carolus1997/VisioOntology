@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>OntoVis — Visualizador Ontológico</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5"></script>
+</head>
+
+<body>
+  <div class="layout">
+    <!-- Panel izquierdo -->
+    <aside class="panel left">
+      <h2>Descripción</h2>
+      <div id="descriptor" class="descriptor-panel"></div>
+      <h2>Gráfico Relaciones</h2>
+      <div id="relation-graph" class="chart small"></div>
+    </aside>
+
+    <!-- Panel central -->
+    <main class="panel center">
+      <div id="tree-chart" class="chart"></div>
+
+    </main>
+
+    <!-- Panel derecho -->
+    <aside class="panel right">
+      
+      <div id="dropdown"></div>
+    </aside>
+  </div>
+
+
+  <!-- Scripts -->
+  <script src="./tree-view.js"></script>
+  <script src="./relation-graph.js"></script>
+  <script src="./descriptor.js"></script>
+  <script src="./dropdown-tree.js"></script>
+  <script src="./ui-panels.js"></script>
+  <script src="./main.js"></script>
+</body>
+
+
+</html>

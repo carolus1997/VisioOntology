@@ -1,0 +1,1935 @@
+[
+  {
+    "name": "Capability",
+    "children": [
+      {
+        "name": "CapabilityCyber",
+        "children": [
+          {
+            "name": "CapabilityCyberC2",
+            "children": []
+          },
+          {
+            "name": "CapabilityCyberDefensive",
+            "children": []
+          },
+          {
+            "name": "CapabilityCyberForceProtection",
+            "children": []
+          },
+          {
+            "name": "CapabilityCyberISR",
+            "children": []
+          },
+          {
+            "name": "CapabilityCyberOffensive",
+            "children": []
+          },
+          {
+            "name": "CapabilityCyberSupportCoordination",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "CapabilityEngineering",
+        "children": []
+      },
+      {
+        "name": "CapabilityFire",
+        "children": []
+      },
+      {
+        "name": "CapabilityHandling",
+        "children": []
+      },
+      {
+        "name": "CapabilityMaintenance",
+        "children": []
+      },
+      {
+        "name": "CapabilityMobility",
+        "children": []
+      },
+      {
+        "name": "CapabilityOperational",
+        "children": []
+      },
+      {
+        "name": "CapabilityStorage",
+        "children": []
+      },
+      {
+        "name": "CapabilitySupport",
+        "children": []
+      },
+      {
+        "name": "CapabilitySurveillance",
+        "children": []
+      },
+      {
+        "name": "CapabilityTransmission",
+        "children": []
+      }
+    ]
+  },
+  {
+    "name": "Category",
+    "children": [
+      {
+        "name": "Action",
+        "children": [
+          {
+            "name": "CyberEvent",
+            "children": [
+              {
+                "name": "CyberAcknowledge",
+                "children": []
+              },
+              {
+                "name": "CyberAction",
+                "children": [
+                  {
+                    "name": "CyberAdmin",
+                    "children": []
+                  },
+                  {
+                    "name": "CyberAttack",
+                    "children": [
+                      {
+                        "name": "DataExfiltration",
+                        "children": []
+                      },
+                      {
+                        "name": "ManipulationAttack",
+                        "children": []
+                      },
+                      {
+                        "name": "PhishingAttack",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "CyberDefend",
+                    "children": []
+                  },
+                  {
+                    "name": "CyberRecon",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "CyberEffect",
+                "children": [
+                  {
+                    "name": "Deny",
+                    "children": [
+                      {
+                        "name": "Degrade",
+                        "children": [
+                          {
+                            "name": "CPULoadEffect",
+                            "children": []
+                          },
+                          {
+                            "name": "DelayEffect",
+                            "children": []
+                          },
+                          {
+                            "name": "DropEffect",
+                            "children": []
+                          },
+                          {
+                            "name": "HardwareDegradeEffect",
+                            "children": []
+                          },
+                          {
+                            "name": "JitterEffect",
+                            "children": []
+                          },
+                          {
+                            "name": "LoadRateEffect",
+                            "children": []
+                          },
+                          {
+                            "name": "MemoryUseEffect",
+                            "children": []
+                          },
+                          {
+                            "name": "OtherDegradeEffect",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Destroy",
+                        "children": [
+                          {
+                            "name": "HardwareDamageEffect",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Disrupt",
+                        "children": [
+                          {
+                            "name": "BlockTrafficEffect",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Detect",
+                    "children": []
+                  },
+                  {
+                    "name": "Manipulate",
+                    "children": [
+                      {
+                        "name": "ManipulationEffect",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "CyberOrder",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Object",
+        "children": [
+          {
+            "name": "Actor",
+            "children": [
+              {
+                "name": "Organisation",
+                "children": [
+                  {
+                    "name": "CivilianPost",
+                    "children": []
+                  },
+                  {
+                    "name": "GovernmentOrganisation",
+                    "children": [
+                      {
+                        "name": "InternalSecurityForcesOrganisation",
+                        "children": []
+                      },
+                      {
+                        "name": "InternationalCivilGovernmentalOrganisation",
+                        "children": []
+                      },
+                      {
+                        "name": "InternationalCivilOrMilitaryGovernmentalOrganisation",
+                        "children": []
+                      },
+                      {
+                        "name": "MilitaryOrganisation",
+                        "children": [
+                          {
+                            "name": "MilitaryPost",
+                            "children": []
+                          },
+                          {
+                            "name": "Unit",
+                            "children": [
+                              {
+                                "name": "CombatServiceSupportUnit",
+                                "children": []
+                              },
+                              {
+                                "name": "CombatSupportUnit",
+                                "children": []
+                              },
+                              {
+                                "name": "CombatUnit",
+                                "children": []
+                              },
+                              {
+                                "name": "CommandSupportUnit",
+                                "children": []
+                              },
+                              {
+                                "name": "ObserverUnit",
+                                "children": []
+                              },
+                              {
+                                "name": "SpecialOperationsForcesUnit",
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "NationalCivilGovernmentalOrganisation",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "GroupOrganisation",
+                    "children": [
+                      {
+                        "name": "CivilianConvoy",
+                        "children": []
+                      },
+                      {
+                        "name": "MediaGroup",
+                        "children": [
+                          {
+                            "name": "InternationalMediaGroup",
+                            "children": []
+                          },
+                          {
+                            "name": "LocalMediaGroup",
+                            "children": []
+                          },
+                          {
+                            "name": "NationalMediaGroup",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "name": "OtherGroupOrganisation",
+                        "children": [
+                          {
+                            "name": "OtherGroupOrganisationContractorGroup",
+                            "children": []
+                          },
+                          {
+                            "name": "OtherGroupOrganisationCriminalGroup",
+                            "children": []
+                          },
+                          {
+                            "name": "OtherGroupOrganisationDisplacedPersonGroup",
+                            "children": []
+                          },
+                          {
+                            "name": "OtherGroupOrganisationEducationalGroup",
+                            "children": []
+                          },
+                          {
+                            "name": "OtherGroupOrganisationFinancialGroup",
+                            "children": []
+                          },
+                          {
+                            "name": "OtherGroupOrganisationForeignFightersGroup",
+                            "children": []
+                          },
+                          {
+                            "name": "OtherGroupOrganisationGangGroup",
+                            "children": []
+                          },
+                          {
+                            "name": "OtherGroupOrganisationInsurgentGroup",
+                            "children": []
+                          },
+                          {
+                            "name": "OtherGroupOrganisationIntellectualGroup",
+                            "children": []
+                          },
+                          {
+                            "name": "OtherGroupOrganisationIntelligenceGroup",
+                            "children": []
+                          },
+                          {
+                            "name": "OtherGroupOrganisationInternallyDisplacedPersonGroup",
+                            "children": []
+                          },
+                          {
+                            "name": "OtherGroupOrganisationJournalistGroup",
+                            "children": []
+                          },
+                          {
+                            "name": "OtherGroupOrganisationJudicialGroup",
+                            "children": []
+                          },
+                          {
+                            "name": "OtherGroupOrganisationLandownerGroup",
+                            "children": []
+                          },
+                          {
+                            "name": "OtherGroupOrganisationLocalInhabitantGroup",
+                            "children": []
+                          },
+                          {
+                            "name": "OtherGroupOrganisationMedicalGroup",
+                            "children": []
+                          },
+                          {
+                            "name": "OtherGroupOrganisationMerchantGroup",
+                            "children": []
+                          },
+                          {
+                            "name": "OtherGroupOrganisationPoliceChiefGroup",
+                            "children": []
+                          },
+                          {
+                            "name": "OtherGroupOrganisationPoliceGroup",
+                            "children": []
+                          },
+                          {
+                            "name": "OtherGroupOrganisationPoliticalGroup",
+                            "children": []
+                          },
+                          {
+                            "name": "OtherGroupOrganisationPrisonerGroup",
+                            "children": []
+                          },
+                          {
+                            "name": "OtherGroupOrganisationPrisonerOfWarGroup",
+                            "children": []
+                          },
+                          {
+                            "name": "OtherGroupOrganisationRefugeeGroup",
+                            "children": []
+                          },
+                          {
+                            "name": "OtherGroupOrganisationShuraGroup",
+                            "children": []
+                          },
+                          {
+                            "name": "OtherGroupOrganisationSocialGroup",
+                            "children": []
+                          },
+                          {
+                            "name": "OtherGroupOrganisationTerroristGroup",
+                            "children": []
+                          },
+                          {
+                            "name": "OtherGroupOrganisationTribalGroup",
+                            "children": []
+                          },
+                          {
+                            "name": "OtherGroupOrganisationVillageElderGroup",
+                            "children": []
+                          },
+                          {
+                            "name": "OtherGroupOrganisationWriterGroup",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "PrivateSectorOrganisation",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Person",
+                "children": [
+                  {
+                    "name": "Civilian",
+                    "children": []
+                  },
+                  {
+                    "name": "Military",
+                    "children": []
+                  },
+                  {
+                    "name": "Paramilitary",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "CyberObject",
+            "children": [
+              {
+                "name": "Application",
+                "children": [
+                  {
+                    "name": "OperatingSystem",
+                    "children": []
+                  },
+                  {
+                    "name": "Service",
+                    "children": [
+                      {
+                        "name": "ICTService",
+                        "children": [
+                          {
+                            "name": "DataTransfer",
+                            "children": [
+                              {
+                                "name": "FileTransferProtocol",
+                                "children": []
+                              },
+                              {
+                                "name": "HypertextTransferProtocol",
+                                "children": []
+                              },
+                              {
+                                "name": "RemoteAccess",
+                                "children": []
+                              },
+                              {
+                                "name": "Telnet",
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Facsimile",
+                            "children": []
+                          },
+                          {
+                            "name": "IdentificationFriendOrFoe",
+                            "children": [
+                              {
+                                "name": "IFFMode1",
+                                "children": []
+                              },
+                              {
+                                "name": "IFFMode2",
+                                "children": []
+                              },
+                              {
+                                "name": "IFFMode4",
+                                "children": []
+                              },
+                              {
+                                "name": "IFFMode5",
+                                "children": []
+                              },
+                              {
+                                "name": "IFFModeS",
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "name": "ImageService",
+                            "children": []
+                          },
+                          {
+                            "name": "MIP31Service",
+                            "children": []
+                          },
+                          {
+                            "name": "MIP4IESService",
+                            "children": []
+                          },
+                          {
+                            "name": "MessageHandlingService",
+                            "children": [
+                              {
+                                "name": "Directory",
+                                "children": []
+                              },
+                              {
+                                "name": "ElectronicMail",
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "name": "TacticalDataLink",
+                            "children": [
+                              {
+                                "name": "DataLink16",
+                                "children": []
+                              },
+                              {
+                                "name": "Link1",
+                                "children": []
+                              },
+                              {
+                                "name": "Link11B",
+                                "children": []
+                              },
+                              {
+                                "name": "Link22",
+                                "children": []
+                              },
+                              {
+                                "name": "Link4",
+                                "children": []
+                              },
+                              {
+                                "name": "VoiceLink16",
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "name": "VideoService",
+                            "children": []
+                          },
+                          {
+                            "name": "VoiceService",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Data",
+                "children": [
+                  {
+                    "name": "CommunicationData",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Device",
+                "children": []
+              },
+              {
+                "name": "Network",
+                "children": []
+              },
+              {
+                "name": "NetworkLink",
+                "children": [
+                  {
+                    "name": "LogicalNetworkLink",
+                    "children": []
+                  },
+                  {
+                    "name": "PhysicalNetworkLink",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Persona",
+                "children": []
+              },
+              {
+                "name": "System",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Facility",
+            "children": [
+              {
+                "name": "AccommodationFacility",
+                "children": [
+                  {
+                    "name": "AccommodationFacilityApartmentBuilding",
+                    "children": []
+                  },
+                  {
+                    "name": "AccommodationFacilityBuilding",
+                    "children": []
+                  },
+                  {
+                    "name": "AccommodationFacilityCamp",
+                    "children": []
+                  },
+                  {
+                    "name": "AccommodationFacilityCompound",
+                    "children": []
+                  },
+                  {
+                    "name": "AccommodationFacilityHouse",
+                    "children": []
+                  },
+                  {
+                    "name": "AccommodationFacilityHut",
+                    "children": []
+                  },
+                  {
+                    "name": "AccommodationFacilityRowHouse",
+                    "children": []
+                  },
+                  {
+                    "name": "AccommodationFacilityShed",
+                    "children": []
+                  },
+                  {
+                    "name": "AccommodationFacilityUnitOfAccommodation",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "AgricultureFacility",
+                "children": [
+                  {
+                    "name": "Cropland",
+                    "children": []
+                  },
+                  {
+                    "name": "Farm",
+                    "children": []
+                  },
+                  {
+                    "name": "Orchard",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "BuiltUpArea",
+                "children": [
+                  {
+                    "name": "BuiltUpAreaCity",
+                    "children": []
+                  },
+                  {
+                    "name": "BuiltUpAreaHamlet",
+                    "children": []
+                  },
+                  {
+                    "name": "BuiltUpAreaTown",
+                    "children": []
+                  },
+                  {
+                    "name": "BuiltUpAreaUrbanArea",
+                    "children": []
+                  },
+                  {
+                    "name": "BuiltUpAreaVillage",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "CommercialFacility",
+                "children": [
+                  {
+                    "name": "Bank",
+                    "children": []
+                  },
+                  {
+                    "name": "Market",
+                    "children": []
+                  },
+                  {
+                    "name": "Office",
+                    "children": []
+                  },
+                  {
+                    "name": "Shop",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "ControlMeasure",
+                "children": [
+                  {
+                    "name": "CannibalizationPoint",
+                    "children": []
+                  },
+                  {
+                    "name": "CasualtyCollectionPoint",
+                    "children": []
+                  },
+                  {
+                    "name": "DecontaminationFacility",
+                    "children": []
+                  },
+                  {
+                    "name": "ForwardArmingAndRefuellingPoint",
+                    "children": []
+                  },
+                  {
+                    "name": "MaintenanceCollectionPoint",
+                    "children": []
+                  },
+                  {
+                    "name": "MedicalEvacuationPickupPoint",
+                    "children": []
+                  },
+                  {
+                    "name": "ObservationPost",
+                    "children": []
+                  },
+                  {
+                    "name": "PopulationHandlingArea",
+                    "children": []
+                  },
+                  {
+                    "name": "RearmRefuelResupplyPoint",
+                    "children": []
+                  },
+                  {
+                    "name": "RefuelOnTheMovePoint",
+                    "children": []
+                  },
+                  {
+                    "name": "SupplyDistributionPoint",
+                    "children": []
+                  },
+                  {
+                    "name": "SupportArea",
+                    "children": []
+                  },
+                  {
+                    "name": "TrafficControlPost",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "GovernmentFacility",
+                "children": [
+                  {
+                    "name": "CivilianMilitaryCoordinationCentre",
+                    "children": []
+                  },
+                  {
+                    "name": "GovernmentBuilding",
+                    "children": []
+                  },
+                  {
+                    "name": "GovernmentalLeadership",
+                    "children": []
+                  },
+                  {
+                    "name": "HeadquartersFacility",
+                    "children": []
+                  },
+                  {
+                    "name": "LawEnforcementFacility",
+                    "children": [
+                      {
+                        "name": "PoliceCheckPoint",
+                        "children": []
+                      },
+                      {
+                        "name": "PoliceStation",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "TownHall",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "IndustrialFacility",
+                "children": [
+                  {
+                    "name": "CommercialManufacturingFacility",
+                    "children": []
+                  },
+                  {
+                    "name": "EnergyIndustryFacility",
+                    "children": []
+                  },
+                  {
+                    "name": "ExtractionFacility",
+                    "children": []
+                  },
+                  {
+                    "name": "MaintenanceAndRepairFacility",
+                    "children": []
+                  },
+                  {
+                    "name": "MilitaryManufacturingFacility",
+                    "children": []
+                  },
+                  {
+                    "name": "ResearchAndTechnologyFacility",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "MedicalFacility",
+                "children": []
+              },
+              {
+                "name": "MilitaryFacility",
+                "children": [
+                  {
+                    "name": "AirDefenceRadarSite",
+                    "children": []
+                  },
+                  {
+                    "name": "AirborneEarlyWarningGroundFacility",
+                    "children": []
+                  },
+                  {
+                    "name": "ArmyMilitaryBaseOrFacility",
+                    "children": []
+                  },
+                  {
+                    "name": "ArtilleryLocatingSite",
+                    "children": []
+                  },
+                  {
+                    "name": "Barracks",
+                    "children": []
+                  },
+                  {
+                    "name": "Bivouac",
+                    "children": []
+                  },
+                  {
+                    "name": "CommandPostFacility",
+                    "children": []
+                  },
+                  {
+                    "name": "ElectronicWarfareSite",
+                    "children": []
+                  },
+                  {
+                    "name": "Fortification",
+                    "children": []
+                  },
+                  {
+                    "name": "ForwardOperatingBase",
+                    "children": []
+                  },
+                  {
+                    "name": "GroundSurveillanceRadarSite",
+                    "children": []
+                  },
+                  {
+                    "name": "LogisticsOrSupplyFacility",
+                    "children": []
+                  },
+                  {
+                    "name": "MilitaryBaseOrFacility",
+                    "children": []
+                  },
+                  {
+                    "name": "MilitaryBridgingSite",
+                    "children": []
+                  },
+                  {
+                    "name": "MilitaryObstacle",
+                    "children": [
+                      {
+                        "name": "ComposedAntiTankObstacle",
+                        "children": []
+                      },
+                      {
+                        "name": "Ditch",
+                        "children": []
+                      },
+                      {
+                        "name": "Minefield",
+                        "children": []
+                      },
+                      {
+                        "name": "OtherMilitaryObstacle",
+                        "children": []
+                      },
+                      {
+                        "name": "WireObstacle",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "MilitarySeaportOrNavalBase",
+                    "children": []
+                  },
+                  {
+                    "name": "MissileSite",
+                    "children": []
+                  },
+                  {
+                    "name": "NavalAirStation",
+                    "children": []
+                  },
+                  {
+                    "name": "ObservationTower",
+                    "children": []
+                  },
+                  {
+                    "name": "PrisonerOfWarCamp",
+                    "children": []
+                  },
+                  {
+                    "name": "SensorFusionPost",
+                    "children": []
+                  },
+                  {
+                    "name": "ShoranStation",
+                    "children": []
+                  },
+                  {
+                    "name": "SubmarineMilitaryBaseOrFacility",
+                    "children": []
+                  },
+                  {
+                    "name": "SurfaceSurveillanceJammer",
+                    "children": []
+                  },
+                  {
+                    "name": "SurfaceToSurfaceMissileSite",
+                    "children": []
+                  },
+                  {
+                    "name": "TacanStation",
+                    "children": []
+                  },
+                  {
+                    "name": "TacticalIntelligenceCentre",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "OtherFacility",
+                "children": []
+              },
+              {
+                "name": "TransportFacility",
+                "children": [
+                  {
+                    "name": "AirTransportFacility",
+                    "children": [
+                      {
+                        "name": "Airfield",
+                        "children": []
+                      },
+                      {
+                        "name": "AirportOrAirbase",
+                        "children": []
+                      },
+                      {
+                        "name": "Apron",
+                        "children": []
+                      },
+                      {
+                        "name": "Helipad",
+                        "children": []
+                      },
+                      {
+                        "name": "Heliport",
+                        "children": []
+                      },
+                      {
+                        "name": "Runway",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "GeneralTransportFacility",
+                    "children": []
+                  },
+                  {
+                    "name": "GroundTransportFacility",
+                    "children": [
+                      {
+                        "name": "ClearedWay",
+                        "children": []
+                      },
+                      {
+                        "name": "CrossingPlatform",
+                        "children": []
+                      },
+                      {
+                        "name": "Ford",
+                        "children": []
+                      },
+                      {
+                        "name": "RailFacility",
+                        "children": []
+                      },
+                      {
+                        "name": "RailHead",
+                        "children": []
+                      },
+                      {
+                        "name": "Railway",
+                        "children": []
+                      },
+                      {
+                        "name": "RailwayCrossing",
+                        "children": []
+                      },
+                      {
+                        "name": "RailwayJunction",
+                        "children": []
+                      },
+                      {
+                        "name": "Road",
+                        "children": []
+                      },
+                      {
+                        "name": "RoadInterchange",
+                        "children": []
+                      },
+                      {
+                        "name": "Trail",
+                        "children": []
+                      },
+                      {
+                        "name": "Tunnel",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "MaritimeTransportFacility",
+                    "children": [
+                      {
+                        "name": "Anchorage",
+                        "children": []
+                      },
+                      {
+                        "name": "Basin",
+                        "children": []
+                      },
+                      {
+                        "name": "Berth",
+                        "children": []
+                      },
+                      {
+                        "name": "DryDock",
+                        "children": []
+                      },
+                      {
+                        "name": "FerryOrFordAccess",
+                        "children": []
+                      },
+                      {
+                        "name": "FerryStation",
+                        "children": []
+                      },
+                      {
+                        "name": "Harbour",
+                        "children": []
+                      },
+                      {
+                        "name": "Jetty",
+                        "children": []
+                      },
+                      {
+                        "name": "Lighthouse",
+                        "children": []
+                      },
+                      {
+                        "name": "Lock",
+                        "children": []
+                      },
+                      {
+                        "name": "Pier",
+                        "children": []
+                      },
+                      {
+                        "name": "Port",
+                        "children": []
+                      },
+                      {
+                        "name": "Quay",
+                        "children": []
+                      },
+                      {
+                        "name": "Slipway",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Feature",
+            "children": [
+              {
+                "name": "ControlFeature",
+                "children": [
+                  {
+                    "name": "AirspaceControlFeature",
+                    "children": []
+                  },
+                  {
+                    "name": "C2BoundaryFeature",
+                    "children": []
+                  },
+                  {
+                    "name": "CBRNControlFeature",
+                    "children": []
+                  },
+                  {
+                    "name": "FiresCoordinationFeature",
+                    "children": []
+                  },
+                  {
+                    "name": "MobilityCountermobilityFeature",
+                    "children": []
+                  },
+                  {
+                    "name": "ReferenceNavigationFix",
+                    "children": []
+                  },
+                  {
+                    "name": "RouteControlFeature",
+                    "children": []
+                  },
+                  {
+                    "name": "SustainmentControlFeature",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "GeographicFeature",
+                "children": [
+                  {
+                    "name": "CoastalZone",
+                    "children": []
+                  },
+                  {
+                    "name": "Cryosphere",
+                    "children": []
+                  },
+                  {
+                    "name": "InlandWater",
+                    "children": []
+                  },
+                  {
+                    "name": "LandTerrain",
+                    "children": []
+                  },
+                  {
+                    "name": "MaritimeWater",
+                    "children": []
+                  },
+                  {
+                    "name": "Wetland",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "InformationResource",
+            "children": [
+              {
+                "name": "Image",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Materiel",
+            "children": [
+              {
+                "name": "ConsumableMateriel",
+                "children": []
+              },
+              {
+                "name": "Equipment",
+                "children": [
+                  {
+                    "name": "Sensor",
+                    "children": [
+                      {
+                        "name": "Radar",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Tool",
+                    "children": []
+                  },
+                  {
+                    "name": "Vehicle",
+                    "children": [
+                      {
+                        "name": "Aircraft",
+                        "children": []
+                      },
+                      {
+                        "name": "LandVehicle",
+                        "children": [
+                          {
+                            "name": "CivilianTypeVehicle",
+                            "children": []
+                          },
+                          {
+                            "name": "MilitaryTypeVehicle",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Spacecraft",
+                        "children": []
+                      },
+                      {
+                        "name": "Vessel",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Weapon",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "UnexplodedOrdnance",
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Component",
+    "children": [
+      {
+        "name": "ComplexDetectionReplayEvent",
+        "children": []
+      },
+      {
+        "name": "ComplexManeuver",
+        "children": []
+      },
+      {
+        "name": "ComplexOrientation",
+        "children": []
+      },
+      {
+        "name": "ComplexPositionReplayEvent",
+        "children": []
+      },
+      {
+        "name": "ComplexUuidPair",
+        "children": []
+      },
+      {
+        "name": "ComplexVector3d",
+        "children": []
+      },
+      {
+        "name": "ComplexWaypoint",
+        "children": []
+      },
+      {
+        "name": "ComponentActivationTimestamp",
+        "children": []
+      },
+      {
+        "name": "ComponentAirMotion",
+        "children": []
+      },
+      {
+        "name": "ComponentArea",
+        "children": []
+      },
+      {
+        "name": "ComponentAreaInfoContainer",
+        "children": []
+      },
+      {
+        "name": "ComponentAssetAttacked",
+        "children": []
+      },
+      {
+        "name": "ComponentAssetControlColumn",
+        "children": []
+      },
+      {
+        "name": "ComponentChildsContainer",
+        "children": []
+      },
+      {
+        "name": "ComponentClusterRender",
+        "children": []
+      },
+      {
+        "name": "ComponentClustersMemberContainer",
+        "children": []
+      },
+      {
+        "name": "ComponentConditionPosition",
+        "children": []
+      },
+      {
+        "name": "ComponentDetectionEventsReplay",
+        "children": []
+      },
+      {
+        "name": "ComponentDistanceEntities",
+        "children": []
+      },
+      {
+        "name": "ComponentEntityVisibility",
+        "children": []
+      },
+      {
+        "name": "ComponentFollowRoute",
+        "children": []
+      },
+      {
+        "name": "ComponentGeometry",
+        "children": []
+      },
+      {
+        "name": "ComponentGeoposition",
+        "children": []
+      },
+      {
+        "name": "ComponentGeopositionStatic",
+        "children": []
+      },
+      {
+        "name": "ComponentHoldPosition",
+        "children": []
+      },
+      {
+        "name": "ComponentIdentification",
+        "children": []
+      },
+      {
+        "name": "ComponentLandMotion",
+        "children": []
+      },
+      {
+        "name": "ComponentLineRepresentationComponent",
+        "children": []
+      },
+      {
+        "name": "ComponentMembersContainer",
+        "children": []
+      },
+      {
+        "name": "ComponentOrderComponent",
+        "children": []
+      },
+      {
+        "name": "ComponentPositionEventsReplay",
+        "children": []
+      },
+      {
+        "name": "ComponentRadar",
+        "children": []
+      },
+      {
+        "name": "ComponentRoadDensityComponent",
+        "children": []
+      },
+      {
+        "name": "ComponentRoute",
+        "children": []
+      },
+      {
+        "name": "ComponentSurfaceMotion",
+        "children": []
+      },
+      {
+        "name": "ComponentTriageData",
+        "children": []
+      },
+      {
+        "name": "ComponentVisualizationInfo",
+        "children": []
+      },
+      {
+        "name": "ComponentVisualizationInfoData",
+        "children": []
+      },
+      {
+        "name": "ComponentWaitCondition",
+        "children": []
+      },
+      {
+        "name": "KeyValuePair",
+        "children": []
+      },
+      {
+        "name": "MitreID",
+        "children": []
+      },
+      {
+        "name": "NetworkInterfaceStruct",
+        "children": []
+      },
+      {
+        "name": "RelatedObjectStruct",
+        "children": []
+      },
+      {
+        "name": "TimeStruct",
+        "children": []
+      }
+    ]
+  },
+  {
+    "name": "DeprecatedClass",
+    "children": [
+      {
+        "name": "CyberDEM",
+        "children": []
+      },
+      {
+        "name": "Unclassified",
+        "children": [
+          {
+            "name": "UnclassifiedFunctionalPerson",
+            "children": [
+              {
+                "name": "AirborneMissionCommander",
+                "children": []
+              },
+              {
+                "name": "AuthorisedCommander",
+                "children": []
+              },
+              {
+                "name": "CyberOperator",
+                "children": []
+              },
+              {
+                "name": "GroundManoeuvreCommander",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "UnclassifiedMilitaryUnit",
+            "children": [
+              {
+                "name": "InfantryUnit",
+                "children": []
+              },
+              {
+                "name": "InformationWarfareUnit",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "UnclassifiedVehicle",
+            "children": [
+              {
+                "name": "ArmouredPersonnelCarrier",
+                "children": []
+              },
+              {
+                "name": "Tank",
+                "children": []
+              },
+              {
+                "name": "Truck",
+                "children": []
+              },
+              {
+                "name": "UAV",
+                "children": [
+                  {
+                    "name": "TacticalUAV",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "UnclassifiedWeapon",
+            "children": [
+              {
+                "name": "Cannon",
+                "children": [
+                  {
+                    "name": "AssaultGun",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "LOV",
+    "children": [
+      {
+        "name": "CapabilityType",
+        "children": []
+      },
+      {
+        "name": "Domain",
+        "children": []
+      },
+      {
+        "name": "Enumerations",
+        "children": [
+          {
+            "name": "AcknowledgeResponseType",
+            "children": []
+          },
+          {
+            "name": "AdminType",
+            "children": []
+          },
+          {
+            "name": "CyberEventPhaseType",
+            "children": []
+          },
+          {
+            "name": "DataLinkProtocolType",
+            "children": []
+          },
+          {
+            "name": "DataStatusType",
+            "children": []
+          },
+          {
+            "name": "DataType",
+            "children": [
+              {
+                "name": "Boolean",
+                "children": []
+              },
+              {
+                "name": "Component",
+                "children": [
+                  {
+                    "name": "ComplexDetectionReplayEvent",
+                    "children": []
+                  },
+                  {
+                    "name": "ComplexManeuver",
+                    "children": []
+                  },
+                  {
+                    "name": "ComplexOrientation",
+                    "children": []
+                  },
+                  {
+                    "name": "ComplexPositionReplayEvent",
+                    "children": []
+                  },
+                  {
+                    "name": "ComplexUuidPair",
+                    "children": []
+                  },
+                  {
+                    "name": "ComplexVector3d",
+                    "children": []
+                  },
+                  {
+                    "name": "ComplexWaypoint",
+                    "children": []
+                  },
+                  {
+                    "name": "ComponentActivationTimestamp",
+                    "children": []
+                  },
+                  {
+                    "name": "ComponentAirMotion",
+                    "children": []
+                  },
+                  {
+                    "name": "ComponentArea",
+                    "children": []
+                  },
+                  {
+                    "name": "ComponentAreaInfoContainer",
+                    "children": []
+                  },
+                  {
+                    "name": "ComponentAssetAttacked",
+                    "children": []
+                  },
+                  {
+                    "name": "ComponentAssetControlColumn",
+                    "children": []
+                  },
+                  {
+                    "name": "ComponentChildsContainer",
+                    "children": []
+                  },
+                  {
+                    "name": "ComponentClusterRender",
+                    "children": []
+                  },
+                  {
+                    "name": "ComponentClustersMemberContainer",
+                    "children": []
+                  },
+                  {
+                    "name": "ComponentConditionPosition",
+                    "children": []
+                  },
+                  {
+                    "name": "ComponentDetectionEventsReplay",
+                    "children": []
+                  },
+                  {
+                    "name": "ComponentDistanceEntities",
+                    "children": []
+                  },
+                  {
+                    "name": "ComponentEntityVisibility",
+                    "children": []
+                  },
+                  {
+                    "name": "ComponentFollowRoute",
+                    "children": []
+                  },
+                  {
+                    "name": "ComponentGeometry",
+                    "children": []
+                  },
+                  {
+                    "name": "ComponentGeoposition",
+                    "children": []
+                  },
+                  {
+                    "name": "ComponentGeopositionStatic",
+                    "children": []
+                  },
+                  {
+                    "name": "ComponentHoldPosition",
+                    "children": []
+                  },
+                  {
+                    "name": "ComponentIdentification",
+                    "children": []
+                  },
+                  {
+                    "name": "ComponentLandMotion",
+                    "children": []
+                  },
+                  {
+                    "name": "ComponentLineRepresentationComponent",
+                    "children": []
+                  },
+                  {
+                    "name": "ComponentMembersContainer",
+                    "children": []
+                  },
+                  {
+                    "name": "ComponentOrderComponent",
+                    "children": []
+                  },
+                  {
+                    "name": "ComponentPositionEventsReplay",
+                    "children": []
+                  },
+                  {
+                    "name": "ComponentRadar",
+                    "children": []
+                  },
+                  {
+                    "name": "ComponentRoadDensityComponent",
+                    "children": []
+                  },
+                  {
+                    "name": "ComponentRoute",
+                    "children": []
+                  },
+                  {
+                    "name": "ComponentSurfaceMotion",
+                    "children": []
+                  },
+                  {
+                    "name": "ComponentTriageData",
+                    "children": []
+                  },
+                  {
+                    "name": "ComponentVisualizationInfo",
+                    "children": []
+                  },
+                  {
+                    "name": "ComponentVisualizationInfoData",
+                    "children": []
+                  },
+                  {
+                    "name": "ComponentWaitCondition",
+                    "children": []
+                  },
+                  {
+                    "name": "KeyValuePair",
+                    "children": []
+                  },
+                  {
+                    "name": "MitreID",
+                    "children": []
+                  },
+                  {
+                    "name": "NetworkInterfaceStruct",
+                    "children": []
+                  },
+                  {
+                    "name": "RelatedObjectStruct",
+                    "children": []
+                  },
+                  {
+                    "name": "TimeStruct",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "DateTimeStamp",
+                "children": []
+              },
+              {
+                "name": "Decimal",
+                "children": []
+              },
+              {
+                "name": "Double",
+                "children": []
+              },
+              {
+                "name": "Int",
+                "children": []
+              },
+              {
+                "name": "LOV"
+              },
+              {
+                "name": "String",
+                "children": []
+              },
+              {
+                "name": "UUID",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "DeviceType",
+            "children": []
+          },
+          {
+            "name": "EncryptionType",
+            "children": []
+          },
+          {
+            "name": "HardwareDamageType",
+            "children": []
+          },
+          {
+            "name": "HardwareDegradeType",
+            "children": []
+          },
+          {
+            "name": "LoadRateType",
+            "children": []
+          },
+          {
+            "name": "ManipulationType",
+            "children": []
+          },
+          {
+            "name": "MessageType",
+            "children": []
+          },
+          {
+            "name": "NetworkProtocolType",
+            "children": []
+          },
+          {
+            "name": "OperatingSystemType",
+            "children": []
+          },
+          {
+            "name": "PacketManipulationType",
+            "children": []
+          },
+          {
+            "name": "PhysicalLayerType",
+            "children": []
+          },
+          {
+            "name": "ReconType",
+            "children": []
+          },
+          {
+            "name": "RelationshipType",
+            "children": []
+          },
+          {
+            "name": "SensitivityType",
+            "children": []
+          },
+          {
+            "name": "ServiceType",
+            "children": []
+          },
+          {
+            "name": "SystemType",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "LOVAirModel",
+        "children": []
+      },
+      {
+        "name": "LOVCommandType",
+        "children": []
+      },
+      {
+        "name": "LOVEventPhase",
+        "children": []
+      },
+      {
+        "name": "LOVRadarType",
+        "children": []
+      },
+      {
+        "name": "LOVRoadState",
+        "children": []
+      },
+      {
+        "name": "LOVSideType",
+        "children": []
+      },
+      {
+        "name": "LOVSurfaceModel",
+        "children": []
+      },
+      {
+        "name": "LOVTriagePriority",
+        "children": []
+      },
+      {
+        "name": "LOVTriageType",
+        "children": []
+      },
+      {
+        "name": "LOVWarfareFunction",
+        "children": []
+      },
+      {
+        "name": "LOVWaypointType",
+        "children": []
+      }
+    ]
+  }
+]

@@ -1,0 +1,363 @@
+/* =============================
+    LAYOUT GENERAL
+============================= */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #0c0c0c;
+  color: #eee;
+  font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 22% 58% 20%;
+  grid-template-rows: auto;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+/* =============================
+    PANEL BASE
+============================= */
+.panel {
+  border: 1px solid #0c0c0c;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.panel.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  height: 100vh;
+}
+
+
+#relation-graph {
+  flex: 1;
+  min-height: 45%;
+  
+}
+
+.panel.left {
+  background: #0c0c0c;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10px;
+  overflow: hidden; /* sin scroll */
+}
+
+/* =============================
+    PANEL CENTRAL (árbol + relaciones)
+============================= */
+.panel.center {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  overflow: visible !important;
+}
+
+#tree-chart {
+  flex: 1;
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: visible !important; /* evita cortar las líneas */
+}
+
+.relations-panel {
+  background: #0c0c0c;
+  color: #ddd;
+  padding: 10px;
+  height: 10vh;
+  overflow-y: auto;
+}
+
+.relations-panel h3 {
+  color: #4aa8ff;
+  margin-top: 0;
+}
+
+/* =============================
+    CHARTS
+============================= */
+#relation-graph.chart.small {
+  flex: 1;
+  min-height: 35vh; /* o 300px mínimo */
+  width: 100%;
+  border-right: 1px solid #222;
+  border-radius: 6px;
+  background-color: #0c0c0c;
+}
+
+/* Controles flotantes del RelationGraph */
+.rg-controls {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  gap: 6px;
+  z-index: 2;
+}
+.rg-btn {
+  background: #0c0c0c;
+  color: #eaeaea;
+  border: 1px solid #2b2b2b;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.rg-btn:hover { background: #232323; }
+
+/* Overlay guía cuando el grafo está vacío */
+.rg-guide {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #a8a8a8;
+  font-size: 12px;
+  pointer-events: none;
+}
+
+.rg-filters input[type="checkbox"] {
+  accent-color: #0ff;
+  transform: scale(1.1);
+}
+.rg-filters label:hover {
+  color: #fff;
+}
+
+/* =============================
+    PANEL DESCRIPTOR
+============================= */
+.descriptor-panel {
+  background: #0c0c0c;
+  color: #eaeaea;
+  border-right: 1px solid #333;
+  border-radius: 3px;
+  padding: 12px;
+  font-size: 0.9em;
+  overflow-y: auto;
+  height: 100%; 
+  scrollbar-width: thin;
+  scrollbar-color: #444 #181818;
+}
+
+.descriptor-panel::-webkit-scrollbar {
+  width: 6px;
+}
+.descriptor-panel::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 6px;
+}
+
+.descriptor-panel h3 {
+  margin: 0 0 6px 0;
+  font-size: 1.1em;
+  color: #4aa8ff;
+}
+
+.descriptor-panel .meta {
+  font-size: 0.85em;
+  color: #aaa;
+  margin-bottom: 8px;
+}
+
+.descriptor-panel ul {
+  margin: 4px 0;
+  padding-left: 18px;
+}
+
+.descriptor-panel li {
+  line-height: 1.35;
+}
+
+.descriptor-panel .chip {
+  display: inline-block;
+  padding: 1px 6px;
+  margin-left: 6px;
+  border-right: 1px solid #333;
+  border-radius: 999px;
+  font-size: 0.75em;
+  color: #b8d9ff;
+  background: #0f2335;
+}
+
+/* =============================
+    RESET BUTTON
+============================= */
+.reset-tree-btn {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  padding: 5px 12px;
+  background: rgba(30,30,30,0.8);
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: #eee;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all .25s ease;
+  z-index: 5;
+}
+.reset-tree-btn:hover {
+  background: #00ffff;
+  color: #000;
+  border-color: #00ffff;
+  box-shadow: 0 0 10px #00ffff55;
+  transform: scale(1.05);
+}
+
+/* =============================
+    TÍTULOS
+============================= */
+h2 {
+  font-size: 1.1em;
+  text-align: center;
+  border-bottom: 1px solid #0c0c0c;
+  padding-bottom: 4px;
+  margin-bottom: 10px;
+}
+
+
+
+/* =============================
+   🔹 Árbol jerárquico (DropdownTree)
+============================= */
+#dropdown {
+  flex: 1;
+  min-height: 50%;
+  overflow-y: auto;
+  padding: 10px 14px 16px;
+  border-left: 1px solid #333;
+  background: #0b0b0b;
+  box-shadow: inset 0 0 5px rgba(0,255,255,.05);
+  scrollbar-width: thin;
+  scrollbar-color: #555 #0b0b0b;
+}
+#dropdown::-webkit-scrollbar { width: 8px; }
+#dropdown::-webkit-scrollbar-track { background: #0b0b0b; }
+#dropdown::-webkit-scrollbar-thumb { background: #444; border-radius: 4px; }
+#dropdown::-webkit-scrollbar-thumb:hover { background: #666; }
+
+/* === Cabecera === */
+#dropdown-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+#dropdown-title {
+  flex: 1;
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  color: #ffffff;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+  border-bottom: 1px solid #222;
+  padding-bottom: 4px;
+}
+#dropdown-reset {
+  background: transparent;
+  border: 1px solid #333;
+  border-radius: 4px;
+  color: #4aa8ff;
+  cursor: pointer;
+  padding: 2px 6px;
+  font-size: 0.9em;
+  transition: all 0.2s ease;
+}
+#dropdown-reset:hover {
+  background: rgba(0,255,255,.1);
+  border-color: #4aa8ff;
+  transform: rotate(180deg);
+}
+
+/* === Árbol alineado === */
+.dropdown-tree {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #eee;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1em;
+  user-select: none;
+}
+.dropdown-tree li {
+  display: grid;
+  grid-template-columns: 16px 1fr;
+  align-items: center;
+  line-height: 1.45;
+  margin: 2px 0;
+}
+
+/* Flechas / puntos */
+.dropdown-tree .toggle,
+.dropdown-tree .dot {
+  grid-column: 1;
+  justify-self: center;
+  width: 14px;
+  height: 14px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  color: #4aa8ff;
+}
+.dropdown-tree .dot {
+  color: #555;
+  cursor: default;
+}
+.dropdown-tree .toggle {
+  transition: transform 0.25s ease;
+}
+
+/* Etiquetas */
+.dropdown-tree .node-label {
+  grid-column: 2;
+  display: flex;
+  align-items: center;
+  color: #ccc;
+  transition: color 0.15s ease;
+  padding: 2px 0;
+}
+.dropdown-tree .node-label:hover {
+  color: #4aa8ff;
+  text-shadow: 0 0 4px #4aa8ff;
+}
+
+/* Subniveles */
+.dropdown-tree li > ul {
+  grid-column: 1 / span 2;
+  margin: 0;
+  padding-left: 14px;
+  border-left: 1px dotted #333;
+  overflow: hidden;
+  height: 0;
+  transition: height 0.35s ease-in-out;
+}
+.dropdown-tree li.expanded > ul {
+  max-height: 1000px;
+}
+.dropdown-tree li.expanded > .toggle {
+  transform: rotate(90deg);
+}
+
+/* Nodo seleccionado */
+.node-label.selected {
+  background: rgba(0,255,255,0.1);
+  border-left: 2px solid #4aa8ff;
+  color: #4aa8ff;
+  font-weight: bold;
+  padding-left: 6px;
+}
