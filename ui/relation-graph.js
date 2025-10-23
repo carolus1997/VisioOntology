@@ -54,11 +54,10 @@ window.RelationGraph = (() => {
         id,
         name: n.label || id.replace(/^CAT_/, ''),
         category: n.categoryName || 'Desconocido',
-        source: n.source || '',  // ✅ añadimos
-        info: n.info || '',      // ✅ añadimos
+        source: n.source || '',
+        info: n.info || '',
         itemStyle: { color: colorForOrigin(n) },
       };
-
       nodeById.set(id, node);
       neighborsMap.set(id, new Set());
     }
@@ -67,8 +66,23 @@ window.RelationGraph = (() => {
     for (const e of edges) {
       const s = normalizeId(e.source);
       const t = normalizeId(e.target);
-      if (nodeById.has(s) && nodeById.has(t)) {
+
+      if (!s || !t) continue;
+
+      const hasS = nodeById.has(s);
+      const hasT = nodeById.has(t);
+
+      // ✅ Relación bidireccional completa (si ambos existen)
+      if (hasS && hasT) {
         neighborsMap.get(s).add(t);
+        neighborsMap.get(t).add(s);
+      }
+      // ⚙️ Si solo uno existe, se registra igualmente el otro
+      else if (hasS && !hasT) {
+        if (!neighborsMap.has(s)) neighborsMap.set(s, new Set());
+        neighborsMap.get(s).add(t);
+      } else if (hasT && !hasS) {
+        if (!neighborsMap.has(t)) neighborsMap.set(t, new Set());
         neighborsMap.get(t).add(s);
       } else dropped++;
     }
@@ -76,6 +90,7 @@ window.RelationGraph = (() => {
     if (dropped) console.warn(`[RelationGraph] ${dropped} enlaces omitidos por nodos inexistentes.`);
     window.RelationGraph.__debug = { nodeById, neighborsMap };
   }
+
 
   function clearVisible() {
     visibleNodes.clear();
@@ -96,12 +111,22 @@ window.RelationGraph = (() => {
 
   function expandDepth1(centerId) {
     const neigh = neighborsMap.get(centerId) || new Set();
-    const sorted = [...neigh].sort((a, b) => (neighborsMap.get(b)?.size || 0) - (neighborsMap.get(a)?.size || 0));
+
+    // 🔹 Incluye también conexiones donde el nodo actual es el target
+    for (const [src, set] of neighborsMap.entries()) {
+      if (set.has(centerId)) neigh.add(src);
+    }
+
+    const sorted = [...neigh].sort(
+      (a, b) => (neighborsMap.get(b)?.size || 0) - (neighborsMap.get(a)?.size || 0)
+    );
+
     for (const nb of sorted) {
       if (!addNode(nb)) break;
-      addEdge(centerId, nb, 'out');
+      addEdge(centerId, nb, 'bidirectional');
     }
   }
+
 
   function render(centerId) {
     if (!_chart) return;
@@ -243,6 +268,8 @@ window.RelationGraph = (() => {
       showError(`Error al cargar la ontología: ${err.message}`);
     }
   }
+
+
 
   return { init };
 })();

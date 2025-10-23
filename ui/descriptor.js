@@ -17,7 +17,7 @@
     .replace(/>/g, '&gt;').replace(/"/g, '&quot;')
     .replace(/'/g, '&#039;');
 
-  async function init(containerId = 'descriptor', ontologyPath = 'data/ontology2.json'){
+  async function init(containerId = 'descriptor', ontologyPath = 'data/ontology2.json') {
     STATE.container = document.getElementById(containerId);
     if (!STATE.container) {
       console.warn(`[Descriptor] No se encontró el contenedor #${containerId}`);
@@ -187,6 +187,8 @@
     </div>
   `;
   }
+  
+
 
 
 

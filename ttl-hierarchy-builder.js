@@ -26,6 +26,12 @@ const prefixes = {
     component: "COMP_"
 };
 
+function addPrefixIfMissing(id, prefix = "CAT_") {
+    if (!id) return id;
+    return id.startsWith(prefix) ? id : (prefix + id);
+}
+
+
 const nodes = new Map();
 const edges = [];
 const subclasses = new Map();
@@ -61,8 +67,8 @@ function parseTTL(path) {
 
         // --- Subclases ---
         if (p === "subClassOf") {
-            const parent = prefixes.category + o;
-            const child = prefixes.category + s;
+            const parent = addPrefixIfMissing(prefixes.category + o, "CAT_");
+            const child = addPrefixIfMissing(prefixes.category + s, "CAT_");
             ensureNode(parent, o);
             ensureNode(child, s);
             edges.push({ source: child, target: parent, type: "is_a" });
@@ -75,6 +81,7 @@ function parseTTL(path) {
             subclasses.get(o).push(s);
             continue;
         }
+
 
         // --- Propiedades RDF/OWL ---
         if (
@@ -89,8 +96,8 @@ function parseTTL(path) {
 
         // --- Dominios y rangos ---
         if (p === "domain") {
-            const source = prefixes.category + o;
-            const target = prefixes.relation + s;
+            const source = addPrefixIfMissing(prefixes.category + o, "CAT_");
+            const target = addPrefixIfMissing(prefixes.relation + s, "REL_");
             ensureNode(source, o);
             ensureNode(target, s, "relation");
             edges.push({ source, target, type: "domainOf" });
@@ -99,8 +106,8 @@ function parseTTL(path) {
         }
 
         if (p === "range") {
-            const source = prefixes.relation + s;
-            const target = prefixes.category + o;
+            const source = addPrefixIfMissing(prefixes.relation + s, "REL_");
+            const target = addPrefixIfMissing(prefixes.category + o, "CAT_");
             ensureNode(source, s, "relation");
             ensureNode(target, o);
             edges.push({ source, target, type: "rangeOf" });
@@ -108,20 +115,22 @@ function parseTTL(path) {
             continue;
         }
 
+
         // --- Etiquetas y descripciones ---
         if (["label"].includes(p)) {
-            const id = prefixes.category + s;
+            const id = addPrefixIfMissing(prefixes.category + s, "CAT_");
             ensureNode(id, s);
             nodes.get(id).label = t.object.value;
             continue;
         }
 
         if (["comment", "description"].includes(p)) {
-            const id = prefixes.category + s;
+            const id = addPrefixIfMissing(prefixes.category + s, "CAT_");
             ensureNode(id, s);
             nodes.get(id).description = t.object.value;
             continue;
         }
+
 
         // --- Literales generales ---
         if (oLiteral && !p.startsWith("rdf") && !p.startsWith("owl")) {
@@ -133,13 +142,14 @@ function parseTTL(path) {
 
         // --- Relaciones genéricas ---
         if (s && o && s !== o && !p.startsWith("rdf") && !p.startsWith("owl")) {
-            const source = prefixes.category + s;
-            const target = prefixes.category + o;
+            const source = addPrefixIfMissing(prefixes.category + s, "CAT_");
+            const target = addPrefixIfMissing(prefixes.category + o, "CAT_");
             ensureNode(source, s);
             ensureNode(target, o);
             edges.push({ source, target, type: p });
             relationTypes.add(p);
         }
+
     }
 }
 

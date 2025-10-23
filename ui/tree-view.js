@@ -3,7 +3,7 @@ window.TreeView = window.TreeView || (() => {
 
     let chart;
 
-    async function init(containerId = 'tree-chart', jsonPath = 'data/class-hierarchy2.json'){
+    async function init(containerId = 'tree-chart', jsonPath = 'data/class-hierarchy2.json') {
         const el = document.getElementById(containerId);
         chart = echarts.init(el, null, { renderer: 'canvas' });
 
@@ -38,6 +38,31 @@ window.TreeView = window.TreeView || (() => {
                 });
             }
 
+            // === 🎨 Colorea cada línea según el color del nodo padre ===
+            function colorForOrigin(n) {
+                const src = (n?.source || n?.info || n?.data?.source || n?.data?.info || '').toLowerCase();
+                if (src.includes('mim')) return '#00e68a';           // Verde MIM
+                if (src.includes('cyberdem') || src.includes('cdem')) return '#00baff'; // Azul CDEM
+                return '#ff9f1c';                                   // Naranja propio
+            }
+
+            function applyLineColors(node, inheritedColor = null) {
+                if (!node) return;
+
+                // 🎯 El color del nodo actual: si tiene padre, hereda el color del padre
+                const nodeColor = inheritedColor || colorForOrigin(node);
+
+                // Asigna ese color a la línea que une este nodo con su padre
+                node.lineStyle = { color: nodeColor };
+
+                // Propaga el color a los hijos
+                if (node.children && node.children.length) {
+                    node.children.forEach(child => applyLineColors(child, nodeColor));
+                }
+            }
+
+            applyLineColors(data);
+
             const option = {
                 backgroundColor: '#0c0c0c',
                 tooltip: {
@@ -61,20 +86,23 @@ window.TreeView = window.TreeView || (() => {
                         scaleLimit: { min: 0.5, max: 3 },
                         zoom: 1.1,
 
+                        // 🌈 Coloreado dinámico
                         lineStyle: {
-                            color: '#555',
-                            width: 1.2
+                            color: params => {
+                                // 🔹 Usar directamente el color ya calculado en applyLineColors()
+                                return params.data?.lineStyle?.color || '#ff9f1c';
+                            },
+                            width: 1.6,
+                            opacity: 0.75,
+                            shadowBlur: 6,
+                            shadowColor: '#000'
                         },
-
-                        // Tamaño por nivel
                         symbolSize: (value, params) => Math.max(6, 12 - (params.treeDepth || 0)),
 
-                        // Colores
                         itemStyle: {
                             color: params => {
                                 if (!params || !params.data) return '#888';
                                 if (params.data.invisibleRoot) return 'transparent';
-
                                 const d = params.treeDepth || 0;
                                 const hasChildren = params.data.children?.length > 0;
 
@@ -111,7 +139,7 @@ window.TreeView = window.TreeView || (() => {
                         },
 
                         emphasis: {
-                            focus: 'none', // 🚫 desactiva el enfoque descendente
+                            focus: 'none',
                             itemStyle: {
                                 shadowBlur: 12,
                                 shadowColor: '#00ffff',
@@ -131,8 +159,32 @@ window.TreeView = window.TreeView || (() => {
 
             console.log('📊 Datos del árbol cargados:', data);
 
+
+
+            console.table(data.children.map(n => ({
+                name: n.name,
+                color: n.lineStyle?.color || '(none)',
+                source: n.source || n.info || ''
+            })));
+
+
             chart.setOption(option);
 
+            // 🧮 Forzar el cálculo completo del layout de todos los nodos visibles
+            setTimeout(() => {
+                chart.dispatchAction({ type: 'highlight', seriesIndex: 0, dataIndex: 0 });
+                chart.dispatchAction({ type: 'downplay', seriesIndex: 0, dataIndex: 0 });
+                chart.resize();
+                console.log('🧩 Layout forzado calculado para todos los nodos');
+            }, 500);
+
+
+            // 🔧 Asegura que el canvas no limite el renderizado de líneas externas
+            const canvas = el.querySelector('canvas');
+            if (canvas) {
+                canvas.style.overflow = 'visible';
+                canvas.style.position = 'relative';
+            }
 
             // === 🧭 Interacción: highlight hacia los padres ===
             let parentMap = {};   // hijo → padre
@@ -149,27 +201,34 @@ window.TreeView = window.TreeView || (() => {
 
             // 🔹 Hover sobre un nodo → resalta toda su cadena de padres
             chart.on('mouseover', params => {
+                if (!params?.data || params.data.invisibleRoot) return;
+
                 const series = chart.getModel().getSeriesByIndex(0);
                 const tree = series.getData().tree;
                 const node = tree.getNodeByDataIndex(params.dataIndex);
-                drawParentLines(tree, series.getData(), node);   // 🩵 Dibuja líneas y puntos
 
-                if (!params?.data || params.data.invisibleRoot) return;
+                // ✅ Esperar a que ECharts termine completamente el render
+                const drawOnce = () => {
+                    // ⚙️ Forzar un pequeño retraso para asegurar que layout esté disponible
+                    requestAnimationFrame(() => {
+                        drawParentLines(tree, series.getData(), node);
+                    });
+                    chart.off('finished', drawOnce); // desconectamos tras ejecutarse
+                };
 
-                // Limpia los anteriores
-                lastHighlighted.forEach(name =>
-                    chart.dispatchAction({ type: 'downplay', name })
-                );
-                lastHighlighted = [];
-
-                // Recorre el árbol lógico hacia arriba (sin tocar el layout)
-                let current = params.data.name;
-                while (current) {
-                    chart.dispatchAction({ type: 'highlight', name: current });
-                    lastHighlighted.push(current);
-                    current = parentMap[current];
+                // 🔸 Si el gráfico ya está listo, no esperamos el evento
+                if (chart.isDisposed()) return;
+                if (chart._chartsViews?.length) {
+                    // Si ya hay datos renderizados, dibuja directamente con 1 frame de retardo
+                    requestAnimationFrame(() => drawParentLines(tree, series.getData(), node));
+                } else {
+                    // Si todavía está renderizando, espera al evento
+                    chart.on('finished', drawOnce);
                 }
             });
+
+
+
 
             // 🔹 Al salir del nodo → limpia los resaltados
             chart.on('mouseout', () => {
@@ -192,22 +251,27 @@ window.TreeView = window.TreeView || (() => {
                 overlayGroups = [];
             }
 
-            // 🔹 Dibuja una línea tenue entre dos puntos
-            function drawConnectionLine(p1, p2) {
+
+            // 🔹 Dibuja una línea coloreada según el origen del nodo
+            function drawConnectionLine(p1, p2, node) {
+                const color = colorForOrigin(node);
+
                 const line = new echarts.graphic.Line({
                     shape: { x1: p1.x, y1: p1.y, x2: p2.x, y2: p2.y },
                     style: {
-                        stroke: '#00ffff',
-                        lineWidth: 1.2,
-                        opacity: 0.35,
-                        shadowBlur: 6,
-                        shadowColor: '#00ffff'
+                        stroke: color,
+                        lineWidth: 1.8,
+                        opacity: 0.45,
+                        shadowBlur: 8,
+                        shadowColor: color
                     },
                     z: 1000
                 });
+
                 zr.add(line);
                 overlayGroups.push(line);
             }
+
 
             // 🔹 Dibuja un punto brillante
             function drawGlowPoint(p) {
@@ -225,60 +289,99 @@ window.TreeView = window.TreeView || (() => {
                 overlayGroups.push(dot);
             }
 
-            // === 🩵 Función auxiliar para dibujar desde un nodo hacia sus padres ===
+            // === 🩵 Función auxiliar para dibujar desde un nodo hacia sus padres (con color del padre) ===
             function drawParentLines(tree, data, node) {
-                if (!tree || !data || !node) return;
-                clearOverlay();
-
-                const zr = chart.getZr();
-
-                try {
-                    // 🔸 Función auxiliar para obtener coordenadas globales seguras
-                    function getNodePosition(n) {
-                        if (!n) return null;
-                        const el = data.getItemGraphicEl(n.dataIndex);
-                        if (el) {
-                            // Buscar el círculo dentro del grupo
-                            let circle = null;
-                            el.traverse(child => {
-                                if (child.type === 'circle') circle = child;
-                            });
-                            if (circle && circle.shape) {
-                                // Usar su transformación completa (funciona en canvas)
-                                const m = circle.transform || [1, 0, 0, 1, 0, 0];
-                                const x = m[0] * circle.shape.cx + m[2] * circle.shape.cy + m[4];
-                                const y = m[1] * circle.shape.cx + m[3] * circle.shape.cy + m[5];
-                                return { x, y };
-                            }
-                        }
-
-                        // 🔹 Si no hay elemento renderizado, usar fallback de layout
-                        const layout = n.getLayout?.();
-                        if (layout) {
-                            const pixel = chart.convertToPixel({ seriesIndex: 0 }, layout);
-                            if (pixel) return { x: pixel[0], y: pixel[1] };
-                        }
-
-                        return null;
-                    }
-
-                    let current = node;
-                    while (current && current.parent) {
-                        const pos = getNodePosition(current);
-                        const parentPos = getNodePosition(current.parent);
-                        if (pos && parentPos) {
-                            drawConnectionLine(pos, parentPos);
-                            drawGlowPoint(parentPos);
-                        }
-                        current = current.parent;
-                    }
-                } catch (err) {
-                    console.warn('⚠️ Error al trazar líneas ascendentes:', err);
+                if (!tree || !data || !node) {
+                    console.warn('[TreeView] drawParentLines: parámetros inválidos', { tree: !!tree, data: !!data, node });
+                    return;
                 }
 
-                zr.refresh(); // 🔸 Forzar render inmediato
-            }
+                console.group('[TreeView] drawParentLines');
+                console.log('Nodo inicial:', {
+                    name: node?.data?.name || node?.name,
+                    id: node?.data?.id || node?.id,
+                    source: node?.data?.source || node?.data?.info || node?.source || node?.info || '(sin source)'
+                });
 
+                clearOverlay();
+
+                // === Función para obtener color según origen ===
+                function colorForOrigin(n) {
+                    const src = (n?.data?.source || n?.data?.info || n?.source || n?.info || '').toLowerCase();
+                    if (src.includes('mim')) return '#00e68a';
+                    if (src.includes('cyberdem') || src.includes('cdem')) return '#00baff';
+                    return '#ff9f1c';
+                }
+
+                // === Calcula posición (x, y) del nodo en píxeles ===
+                function getNodePos(n) {
+                    if (!n) return null;
+                    try {
+                        const layout = n.getLayout?.();
+                        if (!layout || !Array.isArray(layout)) {
+                            console.warn('⚠️ getNodePos: layout no disponible aún para', n.data?.name);
+                            return null;
+                        }
+
+                        const pixel = chart.convertToPixel({ seriesIndex: 0 }, layout);
+                        if (!pixel || pixel.length < 2 || isNaN(pixel[0]) || isNaN(pixel[1])) {
+                            console.warn('⚠️ getNodePos: convertToPixel devolvió valor inválido', pixel, 'para', n.data?.name);
+                            return null;
+                        }
+
+                        return { x: pixel[0], y: pixel[1] };
+                    } catch (err) {
+                        console.error('❌ getNodePos error en', n.data?.name, err);
+                        return null;
+                    }
+                }
+
+
+                // === Recorre hacia arriba y dibuja líneas ===
+                let current = node;
+                let count = 0;
+
+                while (current && current.parentNode) {
+                    const parent = current.parentNode;
+                    const p1 = getNodePos(current);
+                    const p2 = getNodePos(parent);
+                    if (!p1 || !p2) break;
+
+                    const parentColor = colorForOrigin(parent);
+                    const line = new echarts.graphic.Line({
+                        shape: { x1: p1.x, y1: p1.y, x2: p2.x, y2: p2.y },
+                        style: {
+                            stroke: parentColor,
+                            lineWidth: 2,
+                            opacity: 0.65,
+                            shadowBlur: 10,
+                            shadowColor: parentColor
+                        },
+                        z: 1000
+                    });
+
+                    const dot = new echarts.graphic.Circle({
+                        shape: { cx: p1.x, cy: p1.y, r: 3 },
+                        style: {
+                            fill: parentColor,
+                            opacity: 0.8,
+                            shadowBlur: 8,
+                            shadowColor: parentColor
+                        },
+                        z: 1001
+                    });
+
+                    chart.getZr().add(line);
+                    chart.getZr().add(dot);
+                    overlayGroups.push(line, dot);
+                    count++;
+
+                    current = parent;
+                }
+
+                console.log(`total segmentos dibujados: ${count} overlayGroups: ${overlayGroups.length}`);
+                console.groupEnd();
+            }
 
 
 
