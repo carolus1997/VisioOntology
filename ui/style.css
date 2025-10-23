@@ -196,7 +196,7 @@ body {
 .reset-tree-btn {
   position: absolute;
   top: 12px;
-  right: 14px;
+  left: 14px;
   padding: 5px 12px;
   background: rgba(30,30,30,0.8);
   border: 1px solid #333;
@@ -360,4 +360,100 @@ h2 {
   color: #4aa8ff;
   font-weight: bold;
   padding-left: 6px;
+}
+
+
+/* =============================
+   🔹 Botones pantalla completa
+============================= */
+
+
+.fullscreen-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(20, 20, 20, 0.8);
+  border: 1px solid #333;
+  color: #0ff;
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 12px;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.25s ease;
+}
+.fullscreen-btn:hover {
+  background: #00ffff;
+  color: #000;
+  box-shadow: 0 0 8px #00ffff88;
+}
+
+.fullscreen-active {
+  position: fixed !important;
+  inset: 0;
+  z-index: 9999 !important;
+  background: #000 !important;
+}
+
+
+/* =============================
+   ✳️ Efecto de pantalla completa (fade + zoom)
+============================= */
+
+.fullscreen-active {
+  position: fixed !important;
+  inset: 0;
+  z-index: 9999 !important;
+  background: #000 !important;
+  animation: fullscreenIn 0.35s ease forwards;
+}
+
+.fullscreen-active.closing {
+  animation: fullscreenOut 0.35s ease forwards;
+}
+
+/* Botón */
+.fullscreen-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(20, 20, 20, 0.8);
+  border: 1px solid #333;
+  color: #0ff;
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 12px;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.25s ease;
+  opacity: 0.85;
+}
+.fullscreen-btn:hover {
+  background: #00ffff;
+  color: #000;
+  box-shadow: 0 0 8px #00ffff88;
+  opacity: 1;
+}
+
+/* Animaciones */
+@keyframes fullscreenIn {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fullscreenOut {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
 }

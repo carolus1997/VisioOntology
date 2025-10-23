@@ -186,12 +186,26 @@ function buildHierarchy() {
     }
 
     function buildTree(node, visited = new Set()) {
-        if (visited.has(node)) return { name: node };
+        if (!node || visited.has(node)) return { name: node + " (loop)" };
         visited.add(node);
-        const children = subclasses.get(node) || [];
+
+        // 🧩 Obtener hijos seguros
+        const children = (subclasses.get(node) || []).filter(c => c !== node);
         children.sort();
-        return { name: node, children: children.map(c => buildTree(c, visited)) };
+
+        // ⚠️ Log de detección de ciclos directos
+        if (children.includes(node)) {
+            console.warn(`⚠️ Ciclo directo detectado en ${node}`);
+        }
+
+        // 🌳 Construcción recursiva
+        return {
+            name: node,
+            children: children.map(c => buildTree(c, visited))
+        };
     }
+
+
 
     const forest = roots.map(r => buildTree(r));
     fs.mkdirSync("./data", { recursive: true });

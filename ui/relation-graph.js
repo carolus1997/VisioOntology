@@ -29,11 +29,19 @@ window.RelationGraph = (() => {
   function colorForCategory(cat) {
     switch (cat) {
       case 'Capability': return '#4aa8ff';
-      case 'Category':   return '#24d28a';
-      case 'Component':  return '#ffa62b';
-      case 'Source':     return '#a78bfa';
-      default:           return '#999';
+      case 'Category': return '#24d28a';
+      case 'Component': return '#ffa62b';
+      case 'Source': return '#a78bfa';
+      default: return '#999';
     }
+  }
+
+  // === Añadir debajo de colorForCategory ===
+  function colorForOrigin(n) {
+    const src = (n.source || n.info || '').toLowerCase();
+    if (src.includes('mim')) return '#00e68a';        // Verde MIM
+    if (src.includes('cyberdem') || src.includes('cdem')) return '#00baff'; // Azul CDEM
+    return '#ff9f1c';                                // Naranja propio
   }
 
   function buildIndexes(nodes, edges) {
@@ -46,8 +54,11 @@ window.RelationGraph = (() => {
         id,
         name: n.label || id.replace(/^CAT_/, ''),
         category: n.categoryName || 'Desconocido',
-        itemStyle: { color: colorForCategory(n.categoryName) },
+        source: n.source || '',  // ✅ añadimos
+        info: n.info || '',      // ✅ añadimos
+        itemStyle: { color: colorForOrigin(n) },
       };
+
       nodeById.set(id, node);
       neighborsMap.set(id, new Set());
     }
@@ -123,25 +134,42 @@ window.RelationGraph = (() => {
         },
         itemStyle: isCenter
           ? {
-              color: base.itemStyle.color,
-              shadowBlur: 20,
-              shadowColor: base.itemStyle.color,
-            }
+            color: base.itemStyle.color,
+            shadowBlur: 20,
+            shadowColor: base.itemStyle.color,
+          }
           : base.itemStyle,
       });
     }
 
     for (const e of visibleEdges.values()) {
-      let color = '#b5b5b5';
-      if (e.source === centerId) color = '#00ffff';
-      else if (e.target === centerId) color = '#ff7af5';
+      const sourceNode = nodeById.get(e.source);
+      const targetNode = nodeById.get(e.target);
+      const sourceColor = colorForOrigin(sourceNode || {});
+      const targetColor = colorForOrigin(targetNode || {});
+
+      // 🎨 Opción 1 — color del origen del nodo fuente
+      let color = sourceColor;
+
+      // 🎨 Opción 2 (comentada): degradado entre source y target
+      // let color = new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+      //   { offset: 0, color: sourceColor },
+      //   { offset: 1, color: targetColor }
+      // ]);
 
       links.push({
         source: e.source,
         target: e.target,
-        lineStyle: { color, width: 1, opacity: 0.8 },
+        lineStyle: {
+          color,
+          width: 1.3,
+          opacity: 0.85,
+          shadowBlur: 6,
+          shadowColor: color
+        },
       });
     }
+
 
     _chart.setOption({
       backgroundColor: '#000',
@@ -199,7 +227,7 @@ window.RelationGraph = (() => {
         render(id);
       });
 
-      
+
 
       const seedId = 'CAT_Action';
       if (nodeById.has(seedId)) {

@@ -33,16 +33,19 @@
     try {
       console.log("🟢 Ejecutando TreeView.init manualmente");
       await TreeView.init("tree-chart", PATHS.hierarchy);
+      addFullscreenButton("tree-chart"); // ✅ AÑADE ESTA LÍNEA
       console.log("🌲 TreeView renderizado correctamente");
     } catch (err) {
       console.error("❌ No se pudo inicializar TreeView:", err);
     }
   }
 
+
   // === RELATION GRAPH (si existe) ===
   if (window.RelationGraph && typeof RelationGraph.init === "function") {
     try {
       await RelationGraph.init("relation-graph", PATHS.ontology);
+      addFullscreenButton("relation-graph"); // ✅ AÑADE ESTA LÍNEA
       console.log("🔗 RelationGraph renderizado correctamente");
     } catch (err) {
       console.error("[RelationGraph] ❌ Error al cargar la ontología:", err);
@@ -50,4 +53,46 @@
   }
 
   console.log("🟢 Aplicación inicializada completamente");
+
 })();
+// ======================================================
+// 🔳 Botón genérico de Pantalla Completa para contenedores
+// ======================================================
+function addFullscreenButton(containerId) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+
+  if (container.querySelector('.fullscreen-btn')) return;
+
+  const btn = document.createElement('button');
+  btn.className = 'fullscreen-btn';
+  btn.textContent = '⛶';
+  btn.title = 'Pantalla completa';
+  container.style.position = 'relative';
+  container.appendChild(btn);
+
+  btn.addEventListener('click', () => {
+    const isActive = container.classList.contains('fullscreen-active');
+
+    if (!isActive) {
+      container.classList.add('fullscreen-active');
+      btn.textContent = '✕';
+      btn.title = 'Salir de pantalla completa';
+    } else {
+      // 🔹 reproducir animación inversa antes de salir
+      container.classList.add('closing');
+      btn.textContent = '⛶';
+      btn.title = 'Pantalla completa';
+      setTimeout(() => {
+        container.classList.remove('fullscreen-active', 'closing');
+        const chart = echarts.getInstanceByDom(container);
+        if (chart) chart.resize();
+      }, 300);
+    }
+
+    // 🔸 ajusta el tamaño del gráfico
+    const chart = echarts.getInstanceByDom(container);
+    if (chart) chart.resize();
+  });
+
+}
