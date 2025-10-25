@@ -1,0 +1,2890 @@
+{
+  "name": "CYBERDEM Ontology",
+  "kind": "root",
+  "source": "cyberdem",
+  "children": [
+    {
+      "id": "CAT_source",
+      "name": "source",
+      "kind": "category",
+      "source": "CyberDEM (SISO-REF-072-2024)",
+      "children": [
+        {
+          "id": "CAT_CyberEvent",
+          "name": "Cyber event",
+          "kind": "category",
+          "source": "CyberDEM (SISO-REF-072-2024)",
+          "description": "represent non-persistent cyber actions and effects as opposed to persistent cyber objects.",
+          "label": "Cyber event",
+          "children": [
+            {
+              "id": "CAT_CyberAcknowledge",
+              "name": "Cyber acknowledge",
+              "kind": "category",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Cyber Acknowledge represents a response to a Cyber Event that has requested an acknowledgement.",
+              "label": "Cyber acknowledge",
+              "children": []
+            },
+            {
+              "id": "CAT_CyberAction",
+              "name": "Cyber action",
+              "kind": "category",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "A Cyber Action is the fact or process of doing something, in or through cyberspace, typically to achieve an aim. [Lexico, adapted] Cyber Action is an abstract class intended as an organizational construct; specific effects are instantiated as subclasses.",
+              "label": "Cyber action",
+              "children": [
+                {
+                  "id": "CAT_CyberAdmin",
+                  "name": "Cyber admin",
+                  "kind": "category",
+                  "source": "CyberDEM (SISO-REF-072-2024)",
+                  "description": "Cyber Admin are actions that are administrative in nature and performed by authorized actors.",
+                  "label": "Cyber admin",
+                  "children": []
+                },
+                {
+                  "id": "CAT_CyberAttack",
+                  "name": "Cyber attack",
+                  "kind": "category",
+                  "source": "CyberDEM (SISO-REF-072-2024)",
+                  "description": "Techniques represent how an adversary achieves a tactical goal by performing an action. Sub-techniques are a more specific description of the adversarial behavior used to achieve a goal. They describe behavior at a lower level than a technique. Techniques are identified by “T####” and sub-techniques are indicated by the “.###” notation. [ATT&CK v13]",
+                  "label": "Cyber attack",
+                  "children": [
+                    {
+                      "id": "CAT_DataExfiltration",
+                      "name": "Data exfiltration",
+                      "kind": "category",
+                      "source": "CyberDEM (SISO-REF-072-2024)",
+                      "description": "Data Exfiltration is the unauthorized copying, transfer or retrieval of data from a computer or server. Data exfiltration is a malicious activity performed through various different techniques, typically by cybercriminals over the Internet or other network. [Techopedia] Data Exfiltration is an abstract class intended as an organizational construct.\nCyberEvent.Target identifies the data being exfiltrated. CyberEvent.ActorID identifies the actor performing the exfiltration.",
+                      "label": "Data exfiltration",
+                      "children": []
+                    },
+                    {
+                      "id": "CAT_ManipulationAttack",
+                      "name": "Manipulation attack",
+                      "kind": "category",
+                      "source": "CyberDEM (SISO-REF-072-2024)",
+                      "description": "A Manipulation Attack controls or changes information, information systems, and/or networks to create physical denial effects, using deception, decoying, conditioning, spoofing, falsification, and other similar techniques. [JP3-12] Manipulation Attack is an abstract class intended as an organizational construct.",
+                      "label": "Manipulation attack",
+                      "children": []
+                    },
+                    {
+                      "id": "CAT_PhishingAttack",
+                      "name": "Phishing attack",
+                      "kind": "category",
+                      "source": "CyberDEM (SISO-REF-072-2024)",
+                      "description": "A Phishing Attack is the fraudulent practice of sending messages purporting to be from reputable sources in order to induce individuals to reveal sensitive information or unknowingly initiate another attack.",
+                      "label": "Phishing attack",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "CAT_CyberDefend",
+                  "name": "Cyber defend",
+                  "kind": "category",
+                  "source": "CyberDEM (SISO-REF-072-2024)",
+                  "description": "Cyber Defend is a cyberspace action taken within protected cyberspace to defeat specific threats that have breached or are threatening to breach the cyberspace security measures and include actions to detect, characterize, counter, and mitigate threats, including malware or the unauthorized activities of users, and to restore the system to a secure configuration. [JP3-12]\nMitigations represent security concepts and classes of technologies that can be used to prevent a technique or sub-technique from being successfully executed. Mitigations are identified by “M####” notation. [ATT&CK v13]",
+                  "label": "Cyber defend",
+                  "children": []
+                },
+                {
+                  "id": "CAT_CyberRecon",
+                  "name": "Cyber recon",
+                  "kind": "category",
+                  "source": "CyberDEM (SISO-REF-072-2024)",
+                  "description": "The detect tactic is used to identify adversary access to or unauthorized activity on computer networks. Detect techniques format D3-xxxxx, where “xxx” are the first letters in the technique’s name. [D3FEND]",
+                  "label": "Cyber recon",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "CAT_CyberEffect",
+              "name": "Cyber effect",
+              "kind": "category",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "A Cyber Effect is a change, in or through cyberspace, which is a result or consequence of an action or other cause. [Lexico, adapted] Cyber Effect is an abstract class intended as an organizational construct; specific effects are instantiated as subclasses. Cyber Effect is further decomposed into deny (degrade, destroy, and disrupt) and manipulate consistent with US Joint Publication 3-12 [JP3-12] and detect.",
+              "label": "Cyber effect",
+              "children": [
+                {
+                  "id": "CAT_Deny",
+                  "name": "Deny",
+                  "kind": "category",
+                  "source": "CyberDEM (SISO-REF-072-2024)",
+                  "description": "Deny represents preventing access to, operation of, or availability of a target function by a specified level for a specified time, by degrade, disrupt, or destroy. Deny is an abstract class intended as an organizational construct; specific effects are instantiated as subclasses.",
+                  "label": "Deny",
+                  "children": [
+                    {
+                      "id": "CAT_Degrade",
+                      "name": "Degrade",
+                      "kind": "category",
+                      "source": "CyberDEM (SISO-REF-072-2024)",
+                      "description": "Degrade represets denying access to, or operation of, a target to a level represented as a percentage of capacity. [JP3-12]",
+                      "label": "Degrade",
+                      "children": [
+                        {
+                          "id": "CAT_CPULoadEffect",
+                          "name": "CPU load effect",
+                          "kind": "category",
+                          "source": "CyberDEM (SISO-REF-072-2024)",
+                          "description": "CPU Load Effect is an abstract class intended as an organizational construct.",
+                          "label": "CPU load effect",
+                          "children": []
+                        },
+                        {
+                          "id": "CAT_DelayEffect",
+                          "name": "Delay effect",
+                          "kind": "category",
+                          "source": "CyberDEM (SISO-REF-072-2024)",
+                          "description": "Delay Effect represents the increased time for data to travel between two points.",
+                          "label": "Delay effect",
+                          "children": []
+                        },
+                        {
+                          "id": "CAT_DropEffect",
+                          "name": "Drop effect",
+                          "kind": "category",
+                          "source": "CyberDEM (SISO-REF-072-2024)",
+                          "description": "Drop Effect is an abstract class intended as an organizational construct.",
+                          "label": "Drop effect",
+                          "children": []
+                        },
+                        {
+                          "id": "CAT_HardwareDegradeEffect",
+                          "name": "Hardware degrade effect",
+                          "kind": "category",
+                          "source": "CyberDEM (SISO-REF-072-2024)",
+                          "description": "Hardware Degrade Effect represents the degradation but not destruction of hardware.",
+                          "label": "Hardware degrade effect",
+                          "children": []
+                        },
+                        {
+                          "id": "CAT_JitterEffect",
+                          "name": "Jitter effect",
+                          "kind": "category",
+                          "source": "CyberDEM (SISO-REF-072-2024)",
+                          "description": "Jitter Effect represents the variance in time delay in milliseconds (ms) between data packets over a network; a disruption in the normal sequence of sending data packets.",
+                          "label": "Jitter effect",
+                          "children": []
+                        },
+                        {
+                          "id": "CAT_LoadRateEffect",
+                          "name": "Load rate effect",
+                          "kind": "category",
+                          "source": "CyberDEM (SISO-REF-072-2024)",
+                          "description": "Load Rate Effect represents the impact on data upload or download rate.",
+                          "label": "Load rate effect",
+                          "children": []
+                        },
+                        {
+                          "id": "CAT_MemoryUseEffect",
+                          "name": "Memory use effect",
+                          "kind": "category",
+                          "source": "CyberDEM (SISO-REF-072-2024)",
+                          "description": "Memory Use Effect is an abstract class intended as an organizational construct.",
+                          "label": "Memory use effect",
+                          "children": []
+                        },
+                        {
+                          "id": "CAT_OtherDegradeEffect",
+                          "name": "Other degrade effect",
+                          "kind": "category",
+                          "source": "CyberDEM (SISO-REF-072-2024)",
+                          "description": "Other Degrade Effect is an abstract class intended as an organizational construct for representing a generic degradation effect.",
+                          "label": "Other degrade effect",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "CAT_Destroy",
+                      "name": "Destroy",
+                      "kind": "category",
+                      "source": "CyberDEM (SISO-REF-072-2024)",
+                      "description": "Destroy represents completely and irreparably denying access to, or operation of, a target. [JP3-12] Destroy is an abstract class intended as an organizational construct; specific effects are instantiated as subclasses.",
+                      "label": "Destroy",
+                      "children": [
+                        {
+                          "id": "CAT_HardwareDamageEffect",
+                          "name": "Hardware damage effect",
+                          "kind": "category",
+                          "source": "CyberDEM (SISO-REF-072-2024)",
+                          "description": "Hardware Damage Effect represents physical damage to a device.",
+                          "label": "Hardware damage effect",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "CAT_Disrupt",
+                      "name": "Disrupt",
+                      "kind": "category",
+                      "source": "CyberDEM (SISO-REF-072-2024)",
+                      "description": "Disrupt represents completely but temporarily denying access to, or operation of, a target for a period of time. [JP3-12] Disrupt is an abstract class intended as an organizational construct; specific effects are instantiated as subclasses.",
+                      "label": "Disrupt",
+                      "children": [
+                        {
+                          "id": "CAT_BlockTrafficEffect",
+                          "name": "Block traffic effect",
+                          "kind": "category",
+                          "source": "CyberDEM (SISO-REF-072-2024)",
+                          "description": "Block Traffic Effect represents completely blocking all traffic over a communication channel. Block Traffic Effect is an abstract class intended as an organizational construct.",
+                          "label": "Block traffic effect",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "CAT_Detect",
+                  "name": "Detect",
+                  "kind": "category",
+                  "source": "CyberDEM (SISO-REF-072-2024)",
+                  "description": "Detect represents discovering or discerning the existence, presence, or fact of an intrusion into information systems. [ATT&CK v13]",
+                  "label": "Detect",
+                  "children": []
+                },
+                {
+                  "id": "CAT_Manipulate",
+                  "name": "Manipulate",
+                  "kind": "category",
+                  "source": "CyberDEM (SISO-REF-072-2024)",
+                  "description": "Manipulate represents the effect of controlling or changing information, information systems, and/or networks to create physical denial effects, using deception, decoying, conditioning, spoofing, falsification, and other similar techniques. [JP3-12] Manipulate is an abstract class intended as an organizational construct.",
+                  "label": "Manipulate",
+                  "children": [
+                    {
+                      "id": "CAT_ManipulationEffect",
+                      "name": "Manipulation effect",
+                      "kind": "category",
+                      "source": "CyberDEM (SISO-REF-072-2024)",
+                      "description": "A Manipulation Effect describes the type, effected information/system/network, and/or extent (as a percentage) of the manipulation attack.",
+                      "label": "Manipulation effect",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "CAT_CyberOrder",
+              "name": "Cyber order",
+              "kind": "category",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Cyber Order captures cyberspace related command and control orders/directives. Cyber Order is an abstract class intended as an organizational construct. The commander will need a persona to be represented in the Actor ID. If the order is directed at live subordinates, they will need to have personas to be the targets of the order. The content of the orders is represented in the Target Modifiers.",
+              "label": "Cyber order",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CAT_KeyValuePair",
+      "name": "KeyValuePair",
+      "kind": "category",
+      "source": "CyberDEM (SISO-REF-072-2024)",
+      "description": "Key Value Pairs are for specifying additional criteria for targets and Detect Acquired Information.",
+      "children": []
+    },
+    {
+      "id": "CAT_TimeStruct",
+      "name": "TimeStruct",
+      "kind": "category",
+      "source": "CyberDEM (SISO-REF-072-2024)",
+      "description": "Time Struct is a placeholder for simulation time specified in a federation-specific format.",
+      "children": []
+    },
+    {
+      "id": "CAT_MitreID",
+      "name": "MitreID",
+      "kind": "category",
+      "source": "CyberDEM (SISO-REF-072-2024)",
+      "description": "A (String) ID from the MITRE ATT&CK or D3FEND matrix. Sub-technique IDs are formatted as T####.###. Mitigation IDs are formatted as M####. Detection IDs are formatted as D3-xxxxx.",
+      "children": []
+    },
+    {
+      "id": "CAT_NetworkInterfaceStruct",
+      "name": "NetworkInterfaceStruct",
+      "kind": "category",
+      "source": "CyberDEM (SISO-REF-072-2024)",
+      "description": "Network Interface Struct represents a network interface, hardware and/or software, that enables a device to connect to a network link. A network interface can exist with or without a link, but not without a device.",
+      "children": []
+    },
+    {
+      "id": "CAT_CyberObject",
+      "name": "Cyber object",
+      "kind": "category",
+      "source": "CyberDEM (SISO-REF-072-2024)",
+      "description": "Cyber objects will provide additional information for simulation entities and will be sent at heartbeat intervals similar to Entity State PDUs to indicate persistence.",
+      "label": "Cyber object",
+      "children": [
+        {
+          "id": "CAT_Application",
+          "name": "Application",
+          "kind": "category",
+          "source": "CyberDEM (SISO-REF-072-2024)",
+          "description": "Application represents a specific instance of a software program running on a device. Running processes are considered to be members of this class. At rest applications are considered to be members of the Data class with Data Type Code.",
+          "label": "Application",
+          "children": [
+            {
+              "id": "CAT_OperatingSystem",
+              "name": "Operating system",
+              "kind": "category",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Operating System represents the software that supports a computer's basic functions, such as scheduling tasks, executing applications, and controlling peripherals.",
+              "label": "Operating system",
+              "children": []
+            },
+            {
+              "id": "CAT_Service",
+              "name": "Service",
+              "kind": "category",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Service represents an application that provides a service to network clients.",
+              "label": "Service",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "CAT_Data",
+          "name": "Data",
+          "kind": "category",
+          "source": "CyberDEM (SISO-REF-072-2024)",
+          "description": "Data represents information encapsulated in an instance or collection of file(s), message(s), or record(s) in a database. Data can represent a specific information object or a kind of information, e.g. a specific tactical message or messages that contain SPOTREP information. CyberObject.Name is the filename, subject, information kind, etc. At rest applications are considered to be members of this class with Data Type Code. Running processes are considered to be members of the Application class.",
+          "label": "Data",
+          "children": [
+            {
+              "id": "CAT_CommunicationData",
+              "name": "Communication data",
+              "kind": "category",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Communications Data represents data on a communications channel/stream.",
+              "label": "Communication data",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "CAT_Device",
+          "name": "Device",
+          "kind": "category",
+          "source": "CyberDEM (SISO-REF-072-2024)",
+          "description": "Device represents an electronic device capable of operating in cyberspace.",
+          "label": "Device",
+          "children": []
+        },
+        {
+          "id": "CAT_Network",
+          "name": "Network",
+          "kind": "category",
+          "source": "CyberDEM (SISO-REF-072-2024)",
+          "description": "Network represents a data network including LANs, WANs, tactical radio data networks, cellular data networks, etc.; networks can be composed of other networks, e.g. a WAN is a collection of LANs. CyberObject.Name is the domain name or subnet address range.",
+          "label": "Network",
+          "children": []
+        },
+        {
+          "id": "CAT_NetworkLink",
+          "name": "Network link",
+          "kind": "category",
+          "source": "CyberDEM (SISO-REF-072-2024)",
+          "description": "Network Link represents a physical or logical data link or bus between two or more devices.",
+          "label": "Network link",
+          "children": [
+            {
+              "id": "CAT_LogicalNetworkLink",
+              "name": "Logical network link",
+              "kind": "category",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Logical Network Link represents a logical data link (or bus) between two or more devices. Logical Network Link is an abstract class intended as an organizational construct.",
+              "label": "Logical network link",
+              "children": []
+            },
+            {
+              "id": "CAT_PhysicalNetworkLink",
+              "name": "Physical network link",
+              "kind": "category",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Physical Network Link represents physical data link (or bus) between two or more devices.",
+              "label": "Physical network link",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "CAT_Persona",
+          "name": "Persona",
+          "kind": "category",
+          "source": "CyberDEM (SISO-REF-072-2024)",
+          "description": "Persona represents a user or profile for a person within cyberspace. CyberObject.Name is the username, email address, etc. Persona is currently a placeholder and organizational construct for identifying personae. It has no attributes.",
+          "label": "Persona",
+          "children": []
+        },
+        {
+          "id": "CAT_System",
+          "name": "System",
+          "kind": "category",
+          "source": "CyberDEM (SISO-REF-072-2024)",
+          "description": "System represents a collection of Cyber Objects, i.e. components and / or subsystems, that work together.",
+          "label": "System",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "CAT_RelatedObjectStruct",
+      "name": "RelatedObjectStruct",
+      "kind": "category",
+      "source": "CyberDEM (SISO-REF-072-2024)",
+      "description": "Related Object Struct describes properties about a relationship between objects.",
+      "children": []
+    },
+    {
+      "id": "CAT_Enumerations",
+      "name": "Enumerations",
+      "kind": "category",
+      "source": "CyberDEM (SISO-REF-072-2024)",
+      "description": "The following are the Cyber DEM enumerations at the time the standard was completed. Updates to the enumeration values may occur between versions of the standard via the Enumerations SWG. See the latest version of SISO-REF-010 for the current values.",
+      "children": [
+        {
+          "id": "CAT_AcknowledgeResponseType",
+          "name": "AcknowledgeResponseType",
+          "kind": "category",
+          "source": "CyberDEM (SISO-REF-072-2024)",
+          "children": [
+            {
+              "id": "CAT_AcknowledgeResponseTypeAbleToComply",
+              "name": "AcknowledgeResponseTypeAbleToComply",
+              "kind": "category",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "children": []
+            },
+            {
+              "id": "CAT_AcknowledgeResponseTypeUnableToComply",
+              "name": "AcknowledgeResponseTypeUnableToComply",
+              "kind": "category",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "CAT_AdminType",
+          "name": "AdminType",
+          "kind": "category",
+          "source": "CyberDEM (SISO-REF-072-2024)",
+          "children": [
+            {
+              "id": "CAT_AdminTypeAdministration",
+              "name": "AdminTypeAdministration",
+              "kind": "category",
+              "enumOrder": "1",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Installation, configuration, troubleshooting, and maintenance of systems, networks, data, or accounts.",
+              "label": "Administration",
+              "children": []
+            },
+            {
+              "id": "CAT_AdminTypeAssessment",
+              "name": "AdminTypeAssessment",
+              "kind": "category",
+              "enumOrder": "2",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Determining deviations from acceptable configurations, enterprise, or local policy; determining level of risk; analysis of operational and technical security controls.",
+              "label": "Assessment",
+              "children": []
+            },
+            {
+              "id": "CAT_AdminTypeCollection",
+              "name": "AdminTypeCollection",
+              "kind": "category",
+              "enumOrder": "3",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Collection of data located on the network or system(s) for the purposes of intelligence, assessment, or planning.",
+              "label": "Collection",
+              "children": []
+            },
+            {
+              "id": "CAT_AdminTypeConfiguration",
+              "name": "AdminTypeConfiguration",
+              "kind": "category",
+              "enumOrder": "4",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Making changes to system, software, security, or network settings.",
+              "label": "Configuration",
+              "children": []
+            },
+            {
+              "id": "CAT_AdminTypeEvaluation",
+              "name": "AdminTypeEvaluation",
+              "kind": "category",
+              "enumOrder": "5",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Analyzing systems for compliance with specifications and requirements.",
+              "label": "Evaluation",
+              "children": []
+            },
+            {
+              "id": "CAT_AdminTypeForensics",
+              "name": "AdminTypeForensics",
+              "kind": "category",
+              "enumOrder": "6",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Collection, processing, preservation, and/or analysis of computer-related evidence in support of network vulnerability mitigation and/or criminal, fraud, counterintelligence, or law enforcement investigations.",
+              "label": "Forensics",
+              "children": []
+            },
+            {
+              "id": "CAT_AdminTypeInvestigation",
+              "name": "AdminTypeInvestigation",
+              "kind": "category",
+              "enumOrder": "7",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Analyze information technology (IT) or cybersecurity events related to systems, networks, and digital evidence.",
+              "label": "Investigation",
+              "children": []
+            },
+            {
+              "id": "CAT_AdminTypeOperations",
+              "name": "AdminTypeOperations",
+              "kind": "category",
+              "enumOrder": "8",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Support, administration, or maintenance necessary to ensure effective and efficient information technology (IT) system performance and security.",
+              "label": "Operations",
+              "children": []
+            },
+            {
+              "id": "CAT_AdminTypeProvisioning",
+              "name": "AdminTypeProvisioning",
+              "kind": "category",
+              "enumOrder": "9",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Procuring or building IT systems.",
+              "label": "Provisioning",
+              "children": []
+            },
+            {
+              "id": "CAT_AdminTypeTesting",
+              "name": "AdminTypeTesting",
+              "kind": "category",
+              "enumOrder": "10",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Execution of all or part of a system to evaluate and verify compliance with specifications or requirements.",
+              "label": "Testing",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "CAT_CyberEventPhaseType",
+          "name": "CyberEventPhaseType",
+          "kind": "category",
+          "source": "CyberDEM (SISO-REF-072-2024)",
+          "children": [
+            {
+              "id": "CAT_CyberEventPhaseTypeCancel",
+              "name": "CyberEventPhaseTypeCancel",
+              "kind": "category",
+              "enumOrder": "6",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "The cyber event is cancelled regardless of it's current phase.",
+              "label": "Cancel",
+              "children": []
+            },
+            {
+              "id": "CAT_CyberEventPhaseTypeContinue",
+              "name": "CyberEventPhaseTypeContinue",
+              "kind": "category",
+              "enumOrder": "3",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Resume paused cyber event.",
+              "label": "Continue",
+              "children": []
+            },
+            {
+              "id": "CAT_CyberEventPhaseTypeContinueWithChanges",
+              "name": "CyberEventPhaseTypeContinueWithChanges",
+              "kind": "category",
+              "enumOrder": "4",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Resume paused cyber event with changes to parameters.",
+              "label": "Continue with changes",
+              "children": []
+            },
+            {
+              "id": "CAT_CyberEventPhaseTypeEnd",
+              "name": "CyberEventPhaseTypeEnd",
+              "kind": "category",
+              "enumOrder": "5",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "End cyber event regardless of remaining duration.",
+              "label": "End",
+              "children": []
+            },
+            {
+              "id": "CAT_CyberEventPhaseTypeStart",
+              "name": "CyberEventPhaseTypeStart",
+              "kind": "category",
+              "enumOrder": "1",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Initiate cyber event.",
+              "label": "Start",
+              "children": []
+            },
+            {
+              "id": "CAT_CyberEventPhaseTypeSuspend",
+              "name": "CyberEventPhaseTypeSuspend",
+              "kind": "category",
+              "enumOrder": "2",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Pause cyber event.",
+              "label": "Suspend",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "CAT_DataLinkProtocolType",
+          "name": "DataLinkProtocolType",
+          "kind": "category",
+          "source": "CyberDEM (SISO-REF-072-2024)",
+          "children": [
+            {
+              "id": "CAT_DataLinkProtocolType1553Bus",
+              "name": "DataLinkProtocolType1553Bus",
+              "kind": "category",
+              "enumOrder": "9",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "MIL-STD-1553 multiplex data bus system.",
+              "label": "1553 bus",
+              "children": []
+            },
+            {
+              "id": "CAT_DataLinkProtocolTypeATM",
+              "name": "DataLinkProtocolTypeATM",
+              "kind": "category",
+              "enumOrder": "3",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Asynchronous transfer mode.",
+              "label": "ATM",
+              "children": []
+            },
+            {
+              "id": "CAT_DataLinkProtocolTypeBluetooth",
+              "name": "DataLinkProtocolTypeBluetooth",
+              "kind": "category",
+              "enumOrder": "8",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "A short-range wireless technology standard that is used for exchanging data between fixed and mobile devices and building personal area networks (PANs).",
+              "label": "Bluetooth",
+              "children": []
+            },
+            {
+              "id": "CAT_DataLinkProtocolTypeEthernet",
+              "name": "DataLinkProtocolTypeEthernet",
+              "kind": "category",
+              "enumOrder": "1",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "IEEE 802.3 networking protocol (based on the Carrier Sense Multiple Access/Collision Detection CSMA/CD protocol), used for connected devices in a wired LAN or WAN.",
+              "label": "Ethernet",
+              "children": []
+            },
+            {
+              "id": "CAT_DataLinkProtocolTypeLLC",
+              "name": "DataLinkProtocolTypeLLC",
+              "kind": "category",
+              "enumOrder": "10",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Logical Link Control.",
+              "label": "LLC",
+              "children": []
+            },
+            {
+              "id": "CAT_DataLinkProtocolTypeLocalTalk",
+              "name": "DataLinkProtocolTypeLocalTalk",
+              "kind": "category",
+              "enumOrder": "4",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "A particular implementation of the physical layer of the AppleTalk networking system from Apple Computer.",
+              "label": "LocalTalk",
+              "children": []
+            },
+            {
+              "id": "CAT_DataLinkProtocolTypePPP",
+              "name": "DataLinkProtocolTypePPP",
+              "kind": "category",
+              "enumOrder": "5",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Point-to-point protocol.",
+              "label": "PPP",
+              "children": []
+            },
+            {
+              "id": "CAT_DataLinkProtocolTypeTokenRing",
+              "name": "DataLinkProtocolTypeTokenRing",
+              "kind": "category",
+              "enumOrder": "6",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "IEEE 802.5, a local area network (LAN) topology that sends data in one direction throughout a specified number of locations by using a token.",
+              "label": "Token Ring",
+              "children": []
+            },
+            {
+              "id": "CAT_DataLinkProtocolTypeVLAN",
+              "name": "DataLinkProtocolTypeVLAN",
+              "kind": "category",
+              "enumOrder": "7",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Virtual local area network.",
+              "label": "VLAN",
+              "children": []
+            },
+            {
+              "id": "CAT_DataLinkProtocolTypeWiFi",
+              "name": "DataLinkProtocolTypeWiFi",
+              "kind": "category",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "A capability allowing computers, smartphones, or other devices to connect to the internet or communicate with one another wirelessly within a particular area.",
+              "label": "WiFi",
+              "children": []
+            },
+            {
+              "id": "CAT_DataLinkProtocolTypeWifi",
+              "name": "DataLinkProtocolTypeWifi",
+              "kind": "category",
+              "enumOrder": "2",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "CAT_DataStatusType",
+          "name": "DataStatusType",
+          "kind": "category",
+          "source": "CyberDEM (SISO-REF-072-2024)",
+          "children": [
+            {
+              "id": "CAT_DDataStatusTypeIntact",
+              "name": "DDataStatusTypeIntact",
+              "kind": "category",
+              "enumOrder": "1",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "children": []
+            },
+            {
+              "id": "CAT_DataStatusTypeCompromised",
+              "name": "DataStatusTypeCompromised",
+              "kind": "category",
+              "enumOrder": "2",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Data has been modified or accessed without authorization.",
+              "label": "Compromised",
+              "children": []
+            },
+            {
+              "id": "CAT_DataStatusTypeCorrupted",
+              "name": "DataStatusTypeCorrupted",
+              "kind": "category",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Data integrity is lost.",
+              "label": "Corrupted",
+              "children": []
+            },
+            {
+              "id": "CAT_DataStatusTypeErased",
+              "name": "DataStatusTypeErased",
+              "kind": "category",
+              "enumOrder": "6",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Data was deleted and is irretrievable.",
+              "label": "Erased",
+              "children": []
+            },
+            {
+              "id": "CAT_DataStatusTypeIntact",
+              "name": "DataStatusTypeIntact",
+              "kind": "category",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Data is complete, not damaged or impaired in any way.",
+              "label": "Intact",
+              "children": []
+            },
+            {
+              "id": "CAT_DataStatusTypeManipulated",
+              "name": "DataStatusTypeManipulated",
+              "kind": "category",
+              "enumOrder": "3",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Data has been altered (by unauthorized means).",
+              "label": "Manipulated",
+              "children": []
+            },
+            {
+              "id": "CAT_DataStatusTypeNonDecriptable",
+              "name": "DataStatusTypeNonDecriptable",
+              "kind": "category",
+              "enumOrder": "4",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "children": []
+            },
+            {
+              "id": "CAT_DataStatusTypeNonDecryptable",
+              "name": "DataStatusTypeNonDecryptable",
+              "kind": "category",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Data is encrypted and not accessible by authorized users.",
+              "label": "Non decryptable",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "CAT_DataType",
+          "name": "DataType",
+          "kind": "category",
+          "source": "CyberDEM (SISO-REF-072-2024)",
+          "children": [
+            {
+              "id": "CAT_DataTypeCode",
+              "name": "DataTypeCode",
+              "kind": "category",
+              "enumOrder": "2",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "File in binary format.",
+              "label": "Code",
+              "children": []
+            },
+            {
+              "id": "CAT_DataTypeCommunications",
+              "name": "DataTypeCommunications",
+              "kind": "category",
+              "enumOrder": "4",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Data in motion through a communications channel.",
+              "label": "Communications",
+              "children": []
+            },
+            {
+              "id": "CAT_DataTypeCredentials",
+              "name": "DataTypeCredentials",
+              "kind": "category",
+              "enumOrder": "3",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "File with authentication data, e.g., PKI keys, hashed passwords.",
+              "label": "Credentials",
+              "children": []
+            },
+            {
+              "id": "CAT_DataTypeFile",
+              "name": "DataTypeFile",
+              "kind": "category",
+              "enumOrder": "1",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "File in human readable format.",
+              "label": "File",
+              "children": []
+            },
+            {
+              "id": "CAT_DataTypeSystemConfiguration",
+              "name": "DataTypeSystemConfiguration",
+              "kind": "category",
+              "enumOrder": "5",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "A system's configuration data (e.g., MS Windows Registry database).",
+              "label": "System configuration",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "CAT_DeviceType",
+          "name": "DeviceType",
+          "kind": "category",
+          "source": "CyberDEM (SISO-REF-072-2024)",
+          "children": [
+            {
+              "id": "CAT_DeviceTypeCommunications",
+              "name": "DeviceTypeCommunications",
+              "kind": "category",
+              "enumOrder": "10",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Device that performs non-computer communications, e.g. radio, telephone, cellular.",
+              "label": "Communications",
+              "children": []
+            },
+            {
+              "id": "CAT_DeviceTypeComputerNode",
+              "name": "DeviceTypeComputerNode",
+              "kind": "category",
+              "enumOrder": "3",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "General purpose computer, e.g. a server or desktop.",
+              "label": "Computer node",
+              "children": []
+            },
+            {
+              "id": "CAT_DeviceTypeController",
+              "name": "DeviceTypeController",
+              "kind": "category",
+              "enumOrder": "5",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Device used to control another device, e.g. a storage device controller.",
+              "label": "Controller",
+              "children": []
+            },
+            {
+              "id": "CAT_DeviceTypeGeneric",
+              "name": "DeviceTypeGeneric",
+              "kind": "category",
+              "enumOrder": "1",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "General device with logic bearing components.",
+              "label": "Generic",
+              "children": []
+            },
+            {
+              "id": "CAT_DeviceTypeHMI",
+              "name": "DeviceTypeHMI",
+              "kind": "category",
+              "enumOrder": "11",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Human machine interface; devices through which the user interacts with a computer system.",
+              "label": "HMI",
+              "children": []
+            },
+            {
+              "id": "CAT_DeviceTypeIoT",
+              "name": "DeviceTypeIoT",
+              "kind": "category",
+              "enumOrder": "13",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Internet of things; device that uses internet protocols for communications, command and control.",
+              "label": "IoT",
+              "children": []
+            },
+            {
+              "id": "CAT_DeviceTypeMonitoring",
+              "name": "DeviceTypeMonitoring",
+              "kind": "category",
+              "enumOrder": "12",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Software that inspects digital actions, e.g. Intrusion Detection Systems (IDS).",
+              "label": "Monitoring",
+              "children": []
+            },
+            {
+              "id": "CAT_DeviceTypeNetworking",
+              "name": "DeviceTypeNetworking",
+              "kind": "category",
+              "enumOrder": "2",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Includes routers, switches, VPN concentrators.",
+              "label": "Networking",
+              "children": []
+            },
+            {
+              "id": "CAT_DeviceTypePortableComputer",
+              "name": "DeviceTypePortableComputer",
+              "kind": "category",
+              "enumOrder": "4",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Computer that is mobile, e.g. a laptop or tablet.",
+              "label": "Portable computer",
+              "children": []
+            },
+            {
+              "id": "CAT_DeviceTypePrinter",
+              "name": "DeviceTypePrinter",
+              "kind": "category",
+              "enumOrder": "8",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Device for producing printed output including paper and 3D materials.",
+              "label": "Printer",
+              "children": []
+            },
+            {
+              "id": "CAT_DeviceTypeScanner",
+              "name": "DeviceTypeScanner",
+              "kind": "category",
+              "enumOrder": "9",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Device for producing a digital representation of a physical item, e.g. printed material, fingerprint, facial recognition, highway toll readers.",
+              "label": "Scanner",
+              "children": []
+            },
+            {
+              "id": "CAT_DeviceTypeSecurity",
+              "name": "DeviceTypeSecurity",
+              "kind": "category",
+              "enumOrder": "14",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Device that provides security functions to the system.",
+              "label": "Security",
+              "children": []
+            },
+            {
+              "id": "CAT_DeviceTypeSensor",
+              "name": "DeviceTypeSensor",
+              "kind": "category",
+              "enumOrder": "7",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Device that reports certain conditions, e.g. environmental, operating status.",
+              "label": "Sensor",
+              "children": []
+            },
+            {
+              "id": "CAT_DeviceTypeStorage",
+              "name": "DeviceTypeStorage",
+              "kind": "category",
+              "enumOrder": "6",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Non-volatile memory device, e.g. thumb drive, solid-state drive, serial advanced technology attachment.",
+              "label": "Storage",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "CAT_EncryptionType",
+          "name": "EncryptionType",
+          "kind": "category",
+          "source": "CyberDEM (SISO-REF-072-2024)",
+          "children": [
+            {
+              "id": "CAT_EncryptionTypeAES",
+              "name": "EncryptionTypeAES",
+              "kind": "category",
+              "enumOrder": "5",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Advanced Encryption Standard.",
+              "label": "AES",
+              "children": []
+            },
+            {
+              "id": "CAT_EncryptionTypeDES",
+              "name": "EncryptionTypeDES",
+              "kind": "category",
+              "enumOrder": "2",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Data Encryption Standard.",
+              "label": "DES",
+              "children": []
+            },
+            {
+              "id": "CAT_EncryptionTypeNotEncrypted",
+              "name": "EncryptionTypeNotEncrypted",
+              "kind": "category",
+              "enumOrder": "1",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "No encryption used.",
+              "label": "Not encrypted",
+              "children": []
+            },
+            {
+              "id": "CAT_EncryptionTypeRSA",
+              "name": "EncryptionTypeRSA",
+              "kind": "category",
+              "enumOrder": "4",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Rivest Shamir Adleman.",
+              "label": "RSA",
+              "children": []
+            },
+            {
+              "id": "CAT_EncryptionTypeTripleDES",
+              "name": "EncryptionTypeTripleDES",
+              "kind": "category",
+              "enumOrder": "3",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Triple DES.",
+              "label": "Triple DES",
+              "children": []
+            },
+            {
+              "id": "CAT_EncryptionTypeTwoFish",
+              "name": "EncryptionTypeTwoFish",
+              "kind": "category",
+              "enumOrder": "6",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "TwoFish encryption.",
+              "label": "TwoFish",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "CAT_HardwareDamageType",
+          "name": "HardwareDamageType",
+          "kind": "category",
+          "source": "CyberDEM (SISO-REF-072-2024)",
+          "children": [
+            {
+              "id": "CAT_HardwareDamageTypeBootLoop",
+              "name": "HardwareDamageTypeBootLoop",
+              "kind": "category",
+              "enumOrder": "1",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Repeated, uninterruptable rebooting.",
+              "label": "Boot loop",
+              "children": []
+            },
+            {
+              "id": "CAT_HardwareDamageTypeHardDriveErased",
+              "name": "HardwareDamageTypeHardDriveErased",
+              "kind": "category",
+              "enumOrder": "3",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Hard drive is not readable, e.g. zeroized or file allocation table erased.",
+              "label": "Hard drive erased",
+              "children": []
+            },
+            {
+              "id": "CAT_HardwareDamageTypePhysicalDestruction",
+              "name": "HardwareDamageTypePhysicalDestruction",
+              "kind": "category",
+              "enumOrder": "2",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Physical damage to hardware, e.g. overheating.",
+              "label": "Physical destruction",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "CAT_HardwareDegradeType",
+          "name": "HardwareDegradeType",
+          "kind": "category",
+          "source": "CyberDEM (SISO-REF-072-2024)",
+          "children": [
+            {
+              "id": "CAT_HardwareDegradeTypeDisplay",
+              "name": "HardwareDegradeTypeDisplay",
+              "kind": "category",
+              "enumOrder": "3",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Display inoperable or unreadable.",
+              "label": "Display",
+              "children": []
+            },
+            {
+              "id": "CAT_HardwareDegradeTypeKernelPanic",
+              "name": "HardwareDegradeTypeKernelPanic",
+              "kind": "category",
+              "enumOrder": "5",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "label": "Kernel panic",
+              "children": []
+            },
+            {
+              "id": "CAT_HardwareDegradeTypeKeyboard",
+              "name": "HardwareDegradeTypeKeyboard",
+              "kind": "category",
+              "enumOrder": "1",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Keyboard inoperable or degraded performance.",
+              "label": "Keyboard",
+              "children": []
+            },
+            {
+              "id": "CAT_HardwareDegradeTypeMouse",
+              "name": "HardwareDegradeTypeMouse",
+              "kind": "category",
+              "enumOrder": "2",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Mouse inoperable or degraded performance.",
+              "label": "Mouse",
+              "children": []
+            },
+            {
+              "id": "CAT_HardwareDegradeTypeRandomText",
+              "name": "HardwareDegradeTypeRandomText",
+              "kind": "category",
+              "enumOrder": "6",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "label": "Random text",
+              "children": []
+            },
+            {
+              "id": "CAT_HardwareDegradeTypeReboot",
+              "name": "HardwareDegradeTypeReboot",
+              "kind": "category",
+              "enumOrder": "7",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "label": "Reboot",
+              "children": []
+            },
+            {
+              "id": "CAT_HardwareDegradeTypeSound",
+              "name": "HardwareDegradeTypeSound",
+              "kind": "category",
+              "enumOrder": "4",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Sound inoperable.",
+              "label": "Sound",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "CAT_LoadRateType",
+          "name": "LoadRateType",
+          "kind": "category",
+          "source": "CyberDEM (SISO-REF-072-2024)",
+          "children": [
+            {
+              "id": "CAT_LoadRateTypeDownload",
+              "name": "LoadRateTypeDownload",
+              "kind": "category",
+              "enumOrder": "2",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Slow download from the target.",
+              "label": "Download",
+              "children": []
+            },
+            {
+              "id": "CAT_LoadRateTypeUpload",
+              "name": "LoadRateTypeUpload",
+              "kind": "category",
+              "enumOrder": "1",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Slow upload toward the target.",
+              "label": "Upload",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "CAT_ManipulationType",
+          "name": "ManipulationType",
+          "kind": "category",
+          "source": "CyberDEM (SISO-REF-072-2024)",
+          "children": [
+            {
+              "id": "CAT_ManipulationTypeDatabase",
+              "name": "ManipulationTypeDatabase",
+              "kind": "category",
+              "enumOrder": "3",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Database records.",
+              "label": "Database",
+              "children": []
+            },
+            {
+              "id": "CAT_ManipulationTypeFile",
+              "name": "ManipulationTypeFile",
+              "kind": "category",
+              "enumOrder": "2",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Files on a drive/system.",
+              "label": "File",
+              "children": []
+            },
+            {
+              "id": "CAT_ManipulationTypePacket",
+              "name": "ManipulationTypePacket",
+              "kind": "category",
+              "enumOrder": "1",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Communications packets.",
+              "label": "Packet",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "CAT_MessageType",
+          "name": "MessageType",
+          "kind": "category",
+          "source": "CyberDEM (SISO-REF-072-2024)",
+          "children": [
+            {
+              "id": "CAT_MessageTypeChat",
+              "name": "MessageTypeChat",
+              "kind": "category",
+              "enumOrder": "2",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Two way non-voice communication through an application hosted on any device.",
+              "label": "Chat",
+              "children": []
+            },
+            {
+              "id": "CAT_MessageTypeEmail",
+              "name": "MessageTypeEmail",
+              "kind": "category",
+              "enumOrder": "1",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Contents of an email.",
+              "label": "Email",
+              "children": []
+            },
+            {
+              "id": "CAT_MessageTypeSocialMedia",
+              "name": "MessageTypeSocialMedia",
+              "kind": "category",
+              "enumOrder": "4",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Data published on a social media platform.",
+              "label": "Social media",
+              "children": []
+            },
+            {
+              "id": "CAT_MessageTypeText",
+              "name": "MessageTypeText",
+              "kind": "category",
+              "enumOrder": "3",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Two way non-voice communication through a cellular device.",
+              "label": "Text",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "CAT_NetworkProtocolType",
+          "name": "NetworkProtocolType",
+          "kind": "category",
+          "source": "CyberDEM (SISO-REF-072-2024)",
+          "children": [
+            {
+              "id": "CAT_NetworkProtocolTypeARP",
+              "name": "NetworkProtocolTypeARP",
+              "kind": "category",
+              "enumOrder": "4",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Address Resolution Protocol.",
+              "label": "ARP",
+              "children": []
+            },
+            {
+              "id": "CAT_NetworkProtocolTypeICMP",
+              "name": "NetworkProtocolTypeICMP",
+              "kind": "category",
+              "enumOrder": "3",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Internet Control Message Protocol.",
+              "label": "ICMP",
+              "children": []
+            },
+            {
+              "id": "CAT_NetworkProtocolTypeIPsec",
+              "name": "NetworkProtocolTypeIPsec",
+              "kind": "category",
+              "enumOrder": "7",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Internet Protocol Security.",
+              "label": "IPsec",
+              "children": []
+            },
+            {
+              "id": "CAT_NetworkProtocolTypeInternetProtocol",
+              "name": "NetworkProtocolTypeInternetProtocol",
+              "kind": "category",
+              "enumOrder": "1",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Internet protocol.",
+              "label": "Internet protocol",
+              "children": []
+            },
+            {
+              "id": "CAT_NetworkProtocolTypeNAT",
+              "name": "NetworkProtocolTypeNAT",
+              "kind": "category",
+              "enumOrder": "2",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Network address translation.",
+              "label": "NAT",
+              "children": []
+            },
+            {
+              "id": "CAT_NetworkProtocolTypeOSPF",
+              "name": "NetworkProtocolTypeOSPF",
+              "kind": "category",
+              "enumOrder": "6",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Open Shortest Path First.",
+              "label": "OSPF",
+              "children": []
+            },
+            {
+              "id": "CAT_NetworkProtocolTypeRIP",
+              "name": "NetworkProtocolTypeRIP",
+              "kind": "category",
+              "enumOrder": "5",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Routing Information Protocol.",
+              "label": "RIP",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "CAT_OperatingSystemType",
+          "name": "OperatingSystemType",
+          "kind": "category",
+          "source": "CyberDEM (SISO-REF-072-2024)",
+          "children": [
+            {
+              "id": "CAT_OperatingSystemTypeAndroid",
+              "name": "OperatingSystemTypeAndroid",
+              "kind": "category",
+              "enumOrder": "6",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Google's mobile phone OS.",
+              "label": "Android",
+              "children": []
+            },
+            {
+              "id": "CAT_OperatingSystemTypeAppleIOS",
+              "name": "OperatingSystemTypeAppleIOS",
+              "kind": "category",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Apple's mobile phone OS.",
+              "label": "Apple iOS",
+              "children": []
+            },
+            {
+              "id": "CAT_OperatingSystemTypeAppleMacOS",
+              "name": "OperatingSystemTypeAppleMacOS",
+              "kind": "category",
+              "enumOrder": "3",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Apple's OS with a windowing UI.",
+              "label": "Apple macOS",
+              "children": []
+            },
+            {
+              "id": "CAT_OperatingSystemTypeCiscoIOS",
+              "name": "OperatingSystemTypeCiscoIOS",
+              "kind": "category",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Cisco's OS for routers and switches.",
+              "label": "Cisco IOS",
+              "children": []
+            },
+            {
+              "id": "CAT_OperatingSystemTypeDECVMS",
+              "name": "OperatingSystemTypeDECVMS",
+              "kind": "category",
+              "enumOrder": "4",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Digital Equipment Corporation Virtual Memory System.",
+              "label": "DEC VMS",
+              "children": []
+            },
+            {
+              "id": "CAT_OperatingSystemTypeFirmware",
+              "name": "OperatingSystemTypeFirmware",
+              "kind": "category",
+              "enumOrder": "9",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Hardware control software.",
+              "label": "Firmware",
+              "children": []
+            },
+            {
+              "id": "CAT_OperatingSystemTypeIBMOS2",
+              "name": "OperatingSystemTypeIBMOS2",
+              "kind": "category",
+              "enumOrder": "5",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "International Business Machines OS/2.",
+              "label": "IBM OS/2",
+              "children": []
+            },
+            {
+              "id": "CAT_OperatingSystemTypeMicrosoftDOS",
+              "name": "OperatingSystemTypeMicrosoftDOS",
+              "kind": "category",
+              "enumOrder": "1",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Microsoft's Disk Operating System.",
+              "label": "Microsoft DOS",
+              "children": []
+            },
+            {
+              "id": "CAT_OperatingSystemTypeMicrosoftWindows",
+              "name": "OperatingSystemTypeMicrosoftWindows",
+              "kind": "category",
+              "enumOrder": "2",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Microsoft's OS with a windowing UI.",
+              "label": "Microsoft Windows",
+              "children": []
+            },
+            {
+              "id": "CAT_OperatingSystemTypeUNIXLinux",
+              "name": "OperatingSystemTypeUNIXLinux",
+              "kind": "category",
+              "enumOrder": "10",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Any *nix operating system.",
+              "label": "UNIX-Linux",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "CAT_PacketManipulationType",
+          "name": "PacketManipulationType",
+          "kind": "category",
+          "source": "CyberDEM (SISO-REF-072-2024)",
+          "children": [
+            {
+              "id": "CAT_PacketManipulationTypeCorruption",
+              "name": "PacketManipulationTypeCorruption",
+              "kind": "category",
+              "enumOrder": "2",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Manipulating data within the packet.",
+              "label": "Corruption",
+              "children": []
+            },
+            {
+              "id": "CAT_PacketManipulationTypeDropped",
+              "name": "PacketManipulationTypeDropped",
+              "kind": "category",
+              "enumOrder": "4",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Preventing packets from reaching the destination.",
+              "label": "Dropped",
+              "children": []
+            },
+            {
+              "id": "CAT_PacketManipulationTypeDuplication",
+              "name": "PacketManipulationTypeDuplication",
+              "kind": "category",
+              "enumOrder": "1",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Sending the same packet again.",
+              "label": "Duplication",
+              "children": []
+            },
+            {
+              "id": "CAT_PacketManipulationTypeReordering",
+              "name": "PacketManipulationTypeReordering",
+              "kind": "category",
+              "enumOrder": "3",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Changing the order of packets.",
+              "label": "Reordering",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "CAT_PhysicalLayerType",
+          "name": "PhysicalLayerType",
+          "kind": "category",
+          "source": "CyberDEM (SISO-REF-072-2024)",
+          "children": [
+            {
+              "id": "CAT_PhysicalLayerTypeWired",
+              "name": "PhysicalLayerTypeWired",
+              "kind": "category",
+              "enumOrder": "1",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Wired, e.g., ethernet.",
+              "label": "Wired",
+              "children": []
+            },
+            {
+              "id": "CAT_PhysicalLayerTypeWireless",
+              "name": "PhysicalLayerTypeWireless",
+              "kind": "category",
+              "enumOrder": "2",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Wireless, e.g., IEEE 802.11.",
+              "label": "Wireless",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "CAT_ReconType",
+          "name": "ReconType",
+          "kind": "category",
+          "source": "CyberDEM (SISO-REF-072-2024)",
+          "children": [
+            {
+              "id": "CAT_ReconTypeARPScan",
+              "name": "ReconTypeARPScan",
+              "kind": "category",
+              "enumOrder": "5",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Address Resolution Protocol scan",
+              "label": "ARP scan",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeAccountDiscovery",
+              "name": "ReconTypeAccountDiscovery",
+              "kind": "category",
+              "enumOrder": "1",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Identify accounts",
+              "label": "Account discovery",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeAdMalware",
+              "name": "ReconTypeAdMalware",
+              "kind": "category",
+              "enumOrder": "2",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Host-based scan",
+              "label": "Ad malware",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeAntivirusTrojan",
+              "name": "ReconTypeAntivirusTrojan",
+              "kind": "category",
+              "enumOrder": "3",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Host-based scan",
+              "label": "Antivirus trojan",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeApplicationWindowDiscovery",
+              "name": "ReconTypeApplicationWindowDiscovery",
+              "kind": "category",
+              "enumOrder": "4",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Identify open application windows",
+              "label": "Application window discovery",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeBannerGrabbing",
+              "name": "ReconTypeBannerGrabbing",
+              "kind": "category",
+              "enumOrder": "6",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Web application scan",
+              "label": "Banner grabbing",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeBounceScan",
+              "name": "ReconTypeBounceScan",
+              "kind": "category",
+              "enumOrder": "7",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Transport layer - TCP scan",
+              "label": "Bounce scan",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeBrowserBookmarkDiscovery",
+              "name": "ReconTypeBrowserBookmarkDiscovery",
+              "kind": "category",
+              "enumOrder": "8",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Identify bookmarks",
+              "label": "Browser bookmark discovery",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeCSRF",
+              "name": "ReconTypeCSRF",
+              "kind": "category",
+              "enumOrder": "13",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Cross site request forgery scan",
+              "label": "CSRF",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeCloudInfrastructureDiscovery",
+              "name": "ReconTypeCloudInfrastructureDiscovery",
+              "kind": "category",
+              "enumOrder": "9",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Identify resources that are available in an IaaS",
+              "label": "Cloud infrastructure discovery",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeCloudServiceDashboard",
+              "name": "ReconTypeCloudServiceDashboard",
+              "kind": "category",
+              "enumOrder": "10",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Identify resources available via compromised credentials",
+              "label": "Cloud service dashboard",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeCloudServiceDiscovery",
+              "name": "ReconTypeCloudServiceDiscovery",
+              "kind": "category",
+              "enumOrder": "11",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Identify cloud services running",
+              "label": "Cloud service discovery",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeCompliance",
+              "name": "ReconTypeCompliance",
+              "kind": "category",
+              "enumOrder": "12",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Host-based scan (PCIDSS, HIPAA, ISO 27001, NIST SP800.53)",
+              "label": "Compliance",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeDBManufactureVersion",
+              "name": "ReconTypeDBManufactureVersion",
+              "kind": "category",
+              "enumOrder": "16",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Database enumeration",
+              "label": "DB manufacture version",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeDNS",
+              "name": "ReconTypeDNS",
+              "kind": "category",
+              "enumOrder": "18",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Identify Domain Name System",
+              "label": "DNS",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeDatabaseInjection",
+              "name": "ReconTypeDatabaseInjection",
+              "kind": "category",
+              "enumOrder": "14",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Database enumeration (Boolean-based blind, time-based blind, error based, union query, stacked query, out-of-band), scans to test for vulnerabilities not actual exploiting",
+              "label": "Database injection",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeDatabaseStructure",
+              "name": "ReconTypeDatabaseStructure",
+              "kind": "category",
+              "enumOrder": "15",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Database enumeration - tables, columns, users, privileges, roles",
+              "label": "Database structure",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeDevice",
+              "name": "ReconTypeDevice",
+              "kind": "category",
+              "enumOrder": "17",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Identify devices",
+              "label": "Device",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeDomain",
+              "name": "ReconTypeDomain",
+              "kind": "category",
+              "enumOrder": "19",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Identify domains",
+              "label": "Domain",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeDomainTrustDiscovery",
+              "name": "ReconTypeDomainTrustDiscovery",
+              "kind": "category",
+              "enumOrder": "20",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Identify domain trust relationships",
+              "label": "Domain trust discovery",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeFINScan",
+              "name": "ReconTypeFINScan",
+              "kind": "category",
+              "enumOrder": "22",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Transport layer - TCP scan",
+              "label": "FIN scan",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeFTP",
+              "name": "ReconTypeFTP",
+              "kind": "category",
+              "enumOrder": "23",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "File transfer protocol scan",
+              "label": "FTP",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeFileAndDirectoryDiscovery",
+              "name": "ReconTypeFileAndDirectoryDiscovery",
+              "kind": "category",
+              "enumOrder": "21",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Identify file and directory structure",
+              "label": "File and directory discovery",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeHTTP",
+              "name": "ReconTypeHTTP",
+              "kind": "category",
+              "enumOrder": "24",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Hyper text transfer protocol scan",
+              "label": "HTTP",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeIGMP",
+              "name": "ReconTypeIGMP",
+              "kind": "category",
+              "enumOrder": "26",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Internet group management protocol scan",
+              "label": "IGMP",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeIP",
+              "name": "ReconTypeIP",
+              "kind": "category",
+              "enumOrder": "28",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Internet Protocol scan",
+              "label": "IP",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeIdleScan",
+              "name": "ReconTypeIdleScan",
+              "kind": "category",
+              "enumOrder": "25",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Transport layer - TCP scan",
+              "label": "Idle scan",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeInputValidation",
+              "name": "ReconTypeInputValidation",
+              "kind": "category",
+              "enumOrder": "27",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Application scan (code injection, fuzzing)",
+              "label": "Input validation",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeLDAPScan",
+              "name": "ReconTypeLDAPScan",
+              "kind": "category",
+              "enumOrder": "29",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Lightweight directory access protocol scan",
+              "label": "LDAP scan",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeNTP",
+              "name": "ReconTypeNTP",
+              "kind": "category",
+              "enumOrder": "35",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Network Time Protocol scan",
+              "label": "NTP",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeNULLScan",
+              "name": "ReconTypeNULLScan",
+              "kind": "category",
+              "enumOrder": "36",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Transport layer - TCP scan",
+              "label": "NULL scan",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeNetBiosScan",
+              "name": "ReconTypeNetBiosScan",
+              "kind": "category",
+              "enumOrder": "30",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Identify NetBios enabled systems",
+              "label": "NetBIOS scan",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeNetworkMap",
+              "name": "ReconTypeNetworkMap",
+              "kind": "category",
+              "enumOrder": "31",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Determine topology",
+              "label": "Network map",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeNetworkServiceScanning",
+              "name": "ReconTypeNetworkServiceScanning",
+              "kind": "category",
+              "enumOrder": "32",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Identify network services running",
+              "label": "Network service scanning",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeNetworkShareDiscovery",
+              "name": "ReconTypeNetworkShareDiscovery",
+              "kind": "category",
+              "enumOrder": "33",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Identify shared folders and drives",
+              "label": "Network share discovery",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeNetworkSniffing",
+              "name": "ReconTypeNetworkSniffing",
+              "kind": "category",
+              "enumOrder": "34",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Capture network traffic for analysis",
+              "label": "Network sniffing",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeOSScan",
+              "name": "ReconTypeOSScan",
+              "kind": "category",
+              "enumOrder": "37",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Identify operating systems",
+              "label": "OS scan",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypePPP",
+              "name": "ReconTypePPP",
+              "kind": "category",
+              "enumOrder": "46",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Point-to-point protocol scan",
+              "label": "PPP",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypePasswordPolicyDiscovery",
+              "name": "ReconTypePasswordPolicyDiscovery",
+              "kind": "category",
+              "enumOrder": "38",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Identify password policy",
+              "label": "Password policy discovery",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypePatchHistory",
+              "name": "ReconTypePatchHistory",
+              "kind": "category",
+              "enumOrder": "39",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Host-based scan",
+              "label": "Patch history",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypePeripheralDeviceDiscovery",
+              "name": "ReconTypePeripheralDeviceDiscovery",
+              "kind": "category",
+              "enumOrder": "40",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Identify devices connected to a computer system",
+              "label": "Peripheral device discovery",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypePermissionGroupsDiscovery",
+              "name": "ReconTypePermissionGroupsDiscovery",
+              "kind": "category",
+              "enumOrder": "41",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Identify group permissions",
+              "label": "Permission groups discovery",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypePing",
+              "name": "ReconTypePing",
+              "kind": "category",
+              "enumOrder": "42",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Single host",
+              "label": "Ping",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypePingScan",
+              "name": "ReconTypePingScan",
+              "kind": "category",
+              "enumOrder": "43",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Multiple host",
+              "label": "Ping scan",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypePortScan",
+              "name": "ReconTypePortScan",
+              "kind": "category",
+              "enumOrder": "44",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Single host, multiple ports",
+              "label": "Port scan",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypePortSweep",
+              "name": "ReconTypePortSweep",
+              "kind": "category",
+              "enumOrder": "45",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Multiple hosts, single port",
+              "label": "Port sweep",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeProcessDiscovery",
+              "name": "ReconTypeProcessDiscovery",
+              "kind": "category",
+              "enumOrder": "47",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Identify processes running on the system",
+              "label": "Process discovery",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeQueryRegistry",
+              "name": "ReconTypeQueryRegistry",
+              "kind": "category",
+              "enumOrder": "48",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Gather registry information",
+              "label": "Query registry",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeRARP",
+              "name": "ReconTypeRARP",
+              "kind": "category",
+              "enumOrder": "49",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Reverse address resolution protocol scan",
+              "label": "RARP",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeRPCScan",
+              "name": "ReconTypeRPCScan",
+              "kind": "category",
+              "enumOrder": "52",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Remote Procedure Call scan",
+              "label": "RPC scan",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeRemoteSystemDiscovery",
+              "name": "ReconTypeRemoteSystemDiscovery",
+              "kind": "category",
+              "enumOrder": "50",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Identify remote systems",
+              "label": "Remote system discovery",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeRootkit",
+              "name": "ReconTypeRootkit",
+              "kind": "category",
+              "enumOrder": "51",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Host-based scan",
+              "label": "Rootkit",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeSLIP",
+              "name": "ReconTypeSLIP",
+              "kind": "category",
+              "enumOrder": "54",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Serial line internet protocol scan",
+              "label": "SLIP",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeSMTP",
+              "name": "ReconTypeSMTP",
+              "kind": "category",
+              "enumOrder": "55",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Simple mail transfer protocol scan",
+              "label": "SMTP",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeSNMPSweep",
+              "name": "ReconTypeSNMPSweep",
+              "kind": "category",
+              "enumOrder": "56",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Simple network management protocol scan",
+              "label": "SNMP sweep",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeSYNScan",
+              "name": "ReconTypeSYNScan",
+              "kind": "category",
+              "enumOrder": "58",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Transport layer - TCP scan",
+              "label": "SYN scan",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeService",
+              "name": "ReconTypeService",
+              "kind": "category",
+              "enumOrder": "53",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Identify active services",
+              "label": "Service",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeSoftwareDiscover",
+              "name": "ReconTypeSoftwareDiscover",
+              "kind": "category",
+              "enumOrder": "57",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Identify installed software",
+              "label": "Software discover",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeSystemInformationDiscovery",
+              "name": "ReconTypeSystemInformationDiscovery",
+              "kind": "category",
+              "enumOrder": "59",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Identify operating system version and patch level",
+              "label": "System information discovery",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeSystemNetworkConfigurationDiscovery",
+              "name": "ReconTypeSystemNetworkConfigurationDiscovery",
+              "kind": "category",
+              "enumOrder": "60",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Identify network configuration",
+              "label": "System network configuration discovery",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeSystemNetworkConnectionsDiscovery",
+              "name": "ReconTypeSystemNetworkConnectionsDiscovery",
+              "kind": "category",
+              "enumOrder": "61",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Identify network connections",
+              "label": "System network connections discovery",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeSystemOwnerUserDiscovery",
+              "name": "ReconTypeSystemOwnerUserDiscovery",
+              "kind": "category",
+              "enumOrder": "62",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Identify primary user / currently logged in user",
+              "label": "System owner user discovery",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeSystemServiceDiscovery",
+              "name": "ReconTypeSystemServiceDiscovery",
+              "kind": "category",
+              "enumOrder": "63",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Identify registered services on the system",
+              "label": "System service discovery",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeSystemTimeDiscovery",
+              "name": "ReconTypeSystemTimeDiscovery",
+              "kind": "category",
+              "enumOrder": "64",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Identify system time and time zone",
+              "label": "System time discovery",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeTCPConnect",
+              "name": "ReconTypeTCPConnect",
+              "kind": "category",
+              "enumOrder": "65",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Transmission Control Protocol scan",
+              "label": "TCP connect",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeTraceRoute",
+              "name": "ReconTypeTraceRoute",
+              "kind": "category",
+              "enumOrder": "66",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Network route to system",
+              "label": "Trace route",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeUNIXLinux",
+              "name": "ReconTypeUNIXLinux",
+              "kind": "category",
+              "enumOrder": "67",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Identify *nix OS",
+              "label": "UNIX-Linux",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeVirtualizationSandboxEvasion",
+              "name": "ReconTypeVirtualizationSandboxEvasion",
+              "kind": "category",
+              "enumOrder": "68",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Identify virtualization/analysis environment",
+              "label": "Virtualization sandbox evasion",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeVulnerability",
+              "name": "ReconTypeVulnerability",
+              "kind": "category",
+              "enumOrder": "69",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Host-based scan",
+              "label": "Vulnerability",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeWebCrawler",
+              "name": "ReconTypeWebCrawler",
+              "kind": "category",
+              "enumOrder": "70",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Web application scan",
+              "label": "Web crawler",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeWindows",
+              "name": "ReconTypeWindows",
+              "kind": "category",
+              "enumOrder": "71",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Identify Windows OS",
+              "label": "Windows",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeWirelessActive",
+              "name": "ReconTypeWirelessActive",
+              "kind": "category",
+              "enumOrder": "72",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Wireless network scan",
+              "label": "Wireless active",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeWirelessPassive",
+              "name": "ReconTypeWirelessPassive",
+              "kind": "category",
+              "enumOrder": "73",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Wireless network scan",
+              "label": "Wireless passive",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeXMASScan",
+              "name": "ReconTypeXMASScan",
+              "kind": "category",
+              "enumOrder": "74",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Transport layer - TCP scan",
+              "label": "XMAS scan",
+              "children": []
+            },
+            {
+              "id": "CAT_ReconTypeXSS",
+              "name": "ReconTypeXSS",
+              "kind": "category",
+              "enumOrder": "75",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Cross site scripting scan",
+              "label": "XSS",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "CAT_RelationshipType",
+          "name": "RelationshipType",
+          "kind": "category",
+          "source": "CyberDEM (SISO-REF-072-2024)",
+          "children": [
+            {
+              "id": "CAT_RelationshipTypeAdministeredBy",
+              "name": "RelationshipTypeAdministeredBy",
+              "kind": "category",
+              "enumOrder": "2",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "The citing object is administered by the cited object.",
+              "label": "Administered by",
+              "children": []
+            },
+            {
+              "id": "CAT_RelationshipTypeAdministers",
+              "name": "RelationshipTypeAdministers",
+              "kind": "category",
+              "enumOrder": "1",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "The citing object administers the cited object.",
+              "label": "Administers",
+              "children": []
+            },
+            {
+              "id": "CAT_RelationshipTypeComponentOf",
+              "name": "RelationshipTypeComponentOf",
+              "kind": "category",
+              "enumOrder": "3",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "The citing object is a component of the cited object.",
+              "label": "Component of",
+              "children": []
+            },
+            {
+              "id": "CAT_RelationshipTypeContainedIn",
+              "name": "RelationshipTypeContainedIn",
+              "kind": "category",
+              "enumOrder": "5",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "The citing object is contained in the cited object.",
+              "label": "Contained in",
+              "children": []
+            },
+            {
+              "id": "CAT_RelationshipTypeContains",
+              "name": "RelationshipTypeContains",
+              "kind": "category",
+              "enumOrder": "6",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "The citing object contains the cited object.",
+              "label": "Contains",
+              "children": []
+            },
+            {
+              "id": "CAT_RelationshipTypeHasComponent",
+              "name": "RelationshipTypeHasComponent",
+              "kind": "category",
+              "enumOrder": "4",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "The citing object has the cited object as a component.",
+              "label": "Has component",
+              "children": []
+            },
+            {
+              "id": "CAT_RelationshipTypeHasResident",
+              "name": "RelationshipTypeHasResident",
+              "kind": "category",
+              "enumOrder": "10",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "The citing object has resident of the cited object.",
+              "label": "Has resident",
+              "children": []
+            },
+            {
+              "id": "CAT_RelationshipTypeProvidedBy",
+              "name": "RelationshipTypeProvidedBy",
+              "kind": "category",
+              "enumOrder": "7",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "The citing object is provided by the cited object.",
+              "label": "Provided by",
+              "children": []
+            },
+            {
+              "id": "CAT_RelationshipTypeProvides",
+              "name": "RelationshipTypeProvides",
+              "kind": "category",
+              "enumOrder": "8",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "The citing object provides the cited object.",
+              "label": "Provides",
+              "children": []
+            },
+            {
+              "id": "CAT_RelationshipTypeResidesOn",
+              "name": "RelationshipTypeResidesOn",
+              "kind": "category",
+              "enumOrder": "9",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "The citing object resides on the cited object.",
+              "label": "Resides on",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "CAT_SensitivityType",
+          "name": "SensitivityType",
+          "kind": "category",
+          "source": "CyberDEM (SISO-REF-072-2024)",
+          "children": [
+            {
+              "id": "CAT_SensitivityTypeCUI",
+              "name": "SensitivityTypeCUI",
+              "kind": "category",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Controlled Unclassified Information.",
+              "label": "CUI",
+              "children": []
+            },
+            {
+              "id": "CAT_SensitivityTypeConfidential",
+              "name": "SensitivityTypeConfidential",
+              "kind": "category",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Public disclosure would damage national security.",
+              "label": "Confidential",
+              "children": []
+            },
+            {
+              "id": "CAT_SensitivityTypeCosmicTopSecret",
+              "name": "SensitivityTypeCosmicTopSecret",
+              "kind": "category",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Top Secret documents managed by a COSMIC registry.",
+              "label": "COSMIC Top Secret",
+              "children": []
+            },
+            {
+              "id": "CAT_SensitivityTypeFOUO",
+              "name": "SensitivityTypeFOUO",
+              "kind": "category",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "For official use only.",
+              "label": "FOUO",
+              "children": []
+            },
+            {
+              "id": "CAT_SensitivityTypeFVEYProprietary",
+              "name": "SensitivityTypeFVEYProprietary",
+              "kind": "category",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Five Eyes proprietary.",
+              "label": "FVEY proprietary",
+              "children": []
+            },
+            {
+              "id": "CAT_SensitivityTypeGDPR",
+              "name": "SensitivityTypeGDPR",
+              "kind": "category",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "General Data Protection Regulation.",
+              "label": "GDPR",
+              "children": []
+            },
+            {
+              "id": "CAT_SensitivityTypeHIPAA",
+              "name": "SensitivityTypeHIPAA",
+              "kind": "category",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Health Insurance Portability and Accountability Act.",
+              "label": "HIPAA",
+              "children": []
+            },
+            {
+              "id": "CAT_SensitivityTypeNATOConfidential",
+              "name": "SensitivityTypeNATOConfidential",
+              "kind": "category",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "North Atlantic Treaty Organization Confidential.",
+              "label": "NATO Confidential",
+              "children": []
+            },
+            {
+              "id": "CAT_SensitivityTypeNATORestricted",
+              "name": "SensitivityTypeNATORestricted",
+              "kind": "category",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "North Atlantic Treaty Organization Restricted.",
+              "label": "NATO Restricted",
+              "children": []
+            },
+            {
+              "id": "CAT_SensitivityTypeNATOSecret",
+              "name": "SensitivityTypeNATOSecret",
+              "kind": "category",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "North Atlantic Treaty Organization Secret.",
+              "label": "NATO Secret",
+              "children": []
+            },
+            {
+              "id": "CAT_SensitivityTypePII",
+              "name": "SensitivityTypePII",
+              "kind": "category",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Personally identifiable information.",
+              "label": "PII",
+              "children": []
+            },
+            {
+              "id": "CAT_SensitivityTypeProprietary",
+              "name": "SensitivityTypeProprietary",
+              "kind": "category",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Information a company wishes to keep confidential (e.g., trade secrets).",
+              "label": "Proprietary",
+              "children": []
+            },
+            {
+              "id": "CAT_SensitivityTypePublic",
+              "name": "SensitivityTypePublic",
+              "kind": "category",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Unrestricted or open to the public.",
+              "label": "Public",
+              "children": []
+            },
+            {
+              "id": "CAT_SensitivityTypeSecret",
+              "name": "SensitivityTypeSecret",
+              "kind": "category",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Public disclosure would cause serious damage to national security.",
+              "label": "Secret",
+              "children": []
+            },
+            {
+              "id": "CAT_SensitivityTypeSecretNoForn",
+              "name": "SensitivityTypeSecretNoForn",
+              "kind": "category",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Secret; restricted to country of source.",
+              "label": "Secret NOFORN",
+              "children": []
+            },
+            {
+              "id": "CAT_SensitivityTypeTS",
+              "name": "SensitivityTypeTS",
+              "kind": "category",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Top secret; unauthorized disclosure would cause exceptionally grave damage to national security.",
+              "label": "TS",
+              "children": []
+            },
+            {
+              "id": "CAT_SensitivityTypeTSSCI",
+              "name": "SensitivityTypeTSSCI",
+              "kind": "category",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Top secret; sensitive compartmented information.",
+              "label": "TS/SCI",
+              "children": []
+            },
+            {
+              "id": "CAT_SensitivityTypeUnclassified",
+              "name": "SensitivityTypeUnclassified",
+              "kind": "category",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "No classification.",
+              "label": "Unclassified",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "CAT_ServiceType",
+          "name": "ServiceType",
+          "kind": "category",
+          "source": "CyberDEM (SISO-REF-072-2024)",
+          "children": [
+            {
+              "id": "CAT_ServiceTypeChat",
+              "name": "ServiceTypeChat",
+              "kind": "category",
+              "enumOrder": "6",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Service that allows users to exchange short messages (e.g., IRC).",
+              "label": "Chat",
+              "children": []
+            },
+            {
+              "id": "CAT_ServiceTypeContainerization",
+              "name": "ServiceTypeContainerization",
+              "kind": "category",
+              "enumOrder": "9",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Service that packages libraries, frameworks, and applications into an isolated execution environment utilizing shared resources on a host platform.",
+              "label": "Containerization",
+              "children": []
+            },
+            {
+              "id": "CAT_ServiceTypeDNS",
+              "name": "ServiceTypeDNS",
+              "kind": "category",
+              "enumOrder": "1",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Domain Name System.",
+              "label": "DNS",
+              "children": []
+            },
+            {
+              "id": "CAT_ServiceTypeDatabase",
+              "name": "ServiceTypeDatabase",
+              "kind": "category",
+              "enumOrder": "4",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Service that stores and manages data (e.g., RDBMS).",
+              "label": "Database",
+              "children": []
+            },
+            {
+              "id": "CAT_ServiceTypeEmail",
+              "name": "ServiceTypeEmail",
+              "kind": "category",
+              "enumOrder": "2",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Service that transmits and receives electronic mail messages (typically using SMTP).",
+              "label": "Email",
+              "children": []
+            },
+            {
+              "id": "CAT_ServiceTypeFile",
+              "name": "ServiceTypeFile",
+              "kind": "category",
+              "enumOrder": "5",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Service that provides files to remote devices on a network.",
+              "label": "File",
+              "children": []
+            },
+            {
+              "id": "CAT_ServiceTypeForum",
+              "name": "ServiceTypeForum",
+              "kind": "category",
+              "enumOrder": "7",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Service that allows users to share information and collaborate about a particular topic.",
+              "label": "Forum",
+              "children": []
+            },
+            {
+              "id": "CAT_ServiceTypeNetworkTime",
+              "name": "ServiceTypeNetworkTime",
+              "kind": "category",
+              "enumOrder": "11",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Network protocol for clock synchronization between connected devices (e.g., NTP).",
+              "label": "Network time",
+              "children": []
+            },
+            {
+              "id": "CAT_ServiceTypeSocialMedia",
+              "name": "ServiceTypeSocialMedia",
+              "kind": "category",
+              "enumOrder": "8",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Website and/or application that enables users to create and share content or to participate in social networking.",
+              "label": "Social media",
+              "children": []
+            },
+            {
+              "id": "CAT_ServiceTypeVirtualization",
+              "name": "ServiceTypeVirtualization",
+              "kind": "category",
+              "enumOrder": "10",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Technology that simulates physical hardware and represents it as a separate virtual machine (VM).",
+              "label": "Virtualization",
+              "children": []
+            },
+            {
+              "id": "CAT_ServiceTypeWeb",
+              "name": "ServiceTypeWeb",
+              "kind": "category",
+              "enumOrder": "3",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Service that hosts web pages and provides them via HTTP/HTTPS.",
+              "label": "Web",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "CAT_SystemType",
+          "name": "SystemType",
+          "kind": "category",
+          "source": "CyberDEM (SISO-REF-072-2024)",
+          "children": [
+            {
+              "id": "CAT_SystemTypeC2",
+              "name": "SystemTypeC2",
+              "kind": "category",
+              "enumOrder": "3",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Command and control.",
+              "label": "C2",
+              "children": []
+            },
+            {
+              "id": "CAT_SystemTypeGeneric",
+              "name": "SystemTypeGeneric",
+              "kind": "category",
+              "enumOrder": "1",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Non-DeviceType system other than SCADA, C2, or ICS.",
+              "label": "Generic",
+              "children": []
+            },
+            {
+              "id": "CAT_SystemTypeICS",
+              "name": "SystemTypeICS",
+              "kind": "category",
+              "enumOrder": "4",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Industrial computer system.",
+              "label": "ICS",
+              "children": []
+            },
+            {
+              "id": "CAT_SystemTypeSCADA",
+              "name": "SystemTypeSCADA",
+              "kind": "category",
+              "enumOrder": "2",
+              "source": "CyberDEM (SISO-REF-072-2024)",
+              "description": "Supervisory control and data acquisition.",
+              "label": "SCADA",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CAT_CyberDEM",
+      "name": "CyberDEM",
+      "kind": "category",
+      "source": "CyberDEM (SISO-REF-072-2024)",
+      "description": "The multiplicity of an attribute is expressed in the form datatype[min..max], where the  default number is assumed to be [1..1] similarly to XML, min=1 and max=1 if not specified (UML)",
+      "children": []
+    },
+    {
+      "id": "CAT_AdministeredBy",
+      "name": "AdministeredBy",
+      "kind": "category",
+      "source": "CyberDem",
+      "children": []
+    },
+    {
+      "id": "CAT_Administers",
+      "name": "Administers",
+      "kind": "category",
+      "source": "CyberDem",
+      "children": []
+    },
+    {
+      "id": "CAT_ComponentOf",
+      "name": "ComponentOf",
+      "kind": "category",
+      "source": "CyberDem",
+      "children": []
+    },
+    {
+      "id": "CAT_ContainedIn",
+      "name": "ContainedIn",
+      "kind": "category",
+      "source": "CyberDem",
+      "children": []
+    },
+    {
+      "id": "CAT_Contains",
+      "name": "Contains",
+      "kind": "category",
+      "source": "CyberDem",
+      "children": []
+    },
+    {
+      "id": "CAT_HasComponent",
+      "name": "HasComponent",
+      "kind": "category",
+      "source": "CyberDem",
+      "children": []
+    },
+    {
+      "id": "CAT_HasResident",
+      "name": "HasResident",
+      "kind": "category",
+      "source": "CyberDem",
+      "children": []
+    },
+    {
+      "id": "CAT_ProvidedBy",
+      "name": "ProvidedBy",
+      "kind": "category",
+      "source": "CyberDem",
+      "children": []
+    },
+    {
+      "id": "CAT_Provides",
+      "name": "Provides",
+      "kind": "category",
+      "source": "CyberDem",
+      "children": []
+    },
+    {
+      "id": "CAT_ResidesOn",
+      "name": "ResidesOn",
+      "kind": "category",
+      "source": "CyberDem",
+      "children": []
+    }
+  ]
+}

@@ -1,0 +1,5466 @@
+{
+  "name": "PROPIO Ontology",
+  "kind": "root",
+  "source": "propio",
+  "children": [
+    {
+      "id": "CAT_Ontology",
+      "name": "Ontology",
+      "kind": "category",
+      "children": [
+        {
+          "id": "CAT_scheme",
+          "name": "scheme",
+          "kind": "category",
+          "description": "Simplification and simple fixes.",
+          "label": "Core Ontology scheme - v0",
+          "children": []
+        },
+        {
+          "id": "CAT_concept",
+          "name": "concept",
+          "kind": "category",
+          "description": "Simplification of MIM categories.\nClean-up UUIDs from object/datatype properties.",
+          "label": "Core Ontology Concepts - v0",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "CAT_v42",
+      "name": "v42",
+      "kind": "category",
+      "children": [
+        {
+          "id": "CAT_scheme",
+          "name": "scheme",
+          "kind": "category",
+          "description": "Simplification and simple fixes.",
+          "label": "Core Ontology scheme - v0",
+          "children": []
+        },
+        {
+          "id": "CAT_concept",
+          "name": "concept",
+          "kind": "category",
+          "description": "Simplification of MIM categories.\nClean-up UUIDs from object/datatype properties.",
+          "label": "Core Ontology Concepts - v0",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "CAT_AnnotationProperty",
+      "name": "AnnotationProperty",
+      "kind": "category",
+      "children": [
+        {
+          "id": "CAT_capabilityType",
+          "name": "capabilityType",
+          "kind": "category",
+          "label": "capability type",
+          "children": [
+            {
+              "id": "CAT_Capability",
+              "name": "Capability",
+              "kind": "category",
+              "label": "Capability",
+              "description": "The potential ability to do work, perform a function or mission, achieve an objective, or provide a service.",
+              "children": [
+                {
+                  "id": "CAT_CapabilityCyber",
+                  "name": "Cyber capability",
+                  "kind": "category",
+                  "label": "Cyber capability",
+                  "description": "A capability whose primary environment of employment is cyberspace, integrating people, processes, and technical means to plan, execute, sustain, or protect operations and effects on information systems and networks in accordance with doctrine and ROE.",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "CAT_description",
+          "name": "description",
+          "kind": "category",
+          "children": []
+        },
+        {
+          "id": "CAT_hasCapability",
+          "name": "hasCapability",
+          "kind": "category",
+          "children": []
+        },
+        {
+          "id": "CAT_hasComponent",
+          "name": "hasComponent",
+          "kind": "category",
+          "children": []
+        },
+        {
+          "id": "CAT_hasWarefareFunction",
+          "name": "hasWarefareFunction",
+          "kind": "category",
+          "children": []
+        },
+        {
+          "id": "CAT_id",
+          "name": "id",
+          "kind": "category",
+          "children": []
+        },
+        {
+          "id": "CAT_info",
+          "name": "info",
+          "kind": "category",
+          "children": []
+        },
+        {
+          "id": "CAT_name",
+          "name": "name",
+          "kind": "category",
+          "children": []
+        },
+        {
+          "id": "CAT_refersToDatatype",
+          "name": "refersToDatatype",
+          "kind": "category",
+          "description": "Links a modeled datatype class to its underlying literal datatype (e.g. xsd:string, xsd:dateTime).",
+          "children": []
+        },
+        {
+          "id": "CAT_type",
+          "name": "type",
+          "kind": "category",
+          "children": [
+            {
+              "id": "CAT_capabilityType",
+              "name": "capabilityType",
+              "kind": "category",
+              "label": "capability type",
+              "children": [
+                {
+                  "id": "CAT_Capability",
+                  "name": "Capability",
+                  "kind": "category",
+                  "label": "Capability",
+                  "description": "The potential ability to do work, perform a function or mission, achieve an objective, or provide a service.",
+                  "children": [
+                    {
+                      "id": "CAT_CapabilityCyber",
+                      "name": "Cyber capability",
+                      "kind": "category",
+                      "label": "Cyber capability",
+                      "description": "A capability whose primary environment of employment is cyberspace, integrating people, processes, and technical means to plan, execute, sustain, or protect operations and effects on information systems and networks in accordance with doctrine and ROE.",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "CAT_useCase",
+          "name": "useCase",
+          "kind": "category",
+          "label": "use case",
+          "children": []
+        },
+        {
+          "id": "CAT_mimId",
+          "name": "mimId",
+          "kind": "category",
+          "children": []
+        },
+        {
+          "id": "CAT_maxQualifiedCardinality",
+          "name": "maxQualifiedCardinality",
+          "kind": "category",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "CAT_comment",
+      "name": "comment",
+      "kind": "category",
+      "children": [
+        {
+          "id": "CAT_description",
+          "name": "description",
+          "kind": "category",
+          "children": []
+        },
+        {
+          "id": "CAT_info",
+          "name": "info",
+          "kind": "category",
+          "children": []
+        },
+        {
+          "id": "CAT_useCase",
+          "name": "useCase",
+          "kind": "category",
+          "label": "use case",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "CAT_label",
+      "name": "label",
+      "kind": "category",
+      "children": [
+        {
+          "id": "CAT_name",
+          "name": "name",
+          "kind": "category",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "CAT_Datatype",
+      "name": "Datatype",
+      "kind": "category",
+      "children": [
+        {
+          "id": "CAT_refersToDatatype",
+          "name": "refersToDatatype",
+          "kind": "category",
+          "description": "Links a modeled datatype class to its underlying literal datatype (e.g. xsd:string, xsd:dateTime).",
+          "children": []
+        },
+        {
+          "id": "CAT_uuid",
+          "name": "uuid",
+          "kind": "category",
+          "children": [
+            {
+              "id": "CAT_UUID",
+              "name": "UUID",
+              "kind": "category",
+              "label": "UUID",
+              "children": []
+            },
+            {
+              "id": "REL_PropertyAssetID",
+              "name": "PropertyAssetID",
+              "kind": "relation",
+              "children": []
+            },
+            {
+              "id": "REL_PropertyChildEntityList",
+              "name": "PropertyChildEntityList",
+              "kind": "relation",
+              "children": []
+            },
+            {
+              "id": "REL_PropertyClusterLeader",
+              "name": "PropertyClusterLeader",
+              "kind": "relation",
+              "children": []
+            },
+            {
+              "id": "REL_PropertyNext",
+              "name": "PropertyNext",
+              "kind": "relation",
+              "children": []
+            },
+            {
+              "id": "REL_PropertyObservedPlatUUID",
+              "name": "PropertyObservedPlatUUID",
+              "kind": "relation",
+              "children": []
+            },
+            {
+              "id": "REL_PropertyOriginatorID",
+              "name": "PropertyOriginatorID",
+              "kind": "relation",
+              "children": []
+            },
+            {
+              "id": "REL_PropertyPrevious",
+              "name": "PropertyPrevious",
+              "kind": "relation",
+              "children": []
+            },
+            {
+              "id": "REL_PropertyUUIDValue1",
+              "name": "PropertyUUIDValue1",
+              "kind": "relation",
+              "children": []
+            },
+            {
+              "id": "REL_PropertyUUIDValue2",
+              "name": "PropertyUUIDValue2",
+              "kind": "relation",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "CAT_n30",
+          "name": "n30",
+          "kind": "category",
+          "children": [
+            {
+              "id": "CAT_uuid",
+              "name": "uuid",
+              "kind": "category",
+              "children": [
+                {
+                  "id": "CAT_UUID",
+                  "name": "UUID",
+                  "kind": "category",
+                  "label": "UUID",
+                  "children": []
+                },
+                {
+                  "id": "REL_PropertyAssetID",
+                  "name": "PropertyAssetID",
+                  "kind": "relation",
+                  "children": []
+                },
+                {
+                  "id": "REL_PropertyChildEntityList",
+                  "name": "PropertyChildEntityList",
+                  "kind": "relation",
+                  "children": []
+                },
+                {
+                  "id": "REL_PropertyClusterLeader",
+                  "name": "PropertyClusterLeader",
+                  "kind": "relation",
+                  "children": []
+                },
+                {
+                  "id": "REL_PropertyNext",
+                  "name": "PropertyNext",
+                  "kind": "relation",
+                  "children": []
+                },
+                {
+                  "id": "REL_PropertyObservedPlatUUID",
+                  "name": "PropertyObservedPlatUUID",
+                  "kind": "relation",
+                  "children": []
+                },
+                {
+                  "id": "REL_PropertyOriginatorID",
+                  "name": "PropertyOriginatorID",
+                  "kind": "relation",
+                  "children": []
+                },
+                {
+                  "id": "REL_PropertyPrevious",
+                  "name": "PropertyPrevious",
+                  "kind": "relation",
+                  "children": []
+                },
+                {
+                  "id": "REL_PropertyUUIDValue1",
+                  "name": "PropertyUUIDValue1",
+                  "kind": "relation",
+                  "children": []
+                },
+                {
+                  "id": "REL_PropertyUUIDValue2",
+                  "name": "PropertyUUIDValue2",
+                  "kind": "relation",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CAT_string",
+      "name": "string",
+      "kind": "category",
+      "children": [
+        {
+          "id": "CAT_n30",
+          "name": "n30",
+          "kind": "category",
+          "children": [
+            {
+              "id": "CAT_uuid",
+              "name": "uuid",
+              "kind": "category",
+              "children": [
+                {
+                  "id": "CAT_UUID",
+                  "name": "UUID",
+                  "kind": "category",
+                  "label": "UUID",
+                  "children": []
+                },
+                {
+                  "id": "REL_PropertyAssetID",
+                  "name": "PropertyAssetID",
+                  "kind": "relation",
+                  "children": []
+                },
+                {
+                  "id": "REL_PropertyChildEntityList",
+                  "name": "PropertyChildEntityList",
+                  "kind": "relation",
+                  "children": []
+                },
+                {
+                  "id": "REL_PropertyClusterLeader",
+                  "name": "PropertyClusterLeader",
+                  "kind": "relation",
+                  "children": []
+                },
+                {
+                  "id": "REL_PropertyNext",
+                  "name": "PropertyNext",
+                  "kind": "relation",
+                  "children": []
+                },
+                {
+                  "id": "REL_PropertyObservedPlatUUID",
+                  "name": "PropertyObservedPlatUUID",
+                  "kind": "relation",
+                  "children": []
+                },
+                {
+                  "id": "REL_PropertyOriginatorID",
+                  "name": "PropertyOriginatorID",
+                  "kind": "relation",
+                  "children": []
+                },
+                {
+                  "id": "REL_PropertyPrevious",
+                  "name": "PropertyPrevious",
+                  "kind": "relation",
+                  "children": []
+                },
+                {
+                  "id": "REL_PropertyUUIDValue1",
+                  "name": "PropertyUUIDValue1",
+                  "kind": "relation",
+                  "children": []
+                },
+                {
+                  "id": "REL_PropertyUUIDValue2",
+                  "name": "PropertyUUIDValue2",
+                  "kind": "relation",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "CAT_String",
+          "name": "String",
+          "kind": "category",
+          "label": "String",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyApp6D",
+          "name": "PropertyApp6D",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyApp6e",
+          "name": "PropertyApp6e",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyColor",
+          "name": "PropertyColor",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyColumnName",
+          "name": "PropertyColumnName",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyCompany",
+          "name": "PropertyCompany",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyDataText1",
+          "name": "PropertyDataText1",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyDataText10",
+          "name": "PropertyDataText10",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyDataText2",
+          "name": "PropertyDataText2",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyDataText3",
+          "name": "PropertyDataText3",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyDataText4",
+          "name": "PropertyDataText4",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyDataText5",
+          "name": "PropertyDataText5",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyDataText6",
+          "name": "PropertyDataText6",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyDataText7",
+          "name": "PropertyDataText7",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyDataText8",
+          "name": "PropertyDataText8",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyDataText9",
+          "name": "PropertyDataText9",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyFeature",
+          "name": "PropertyFeature",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyIcon2DCustom",
+          "name": "PropertyIcon2DCustom",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyLineRGBColor",
+          "name": "PropertyLineRGBColor",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyLineRGBGlow",
+          "name": "PropertyLineRGBGlow",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyMipdesc",
+          "name": "PropertyMipdesc",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyMitreattackdetectionids",
+          "name": "PropertyMitreattackdetectionids",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyMitreattackmitigationids",
+          "name": "PropertyMitreattackmitigationids",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyMitreattacksubtechniqueids",
+          "name": "PropertyMitreattacksubtechniqueids",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyModel3D",
+          "name": "PropertyModel3D",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertySiso",
+          "name": "PropertySiso",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyTargetids",
+          "name": "PropertyTargetids",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_address",
+          "name": "address",
+          "kind": "relation",
+          "children": [
+            {
+              "id": "CAT_n339",
+              "name": "n339",
+              "kind": "category",
+              "qualifiedCardinality": "1",
+              "children": []
+            },
+            {
+              "id": "CAT_n352",
+              "name": "n352",
+              "kind": "category",
+              "maxQualifiedCardinality": "1",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "REL_body",
+          "name": "body",
+          "kind": "relation",
+          "children": [
+            {
+              "id": "CAT_n346",
+              "name": "n346",
+              "kind": "category",
+              "maxQualifiedCardinality": "1",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "REL_company",
+          "name": "company",
+          "kind": "relation",
+          "children": [
+            {
+              "id": "CAT_n35",
+              "name": "n35",
+              "kind": "category",
+              "maxQualifiedCardinality": "1",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "CAT_description",
+          "name": "description",
+          "kind": "category",
+          "children": []
+        },
+        {
+          "id": "REL_deviceIdentifier",
+          "name": "deviceIdentifier",
+          "kind": "relation",
+          "children": [
+            {
+              "id": "CAT_n327",
+              "name": "n327",
+              "kind": "category",
+              "maxQualifiedCardinality": "1",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "REL_header",
+          "name": "header",
+          "kind": "relation",
+          "children": [
+            {
+              "id": "CAT_n347",
+              "name": "n347",
+              "kind": "category",
+              "maxQualifiedCardinality": "1",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "REL_key",
+          "name": "key",
+          "kind": "relation",
+          "children": [
+            {
+              "id": "CAT_n332",
+              "name": "n332",
+              "kind": "category",
+              "qualifiedCardinality": "1",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "REL_mask",
+          "name": "mask",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_objectID",
+          "name": "objectID",
+          "kind": "relation",
+          "children": [
+            {
+              "id": "CAT_n319",
+              "name": "n319",
+              "kind": "category",
+              "qualifiedCardinality": "1",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "REL_relatedObjectID",
+          "name": "relatedObjectID",
+          "kind": "relation",
+          "children": [
+            {
+              "id": "CAT_n340",
+              "name": "n340",
+              "kind": "category",
+              "qualifiedCardinality": "1",
+              "children": []
+            },
+            {
+              "id": "CAT_n351",
+              "name": "n351",
+              "kind": "category",
+              "qualifiedCardinality": "1",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "REL_relatedObjectPrivileges",
+          "name": "relatedObjectPrivileges",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_role",
+          "name": "role",
+          "kind": "relation",
+          "children": [
+            {
+              "id": "CAT_n329",
+              "name": "n329",
+              "kind": "category",
+              "maxQualifiedCardinality": "1",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "REL_version",
+          "name": "version",
+          "kind": "relation",
+          "children": [
+            {
+              "id": "CAT_n36",
+              "name": "n36",
+              "kind": "category",
+              "maxQualifiedCardinality": "1",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "CAT_n35",
+          "name": "n35",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n36",
+          "name": "n36",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n316",
+          "name": "n316",
+          "kind": "category",
+          "qualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n319",
+          "name": "n319",
+          "kind": "category",
+          "qualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n327",
+          "name": "n327",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n329",
+          "name": "n329",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n339",
+          "name": "n339",
+          "kind": "category",
+          "qualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n340",
+          "name": "n340",
+          "kind": "category",
+          "qualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n346",
+          "name": "n346",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n347",
+          "name": "n347",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n351",
+          "name": "n351",
+          "kind": "category",
+          "qualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n352",
+          "name": "n352",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "CAT_n32",
+      "name": "n32",
+      "kind": "category",
+      "length": "36",
+      "children": [
+        {
+          "id": "CAT_n31",
+          "name": "n31",
+          "kind": "category",
+          "children": [
+            {
+              "id": "CAT_n30",
+              "name": "n30",
+              "kind": "category",
+              "children": [
+                {
+                  "id": "CAT_uuid",
+                  "name": "uuid",
+                  "kind": "category",
+                  "children": [
+                    {
+                      "id": "CAT_UUID",
+                      "name": "UUID",
+                      "kind": "category",
+                      "label": "UUID",
+                      "children": []
+                    },
+                    {
+                      "id": "REL_PropertyAssetID",
+                      "name": "PropertyAssetID",
+                      "kind": "relation",
+                      "children": []
+                    },
+                    {
+                      "id": "REL_PropertyChildEntityList",
+                      "name": "PropertyChildEntityList",
+                      "kind": "relation",
+                      "children": []
+                    },
+                    {
+                      "id": "REL_PropertyClusterLeader",
+                      "name": "PropertyClusterLeader",
+                      "kind": "relation",
+                      "children": []
+                    },
+                    {
+                      "id": "REL_PropertyNext",
+                      "name": "PropertyNext",
+                      "kind": "relation",
+                      "children": []
+                    },
+                    {
+                      "id": "REL_PropertyObservedPlatUUID",
+                      "name": "PropertyObservedPlatUUID",
+                      "kind": "relation",
+                      "children": []
+                    },
+                    {
+                      "id": "REL_PropertyOriginatorID",
+                      "name": "PropertyOriginatorID",
+                      "kind": "relation",
+                      "children": []
+                    },
+                    {
+                      "id": "REL_PropertyPrevious",
+                      "name": "PropertyPrevious",
+                      "kind": "relation",
+                      "children": []
+                    },
+                    {
+                      "id": "REL_PropertyUUIDValue1",
+                      "name": "PropertyUUIDValue1",
+                      "kind": "relation",
+                      "children": []
+                    },
+                    {
+                      "id": "REL_PropertyUUIDValue2",
+                      "name": "PropertyUUIDValue2",
+                      "kind": "relation",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CAT_n34",
+      "name": "n34",
+      "kind": "category",
+      "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-5][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$",
+      "children": [
+        {
+          "id": "CAT_n33",
+          "name": "n33",
+          "kind": "category",
+          "children": [
+            {
+              "id": "CAT_n31",
+              "name": "n31",
+              "kind": "category",
+              "children": [
+                {
+                  "id": "CAT_n30",
+                  "name": "n30",
+                  "kind": "category",
+                  "children": [
+                    {
+                      "id": "CAT_uuid",
+                      "name": "uuid",
+                      "kind": "category",
+                      "children": [
+                        {
+                          "id": "CAT_UUID",
+                          "name": "UUID",
+                          "kind": "category",
+                          "label": "UUID",
+                          "children": []
+                        },
+                        {
+                          "id": "REL_PropertyAssetID",
+                          "name": "PropertyAssetID",
+                          "kind": "relation",
+                          "children": []
+                        },
+                        {
+                          "id": "REL_PropertyChildEntityList",
+                          "name": "PropertyChildEntityList",
+                          "kind": "relation",
+                          "children": []
+                        },
+                        {
+                          "id": "REL_PropertyClusterLeader",
+                          "name": "PropertyClusterLeader",
+                          "kind": "relation",
+                          "children": []
+                        },
+                        {
+                          "id": "REL_PropertyNext",
+                          "name": "PropertyNext",
+                          "kind": "relation",
+                          "children": []
+                        },
+                        {
+                          "id": "REL_PropertyObservedPlatUUID",
+                          "name": "PropertyObservedPlatUUID",
+                          "kind": "relation",
+                          "children": []
+                        },
+                        {
+                          "id": "REL_PropertyOriginatorID",
+                          "name": "PropertyOriginatorID",
+                          "kind": "relation",
+                          "children": []
+                        },
+                        {
+                          "id": "REL_PropertyPrevious",
+                          "name": "PropertyPrevious",
+                          "kind": "relation",
+                          "children": []
+                        },
+                        {
+                          "id": "REL_PropertyUUIDValue1",
+                          "name": "PropertyUUIDValue1",
+                          "kind": "relation",
+                          "children": []
+                        },
+                        {
+                          "id": "REL_PropertyUUIDValue2",
+                          "name": "PropertyUUIDValue2",
+                          "kind": "relation",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CAT_nil",
+      "name": "nil",
+      "kind": "category",
+      "children": [
+        {
+          "id": "CAT_n33",
+          "name": "n33",
+          "kind": "category",
+          "children": [
+            {
+              "id": "CAT_n31",
+              "name": "n31",
+              "kind": "category",
+              "children": [
+                {
+                  "id": "CAT_n30",
+                  "name": "n30",
+                  "kind": "category",
+                  "children": [
+                    {
+                      "id": "CAT_uuid",
+                      "name": "uuid",
+                      "kind": "category",
+                      "children": [
+                        {
+                          "id": "CAT_UUID",
+                          "name": "UUID",
+                          "kind": "category",
+                          "label": "UUID",
+                          "children": []
+                        },
+                        {
+                          "id": "REL_PropertyAssetID",
+                          "name": "PropertyAssetID",
+                          "kind": "relation",
+                          "children": []
+                        },
+                        {
+                          "id": "REL_PropertyChildEntityList",
+                          "name": "PropertyChildEntityList",
+                          "kind": "relation",
+                          "children": []
+                        },
+                        {
+                          "id": "REL_PropertyClusterLeader",
+                          "name": "PropertyClusterLeader",
+                          "kind": "relation",
+                          "children": []
+                        },
+                        {
+                          "id": "REL_PropertyNext",
+                          "name": "PropertyNext",
+                          "kind": "relation",
+                          "children": []
+                        },
+                        {
+                          "id": "REL_PropertyObservedPlatUUID",
+                          "name": "PropertyObservedPlatUUID",
+                          "kind": "relation",
+                          "children": []
+                        },
+                        {
+                          "id": "REL_PropertyOriginatorID",
+                          "name": "PropertyOriginatorID",
+                          "kind": "relation",
+                          "children": []
+                        },
+                        {
+                          "id": "REL_PropertyPrevious",
+                          "name": "PropertyPrevious",
+                          "kind": "relation",
+                          "children": []
+                        },
+                        {
+                          "id": "REL_PropertyUUIDValue1",
+                          "name": "PropertyUUIDValue1",
+                          "kind": "relation",
+                          "children": []
+                        },
+                        {
+                          "id": "REL_PropertyUUIDValue2",
+                          "name": "PropertyUUIDValue2",
+                          "kind": "relation",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REL_relation",
+      "name": "relation",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "REL_relationadministeredBy",
+      "name": "relationadministeredBy",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "ff77a52f-1c6c-49bb-b36f-3f7c4737bf6a",
+      "name": "administers",
+      "kind": "category",
+      "label": "administers",
+      "children": []
+    },
+    {
+      "id": "REL_relationadministers",
+      "name": "relationadministers",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "REL_relationcomponentOf",
+      "name": "relationcomponentOf",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "46233b83-6685-4ea5-b37a-0ea509ff3730",
+      "name": "hasComponent",
+      "kind": "category",
+      "label": "has component",
+      "children": []
+    },
+    {
+      "id": "REL_relationconnectedWith",
+      "name": "relationconnectedWith",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "8068b29c-65ba-4a75-acea-e920a0a6db71",
+      "name": "hasConnected",
+      "kind": "category",
+      "label": "has connected",
+      "children": []
+    },
+    {
+      "id": "REL_relationcontainedIn",
+      "name": "relationcontainedIn",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "6b40c019-6178-4708-9a0f-b6471bf1c9b5",
+      "name": "contains",
+      "kind": "category",
+      "label": "contains",
+      "children": []
+    },
+    {
+      "id": "REL_relationcontains",
+      "name": "relationcontains",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "REL_relationhasComponent",
+      "name": "relationhasComponent",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "REL_relationhasConnected",
+      "name": "relationhasConnected",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "REL_relationhasResident",
+      "name": "relationhasResident",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "7fd5138c-10a2-4cbc-a5c1-02b546231903",
+      "name": "residesOn",
+      "kind": "category",
+      "label": "resides on",
+      "children": []
+    },
+    {
+      "id": "REL_relationprovidedBy",
+      "name": "relationprovidedBy",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "b7722a51-4932-4375-ac56-5b529d6c1a8c",
+      "name": "provides",
+      "kind": "category",
+      "label": "provides",
+      "children": []
+    },
+    {
+      "id": "REL_relationprovides",
+      "name": "relationprovides",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "REL_relationresidesOn",
+      "name": "relationresidesOn",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "CAT_boolean",
+      "name": "boolean",
+      "kind": "category",
+      "children": [
+        {
+          "id": "CAT_Boolean",
+          "name": "Boolean",
+          "kind": "category",
+          "label": "Boolean",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyAnimated",
+          "name": "PropertyAnimated",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyBlinking",
+          "name": "PropertyBlinking",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyCardVisible",
+          "name": "PropertyCardVisible",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyIsLogical",
+          "name": "PropertyIsLogical",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyMapVisible",
+          "name": "PropertyMapVisible",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyProjectionVector",
+          "name": "PropertyProjectionVector",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyProjectionVectorSelect",
+          "name": "PropertyProjectionVectorSelect",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyRenderText1",
+          "name": "PropertyRenderText1",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyRenderText10",
+          "name": "PropertyRenderText10",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyRenderText10Select",
+          "name": "PropertyRenderText10Select",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyRenderText1Select",
+          "name": "PropertyRenderText1Select",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyRenderText2",
+          "name": "PropertyRenderText2",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyRenderText2Select",
+          "name": "PropertyRenderText2Select",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyRenderText3",
+          "name": "PropertyRenderText3",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyRenderText3Select",
+          "name": "PropertyRenderText3Select",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyRenderText4",
+          "name": "PropertyRenderText4",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyRenderText4Select",
+          "name": "PropertyRenderText4Select",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyRenderText5",
+          "name": "PropertyRenderText5",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyRenderText5Select",
+          "name": "PropertyRenderText5Select",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyRenderText6",
+          "name": "PropertyRenderText6",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyRenderText6Select",
+          "name": "PropertyRenderText6Select",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyRenderText7",
+          "name": "PropertyRenderText7",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyRenderText7Select",
+          "name": "PropertyRenderText7Select",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyRenderText8",
+          "name": "PropertyRenderText8",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyRenderText8Select",
+          "name": "PropertyRenderText8Select",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyRenderText9",
+          "name": "PropertyRenderText9",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyRenderText9Select",
+          "name": "PropertyRenderText9Select",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyRequestack",
+          "name": "PropertyRequestack",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyReverseRoute",
+          "name": "PropertyReverseRoute",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertySpeedVectorHeading",
+          "name": "PropertySpeedVectorHeading",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertySpeedVectorHeadingSelect",
+          "name": "PropertySpeedVectorHeadingSelect",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_isDuplex",
+          "name": "isDuplex",
+          "kind": "relation",
+          "children": [
+            {
+              "id": "CAT_n38",
+              "name": "n38",
+              "kind": "category",
+              "maxQualifiedCardinality": "1",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "REL_isRandom",
+          "name": "isRandom",
+          "kind": "relation",
+          "children": [
+            {
+              "id": "CAT_n324",
+              "name": "n324",
+              "kind": "category",
+              "maxQualifiedCardinality": "1",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "REL_isVirtual",
+          "name": "isVirtual",
+          "kind": "relation",
+          "children": [
+            {
+              "id": "CAT_n328",
+              "name": "n328",
+              "kind": "category",
+              "maxQualifiedCardinality": "1",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "REL_requestAcknowledgement",
+          "name": "requestAcknowledgement",
+          "kind": "relation",
+          "children": [
+            {
+              "id": "CAT_n318",
+              "name": "n318",
+              "kind": "category",
+              "maxQualifiedCardinality": "1",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "CAT_n38",
+          "name": "n38",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n318",
+          "name": "n318",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n324",
+          "name": "n324",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n326",
+          "name": "n326",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n328",
+          "name": "n328",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "CAT_LOV",
+      "name": "LOV",
+      "kind": "category",
+      "label": "List of values",
+      "description": "Finite, governed set of atomic, typed values (LOV) used to constrain and normalize the range of data properties; codes are stable while labels may be multilingual and versioned.",
+      "useCase": "The LOV \"AcknowledgeResponseType\" comprises a closed list of values: \"AbleToComply\" and \"UnableToComply\". This enumerations is represented as a owl Class, subclass of  LOV. The two values are represented as indiviuals of the class AcknoledgeResponseType.\n\n\n:LOV_AcknowledgeResponseType rdf:type owl:Class ;\n   rdfs:subClassOf :LOV .\n\nLOV_AcknowledgeResponseType_AbleToComply rdf:type owl:NamedIndividual , :LOV_AcknowledgeResponseType .\n\nLOV_AcknowledgeResponseType_UnableToComply rdf:type owl:NamedIndividual , :LOV_AcknowledgeResponseType .\n\n* Warning: Do not use the IRI to extract the name. Use rdfs:label or :name instead.",
+      "children": [
+        {
+          "id": "CAT_CapabilityType",
+          "name": "CapabilityType",
+          "kind": "category",
+          "children": [
+            {
+              "id": "CAT_capabilityType",
+              "name": "capabilityType",
+              "kind": "category",
+              "label": "capability type",
+              "children": [
+                {
+                  "id": "CAT_Capability",
+                  "name": "Capability",
+                  "kind": "category",
+                  "label": "Capability",
+                  "description": "The potential ability to do work, perform a function or mission, achieve an objective, or provide a service.",
+                  "children": [
+                    {
+                      "id": "CAT_CapabilityCyber",
+                      "name": "Cyber capability",
+                      "kind": "category",
+                      "label": "Cyber capability",
+                      "description": "A capability whose primary environment of employment is cyberspace, integrating people, processes, and technical means to plan, execute, sustain, or protect operations and effects on information systems and networks in accordance with doctrine and ROE.",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "CAT_CapabilityTypeComms",
+              "name": "Comms",
+              "kind": "category",
+              "description": "The ability to generate, transmit, route, and receive information/signals to provide connectivity and assured communications (voice/data/video, networking, spectrum management). Moves information.",
+              "label": "Comms",
+              "children": []
+            },
+            {
+              "id": "CAT_CapabilityTypeCyber",
+              "name": "Cyber",
+              "kind": "category",
+              "description": "The ability to create, defend, exploit, or deliver effects within information systems and networks (cyberspace), including DODIN ops, defensive cyber ops, and authorized offensive cyber effects. Acts in the digital substrate.",
+              "label": "Cyber",
+              "children": []
+            },
+            {
+              "id": "CAT_CapabilityTypeKinetic",
+              "name": "Kinetic",
+              "kind": "category",
+              "description": "The ability to produce physical effects through mechanical/chemical/explosive energy on material targets (e.g., fires, mobility, breaching, physical destruction). Changes the physical world.",
+              "label": "Kinetic",
+              "children": []
+            },
+            {
+              "id": "CAT_CapabilityTypeSensor",
+              "name": "Sensor",
+              "kind": "category",
+              "description": "The ability to detect, measure, or observe phenomena (physical or logical) and produce observations for awareness/targeting (e.g., EO/IR, radar, SIGINT, cyber telemetry). Creates information.",
+              "label": "Sensor",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "CAT_Domain",
+          "name": "Domain",
+          "kind": "category",
+          "label": "Domain",
+          "children": [
+            {
+              "id": "CAT_DomainCognitive",
+              "name": "DomainCognitive",
+              "kind": "category",
+              "label": "Cognitive",
+              "children": []
+            },
+            {
+              "id": "CAT_DomainCyber",
+              "name": "DomainCyber",
+              "kind": "category",
+              "label": "Cyber",
+              "children": []
+            },
+            {
+              "id": "CAT_DomainLand",
+              "name": "DomainLand",
+              "kind": "category",
+              "label": "Land",
+              "children": []
+            },
+            {
+              "id": "CAT_DomainSpace",
+              "name": "DomainSpace",
+              "kind": "category",
+              "label": "Space",
+              "children": []
+            },
+            {
+              "id": "CAT_DomainSubsurface",
+              "name": "DomainSubsurface",
+              "kind": "category",
+              "label": "Subsurface",
+              "children": []
+            },
+            {
+              "id": "CAT_DomainSurface",
+              "name": "DomainSurface",
+              "kind": "category",
+              "label": "Suface",
+              "children": []
+            },
+            {
+              "id": "CAT_DomainUnknown",
+              "name": "DomainUnknown",
+              "kind": "category",
+              "label": "Unknown",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "CAT_LOVWarfareFunction",
+          "name": "Warfare Function",
+          "kind": "category",
+          "label": "Warfare function",
+          "description": "Doctrinal set of operational purposes that group and articulate activities and capabilities (e.g., C2, Intelligence, Manoeuvre, Fires, Information, Civil-Military Cooperation, Sustainment, and Force Protection) enabling commanders and staffs to visualize, integrate, and synchronize operations across all domains.",
+          "children": [
+            {
+              "id": "CAT_LOVWarfareFuncionC2",
+              "name": "Command and Control (C2)",
+              "kind": "category",
+              "label": "Command and Control (C2)",
+              "description": "Directs and coordinates forces and operations to achieve objectives; enables planning, direction, and synchronization across all domains.",
+              "children": []
+            },
+            {
+              "id": "CAT_LOVWarfareFuncionCIMIC",
+              "name": "Civil-Military Cooperation (CIMIC)",
+              "kind": "category",
+              "label": "Civil-Military Cooperation (CIMIC)",
+              "description": "Coordinates and facilitates interaction with civil actors, populations, and authorities to support the mission and unity of effort.",
+              "children": []
+            },
+            {
+              "id": "CAT_LOVWarfareFuncionFires",
+              "name": "Fires",
+              "kind": "category",
+              "label": "Fires",
+              "description": "Delivers effects against targets to degrade, deny, disrupt, or destroy enemy capabilities and will.",
+              "children": []
+            },
+            {
+              "id": "CAT_LOVWarfareFuncionForceProtection",
+              "name": "Force Protection",
+              "kind": "category",
+              "label": "Force Protection",
+              "description": "Preserves the force’s fighting potential by preventing or mitigating hostile actions, hazards, and vulnerabilities.",
+              "children": []
+            },
+            {
+              "id": "CAT_LOVWarfareFuncionInformation",
+              "name": "Information",
+              "kind": "category",
+              "label": "Information",
+              "description": "Creates, protects, senses, and employs information and related capabilities to achieve advantage and influence outcomes.",
+              "children": []
+            },
+            {
+              "id": "CAT_LOVWarfareFuncionIntelligence",
+              "name": "Intelligence",
+              "kind": "category",
+              "label": "Intelligence",
+              "description": "Collects, analyzes, and disseminates information on the operational environment, threats, and targets to support decision-making.",
+              "children": []
+            },
+            {
+              "id": "CAT_LOVWarfareFuncionManoeuvre",
+              "name": "Manoeuvre",
+              "kind": "category",
+              "label": "Manoeuvre",
+              "description": "Positions and moves forces to gain positional advantage and create favorable conditions for success.",
+              "children": []
+            },
+            {
+              "id": "CAT_LOVWarfareFuncionSustainment",
+              "name": "Sustainment",
+              "kind": "category",
+              "label": "Sustainment",
+              "description": "Provides logistics, medical, personnel, and other support to maintain combat power and freedom of action over time.",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CAT_Category",
+      "name": "Category",
+      "kind": "category",
+      "children": []
+    },
+    {
+      "id": "CAT_Component",
+      "name": "Component",
+      "kind": "category",
+      "label": "Component",
+      "description": "A component is a Class that represents a Datatype composed of multiple relationships/properties.",
+      "useCase": "\"Waypoint\" is a property defined by 3 simple properties: latitude (double), longitude (double) and altitude (double). Waypoint is represented as a owl Class, subclass of Component and as domain of the 3 simple properties.\n\n:Component_Waypoint rdf:type owl:Class ;\n   rdfs:subClassOf :Component .\n\n:latitude rdfs:Domain :Component_Waypoint ;\n  rdfs:range xsd:double .\n\n:longitude rdfs:Domain :Component_Waypoint ;\n  rdfs:range xsd:double .\n\n:altitude rdfs:Domain :Component_Waypoint ;\n  rdfs:range xsd:double .\n\nThe category is linked to the component with a owl:Object property:\n\n?category :hasWaypoint :Component_Waypoint .\n\n:hasWaypoint rdf:type owl:ObjectProperty ;\n   rdfs:domain ?category ;\n   rdfs:range :Component_Waypoint .\n\n* Warning: Do not use the IRI to extract the name. Use rdfs:label or :name instead.",
+      "children": [
+        {
+          "id": "CAT_ComponentGeometry",
+          "name": "Geometry",
+          "kind": "category",
+          "label": "Geometry",
+          "children": [
+            {
+              "id": "REL_PropertyGeometry",
+              "name": "PropertyGeometry",
+              "kind": "relation",
+              "children": []
+            },
+            {
+              "id": "REL_PropertyPoligono",
+              "name": "PropertyPoligono",
+              "kind": "relation",
+              "children": []
+            },
+            {
+              "id": "REL_PropertyPosition",
+              "name": "PropertyPosition",
+              "kind": "relation",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CAT_dateTimeStamp",
+      "name": "dateTimeStamp",
+      "kind": "category",
+      "children": [
+        {
+          "id": "CAT_DateTimeStamp",
+          "name": "DateTimeStamp",
+          "kind": "category",
+          "label": "DateTimeStamp",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyEventtime",
+          "name": "PropertyEventtime",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyTime",
+          "name": "PropertyTime",
+          "kind": "relation",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "CAT_decimal",
+      "name": "decimal",
+      "kind": "category",
+      "children": [
+        {
+          "id": "CAT_Decimal",
+          "name": "Decimal",
+          "kind": "category",
+          "label": "Decimal",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyDistance",
+          "name": "PropertyDistance",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertySpeed",
+          "name": "PropertySpeed",
+          "kind": "relation",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "CAT_double",
+      "name": "double",
+      "kind": "category",
+      "children": [
+        {
+          "id": "CAT_Double",
+          "name": "Double",
+          "kind": "category",
+          "label": "Double",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyAltitude",
+          "name": "PropertyAltitude",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyBaseRadius",
+          "name": "PropertyBaseRadius",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyBaseWidth",
+          "name": "PropertyBaseWidth",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyEsAzimuth",
+          "name": "PropertyEsAzimuth",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyEsDistance",
+          "name": "PropertyEsDistance",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyEsElevation",
+          "name": "PropertyEsElevation",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyHeading",
+          "name": "PropertyHeading",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyHoldTime",
+          "name": "PropertyHoldTime",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyLatitude",
+          "name": "PropertyLatitude",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyLength",
+          "name": "PropertyLength",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyLongitude",
+          "name": "PropertyLongitude",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyPitch",
+          "name": "PropertyPitch",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyRVelocity",
+          "name": "PropertyRVelocity",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyRadius",
+          "name": "PropertyRadius",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyRoll",
+          "name": "PropertyRoll",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertySpeedVD",
+          "name": "PropertySpeedVD",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertySpeedVE",
+          "name": "PropertySpeedVE",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertySpeedVN",
+          "name": "PropertySpeedVN",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertySpeedVs",
+          "name": "PropertySpeedVs",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyStability",
+          "name": "PropertyStability",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyTimestamp",
+          "name": "PropertyTimestamp",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyX",
+          "name": "PropertyX",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyY",
+          "name": "PropertyY",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyYaw",
+          "name": "PropertyYaw",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyZ",
+          "name": "PropertyZ",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_TimePeriod",
+          "name": "TimePeriod",
+          "kind": "relation",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "CAT_int",
+      "name": "int",
+      "kind": "category",
+      "children": [
+        {
+          "id": "CAT_Int",
+          "name": "Int",
+          "kind": "category",
+          "label": "Int",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyActiveIcon2D",
+          "name": "PropertyActiveIcon2D",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyBlinkSpeed",
+          "name": "PropertyBlinkSpeed",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyColumnPosition",
+          "name": "PropertyColumnPosition",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyLineWidth",
+          "name": "PropertyLineWidth",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyNEmitters",
+          "name": "PropertyNEmitters",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyNPlatforms",
+          "name": "PropertyNPlatforms",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyObservedPlatID",
+          "name": "PropertyObservedPlatID",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyPType",
+          "name": "PropertyPType",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyPitch",
+          "name": "PropertyPitch",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyPlatformID",
+          "name": "PropertyPlatformID",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyRefPlatID",
+          "name": "PropertyRefPlatID",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertySutVisibility",
+          "name": "PropertySutVisibility",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyVelocityLevel",
+          "name": "PropertyVelocityLevel",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyWaypointOrder",
+          "name": "PropertyWaypointOrder",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_PropertyYaw",
+          "name": "PropertyYaw",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_bandwidth",
+          "name": "bandwidth",
+          "kind": "relation",
+          "children": [
+            {
+              "id": "CAT_n342",
+              "name": "n342",
+              "kind": "category",
+              "maxQualifiedCardinality": "1",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "REL_enumOrder",
+          "name": "enumOrder",
+          "kind": "relation",
+          "children": []
+        },
+        {
+          "id": "REL_frequency",
+          "name": "frequency",
+          "kind": "relation",
+          "children": [
+            {
+              "id": "CAT_n37",
+              "name": "n37",
+              "kind": "category",
+              "maxQualifiedCardinality": "1",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "REL_jitter",
+          "name": "jitter",
+          "kind": "relation",
+          "children": [
+            {
+              "id": "CAT_n343",
+              "name": "n343",
+              "kind": "category",
+              "maxQualifiedCardinality": "1",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "REL_latency",
+          "name": "latency",
+          "kind": "relation",
+          "children": [
+            {
+              "id": "CAT_n344",
+              "name": "n344",
+              "kind": "category",
+              "maxQualifiedCardinality": "1",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "REL_milliseconds",
+          "name": "milliseconds",
+          "kind": "relation",
+          "children": [
+            {
+              "id": "CAT_n331",
+              "name": "n331",
+              "kind": "category",
+              "maxQualifiedCardinality": "1",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "REL_packetSize",
+          "name": "packetSize",
+          "kind": "relation",
+          "children": [
+            {
+              "id": "CAT_n310",
+              "name": "n310",
+              "kind": "category",
+              "maxQualifiedCardinality": "1",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "CAT_n37",
+          "name": "n37",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n310",
+          "name": "n310",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n331",
+          "name": "n331",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n337",
+          "name": "n337",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n342",
+          "name": "n342",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n343",
+          "name": "n343",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n344",
+          "name": "n344",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "13fedf5b-b017-486f-8f6a-00018c74c5e6",
+      "name": "DomainAir",
+      "kind": "category",
+      "label": "Air",
+      "children": []
+    },
+    {
+      "id": "CAT_NamedIndividual",
+      "name": "NamedIndividual",
+      "kind": "category",
+      "children": [
+        {
+          "id": "CAT_CapabilityTypeComms",
+          "name": "Comms",
+          "kind": "category",
+          "description": "The ability to generate, transmit, route, and receive information/signals to provide connectivity and assured communications (voice/data/video, networking, spectrum management). Moves information.",
+          "label": "Comms",
+          "children": []
+        },
+        {
+          "id": "CAT_CapabilityTypeCyber",
+          "name": "Cyber",
+          "kind": "category",
+          "description": "The ability to create, defend, exploit, or deliver effects within information systems and networks (cyberspace), including DODIN ops, defensive cyber ops, and authorized offensive cyber effects. Acts in the digital substrate.",
+          "label": "Cyber",
+          "children": []
+        },
+        {
+          "id": "CAT_CapabilityTypeKinetic",
+          "name": "Kinetic",
+          "kind": "category",
+          "description": "The ability to produce physical effects through mechanical/chemical/explosive energy on material targets (e.g., fires, mobility, breaching, physical destruction). Changes the physical world.",
+          "label": "Kinetic",
+          "children": []
+        },
+        {
+          "id": "CAT_CapabilityTypeSensor",
+          "name": "Sensor",
+          "kind": "category",
+          "description": "The ability to detect, measure, or observe phenomena (physical or logical) and produce observations for awareness/targeting (e.g., EO/IR, radar, SIGINT, cyber telemetry). Creates information.",
+          "label": "Sensor",
+          "children": []
+        },
+        {
+          "id": "CAT_DomainCognitive",
+          "name": "DomainCognitive",
+          "kind": "category",
+          "label": "Cognitive",
+          "children": []
+        },
+        {
+          "id": "CAT_DomainCyber",
+          "name": "DomainCyber",
+          "kind": "category",
+          "label": "Cyber",
+          "children": []
+        },
+        {
+          "id": "CAT_DomainLand",
+          "name": "DomainLand",
+          "kind": "category",
+          "label": "Land",
+          "children": []
+        },
+        {
+          "id": "CAT_DomainSpace",
+          "name": "DomainSpace",
+          "kind": "category",
+          "label": "Space",
+          "children": []
+        },
+        {
+          "id": "CAT_DomainSubsurface",
+          "name": "DomainSubsurface",
+          "kind": "category",
+          "label": "Subsurface",
+          "children": []
+        },
+        {
+          "id": "CAT_DomainSurface",
+          "name": "DomainSurface",
+          "kind": "category",
+          "label": "Suface",
+          "children": []
+        },
+        {
+          "id": "CAT_DomainUnknown",
+          "name": "DomainUnknown",
+          "kind": "category",
+          "label": "Unknown",
+          "children": []
+        },
+        {
+          "id": "CAT_LOVWarfareFuncionC2",
+          "name": "Command and Control (C2)",
+          "kind": "category",
+          "label": "Command and Control (C2)",
+          "description": "Directs and coordinates forces and operations to achieve objectives; enables planning, direction, and synchronization across all domains.",
+          "children": []
+        },
+        {
+          "id": "CAT_LOVWarfareFuncionCIMIC",
+          "name": "Civil-Military Cooperation (CIMIC)",
+          "kind": "category",
+          "label": "Civil-Military Cooperation (CIMIC)",
+          "description": "Coordinates and facilitates interaction with civil actors, populations, and authorities to support the mission and unity of effort.",
+          "children": []
+        },
+        {
+          "id": "CAT_LOVWarfareFuncionFires",
+          "name": "Fires",
+          "kind": "category",
+          "label": "Fires",
+          "description": "Delivers effects against targets to degrade, deny, disrupt, or destroy enemy capabilities and will.",
+          "children": []
+        },
+        {
+          "id": "CAT_LOVWarfareFuncionForceProtection",
+          "name": "Force Protection",
+          "kind": "category",
+          "label": "Force Protection",
+          "description": "Preserves the force’s fighting potential by preventing or mitigating hostile actions, hazards, and vulnerabilities.",
+          "children": []
+        },
+        {
+          "id": "CAT_LOVWarfareFuncionInformation",
+          "name": "Information",
+          "kind": "category",
+          "label": "Information",
+          "description": "Creates, protects, senses, and employs information and related capabilities to achieve advantage and influence outcomes.",
+          "children": []
+        },
+        {
+          "id": "CAT_LOVWarfareFuncionIntelligence",
+          "name": "Intelligence",
+          "kind": "category",
+          "label": "Intelligence",
+          "description": "Collects, analyzes, and disseminates information on the operational environment, threats, and targets to support decision-making.",
+          "children": []
+        },
+        {
+          "id": "CAT_LOVWarfareFuncionManoeuvre",
+          "name": "Manoeuvre",
+          "kind": "category",
+          "label": "Manoeuvre",
+          "description": "Positions and moves forces to gain positional advantage and create favorable conditions for success.",
+          "children": []
+        },
+        {
+          "id": "CAT_LOVWarfareFuncionSustainment",
+          "name": "Sustainment",
+          "kind": "category",
+          "label": "Sustainment",
+          "description": "Provides logistics, medical, personnel, and other support to maintain combat power and freedom of action over time.",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "CAT_v05",
+      "name": "v05",
+      "kind": "category",
+      "children": [
+        {
+          "id": "CAT_concept",
+          "name": "concept",
+          "kind": "category",
+          "description": "Simplification of MIM categories.\nClean-up UUIDs from object/datatype properties.",
+          "label": "Core Ontology Concepts - v0",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "REL_OSTType",
+      "name": "OSTType",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "REL_PropertyAirmotion",
+      "name": "PropertyAirmotion",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "383ae544-b3e7-4d9c-ab66-13d7dbb6a53d",
+      "name": "AirMotion",
+      "kind": "category",
+      "label": "Air motion",
+      "children": []
+    },
+    {
+      "id": "c7dcbb0d-be08-4cb5-a1f3-01ba6934fe0b",
+      "name": "air_model",
+      "kind": "category",
+      "label": "Air model",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyAirmotion",
+      "name": "airmotion",
+      "kind": "category",
+      "label": "Airmotion",
+      "children": []
+    },
+    {
+      "id": "aa2e8cd3-2402-4a28-9581-68a98740fa0a",
+      "name": "AssetAttacked",
+      "kind": "category",
+      "label": "Asset attacked",
+      "description": "paquete de informacion para saber a que asset se esta atacando",
+      "children": []
+    },
+    {
+      "id": "ca65f16b-6f56-4ae9-9f71-cb8f989ca040",
+      "name": "DIstance Entities",
+      "kind": "category",
+      "label": "Distance Entities",
+      "description": "distance between entities",
+      "children": []
+    },
+    {
+      "id": "87826137-ea5b-48f2-9502-bbe11555b9ae",
+      "name": "ChildsContainer",
+      "kind": "category",
+      "label": "Childs container",
+      "children": []
+    },
+    {
+      "id": "REL_PropertyClusterEntitiesList",
+      "name": "PropertyClusterEntitiesList",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "82cd4e5b-463f-4748-9699-43ebb0623baa",
+      "name": "MembersContainer",
+      "kind": "category",
+      "label": "Members container",
+      "description": "Component assignable to a Cluster entity only",
+      "children": []
+    },
+    {
+      "id": "54102a0c-ff7a-4765-abc8-079e736e6968",
+      "name": "uuidPair",
+      "kind": "category",
+      "label": "UUID pair",
+      "description": "A pair of uuid type values",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyClusterEntitiesList",
+      "name": "ClusterEntitiesList",
+      "kind": "category",
+      "label": "ClusterEntitiesList",
+      "children": []
+    },
+    {
+      "id": "REL_PropertyClusterList",
+      "name": "PropertyClusterList",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "6ad5915f-d71a-45e9-9bf7-3f0c2347e3ed",
+      "name": "ClustersMemberContainer",
+      "kind": "category",
+      "label": "Clusters member container",
+      "description": "Component to store how many clusters an entity belongs",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyClusterList",
+      "name": "ClusterList",
+      "kind": "category",
+      "label": "ClusterList",
+      "description": "List of uuid pairs. First: id_cluster, Second: parent_id",
+      "children": []
+    },
+    {
+      "id": "REL_PropertyCommand",
+      "name": "PropertyCommand",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "9b5f9c0e-bb02-41ff-b766-e85f4977571d",
+      "name": "maneuver",
+      "kind": "category",
+      "label": "Maneuver",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyCommand",
+      "name": "command",
+      "kind": "category",
+      "label": "Command",
+      "children": []
+    },
+    {
+      "id": "REL_PropertyDetectionReplayEventList",
+      "name": "PropertyDetectionReplayEventList",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "91656759-d7a9-4c1e-b38c-84c12e03821c",
+      "name": "DetectionEventsReplay",
+      "kind": "category",
+      "label": "Detection events replay",
+      "description": "Replay of the Detection Events",
+      "info": "FCAS",
+      "children": []
+    },
+    {
+      "id": "ce1a4385-a05f-4d97-abd9-d85c9f86a5ba",
+      "name": "DetectionReplayEvent",
+      "kind": "category",
+      "label": "Detection replay event",
+      "description": "detection event from recorded data",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyDetectionReplayEventList",
+      "name": "DetectionReplayEventList",
+      "kind": "category",
+      "label": "DetectionReplayEventList",
+      "description": "List of the Detection Events of the Replay",
+      "children": []
+    },
+    {
+      "id": "REL_PropertyEventphase",
+      "name": "PropertyEventphase",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "1b96db6a-a79d-4c2d-ab15-8a32ea2ea3aa",
+      "name": "event_phase",
+      "kind": "category",
+      "label": "Event phase",
+      "description": "CyberEvent_C Property",
+      "children": []
+    },
+    {
+      "id": "f7207d0c-c79e-45f2-8260-0886b0f31b7f",
+      "name": "AreaInfoContainer",
+      "kind": "category",
+      "label": "Area info container",
+      "children": []
+    },
+    {
+      "id": "REL_PropertyManeuverType",
+      "name": "PropertyManeuverType",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "ffedd75a-9729-4f94-bc35-c27fb0e88438",
+      "name": "command_type",
+      "kind": "category",
+      "label": "Command type",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyManeuverType",
+      "name": "maneuver_type",
+      "kind": "category",
+      "label": "ManeuverType",
+      "children": []
+    },
+    {
+      "id": "5b2e10a1-eee4-40eb-b997-9b1dc2c12e3a",
+      "name": "OrderComponent",
+      "kind": "category",
+      "label": "Order component",
+      "description": "Component to establish the execution order of actions",
+      "info": "Component of any asset of type CyberAction",
+      "children": []
+    },
+    {
+      "id": "9751fc4b-f8e2-4670-8534-31e05bca9f67",
+      "name": "TriageData",
+      "kind": "category",
+      "label": "Triage data",
+      "children": []
+    },
+    {
+      "id": "320b075d-ae51-47a7-ab8d-2835db56dfba",
+      "name": "Area",
+      "kind": "category",
+      "label": "Area",
+      "description": "area geometrica para escenarios",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyPoligono",
+      "name": "poligono",
+      "kind": "category",
+      "label": "Poligono",
+      "children": []
+    },
+    {
+      "id": "16fbde1c-484b-4b40-b2d1-3f84a61d38af",
+      "name": "waypoint",
+      "kind": "category",
+      "label": "Waypoint",
+      "children": []
+    },
+    {
+      "id": "114e8964-539d-4b4a-8f78-fda491e0f501",
+      "name": "ConditionPosition",
+      "kind": "category",
+      "label": "Condition position",
+      "description": "Position Component for CyberEvent.CyberCondition.Position",
+      "children": []
+    },
+    {
+      "id": "6c6891a3-435e-463e-a3cf-2330f605d0cb",
+      "name": "Geoposition",
+      "kind": "category",
+      "label": "Geoposition",
+      "children": []
+    },
+    {
+      "id": "e1e56a11-46d5-4aad-90dc-aec928640ece",
+      "name": "GeopositionStatic",
+      "kind": "category",
+      "label": "Geoposition static",
+      "description": "Static position for assets such as buildings, etc.",
+      "children": []
+    },
+    {
+      "id": "376d1e27-0a3a-4294-b301-0914c6c5a8ec",
+      "name": "HoldPosition",
+      "kind": "category",
+      "label": "Hold position",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyPosition",
+      "name": "Position",
+      "kind": "category",
+      "label": "Position",
+      "children": []
+    },
+    {
+      "id": "REL_PropertyPositionReplayEventList",
+      "name": "PropertyPositionReplayEventList",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "378bb5a1-dee2-4bda-b099-e3e77c762e4a",
+      "name": "PositionEventsReplay",
+      "kind": "category",
+      "label": "Position events replay",
+      "description": "Replay of the Position Events",
+      "info": "FCAS",
+      "children": []
+    },
+    {
+      "id": "30cb19fe-f269-4e28-bc8b-a9d6794a14bb",
+      "name": "PositionReplayEvent",
+      "kind": "category",
+      "label": "Position replay event",
+      "description": "position event from recorded data",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyPositionReplayEventList",
+      "name": "PositionReplayEventList",
+      "kind": "category",
+      "label": "PositionReplayEventList",
+      "description": "List of the Position Events of the Replay",
+      "children": []
+    },
+    {
+      "id": "REL_PropertyPriority",
+      "name": "PropertyPriority",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "a5aa99df-8125-44c3-af4d-442ca0e34de8",
+      "name": "TriagePriority",
+      "kind": "category",
+      "label": "Triage priority",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyPriority",
+      "name": "Priority",
+      "kind": "category",
+      "label": "Priority",
+      "children": []
+    },
+    {
+      "id": "REL_PropertyRoute",
+      "name": "PropertyRoute",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "d4184db0-b94f-40bd-b552-0b9df980c39f",
+      "name": "Route",
+      "kind": "category",
+      "label": "Route",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyRoute",
+      "name": "route",
+      "kind": "category",
+      "label": "Route",
+      "children": []
+    },
+    {
+      "id": "REL_PropertySide",
+      "name": "PropertySide",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "bede23d7-8f02-45e7-a7db-d523317d9804",
+      "name": "EntityVisibility",
+      "kind": "category",
+      "label": "Entity visibility",
+      "children": []
+    },
+    {
+      "id": "def0eec5-be91-4133-a953-7fa62a14f040",
+      "name": "SideType",
+      "kind": "category",
+      "label": "Side type",
+      "description": "Friend, Hostile, etc.",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertySide",
+      "name": "Side",
+      "kind": "category",
+      "label": "Side",
+      "children": []
+    },
+    {
+      "id": "REL_PropertySpeedModule",
+      "name": "PropertySpeedModule",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "0a2cc713-9f6d-4e1e-86c3-ea5d05aa3d87",
+      "name": "vector3d",
+      "kind": "category",
+      "label": "Vector3d",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertySpeedModule",
+      "name": "speed_module",
+      "kind": "category",
+      "label": "SpeedModule",
+      "description": "vx, vy, vz speed components",
+      "children": []
+    },
+    {
+      "id": "REL_PropertySpeedVector",
+      "name": "PropertySpeedVector",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "19a51705-5acf-43cb-a58c-0047691611ae",
+      "name": "VisualizationInfoData",
+      "kind": "category",
+      "label": "Visualization info data",
+      "description": "VisualizationInfo data values",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertySpeedVector",
+      "name": "SpeedVector",
+      "kind": "category",
+      "label": "SpeedVector",
+      "children": []
+    },
+    {
+      "id": "REL_PropertyState",
+      "name": "PropertyState",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "50632c8d-f349-4abf-85fe-35fc6f07ed89",
+      "name": "RoadDensityComponent",
+      "kind": "category",
+      "label": "Road density component",
+      "description": "a component to describe the density state of a road",
+      "children": []
+    },
+    {
+      "id": "efaf32b0-6896-4bd7-867d-8063d4adc560",
+      "name": "RoadState",
+      "kind": "category",
+      "label": "Road state",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyState",
+      "name": "State",
+      "kind": "category",
+      "label": "State",
+      "children": []
+    },
+    {
+      "id": "REL_PropertySurfacemotion",
+      "name": "PropertySurfacemotion",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "017f2245-ff62-458f-9656-3a97b1866eb9",
+      "name": "SurfaceMotion",
+      "kind": "category",
+      "label": "Surface motion",
+      "children": []
+    },
+    {
+      "id": "def707b7-ec1a-48a1-a4c7-541356e6f315",
+      "name": "surface_model",
+      "kind": "category",
+      "label": "Surface model",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertySurfacemotion",
+      "name": "surfacemotion",
+      "kind": "category",
+      "label": "Surfacemotion",
+      "children": []
+    },
+    {
+      "id": "REL_PropertyTriageType",
+      "name": "PropertyTriageType",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "687c2c06-fd9a-4283-a5b8-8d75b01032a4",
+      "name": "TriageType",
+      "kind": "category",
+      "label": "Triage type",
+      "description": "Triage classification",
+      "children": []
+    },
+    {
+      "id": "REL_PropertyType",
+      "name": "PropertyType",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "7f213f19-2ec1-4910-afed-d96ddd1aab6f",
+      "name": "Radar",
+      "kind": "category",
+      "label": "Radar",
+      "description": "Radar Component",
+      "children": []
+    },
+    {
+      "id": "34d7bbd0-31a5-4370-9c51-5546bae2e9d7",
+      "name": "Radar_Type",
+      "kind": "category",
+      "label": "Radar type",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyType",
+      "name": "Type",
+      "kind": "category",
+      "label": "Type",
+      "description": "Radar Component Type",
+      "children": []
+    },
+    {
+      "id": "REL_PropertyWaypointType",
+      "name": "PropertyWaypointType",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "770134d9-5e5b-4eec-b2c1-60a40bc06938",
+      "name": "waypoint_type",
+      "kind": "category",
+      "label": "Waypoint type",
+      "description": "Waypoint type",
+      "children": []
+    },
+    {
+      "id": "REL_acknowledgeResponse",
+      "name": "acknowledgeResponse",
+      "kind": "relation",
+      "children": [
+        {
+          "id": "CAT_n311",
+          "name": "n311",
+          "kind": "category",
+          "qualifiedCardinality": "1",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "REL_acquiredInformation",
+      "name": "acquiredInformation",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "REL_actor",
+      "name": "actor",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "REL_adminType",
+      "name": "adminType",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "REL_damageType",
+      "name": "damageType",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "REL_dataLinkProtocol",
+      "name": "dataLinkProtocol",
+      "kind": "relation",
+      "children": [
+        {
+          "id": "CAT_n341",
+          "name": "n341",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "REL_dataStatus",
+      "name": "dataStatus",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "REL_dataType",
+      "name": "dataType",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "REL_degradeType",
+      "name": "degradeType",
+      "kind": "relation",
+      "children": [
+        {
+          "id": "CAT_n330",
+          "name": "n330",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "REL_deviceType",
+      "name": "deviceType",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "REL_encrypted",
+      "name": "encrypted",
+      "kind": "relation",
+      "children": [
+        {
+          "id": "CAT_n321",
+          "name": "n321",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "REL_eventTime",
+      "name": "eventTime",
+      "kind": "relation",
+      "children": [
+        {
+          "id": "CAT_n313",
+          "name": "n313",
+          "kind": "category",
+          "qualifiedCardinality": "1",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "REL_manipulationType",
+      "name": "manipulationType",
+      "kind": "relation",
+      "children": [
+        {
+          "id": "CAT_n335",
+          "name": "n335",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "REL_messageType",
+      "name": "messageType",
+      "kind": "relation",
+      "children": [
+        {
+          "id": "CAT_n345",
+          "name": "n345",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "REL_mitreDetection",
+      "name": "mitreDetection",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "REL_mitreMitigation",
+      "name": "mitreMitigation",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "REL_mitreSubtechnique",
+      "name": "mitreSubtechnique",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "REL_networkInterface",
+      "name": "networkInterface",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "REL_packetManipulationType",
+      "name": "packetManipulationType",
+      "kind": "relation",
+      "children": [
+        {
+          "id": "CAT_n336",
+          "name": "n336",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "REL_phase",
+      "name": "phase",
+      "kind": "relation",
+      "children": [
+        {
+          "id": "CAT_n314",
+          "name": "n314",
+          "kind": "category",
+          "qualifiedCardinality": "1",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "REL_physicalLayer",
+      "name": "physicalLayer",
+      "kind": "relation",
+      "children": [
+        {
+          "id": "CAT_n348",
+          "name": "n348",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n349",
+          "name": "n349",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "REL_protocol",
+      "name": "protocol",
+      "kind": "relation",
+      "children": [
+        {
+          "id": "CAT_n338",
+          "name": "n338",
+          "kind": "category",
+          "qualifiedCardinality": "1",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "REL_rateType",
+      "name": "rateType",
+      "kind": "relation",
+      "children": [
+        {
+          "id": "CAT_n334",
+          "name": "n334",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "REL_reconType",
+      "name": "reconType",
+      "kind": "relation",
+      "children": [
+        {
+          "id": "CAT_n320",
+          "name": "n320",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "REL_relatedEvent",
+      "name": "relatedEvent",
+      "kind": "relation",
+      "children": [
+        {
+          "id": "CAT_n312",
+          "name": "n312",
+          "kind": "category",
+          "qualifiedCardinality": "1",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "REL_relatedObject",
+      "name": "relatedObject",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "REL_relationshipType",
+      "name": "relationshipType",
+      "kind": "relation",
+      "children": [
+        {
+          "id": "CAT_n350",
+          "name": "n350",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "REL_sensitivity",
+      "name": "sensitivity",
+      "kind": "relation",
+      "children": [
+        {
+          "id": "CAT_n322",
+          "name": "n322",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "REL_serviceType",
+      "name": "serviceType",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "REL_systemType",
+      "name": "systemType",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "REL_target",
+      "name": "target",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "REL_targetModifiers",
+      "name": "targetModifiers",
+      "kind": "relation",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyActiveIcon2D",
+      "name": "ActiveIcon2D",
+      "kind": "category",
+      "label": "ActiveIcon2D",
+      "description": "0: App6D, 1: Custom",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyAltitude",
+      "name": "altitude",
+      "kind": "category",
+      "label": "Altitude",
+      "description": "platform altitude",
+      "children": []
+    },
+    {
+      "id": "8418fb74-4780-46ba-b8c8-cbdb24071682",
+      "name": "LineRepresentationComponent",
+      "kind": "category",
+      "label": "Line representation component",
+      "description": "a component to describe the shape of the read and its representation",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyAnimated",
+      "name": "Animated",
+      "kind": "category",
+      "label": "Animated",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyApp6D",
+      "name": "App6D",
+      "kind": "category",
+      "label": "App6D",
+      "description": "App6D Symbol Identification Code (SIDC)",
+      "children": []
+    },
+    {
+      "id": "91c30bc4-1e24-49b7-a44e-f65d73cb5645",
+      "name": "Identification",
+      "kind": "category",
+      "label": "Identification",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyApp6e",
+      "name": "app6e",
+      "kind": "category",
+      "label": "App6e",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyBaseRadius",
+      "name": "BaseRadius",
+      "kind": "category",
+      "label": "BaseRadius",
+      "description": "Radar Component BaseRadius",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyBaseWidth",
+      "name": "BaseWidth",
+      "kind": "category",
+      "label": "BaseWidth",
+      "description": "Radar Component BaseWidth",
+      "children": []
+    },
+    {
+      "id": "1424b1b9-0aed-4ad4-bf5e-12e295707b4c",
+      "name": "ClusterRender",
+      "kind": "category",
+      "label": "Cluster render",
+      "description": "Defines how to render a cluster",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyBlinkSpeed",
+      "name": "BlinkSpeed",
+      "kind": "category",
+      "label": "BlinkSpeed",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyBlinking",
+      "name": "Blinking",
+      "kind": "category",
+      "label": "Blinking",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyCardVisible",
+      "name": "CardVisible",
+      "kind": "category",
+      "label": "CardVisible",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyColor",
+      "name": "Color",
+      "kind": "category",
+      "label": "Color",
+      "children": []
+    },
+    {
+      "id": "fe82edc7-28ea-4aa6-b98b-1bc809b00558",
+      "name": "AssetControlColumn",
+      "kind": "category",
+      "label": "Asset control column",
+      "description": "Lets us know that the entity goes into an special column in the asset viewer",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyColumnName",
+      "name": "ColumnName",
+      "kind": "category",
+      "label": "ColumnName",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyColumnPosition",
+      "name": "ColumnPosition",
+      "kind": "category",
+      "label": "ColumnPosition",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyCompany",
+      "name": "Company",
+      "kind": "category",
+      "label": "Company",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyDataText1",
+      "name": "DataText1",
+      "kind": "category",
+      "label": "DataText1",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyDataText10",
+      "name": "DataText10",
+      "kind": "category",
+      "label": "DataText10",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyDataText2",
+      "name": "DataText2",
+      "kind": "category",
+      "label": "DataText2",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyDataText3",
+      "name": "DataText3",
+      "kind": "category",
+      "label": "DataText3",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyDataText4",
+      "name": "DataText4",
+      "kind": "category",
+      "label": "DataText4",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyDataText5",
+      "name": "DataText5",
+      "kind": "category",
+      "label": "DataText5",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyDataText6",
+      "name": "DataText6",
+      "kind": "category",
+      "label": "DataText6",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyDataText7",
+      "name": "DataText7",
+      "kind": "category",
+      "label": "DataText7",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyDataText8",
+      "name": "DataText8",
+      "kind": "category",
+      "label": "DataText8",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyDataText9",
+      "name": "DataText9",
+      "kind": "category",
+      "label": "DataText9",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyDistance",
+      "name": "distance",
+      "kind": "category",
+      "label": "Distance",
+      "description": "Maneuver distance",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyEsAzimuth",
+      "name": "esAzimuth",
+      "kind": "category",
+      "label": "EsAzimuth",
+      "description": "azimuth between platforms",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyEsDistance",
+      "name": "esDistance",
+      "kind": "category",
+      "label": "EsDistance",
+      "description": "distance between platforms",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyEsElevation",
+      "name": "esElevation",
+      "kind": "category",
+      "label": "EsElevation",
+      "description": "elevation between platforms",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyEventtime",
+      "name": "eventtime",
+      "kind": "category",
+      "label": "Eventtime",
+      "description": "CyberEvent_C Property",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyFeature",
+      "name": "Feature",
+      "kind": "category",
+      "label": "Feature",
+      "description": "An Object that encompasses meteorological, geographic, or control features of military significance.",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyHeading",
+      "name": "heading",
+      "kind": "category",
+      "label": "Heading",
+      "description": "platform heading",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyHoldTime",
+      "name": "hold_time",
+      "kind": "category",
+      "label": "HoldTime",
+      "description": "Used only with wapypoints of type hold. Value in seconds",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyIcon2DCustom",
+      "name": "Icon2DCustom",
+      "kind": "category",
+      "label": "Icon2DCustom",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyIsLogical",
+      "name": "IsLogical",
+      "kind": "category",
+      "label": "IsLogical",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyLatitude",
+      "name": "latitude",
+      "kind": "category",
+      "label": "Latitude",
+      "description": "platform latitude",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyLength",
+      "name": "Length",
+      "kind": "category",
+      "label": "Length",
+      "description": "Radar Component Length",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyLineRGBColor",
+      "name": "LineRGBColor",
+      "kind": "category",
+      "label": "LineRGBColor",
+      "description": "RGB data stored as a hexadecimal string",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyLineRGBGlow",
+      "name": "LineRGBGlow",
+      "kind": "category",
+      "label": "LineRGBGlow",
+      "description": "RGB data stored as a hexadecimal string",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyLineWidth",
+      "name": "LineWidth",
+      "kind": "category",
+      "label": "LineWidth",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyLongitude",
+      "name": "longitude",
+      "kind": "category",
+      "label": "Longitude",
+      "description": "platform longitude",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyMapVisible",
+      "name": "MapVisible",
+      "kind": "category",
+      "label": "MapVisible",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyMipdesc",
+      "name": "mipdesc",
+      "kind": "category",
+      "label": "Mipdesc",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyMitreattackdetectionids",
+      "name": "mitreattackdetectionids",
+      "kind": "category",
+      "label": "Mitreattackdetectionids",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyMitreattackmitigationids",
+      "name": "mitreattackmitigationids",
+      "kind": "category",
+      "label": "Mitreattackmitigationids",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyMitreattacksubtechniqueids",
+      "name": "mitreattacksubtechniqueids",
+      "kind": "category",
+      "label": "Mitreattacksubtechniqueids",
+      "description": "CyberAttack_C Subtechniques IDs",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyModel3D",
+      "name": "Model3D",
+      "kind": "category",
+      "label": "Model3D",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyNEmitters",
+      "name": "nEmitters",
+      "kind": "category",
+      "label": "NEmitters",
+      "description": "number of sensors aboard",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyNPlatforms",
+      "name": "nPlatforms",
+      "kind": "category",
+      "label": "NPlatforms",
+      "description": "number of platforms in the scenario",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyObservedPlatID",
+      "name": "observedPlatId",
+      "kind": "category",
+      "label": "ObservedPlatID",
+      "description": "id of the observed platform",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyPType",
+      "name": "pType",
+      "kind": "category",
+      "label": "PType",
+      "description": "platform type",
+      "children": []
+    },
+    {
+      "id": "488491b5-1633-480a-a160-5ed44467da65",
+      "name": "orientation",
+      "kind": "category",
+      "label": "Orientation",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyPitch",
+      "name": "pitch",
+      "kind": "category",
+      "label": "Pitch",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyPlatformID",
+      "name": "platformID",
+      "kind": "category",
+      "label": "PlatformID",
+      "description": "actual platform id",
+      "children": []
+    },
+    {
+      "id": "82bf1792-dc70-47b2-816e-ff55fae4f6cd",
+      "name": "VisualizationInfo",
+      "kind": "category",
+      "label": "Visualization info",
+      "description": "Sets info visibility fields by default and/or by entity selection",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyProjectionVector",
+      "name": "ProjectionVector",
+      "kind": "category",
+      "label": "ProjectionVector",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyProjectionVectorSelect",
+      "name": "ProjectionVector_Select",
+      "kind": "category",
+      "label": "ProjectionVectorSelect",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyRVelocity",
+      "name": "rVelocity",
+      "kind": "category",
+      "label": "RVelocity",
+      "description": "radial velocity of the platform",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyRadius",
+      "name": "Radius",
+      "kind": "category",
+      "label": "Radius",
+      "description": "Radius property for position condition",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyRefPlatID",
+      "name": "refPlatId",
+      "kind": "category",
+      "label": "RefPlatID",
+      "description": "id of the referenced platform",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyRenderText1",
+      "name": "RenderText1",
+      "kind": "category",
+      "label": "RenderText1",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyRenderText10",
+      "name": "RenderText10",
+      "kind": "category",
+      "label": "RenderText10",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyRenderText10Select",
+      "name": "RenderText10_Select",
+      "kind": "category",
+      "label": "RenderText10Select",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyRenderText1Select",
+      "name": "RenderText1_Select",
+      "kind": "category",
+      "label": "RenderText1Select",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyRenderText2",
+      "name": "RenderText2",
+      "kind": "category",
+      "label": "RenderText2",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyRenderText2Select",
+      "name": "RenderText2_Select",
+      "kind": "category",
+      "label": "RenderText2Select",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyRenderText3",
+      "name": "RenderText3",
+      "kind": "category",
+      "label": "RenderText3",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyRenderText3Select",
+      "name": "RenderText3_Select",
+      "kind": "category",
+      "label": "RenderText3Select",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyRenderText4",
+      "name": "RenderText4",
+      "kind": "category",
+      "label": "RenderText4",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyRenderText4Select",
+      "name": "RenderText4_Select",
+      "kind": "category",
+      "label": "RenderText4Select",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyRenderText5",
+      "name": "RenderText5",
+      "kind": "category",
+      "label": "RenderText5",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyRenderText5Select",
+      "name": "RenderText5_Select",
+      "kind": "category",
+      "label": "RenderText5Select",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyRenderText6",
+      "name": "RenderText6",
+      "kind": "category",
+      "label": "RenderText6",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyRenderText6Select",
+      "name": "RenderText6_Select",
+      "kind": "category",
+      "label": "RenderText6Select",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyRenderText7",
+      "name": "RenderText7",
+      "kind": "category",
+      "label": "RenderText7",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyRenderText7Select",
+      "name": "RenderText7_Select",
+      "kind": "category",
+      "label": "RenderText7Select",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyRenderText8",
+      "name": "RenderText8",
+      "kind": "category",
+      "label": "RenderText8",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyRenderText8Select",
+      "name": "RenderText8_Select",
+      "kind": "category",
+      "label": "RenderText8Select",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyRenderText9",
+      "name": "RenderText9",
+      "kind": "category",
+      "label": "RenderText9",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyRenderText9Select",
+      "name": "RenderText9_Select",
+      "kind": "category",
+      "label": "RenderText9Select",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyRequestack",
+      "name": "requestack",
+      "kind": "category",
+      "label": "Requestack",
+      "description": "CyberEvent_C Property",
+      "children": []
+    },
+    {
+      "id": "ea5dcbc8-2494-4f31-9a1e-d20a4757152f",
+      "name": "FollowRoute",
+      "kind": "category",
+      "label": "Follow route",
+      "description": "Component for FollowRoute Asset",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyReverseRoute",
+      "name": "ReverseRoute",
+      "kind": "category",
+      "label": "ReverseRoute",
+      "description": "FollowRoute_C Property: Specifies to go through the route forwards(true) or backwards(false)",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyRoll",
+      "name": "roll",
+      "kind": "category",
+      "label": "Roll",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertySiso",
+      "name": "siso",
+      "kind": "category",
+      "label": "Siso",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertySpeed",
+      "name": "speed",
+      "kind": "category",
+      "label": "Speed",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertySpeedVD",
+      "name": "speedVD",
+      "kind": "category",
+      "label": "SpeedVD",
+      "description": "radial speed of platform",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertySpeedVE",
+      "name": "speedVE",
+      "kind": "category",
+      "label": "SpeedVE",
+      "description": "east speed of platform",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertySpeedVN",
+      "name": "speedVN",
+      "kind": "category",
+      "label": "SpeedVN",
+      "description": "north speed of platform",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertySpeedVectorHeading",
+      "name": "SpeedVectorHeading",
+      "kind": "category",
+      "label": "SpeedVectorHeading",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertySpeedVectorHeadingSelect",
+      "name": "SpeedVectorHeading_Select",
+      "kind": "category",
+      "label": "SpeedVectorHeadingSelect",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertySpeedVs",
+      "name": "speedVs",
+      "kind": "category",
+      "label": "SpeedVs",
+      "description": "general speed of platform",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyStability",
+      "name": "Stability",
+      "kind": "category",
+      "label": "Stability",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertySutVisibility",
+      "name": "sutVisibility",
+      "kind": "category",
+      "label": "SutVisibility",
+      "description": "visibility over the horizon line",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyTargetids",
+      "name": "targetids",
+      "kind": "category",
+      "label": "Targetids",
+      "description": "CyberEvent_C Property",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyTime",
+      "name": "Time",
+      "kind": "category",
+      "label": "Time Instant",
+      "description": "position event timestamp",
+      "children": []
+    },
+    {
+      "id": "f230cae2-3f04-4950-9cd1-d1180cb7cbb9",
+      "name": "ActivationTimestamp",
+      "kind": "category",
+      "label": "Activation timestamp",
+      "description": "Indicates the time in seconds, when an asset is activated during a mission",
+      "info": "FCAS",
+      "children": []
+    },
+    {
+      "id": "49d41d29-5b6c-4c28-a0e7-0fb73c76c139",
+      "name": "Timestamp",
+      "kind": "category",
+      "label": "Activation TimeStamp (in seconds)",
+      "description": "ActivationTimestamp_C property. Time expressed in seconds",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyVelocityLevel",
+      "name": "VelocityLevel",
+      "kind": "category",
+      "label": "VelocityLevel",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyWaypointOrder",
+      "name": "waypoint_order",
+      "kind": "category",
+      "label": "WaypointOrder",
+      "description": "Specifies each waypoint's position order",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyX",
+      "name": "x",
+      "kind": "category",
+      "label": "X",
+      "description": "vector3d x component",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyY",
+      "name": "y",
+      "kind": "category",
+      "label": "Y",
+      "description": "vector3d y component",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyYaw",
+      "name": "yaw",
+      "kind": "category",
+      "label": "Yaw",
+      "description": "geoposition_static-yaw",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyZ",
+      "name": "z",
+      "kind": "category",
+      "label": "Z",
+      "description": "vector3d z component",
+      "children": []
+    },
+    {
+      "id": "3b12c45f-5d91-4019-b146-03ba14dfefa4",
+      "name": "WaitCondition",
+      "kind": "category",
+      "label": "Wait condition",
+      "description": "WaitTime Component",
+      "info": "Component of CyberEvent.CyberCondition.WaitTime",
+      "children": []
+    },
+    {
+      "id": "CAT_float",
+      "name": "float",
+      "kind": "category",
+      "children": [
+        {
+          "id": "REL_confidenciality",
+          "name": "confidenciality",
+          "kind": "relation",
+          "children": [
+            {
+              "id": "CAT_n323",
+              "name": "n323",
+              "kind": "category",
+              "maxQualifiedCardinality": "1",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "REL_duration",
+          "name": "duration",
+          "kind": "relation",
+          "children": [
+            {
+              "id": "CAT_n315",
+              "name": "n315",
+              "kind": "category",
+              "qualifiedCardinality": "1",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "REL_packSizeStandardDeviation",
+          "name": "packSizeStandardDeviation",
+          "kind": "relation",
+          "children": [
+            {
+              "id": "CAT_n39",
+              "name": "n39",
+              "kind": "category",
+              "maxQualifiedCardinality": "1",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "REL_percentage",
+          "name": "percentage",
+          "kind": "relation",
+          "children": [
+            {
+              "id": "CAT_n325",
+              "name": "n325",
+              "kind": "category",
+              "maxQualifiedCardinality": "1",
+              "children": []
+            },
+            {
+              "id": "CAT_n337",
+              "name": "n337",
+              "kind": "category",
+              "maxQualifiedCardinality": "1",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "REL_seconds",
+          "name": "seconds",
+          "kind": "relation",
+          "children": [
+            {
+              "id": "CAT_n326",
+              "name": "n326",
+              "kind": "category",
+              "maxQualifiedCardinality": "1",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "CAT_n39",
+          "name": "n39",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n315",
+          "name": "n315",
+          "kind": "category",
+          "qualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n323",
+          "name": "n323",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n325",
+          "name": "n325",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n332",
+          "name": "n332",
+          "kind": "category",
+          "qualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n333",
+          "name": "n333",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "REL_eventID",
+      "name": "eventID",
+      "kind": "relation",
+      "children": [
+        {
+          "id": "CAT_n316",
+          "name": "n316",
+          "kind": "category",
+          "qualifiedCardinality": "1",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "CAT_base64Binary",
+      "name": "base64Binary",
+      "kind": "category",
+      "children": [
+        {
+          "id": "REL_payload",
+          "name": "payload",
+          "kind": "relation",
+          "children": [
+            {
+              "id": "CAT_n317",
+              "name": "n317",
+              "kind": "category",
+              "maxQualifiedCardinality": "1",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "REL_value",
+          "name": "value",
+          "kind": "relation",
+          "children": [
+            {
+              "id": "CAT_n333",
+              "name": "n333",
+              "kind": "category",
+              "maxQualifiedCardinality": "1",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "CAT_n317",
+          "name": "n317",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "eb6fe53c-5d19-4fea-aecf-813929eddbd8",
+      "name": "Airborne Mission Commander",
+      "kind": "category",
+      "label": "Airborne mission commander",
+      "description": "Airborne mission Commander",
+      "children": []
+    },
+    {
+      "id": "CAT_Restriction",
+      "name": "Restriction",
+      "kind": "category",
+      "children": [
+        {
+          "id": "CAT_n35",
+          "name": "n35",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n36",
+          "name": "n36",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n37",
+          "name": "n37",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n38",
+          "name": "n38",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n39",
+          "name": "n39",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n310",
+          "name": "n310",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n311",
+          "name": "n311",
+          "kind": "category",
+          "qualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n312",
+          "name": "n312",
+          "kind": "category",
+          "qualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n313",
+          "name": "n313",
+          "kind": "category",
+          "qualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n314",
+          "name": "n314",
+          "kind": "category",
+          "qualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n315",
+          "name": "n315",
+          "kind": "category",
+          "qualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n316",
+          "name": "n316",
+          "kind": "category",
+          "qualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n317",
+          "name": "n317",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n318",
+          "name": "n318",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n319",
+          "name": "n319",
+          "kind": "category",
+          "qualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n320",
+          "name": "n320",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n321",
+          "name": "n321",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n322",
+          "name": "n322",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n323",
+          "name": "n323",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n324",
+          "name": "n324",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n325",
+          "name": "n325",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n326",
+          "name": "n326",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n327",
+          "name": "n327",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n328",
+          "name": "n328",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n329",
+          "name": "n329",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n330",
+          "name": "n330",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n331",
+          "name": "n331",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n332",
+          "name": "n332",
+          "kind": "category",
+          "qualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n333",
+          "name": "n333",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n334",
+          "name": "n334",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n335",
+          "name": "n335",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n336",
+          "name": "n336",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n337",
+          "name": "n337",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n338",
+          "name": "n338",
+          "kind": "category",
+          "qualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n339",
+          "name": "n339",
+          "kind": "category",
+          "qualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n340",
+          "name": "n340",
+          "kind": "category",
+          "qualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n341",
+          "name": "n341",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n342",
+          "name": "n342",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n343",
+          "name": "n343",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n344",
+          "name": "n344",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n345",
+          "name": "n345",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n346",
+          "name": "n346",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n347",
+          "name": "n347",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n348",
+          "name": "n348",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n349",
+          "name": "n349",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n350",
+          "name": "n350",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n351",
+          "name": "n351",
+          "kind": "category",
+          "qualifiedCardinality": "1",
+          "children": []
+        },
+        {
+          "id": "CAT_n352",
+          "name": "n352",
+          "kind": "category",
+          "maxQualifiedCardinality": "1",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "89f77491-f89e-4675-a7dd-d9a4a8e0a746",
+      "name": "Armoured personnel carrier",
+      "kind": "category",
+      "label": "Armoured personnel carrier",
+      "description": "A lightly armoured, highly mobile vehicle used primarily for transporting personnel and their individual equipment during tactical operations.",
+      "children": []
+    },
+    {
+      "id": "9f2a5f3c-2692-4775-bdcb-f48af485d8e1",
+      "name": "Assault gun",
+      "kind": "category",
+      "label": "Assault gun",
+      "description": "A cannon, with a relatively long barrel, operating with a relatively low angle of fire, and having a high muzzle velocity.",
+      "children": []
+    },
+    {
+      "id": "a5c4cf55-97c1-441a-a24f-5e11bffa816e",
+      "name": "Cannon",
+      "kind": "category",
+      "label": "Cannon",
+      "description": "A weapon for firing projectiles, having a heavy metal tube installed on a carriage or mounting.",
+      "children": []
+    },
+    {
+      "id": "0326bcd4-b1d9-4e94-8fe5-0f6d78851d12",
+      "name": "Authorised Commander",
+      "kind": "category",
+      "label": "Authorised commander",
+      "description": "Base Commander",
+      "children": []
+    },
+    {
+      "id": "ba0d1f71-3a56-4604-8a5d-09c477835c5e",
+      "name": "CyberC2",
+      "kind": "category",
+      "label": "Cyber C2",
+      "description": "Ability to plan, direct, coordinate, and monitor cyber operations (DODIN ops, DCO, OCO), ensuring commander’s intent, battlespace management, and ROE compliance across all echelons.",
+      "children": []
+    },
+    {
+      "id": "c8dec4f3-f596-41f9-abfe-987f22b5be33",
+      "name": "CyberSupportCoordination",
+      "kind": "category",
+      "label": "Cyber support coordination",
+      "description": "Ability to orchestrate and synchronize cyber-related support across units and stakeholders (tasking, deconfliction, liaison with CSIRTs/ISPs/coalition), integrating cyber into joint planning and sustainment.",
+      "children": []
+    },
+    {
+      "id": "b0ecd809-d808-46f5-90db-03a4ed0d031c",
+      "name": "Cyber",
+      "kind": "category",
+      "label": "Cyber",
+      "children": []
+    },
+    {
+      "id": "8927d022-5b48-41d7-9468-5c5f6395ac60",
+      "name": "CyberDefensive",
+      "kind": "category",
+      "label": "Cyber defensive",
+      "description": "Ability to prevent, detect, respond to, and recover from cyber threats to preserve mission assurance (hardening, monitoring, incident response, and continuity of operations).",
+      "children": []
+    },
+    {
+      "id": "91657f56-3f14-4796-ae52-570398679bce",
+      "name": "CyberForceProtection",
+      "kind": "category",
+      "label": "Cyber force protection",
+      "description": "Ability to protect personnel, platforms, and mission systems from cyber effects across the mission lifecycle (endpoint security, mission assurance, COMSEC, digital OPSEC).",
+      "children": []
+    },
+    {
+      "id": "c293f9d6-2768-4094-87df-1a3c37298b56",
+      "name": "CyberISR",
+      "kind": "category",
+      "label": "Cyber ISR",
+      "description": "Ability to collect, process, analyze, and disseminate intelligence about the cyber environment and adversary activity (asset discovery, enumeration, traffic analysis, threat intel).",
+      "children": []
+    },
+    {
+      "id": "bf8fb974-c3cf-409e-8cb5-2d44f2ed1886",
+      "name": "CyberOffensive",
+      "kind": "category",
+      "label": "Cyber offensive",
+      "description": "Ability to deliver authorized cyber effects (degrade, deny, disrupt, deceive, destroy) against targets to achieve operational objectives in accordance with law, policy, and ROE.",
+      "children": []
+    },
+    {
+      "id": "c65516e2-d98b-4488-8ead-a68ed521d744",
+      "name": "Surveillance",
+      "kind": "category",
+      "label": "Surveillance capability",
+      "description": "A Capability, required for planning, of those Facilities, Equipment, Organisations and Persons that are deemed as having the nominal ability to observe aerospace, surface or subsurface areas, places, persons, or things, by visual, aural, electronic, photographic or other means.",
+      "children": []
+    },
+    {
+      "id": "61b4764f-4369-431e-8da2-8ee524095c94",
+      "name": "LandMotion",
+      "kind": "category",
+      "label": "Land motion",
+      "children": []
+    },
+    {
+      "id": "CAT_DeprecatedClass",
+      "name": "DeprecatedClass",
+      "kind": "category",
+      "children": [
+        {
+          "id": "CAT_Unclassified",
+          "name": "Unclassified",
+          "kind": "category",
+          "children": [
+            {
+              "id": "CAT_UnclassifiedFunctionalPerson",
+              "name": "UnclassifiedFunctionalPerson",
+              "kind": "category",
+              "children": []
+            },
+            {
+              "id": "CAT_UnclassifiedMilitaryUnit",
+              "name": "UnclassifiedMilitaryUnit",
+              "kind": "category",
+              "children": []
+            },
+            {
+              "id": "CAT_UnclassifiedVehicle",
+              "name": "UnclassifiedVehicle",
+              "kind": "category",
+              "children": []
+            },
+            {
+              "id": "CAT_UnclassifiedWeapon",
+              "name": "UnclassifiedWeapon",
+              "kind": "category",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fbad32f3-a04b-4146-bf79-967f5740fe5d",
+      "name": "CyberOperator",
+      "kind": "category",
+      "label": "Cyber operator",
+      "description": "Base Cyber operator",
+      "children": []
+    },
+    {
+      "id": "6f110bee-f296-450e-af24-03222773b018",
+      "name": "Data link16",
+      "kind": "category",
+      "label": "Data link16",
+      "description": "DataLink16",
+      "children": []
+    },
+    {
+      "id": "e1799cfa-af14-48eb-a650-687711285182",
+      "name": "Directory",
+      "kind": "category",
+      "label": "Directory",
+      "description": "Directory",
+      "children": []
+    },
+    {
+      "id": "ac133d8f-49a8-44dd-adc3-f97532c2ba10",
+      "name": "Electronic mail",
+      "kind": "category",
+      "label": "Electronic mail",
+      "description": "ElectronicMail",
+      "children": []
+    },
+    {
+      "id": "3ba397d2-4d25-45cf-a282-a98bd62b94fb",
+      "name": "File transfer protocol",
+      "kind": "category",
+      "label": "File transfer protocol",
+      "description": "FTP",
+      "children": []
+    },
+    {
+      "id": "8fc1d374-334c-4f4b-8b21-3c747ec4987f",
+      "name": "Ground Manoeuvre Commander",
+      "kind": "category",
+      "label": "Ground manoeuvre commander",
+      "description": "Ground manoeuvre Commander",
+      "children": []
+    },
+    {
+      "id": "4934ad4e-e3e1-41e9-80ae-e3b7aac9d59d",
+      "name": "Hypertext transfer protocol",
+      "kind": "category",
+      "label": "Hypertext transfer protocol",
+      "description": "HTP",
+      "children": []
+    },
+    {
+      "id": "cd54c37f-0ca4-4cb9-b95e-835bde4ffcd3",
+      "name": "IFF mode 1",
+      "kind": "category",
+      "label": "IFF mode 1",
+      "description": "IFFMode1",
+      "children": []
+    },
+    {
+      "id": "85a9a01f-c92a-49c0-875c-b4efd41b80a6",
+      "name": "IFF mode 2",
+      "kind": "category",
+      "label": "IFF mode 2",
+      "description": "IFFMode2",
+      "children": []
+    },
+    {
+      "id": "17ac8d2a-a380-4162-91d4-4467a2a394e2",
+      "name": "IFF mode 4",
+      "kind": "category",
+      "label": "IFF mode 4",
+      "description": "IFFMode4",
+      "children": []
+    },
+    {
+      "id": "4f0fb570-876c-45d8-a887-3d679e9b1608",
+      "name": "IFF mode 5",
+      "kind": "category",
+      "label": "IFF mode 5",
+      "description": "IFFMode5",
+      "children": []
+    },
+    {
+      "id": "f0b371e3-bcbf-49c1-9e6b-1a2f5dcde5e8",
+      "name": "IFF mode S",
+      "kind": "category",
+      "label": "IFF mode S",
+      "description": "IFFModeS",
+      "children": []
+    },
+    {
+      "id": "c51454d2-9a3d-41c7-83f8-9e63e875ff08",
+      "name": "Infantry Unit",
+      "kind": "category",
+      "label": "Infantry unit",
+      "description": "A CombatUnit whose principal designation is the employment of non-mechanised or lorry-(truck-)borne infantry.",
+      "children": []
+    },
+    {
+      "id": "48d3363e-9f44-4b9a-a126-62b6db3083f2",
+      "name": "Information warfare unit",
+      "kind": "category",
+      "label": "Information warfare unit",
+      "description": "A Unit whose principal designation is to achieve information superiority.",
+      "children": []
+    },
+    {
+      "id": "da1239e1-b782-431e-9d53-7bdb7f838fc7",
+      "name": "Link 1",
+      "kind": "category",
+      "label": "Link 1",
+      "description": "Link1",
+      "children": []
+    },
+    {
+      "id": "9cc04d1e-b8c7-4d3d-845f-b99129195e5a",
+      "name": "Link 11B",
+      "kind": "category",
+      "label": "Link 11B",
+      "description": "Link11B",
+      "children": []
+    },
+    {
+      "id": "c18a27cf-bd9b-480a-9c0d-4eef12b0569f",
+      "name": "Link 22",
+      "kind": "category",
+      "label": "Link 22",
+      "description": "Link22",
+      "children": []
+    },
+    {
+      "id": "9e8fa2c5-0fa1-4f1d-be72-63d5cfb62d38",
+      "name": "Link 4",
+      "kind": "category",
+      "label": "Link 4",
+      "description": "Link4",
+      "children": []
+    },
+    {
+      "id": "09004dae-e9f3-409e-bd41-26f5269e0d90",
+      "name": "Radar",
+      "kind": "category",
+      "label": "Radar",
+      "children": []
+    },
+    {
+      "id": "ccbe529b-d5a1-444a-aa55-d82034c02ae4",
+      "name": "Remote access",
+      "kind": "category",
+      "label": "Remote access",
+      "description": "Remote access",
+      "children": []
+    },
+    {
+      "id": "f93f7abf-3d8d-4602-95b7-a723dfaae035",
+      "name": "Tactical UAV",
+      "kind": "category",
+      "label": "Tactical uav",
+      "description": "Tactical UAV",
+      "children": []
+    },
+    {
+      "id": "3ba40dc5-9bfc-4c18-9066-a23e2a54a5e6",
+      "name": "UAV",
+      "kind": "category",
+      "label": "UAV",
+      "description": "Unmanned aerial vehicle",
+      "children": []
+    },
+    {
+      "id": "d68511bf-ee11-4d1c-a8cb-8dad487191e0",
+      "name": "Tank",
+      "kind": "category",
+      "label": "Tank",
+      "children": []
+    },
+    {
+      "id": "cacf2a57-7410-43a2-81ec-c0bff61c86c1",
+      "name": "Telnet",
+      "kind": "category",
+      "label": "Telnet",
+      "description": "Telnet",
+      "children": []
+    },
+    {
+      "id": "15620a5b-828f-46b6-9c2b-a3dae989f75c",
+      "name": "Truck",
+      "kind": "category",
+      "label": "Truck",
+      "children": []
+    },
+    {
+      "id": "ae315384-172b-4274-b287-093bf643df07",
+      "name": "Voice Link 16",
+      "kind": "category",
+      "label": "Voice Link 16",
+      "description": "VoiceLink16",
+      "children": []
+    },
+    {
+      "id": "687b2b43-8e85-4a6a-a861-8d5a0bee3b5e",
+      "name": "fighter",
+      "kind": "category",
+      "label": "Fighter",
+      "children": []
+    },
+    {
+      "id": "ab5fb3b2-be60-4945-a516-1d02ed255b9a",
+      "name": "heavy",
+      "kind": "category",
+      "label": "Heavy",
+      "children": []
+    },
+    {
+      "id": "661e2442-fdda-4b44-8247-655e5a1337ba",
+      "name": "light",
+      "kind": "category",
+      "label": "Light",
+      "children": []
+    },
+    {
+      "id": "b9432e72-0f72-4f34-8f65-f0948158a6c9",
+      "name": "medium",
+      "kind": "category",
+      "label": "Medium",
+      "children": []
+    },
+    {
+      "id": "9f9c1221-c964-45aa-8ca1-68d303d8be0e",
+      "name": "follow",
+      "kind": "category",
+      "label": "Follow",
+      "children": []
+    },
+    {
+      "id": "97558877-5ff8-4c1d-84d9-8997460fa7c3",
+      "name": "goto",
+      "kind": "category",
+      "label": "Goto",
+      "children": []
+    },
+    {
+      "id": "cc4d2bd9-3052-44fb-8958-81c7fa5ce575",
+      "name": "Air",
+      "kind": "category",
+      "label": "Air",
+      "children": []
+    },
+    {
+      "id": "134bf5b9-1583-40f3-b318-3ec10fb75bc9",
+      "name": "Land",
+      "kind": "category",
+      "label": "Land",
+      "children": []
+    },
+    {
+      "id": "07b2b8dd-c4a5-4f39-9061-348a60306688",
+      "name": "Space",
+      "kind": "category",
+      "label": "Space",
+      "children": []
+    },
+    {
+      "id": "85722e67-a677-4867-8a3b-cfa7a6e5061e",
+      "name": "Subsurface",
+      "kind": "category",
+      "label": "Subsurface",
+      "children": []
+    },
+    {
+      "id": "ffdcf7c2-105c-4c86-a9d7-3ac19ff5a1b9",
+      "name": "Surface",
+      "kind": "category",
+      "label": "Surface",
+      "children": []
+    },
+    {
+      "id": "50a87f9b-d3ad-41d7-9463-53f5d6277764",
+      "name": "Unknown",
+      "kind": "category",
+      "label": "Unknown",
+      "children": []
+    },
+    {
+      "id": "cd09b18b-8bcd-46e6-a53d-e9d625eb0f18",
+      "name": "cancel",
+      "kind": "category",
+      "label": "Cancel",
+      "children": []
+    },
+    {
+      "id": "7fba0903-79fe-465b-9183-c9f15bbe8596",
+      "name": "continue",
+      "kind": "category",
+      "label": "Continue",
+      "children": []
+    },
+    {
+      "id": "99116746-aed2-4573-ad30-de0549c5666f",
+      "name": "continuewithchanges",
+      "kind": "category",
+      "label": "Continuewithchanges",
+      "children": []
+    },
+    {
+      "id": "43fdd58e-cb6c-47c4-852c-3b30a28e5c0b",
+      "name": "end",
+      "kind": "category",
+      "label": "End",
+      "children": []
+    },
+    {
+      "id": "77b7ffb8-fda2-4c37-9338-e3d8d0c34a0d",
+      "name": "start",
+      "kind": "category",
+      "label": "Start",
+      "children": []
+    },
+    {
+      "id": "741cd5cb-8219-4213-a542-919a6c6241e9",
+      "name": "suspend",
+      "kind": "category",
+      "label": "Suspend",
+      "children": []
+    },
+    {
+      "id": "fb051403-65b3-493f-bcf7-583d38348c56",
+      "name": "Cone",
+      "kind": "category",
+      "label": "Cone",
+      "children": []
+    },
+    {
+      "id": "787b7c64-a123-49a1-9431-2e242b678f5f",
+      "name": "Flat Rectangle",
+      "kind": "category",
+      "label": "Flat Rectangle",
+      "children": []
+    },
+    {
+      "id": "d851f185-5881-45fb-942e-0d4ef7a29881",
+      "name": "Rectangular Pyramid",
+      "kind": "category",
+      "label": "Rectangular Pyramid",
+      "children": []
+    },
+    {
+      "id": "b80215a0-0b90-4b65-90ba-5643410c2a54",
+      "name": "Sphere",
+      "kind": "category",
+      "label": "Sphere",
+      "children": []
+    },
+    {
+      "id": "fa9d2192-0c60-404a-b9c7-f8e5d56ab397",
+      "name": "degrading",
+      "kind": "category",
+      "label": "Degrading",
+      "children": []
+    },
+    {
+      "id": "690346ec-7eba-4ecd-a4ad-80059e56e039",
+      "name": "recovering",
+      "kind": "category",
+      "label": "Recovering",
+      "children": []
+    },
+    {
+      "id": "0b3b0739-d3c4-4e4f-b25b-9d90bfb537e5",
+      "name": "stable",
+      "kind": "category",
+      "label": "Stable",
+      "children": []
+    },
+    {
+      "id": "3d5b97f1-a9b9-4b3e-afa8-ef1bc7abae99",
+      "name": "Assumed_Friend",
+      "kind": "category",
+      "label": "AssumedFriend",
+      "children": []
+    },
+    {
+      "id": "774ac13d-24db-4130-b6bc-5fd8a599825c",
+      "name": "Friend",
+      "kind": "category",
+      "label": "Friend",
+      "children": []
+    },
+    {
+      "id": "84a9dadf-e081-4a3b-876e-1114bb040e2d",
+      "name": "Hostile",
+      "kind": "category",
+      "label": "Hostile",
+      "children": []
+    },
+    {
+      "id": "97778871-9c60-49b9-9df2-897c17619a13",
+      "name": "Neutral",
+      "kind": "category",
+      "label": "Neutral",
+      "children": []
+    },
+    {
+      "id": "aa76fff3-4c0b-4d95-b356-cea46270c6fd",
+      "name": "Pending",
+      "kind": "category",
+      "label": "Pending",
+      "children": []
+    },
+    {
+      "id": "161a264c-c810-40ff-bfc1-1539470768c1",
+      "name": "Suspect",
+      "kind": "category",
+      "label": "Suspect",
+      "children": []
+    },
+    {
+      "id": "1892f629-cd00-4d08-942b-b0ffa35fe229",
+      "name": "Unknown",
+      "kind": "category",
+      "label": "Unknown",
+      "children": []
+    },
+    {
+      "id": "66a10aad-337b-40a0-9f8a-39554145d742",
+      "name": "bus",
+      "kind": "category",
+      "label": "Bus",
+      "children": []
+    },
+    {
+      "id": "b1958c1b-d60b-4831-bba7-295a05e1e2f9",
+      "name": "car",
+      "kind": "category",
+      "label": "Car",
+      "children": []
+    },
+    {
+      "id": "089a6a94-1319-44aa-a519-7b77b1d81cdd",
+      "name": "motorbike",
+      "kind": "category",
+      "label": "Motorbike",
+      "children": []
+    },
+    {
+      "id": "d04031c0-d7e2-48c7-a0b7-4ea66d3953ef",
+      "name": "person",
+      "kind": "category",
+      "label": "Person",
+      "children": []
+    },
+    {
+      "id": "af932d89-2639-4bd3-aaea-e2ab5eb1ae8f",
+      "name": "truck",
+      "kind": "category",
+      "label": "Truck",
+      "children": []
+    },
+    {
+      "id": "abb9ea46-6ce9-435e-9777-d3d5dff064c2",
+      "name": "van",
+      "kind": "category",
+      "label": "Van",
+      "children": []
+    },
+    {
+      "id": "9005340e-16b2-4513-8e03-c626a506f3cc",
+      "name": "Deceased",
+      "kind": "category",
+      "label": "Deceased",
+      "children": []
+    },
+    {
+      "id": "f791ce88-5e5b-43ef-af13-ee38d1889de0",
+      "name": "Delayed",
+      "kind": "category",
+      "label": "Delayed",
+      "children": []
+    },
+    {
+      "id": "2a37c014-db6b-4e5f-8971-600a27f77f56",
+      "name": "Immediate",
+      "kind": "category",
+      "label": "Immediate",
+      "children": []
+    },
+    {
+      "id": "2e7ed33b-62a4-4c4a-ab80-46eb837c5c87",
+      "name": "Minor",
+      "kind": "category",
+      "label": "Minor",
+      "children": []
+    },
+    {
+      "id": "3fcb9e0e-3d7c-4ca8-a543-271bcd1c9bca",
+      "name": "Observe",
+      "kind": "category",
+      "label": "Observe",
+      "children": []
+    },
+    {
+      "id": "7e5eb5f0-2957-4eaf-b96b-919dfbc5326f",
+      "name": "Unknown",
+      "kind": "category",
+      "label": "Unknown",
+      "children": []
+    },
+    {
+      "id": "7146dff2-71ed-4a8c-9554-5e0a633da359",
+      "name": "Advanced_Triage_Evacuation",
+      "kind": "category",
+      "label": "AdvancedTriageEvacuation",
+      "description": "Stablishes the victims evacuation order",
+      "children": []
+    },
+    {
+      "id": "663fe9dd-06d4-489b-bf3e-33566cd40d0b",
+      "name": "Advanced_Triage_Stabilization",
+      "kind": "category",
+      "label": "AdvancedTriageStabilization",
+      "description": "Classifies victims by priority order to assist and stabilise them",
+      "children": []
+    },
+    {
+      "id": "08fd4bc1-3434-45ee-864e-0d226a3f9777",
+      "name": "Basic_Triage_SHORT",
+      "kind": "category",
+      "label": "BasicTriageSHORT",
+      "description": "First Triage. Done at Rescue Area",
+      "children": []
+    },
+    {
+      "id": "4eb359d4-f9f3-4ec5-9881-3f3f6b09540f",
+      "name": "cap",
+      "kind": "category",
+      "label": "Cap",
+      "children": []
+    },
+    {
+      "id": "96417328-563a-4889-8027-aa7657890722",
+      "name": "hold",
+      "kind": "category",
+      "label": "Hold",
+      "children": []
+    },
+    {
+      "id": "17dae2c7-c21b-4770-8ea4-5c54d6fbe36b",
+      "name": "landing",
+      "kind": "category",
+      "label": "Landing",
+      "children": []
+    },
+    {
+      "id": "e235c9ef-49a3-4c64-a9a4-9a7b0c0e5d68",
+      "name": "takeoff",
+      "kind": "category",
+      "label": "Takeoff",
+      "children": []
+    },
+    {
+      "id": "6909b9dd-f1c8-4d01-a855-3b0ffd652ddd",
+      "name": "transit",
+      "kind": "category",
+      "label": "Transit",
+      "children": []
+    },
+    {
+      "id": "CAT_n353",
+      "name": "n353",
+      "kind": "category",
+      "maxQualifiedCardinality": "1",
+      "children": []
+    },
+    {
+      "id": "CAT_n354",
+      "name": "n354",
+      "kind": "category",
+      "maxQualifiedCardinality": "1",
+      "children": []
+    },
+    {
+      "id": "CAT_n355",
+      "name": "n355",
+      "kind": "category",
+      "maxQualifiedCardinality": "1",
+      "children": []
+    },
+    {
+      "id": "CAT_n356",
+      "name": "n356",
+      "kind": "category",
+      "maxQualifiedCardinality": "1",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyAssetID",
+      "name": "asset_id",
+      "kind": "category",
+      "label": "AssetID",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyChildEntityList",
+      "name": "ChildEntityList",
+      "kind": "category",
+      "label": "ChildEntityList",
+      "description": "List of embarqued assets in their parent asset",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyClusterLeader",
+      "name": "ClusterLeader",
+      "kind": "category",
+      "label": "ClusterLeader",
+      "description": "Leader Entity Id",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyNext",
+      "name": "Next",
+      "kind": "category",
+      "label": "Next",
+      "description": "List of next actions ids",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyObservedPlatUUID",
+      "name": "observedPlatUuid",
+      "kind": "category",
+      "label": "ObservedPlatUUID",
+      "description": "scenario id of the observed platform",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyOriginatorID",
+      "name": "Originator_id",
+      "kind": "category",
+      "label": "OriginatorID",
+      "description": "Medician who did the triage",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyPrevious",
+      "name": "Previous",
+      "kind": "category",
+      "label": "Previous",
+      "description": "List of previous actions ids",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyUUIDValue1",
+      "name": "UuidValue1",
+      "kind": "category",
+      "label": "UUIDValue1",
+      "description": "First property of uuidPair",
+      "children": []
+    },
+    {
+      "id": "CAT_PropertyUUIDValue2",
+      "name": "UuidValue2",
+      "kind": "category",
+      "label": "UUIDValue2",
+      "description": "Second property of uuidPair",
+      "children": []
+    }
+  ]
+}

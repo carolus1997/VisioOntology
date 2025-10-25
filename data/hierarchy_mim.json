@@ -1,0 +1,2382 @@
+{
+  "name": "MIM Ontology",
+  "kind": "root",
+  "source": "mim",
+  "children": [
+    {
+      "id": "CAT_AccommodationFacility",
+      "name": "AccommodationFacility",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "Accommodation facility",
+      "description": "A building or collection of buildings without a singular purpose, but generally used for accommodation.",
+      "mimId": "EAID_AE8DBB4B_93E0_4f5c_A60A_37FF9B212810",
+      "children": [
+        {
+          "id": "CAT_AccommodationFacilityApartmentBuilding",
+          "name": "Apartment building",
+          "kind": "category",
+          "source": "MIM 5.3 (Accommodation Facility Category Code)",
+          "label": "Apartment building",
+          "description": "Accommodation facility consisting of a multi-dwelling residential building divided into separate units.",
+          "children": []
+        },
+        {
+          "id": "CAT_AccommodationFacilityBuilding",
+          "name": "Building",
+          "kind": "category",
+          "source": "MIM 5.3 (Accommodation Facility Category Code)",
+          "label": "Building",
+          "description": "Accommodation facility represented generically as a building used for lodging.",
+          "children": []
+        },
+        {
+          "id": "CAT_AccommodationFacilityCamp",
+          "name": "Camp",
+          "kind": "category",
+          "source": "MIM 5.3 (Accommodation Facility Category Code)",
+          "label": "Camp",
+          "description": "Accommodation facility formed by a group of temporary or semi-permanent shelters for people.",
+          "children": []
+        },
+        {
+          "id": "CAT_AccommodationFacilityCompound",
+          "name": "Compound",
+          "kind": "category",
+          "source": "MIM 5.3 (Accommodation Facility Category Code)",
+          "label": "Compound",
+          "description": "Accommodation facility comprising multiple buildings or units within a bounded enclosure.",
+          "children": []
+        },
+        {
+          "id": "CAT_AccommodationFacilityHouse",
+          "name": "House",
+          "kind": "category",
+          "source": "MIM 5.3 (Accommodation Facility Category Code)",
+          "label": "House",
+          "description": "Accommodation facility that is a single-family dwelling or similar standalone residence.",
+          "children": []
+        },
+        {
+          "id": "CAT_AccommodationFacilityHut",
+          "name": "Hut",
+          "kind": "category",
+          "source": "MIM 5.3 (Accommodation Facility Category Code)",
+          "label": "Hut",
+          "description": "Accommodation facility that is a small and simple shelter or dwelling.",
+          "children": []
+        },
+        {
+          "id": "CAT_AccommodationFacilityRowHouse",
+          "name": "Row house",
+          "kind": "category",
+          "source": "MIM 5.3 (Accommodation Facility Category Code)",
+          "label": "Row house",
+          "description": "Accommodation facility comprising a dwelling attached in a row to adjacent similar dwellings.",
+          "children": []
+        },
+        {
+          "id": "CAT_AccommodationFacilityShed",
+          "name": "Shed",
+          "kind": "category",
+          "source": "MIM 5.3 (Accommodation Facility Category Code)",
+          "label": "Shed",
+          "description": "Accommodation facility represented as a simple outbuilding or shelter used for lodging/storage.",
+          "children": []
+        },
+        {
+          "id": "CAT_AccommodationFacilityUnitOfAccommodation",
+          "name": "Unit of accommodation",
+          "kind": "category",
+          "source": "MIM 5.3 (Accommodation Facility Category Code)",
+          "label": "Unit of accommodation",
+          "description": "Accommodation facility denoting an individual lodging unit (e.g., apartment, room, module) within a larger site.",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "e3140930-21ed-4bc3-968b-5d7525d35afa",
+      "name": "Facility",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "Facility",
+      "description": "Base facility category",
+      "mimId": "EAID_C697EDE7_CA0C_424e_B469_E1CC49AF8AA5",
+      "children": []
+    },
+    {
+      "id": "CAT_Action",
+      "name": "Action",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "Action",
+      "description": "An activity, or the occurrence of an activity, that may utilise resources and may be focused against an objective.",
+      "mimId": "EAID_AA5F4AAB_4716_4ad3_8B4D_687DFCE3C050",
+      "children": []
+    },
+    {
+      "id": "9c34d309-239d-4bec-ae1e-151318dffe0e",
+      "name": "Actor",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "Actor",
+      "description": "Base actor category",
+      "mimId": "EAID_1928EF21_41AF_45e4_B015_175D0EE0D6F4",
+      "children": []
+    },
+    {
+      "id": "CAT_Object",
+      "name": "Object",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "Object",
+      "description": "An individually identified object that has military or civilian significance.",
+      "info": "This can range from a unit to a single person, an entire tank to a single bolt, and a mountain to a pile of dirt. Objects may not only be physical objects but also intangible or abstract objects such as rendezvous points, phase lines, and boundaries.\nClass Object is non-abstract to support tracking situations where, initially, the object being tracked cannot be definitively classified.",
+      "mimId": "EAID_07140D2E_A0CF_4f9d_9D32_0927EA899D46",
+      "children": []
+    },
+    {
+      "id": "CAT_AgricultureFacility",
+      "name": "Agriculture facility",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "Agriculture facility",
+      "description": "A facility related to farming, including cultivation of the soil for the growing of crops and the rearing of animals to provide food, wool, and other products.",
+      "mimId": "EAID_881ACDEC_84CD_4daa_A89F_A4DDE4AEE866",
+      "children": [
+        {
+          "id": "CAT_Cropland",
+          "name": "Cropland",
+          "kind": "category",
+          "source": "MIM 5.3",
+          "label": "cropland",
+          "description": "An area that has been tilled for the planting of crops.",
+          "mimId": "EAID_30935902_AD57_4597_BE9E_0ED6484150BD",
+          "children": []
+        },
+        {
+          "id": "CAT_Farm",
+          "name": "Farm",
+          "kind": "category",
+          "source": "MIM 5.3",
+          "label": "farm",
+          "description": "A tract of land, including buildings and structures, whose primary use is the production of food (for example: crops or livestock).",
+          "mimId": "EAID_4C7260C9_0BF7_456d_A343_05CABEAC0E7F",
+          "children": []
+        },
+        {
+          "id": "CAT_Orchard",
+          "name": "Orchard",
+          "kind": "category",
+          "source": "MIM 5.3",
+          "label": "orchard",
+          "description": "A tract covered by systematic plantings of trees that yield fruits (including nuts).",
+          "mimId": "EAID_B9E0973D_627D_4692_8B1C_19969167CADA",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "CAT_MilitaryFacility",
+      "name": "Military facility",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "Military facility",
+      "description": "A facility designed to support services that can be found only in the military and have no civilian equivalent.",
+      "mimId": "EAID_FE2C0AD8_A4E8_4ae6_8DCC_E9EDA0D182C2",
+      "children": [
+        {
+          "id": "CAT_AirDefenceRadarSite",
+          "name": "Air defence radar site",
+          "kind": "category",
+          "source": "MIM 5.3 (Air defence radar site)",
+          "label": "Air defence radar site",
+          "description": "Military facility hosting air-defence radar systems for airspace surveillance and control.",
+          "mimId": "EAID_07C4F6CF_28FF_40cd_A200_603CA6BBBBA9",
+          "children": []
+        },
+        {
+          "id": "CAT_AirborneEarlyWarningGroundFacility",
+          "name": "Airborne early warning ground facility",
+          "kind": "category",
+          "source": "MIM 5.3 (Airborne early warning ground facility)",
+          "label": "Airborne early warning ground facility",
+          "description": "Ground facility supporting airborne early-warning (AEW) missions (support, control, maintenance).",
+          "mimId": "EAID_759F4902_6D52_45d4_8E24_4275E1791D4F",
+          "children": []
+        },
+        {
+          "id": "CAT_ArmyMilitaryBaseOrFacility",
+          "name": "Army military base or facility",
+          "kind": "category",
+          "source": "MIM 5.3 (Army military base or facility)",
+          "label": "Army military base or facility",
+          "description": "Army installation used for accommodation, training, logistics, or command.",
+          "mimId": "EAID_0903133F_B604_449f_8050_454D994F01F9",
+          "children": []
+        },
+        {
+          "id": "CAT_ArtilleryLocatingSite",
+          "name": "Artillery locating site",
+          "kind": "category",
+          "source": "MIM 5.3 (Artillery locating site)",
+          "label": "Artillery locating site",
+          "description": "Facility where artillery-locating sensors or systems are deployed.",
+          "mimId": "EAID_2FAF05B3_AF42_4e12_85AD_F6453FA99EA2",
+          "children": []
+        },
+        {
+          "id": "CAT_Barracks",
+          "name": "Barracks",
+          "kind": "category",
+          "source": "MIM 5.3 (Barracks)",
+          "label": "Barracks",
+          "description": "Military accommodation facility for personnel and unit support.",
+          "mimId": "EAID_1326B243_105E_4503_80DF_777BE3A60825",
+          "children": []
+        },
+        {
+          "id": "CAT_Bivouac",
+          "name": "Bivouac",
+          "kind": "category",
+          "source": "MIM 5.3 (Bivouac)",
+          "label": "Bivouac",
+          "description": "Temporary encampment area for troops in the field.",
+          "mimId": "EAID_55ACC7B0_DE9A_4565_AAB4_D2575C7BB7D9",
+          "children": []
+        },
+        {
+          "id": "CAT_ElectronicWarfareSite",
+          "name": "Electronic warfare site",
+          "kind": "category",
+          "source": "MIM 5.3 (Electronic warfare site)",
+          "label": "Electronic warfare site",
+          "description": "Facility supporting electronic warfare operations (EA/EP/ES).",
+          "mimId": "EAID_3E5EB123_E43A_4c88_A749_8FD0278379D8",
+          "children": []
+        },
+        {
+          "id": "CAT_Fortification",
+          "name": "Fortification",
+          "kind": "category",
+          "source": "MIM 5.3 (Fortification)",
+          "label": "Fortification",
+          "description": "Military defensive works designed to strengthen a position against attack.",
+          "mimId": "EAID_BBB9076D_270B_4111_A6D2_D13686264F8B",
+          "children": []
+        },
+        {
+          "id": "CAT_ForwardOperatingBase",
+          "name": "Forward operating base",
+          "kind": "category",
+          "source": "MIM 5.3 (Forward operating base)",
+          "label": "Forward operating base",
+          "description": "Forward-deployed base supporting operations closer to the area of interest.",
+          "mimId": "EAID_D5A81443_39DC_4b18_8A1C_37A62536168F",
+          "children": []
+        },
+        {
+          "id": "CAT_GroundSurveillanceRadarSite",
+          "name": "Ground surveillance radar site",
+          "kind": "category",
+          "source": "MIM 5.3 (Ground surveillance radar site)",
+          "label": "Ground surveillance radar site",
+          "description": "Facility hosting ground-surveillance radar for movement detection and situational awareness.",
+          "mimId": "EAID_4A0D38E5_26C7_4ece_BA15_B727ECF39A08",
+          "children": []
+        },
+        {
+          "id": "CAT_LogisticsOrSupplyFacility",
+          "name": "Logistics or supply facility",
+          "kind": "category",
+          "source": "MIM 5.3 (Logistics or supply facility)",
+          "label": "Logistics or supply facility",
+          "description": "Facility for sustainment, storage, or distribution of military supplies.",
+          "mimId": "EAID_F3D1AD18_C567_49f0_B522_461F0B2BC5FC",
+          "children": []
+        },
+        {
+          "id": "CAT_MilitaryBaseOrFacility",
+          "name": "Military base or facility",
+          "kind": "category",
+          "source": "MIM 5.3 (Military base or facility)",
+          "label": "Military base or facility",
+          "description": "Generic military installation supporting accommodation, operations, training, or command.",
+          "mimId": "EAID_DEB243E9_87C3_4ad1_8435_3A43E6100B23",
+          "children": []
+        },
+        {
+          "id": "CAT_MilitaryBridgingSite",
+          "name": "Military bridging site",
+          "kind": "category",
+          "source": "MIM 5.3 (Military bridging site)",
+          "label": "Military bridging site",
+          "description": "Site used for emplacement or operation of military bridging equipment.",
+          "mimId": "EAID_43733802_1BF8_423e_BA1F_0A3D4D3E9BA1",
+          "children": []
+        },
+        {
+          "id": "CAT_MilitaryObstacle",
+          "name": "Military obstacle",
+          "kind": "category",
+          "source": "MIM 5.3 (Military obstacle family)",
+          "label": "Military obstacle",
+          "description": "Military obstacle employed to delay, disrupt, or channel movement.",
+          "mimId": "EAID_D5A7861A_0BD8_483a_9258_B8EFD1D2788C",
+          "children": [
+            {
+              "id": "CAT_ComposedAntiTankObstacle",
+              "name": "Composed anti tank obstacle",
+              "kind": "category",
+              "source": "MIM 5.3 (Composed anti tank obstacle)",
+              "label": "Composed anti tank obstacle",
+              "description": "Composite obstacle designed to counter armoured vehicles.",
+              "mimId": "EAID_CD229C4C_38A7_4ba0_92BD_518FA542B92E",
+              "children": []
+            },
+            {
+              "id": "CAT_Ditch",
+              "name": "Ditch",
+              "kind": "category",
+              "source": "MIM 5.3 (Ditch)",
+              "label": "Ditch",
+              "description": "Linear excavation used as a military obstacle.",
+              "mimId": "EAID_6B906CC2_4079_44d9_9B86_519E77552FA2",
+              "children": []
+            },
+            {
+              "id": "CAT_Minefield",
+              "name": "Minefield",
+              "kind": "category",
+              "source": "MIM 5.3 (Minefield)",
+              "label": "Minefield",
+              "description": "Area seeded with land or sea mines as an obstacle.",
+              "mimId": "EAID_39E4D765_AD81_4dde_8091_F3B97C4F440D",
+              "children": []
+            },
+            {
+              "id": "CAT_OtherMilitaryObstacle",
+              "name": "Other military obstacle",
+              "kind": "category",
+              "source": "MIM 5.3 (Other military obstacle)",
+              "label": "Other military obstacle",
+              "description": "Other type of military obstacle not otherwise specified.",
+              "mimId": "EAID_5B205A3C_5DBA_42d5_B53D_6926A7E01D1C",
+              "children": []
+            },
+            {
+              "id": "CAT_WireObstacle",
+              "name": "Wire obstacle",
+              "kind": "category",
+              "source": "MIM 5.3 (Wire obstacle)",
+              "label": "Wire obstacle",
+              "description": "Obstacle constructed with wire (e.g., barbed or concertina) to slow or canalize movement.",
+              "mimId": "EAID_B35F5A3D_E7C4_4c0a_B937_8BC36AA68D37",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "CAT_MilitarySeaportOrNavalBase",
+          "name": "Military seaport or naval base",
+          "kind": "category",
+          "source": "MIM 5.3 (Military seaport or naval base)",
+          "label": "Military seaport or naval base",
+          "description": "Naval base or military seaport supporting maritime operations and logistics.",
+          "mimId": "EAID_BB7A7283_2CDD_4ae8_822C_4C1FC966FF38",
+          "children": []
+        },
+        {
+          "id": "CAT_MissileSite",
+          "name": "Missile site",
+          "kind": "category",
+          "source": "MIM 5.3 (Missile site)",
+          "label": "Missile site",
+          "description": "Facility for deployment, storage, or operation of missile systems.",
+          "mimId": "EAID_92A0996B_3F7E_4e69_8E4C_D7ECBB56A5C7",
+          "children": []
+        },
+        {
+          "id": "CAT_NavalAirStation",
+          "name": "Naval air station",
+          "kind": "category",
+          "source": "MIM 5.3 (Naval air station)",
+          "label": "Naval air station",
+          "description": "Naval aviation base supporting maritime air operations.",
+          "mimId": "EAID_2CA221BA_EAED_4241_9358_C4A17EA5424E",
+          "children": []
+        },
+        {
+          "id": "CAT_ObservationTower",
+          "name": "Observation tower",
+          "kind": "category",
+          "source": "MIM 5.3 (Observation tower)",
+          "label": "Observation tower",
+          "description": "Tower structure used for observation and surveillance.",
+          "mimId": "EAID_7CCD9FA9_C72E_4e93_A5AA_F31F237895F9",
+          "children": []
+        },
+        {
+          "id": "CAT_PrisonerOfWarCamp",
+          "name": "Prisoner of war camp",
+          "kind": "category",
+          "source": "MIM 5.3 (Prisoner of war camp)",
+          "label": "Prisoner of war camp",
+          "description": "Facility for detention of prisoners of war.",
+          "mimId": "EAID_B00D1CD4_BF7F_4390_BECF_72D97000DB8A",
+          "children": []
+        },
+        {
+          "id": "CAT_SensorFusionPost",
+          "name": "Sensor fusion post",
+          "kind": "category",
+          "source": "MIM 5.3 (Sensor fusion post)",
+          "label": "Sensor fusion post",
+          "description": "Facility where sensor data are integrated/fused to support situational awareness.",
+          "mimId": "EAID_6F47EB94_3F54_4091_ADB2_23E368D36853",
+          "children": []
+        },
+        {
+          "id": "CAT_ShoranStation",
+          "name": "Shoran station",
+          "kind": "category",
+          "source": "MIM 5.3 (Shoran station)",
+          "label": "Shoran station",
+          "description": "Short-range navigation (SHORAN) station facility.",
+          "mimId": "EAID_B0FD23B2_B094_4ee5_9EE3_6B2D25EE0244",
+          "children": []
+        },
+        {
+          "id": "CAT_SubmarineMilitaryBaseOrFacility",
+          "name": "Submarine military base or facility",
+          "kind": "category",
+          "source": "MIM 5.3 (Submarine military base or facility)",
+          "label": "Submarine military base or facility",
+          "description": "Base or facility supporting submarine operations and sustainment.",
+          "mimId": "EAID_E5553B16_66CD_497c_BEC1_A180017B67FB",
+          "children": []
+        },
+        {
+          "id": "CAT_SurfaceSurveillanceJammer",
+          "name": "Surface surveillance jammer",
+          "kind": "category",
+          "source": "MIM 5.3 (Surface surveillance jammer)",
+          "label": "Surface surveillance jammer",
+          "description": "Facility hosting systems to jam surface surveillance sensors.",
+          "mimId": "EAID_CF881DC5_1808_4699_9544_1075797124FB",
+          "children": []
+        },
+        {
+          "id": "CAT_SurfaceToSurfaceMissileSite",
+          "name": "Surface to surface missile site",
+          "kind": "category",
+          "source": "MIM 5.3 (Surface to surface missile site)",
+          "label": "Surface to surface missile site",
+          "description": "Facility for deployment or operation of surface-to-surface missiles.",
+          "mimId": "EAID_709F3EA5_E551_49d5_B765_A709A9E71674",
+          "children": []
+        },
+        {
+          "id": "CAT_TacanStation",
+          "name": "Tacan station",
+          "kind": "category",
+          "source": "MIM 5.3 (Tacan station)",
+          "label": "Tacan station",
+          "description": "Tactical air navigation (TACAN) station facility.",
+          "mimId": "EAID_879E4310_C170_4b38_A202_23F3F04ED8DE",
+          "children": []
+        },
+        {
+          "id": "CAT_TacticalIntelligenceCentre",
+          "name": "Tactical intelligence centre",
+          "kind": "category",
+          "source": "MIM 5.3 (Tactical intelligence centre)",
+          "label": "Tactical intelligence centre",
+          "description": "Facility hosting tactical intelligence processing and dissemination.",
+          "mimId": "EAID_2EAB708B_13F2_4eda_8EB8_B2189BA772F9",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "CAT_TransportFacility",
+      "name": "Transport facility",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "Transport facility",
+      "description": "A facility that is used to support transport functions.",
+      "mimId": "EAID_BFCB5449_957F_42d5_91CB_3F529A18DFEB",
+      "children": [
+        {
+          "id": "CAT_AirTransportFacility",
+          "name": "Air transport facility",
+          "kind": "category",
+          "source": "MIM 5.3",
+          "label": "Air transport facility",
+          "description": "A facility designed to aid or enable transport of goods or passengers in the air.",
+          "mimId": "EAID_F24F1872_F69C_4660_8331_F92AFCFAC4BE",
+          "children": [
+            {
+              "id": "CAT_Airfield",
+              "name": "Airfield",
+              "kind": "category",
+              "source": "MIM 5.3",
+              "label": "Airfield",
+              "description": "An area prepared for the accommodation (including buildings and installations) or equipment of landing and take-off of aircraft.",
+              "mimId": "EAID_640FACC2_3EBC_459e_847D_579329C23502",
+              "children": []
+            },
+            {
+              "id": "CAT_AirportOrAirbase",
+              "name": "Airport or airbase",
+              "kind": "category",
+              "source": "MIM 5.3",
+              "label": "Airport or airbase",
+              "description": "An air transport facility used for the landing and take-off of aircraft, including its buildings and installations.",
+              "mimId": "EAID_1065FD3E_3819_4b62_8B5F_74F9C14E2F77",
+              "children": []
+            },
+            {
+              "id": "CAT_Apron",
+              "name": "Apron",
+              "kind": "category",
+              "source": "MIM 5.3",
+              "label": "Apron",
+              "description": "A defined area on a land aerodrome intended to accommodate aircraft for the purposes of loading or unloading passengers, mail or cargo, fuelling, parking or maintenance.",
+              "mimId": "EAID_AE77E8A8_8D96_4d1a_9F60_5BE5E06E67B2",
+              "children": []
+            },
+            {
+              "id": "CAT_Helipad",
+              "name": "Helipad",
+              "kind": "category",
+              "source": "MIM 5.3",
+              "label": "Helipad",
+              "description": "A small, designated area (usually with a prepared surface) used for the take-off, landing, or parking of helicopters.",
+              "mimId": "EAID_E8F5B2A3_3C39_4f3a_8B6C_6A1E7F4A6D9D",
+              "children": []
+            },
+            {
+              "id": "CAT_Heliport",
+              "name": "Heliport",
+              "kind": "category",
+              "source": "MIM 5.3",
+              "label": "Heliport",
+              "description": "An aerodrome or defined area on a structure intended or used for the arrival, departure, and surface movement of helicopters.",
+              "mimId": "EAID_D8A3B2F1_1C9D_4f38_B3C0_6B4F3C298D08",
+              "children": []
+            },
+            {
+              "id": "CAT_Runway",
+              "name": "Runway",
+              "kind": "category",
+              "source": "MIM 5.3",
+              "label": "Runway",
+              "description": "A defined rectangular area on a land aerodrome prepared for the landing and take-off of aircraft.",
+              "mimId": "EAID_3B4B2375_3E2C_4d8b_A0F9_2E3F6E5F8B2C",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "CAT_GeneralTransportFacility",
+          "name": "General transport facility",
+          "kind": "category",
+          "source": "MIM 5.3",
+          "label": "General transport facility",
+          "description": "A non-specific transport facility that supports general transport functions.",
+          "mimId": "EAID_9D2F7F8B_2A38_4f8e_8A1B_2C3D4E5F6A7B",
+          "children": []
+        },
+        {
+          "id": "CAT_GroundTransportFacility",
+          "name": "Ground transport facility",
+          "kind": "category",
+          "source": "MIM 5.3",
+          "label": "Ground transport facility",
+          "description": "A facility designed to aid or enable transport of goods or passengers on land.",
+          "mimId": "EAID_5D3FB2E7_3B8F_4a7a_9D35_1C5A4F7E8B9C",
+          "children": [
+            {
+              "id": "CAT_ClearedWay",
+              "name": "Cleared way",
+              "kind": "category",
+              "source": "MIM 5.3",
+              "label": "Cleared way",
+              "description": "A route which has been cleared of obstacles to permit movement.",
+              "mimId": "EAID_6B4C27F1_4E9A_4e65_A15C_2F3A6D8E9B0C",
+              "children": []
+            },
+            {
+              "id": "CAT_CrossingPlatform",
+              "name": "Crossing platform",
+              "kind": "category",
+              "source": "MIM 5.3",
+              "label": "Crossing platform",
+              "description": "A facility enabling the crossing of a water obstacle or similar barrier.",
+              "mimId": "EAID_7C5D38E2_5F0B_4f76_B26D_3A4B7E9F0C1D",
+              "children": []
+            },
+            {
+              "id": "CAT_Ford",
+              "name": "Ford",
+              "kind": "category",
+              "source": "MIM 5.3",
+              "label": "Ford",
+              "description": "A shallow place in a river or stream allowing one to walk or drive across.",
+              "mimId": "EAID_B0917C26_934F_4db0_F6A1_7E8FBC324516",
+              "children": []
+            },
+            {
+              "id": "CAT_RailFacility",
+              "name": "Rail facility",
+              "kind": "category",
+              "source": "MIM 5.3",
+              "label": "Rail facility",
+              "description": "A facility associated with the operation or support of railway transport.",
+              "mimId": "EAID_C1A28D37_A45F_4ec1_07B2_8F90CD435627",
+              "children": []
+            },
+            {
+              "id": "CAT_RailHead",
+              "name": "Rail head",
+              "kind": "category",
+              "source": "MIM 5.3",
+              "label": "Rail head",
+              "description": "The furthest point to which the railway has been laid from a particular direction, or a rail-served point designated for loading/unloading.",
+              "mimId": "EAID_D2B39E48_B560_4fd2_18C3_9GA1DE546738",
+              "children": []
+            },
+            {
+              "id": "CAT_Railway",
+              "name": "Railway",
+              "kind": "category",
+              "source": "MIM 5.3",
+              "label": "Railway",
+              "description": "A permanent track composed of a line of parallel metal rails fixed to sleepers, for transport of passengers and goods in trains.",
+              "mimId": "EAID_E3C4AF59_C671_40e3_29D4_AF12EF657849",
+              "children": []
+            },
+            {
+              "id": "CAT_RailwayCrossing",
+              "name": "Railway crossing",
+              "kind": "category",
+              "source": "MIM 5.3",
+              "label": "Railway crossing",
+              "description": "A place where a railway and a road, path, or another railway cross at the same level.",
+              "mimId": "EAID_F4D5B06A_D782_41f4_3AE5_B013F076895A",
+              "children": []
+            },
+            {
+              "id": "CAT_RailwayJunction",
+              "name": "Railway junction",
+              "kind": "category",
+              "source": "MIM 5.3",
+              "label": "Railway junction",
+              "description": "A place where two or more railway lines or routes meet or diverge.",
+              "mimId": "EAID_05E6C17B_E893_4205_4BF6_C12401879A6B",
+              "children": []
+            },
+            {
+              "id": "CAT_Road",
+              "name": "Road",
+              "kind": "category",
+              "source": "MIM 5.3",
+              "label": "Road",
+              "description": "A wide way leading from one place to another, especially one with a specially prepared surface which vehicles can use.",
+              "mimId": "EAID_16F7D28C_F9A4_4306_5C07_D2351298AB7C",
+              "children": []
+            },
+            {
+              "id": "CAT_RoadInterchange",
+              "name": "Road interchange",
+              "kind": "category",
+              "source": "MIM 5.3",
+              "label": "Road interchange",
+              "description": "A road junction that typically uses grade separation, and one or more ramps, to permit traffic on at least one highway to pass through the junction without directly crossing any other traffic stream.",
+              "mimId": "EAID_27G8E39D_0AB5_4407_6D18_E34623A9BC8D",
+              "children": []
+            },
+            {
+              "id": "CAT_Trail",
+              "name": "Trail",
+              "kind": "category",
+              "source": "MIM 5.3",
+              "label": "Trail",
+              "description": "A beaten path or track through rough country such as a forest or moor, used for travel or transport on foot, horseback, or by vehicle.",
+              "mimId": "EAID_38H9F4AE_1BC6_4508_7E29_F45734BACD9E",
+              "children": []
+            },
+            {
+              "id": "CAT_Tunnel",
+              "name": "Tunnel",
+              "kind": "category",
+              "source": "MIM 5.3",
+              "label": "Tunnel",
+              "description": "An underground or underwater passage dug through the surrounding soil/earth/rock and enclosed except for entry and exit, commonly used for road and rail traffic.",
+              "mimId": "EAID_49I0G5BF_2CD7_4609_8F3A_G56845CBE0AF",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "CAT_MaritimeTransportFacility",
+          "name": "Maritime transport facility",
+          "kind": "category",
+          "source": "MIM 5.3",
+          "label": "Maritime transport facility",
+          "description": "A facility designed to aid or enable transport of goods or passengers by sea or inland waterways.",
+          "mimId": "EAID_5A61D1E0_64A8_4e19_8B27_389C867F8E8A",
+          "children": [
+            {
+              "id": "CAT_Anchorage",
+              "name": "Anchorage",
+              "kind": "category",
+              "source": "MIM 5.3",
+              "label": "Anchorage",
+              "description": "A place where a vessel may anchor, usually designated in charts, offering suitable holding ground and shelter.",
+              "mimId": "EAID_6B72E2F1_75B9_4f2a_9C38_49AD97809F9B",
+              "children": []
+            },
+            {
+              "id": "CAT_Basin",
+              "name": "Basin",
+              "kind": "category",
+              "source": "MIM 5.3",
+              "label": "Basin",
+              "description": "A partially enclosed, man-made or improved water area providing safe anchorage and berthing for vessels.",
+              "mimId": "EAID_7C83F302_86CA_403b_AD49_5ABE0891A0AC",
+              "children": []
+            },
+            {
+              "id": "CAT_Berth",
+              "name": "Berth",
+              "kind": "category",
+              "source": "MIM 5.3",
+              "label": "Berth",
+              "description": "A designated location in a port or harbour where a vessel may be moored, usually alongside a quay, pier, or jetty.",
+              "mimId": "EAID_8D94G413_97DB_414c_BE5A_6BCF19A2B1BD",
+              "children": []
+            },
+            {
+              "id": "CAT_DryDock",
+              "name": "Dry dock",
+              "kind": "category",
+              "source": "MIM 5.3",
+              "label": "Dry dock",
+              "description": "A dock from which water can be pumped out, for the construction, maintenance, and repair of ships.",
+              "mimId": "EAID_9EA5H524_A8EC_424d_CF6B_7CD02AB3C2CE",
+              "children": []
+            },
+            {
+              "id": "CAT_FerryOrFordAccess",
+              "name": "Ferry or ford access",
+              "kind": "category",
+              "source": "MIM 5.3",
+              "label": "Ferry or ford access",
+              "description": "An access point intended for embarkation/disembarkation for ferries or access to a ford crossing.",
+              "mimId": "EAID_AF16I635_B9FD_434e_D07C_8DE13BC4D3DF",
+              "children": []
+            },
+            {
+              "id": "CAT_FerryStation",
+              "name": "Ferry station",
+              "kind": "category",
+              "source": "MIM 5.3",
+              "label": "Ferry station",
+              "description": "A station or terminal for ferries, including embarkation and disembarkation facilities for passengers and vehicles.",
+              "mimId": "EAID_B027J746_CAFE_444f_E18D_9EF24CD5E4E0",
+              "children": []
+            },
+            {
+              "id": "CAT_Harbour",
+              "name": "Harbour",
+              "kind": "category",
+              "source": "MIM 5.3",
+              "label": "Harbour",
+              "description": "A sheltered area of water where ships, boats, and barges can be moored safely, often with port facilities.",
+              "mimId": "EAID_C138K857_DCB0_4540_F29E_AF035DE6F5F1",
+              "children": []
+            },
+            {
+              "id": "CAT_Jetty",
+              "name": "Jetty",
+              "kind": "category",
+              "source": "MIM 5.3",
+              "label": "Jetty",
+              "description": "A structure projecting from the shore into a body of water to influence current or tide or to protect a harbour; also used for mooring vessels.",
+              "mimId": "EAID_D249L968_EDC1_4641_G3AF_B0146EF70602",
+              "children": []
+            },
+            {
+              "id": "CAT_Lighthouse",
+              "name": "Lighthouse",
+              "kind": "category",
+              "source": "MIM 5.3",
+              "label": "Lighthouse",
+              "description": "A tower or other structure with a powerful light that gives a continuous or intermittent signal to navigators.",
+              "mimId": "EAID_E35AM079_FED2_4752_H4B0_C1257F081713",
+              "children": []
+            },
+            {
+              "id": "CAT_Lock",
+              "name": "Lock",
+              "kind": "category",
+              "source": "MIM 5.3",
+              "label": "Lock",
+              "description": "An enclosed section of waterway with gates at each end, by which the level of water can be altered to raise or lower vessels as they pass through.",
+              "mimId": "EAID_F46BN18A_0FE3_4863_I5C1_D23680192824",
+              "children": []
+            },
+            {
+              "id": "CAT_Pier",
+              "name": "Pier",
+              "kind": "category",
+              "source": "MIM 5.3",
+              "label": "Pier",
+              "description": "A platform supported on pillars or girders leading out from the shore into a body of water, used as a landing stage for boats.",
+              "mimId": "EAID_057CO29B_10F4_4974_J6D2_E347912A3935",
+              "children": []
+            },
+            {
+              "id": "CAT_Port",
+              "name": "Port",
+              "kind": "category",
+              "source": "MIM 5.3",
+              "label": "Port",
+              "description": "A town or city with a harbour where ships load or unload, especially one where customs officers are stationed.",
+              "mimId": "EAID_168DP3AC_21G5_4a85_K7E3_F458A23B4A46",
+              "children": []
+            },
+            {
+              "id": "CAT_Quay",
+              "name": "Quay",
+              "kind": "category",
+              "source": "MIM 5.3",
+              "label": "Quay",
+              "description": "A solidly constructed platform, usually parallel to the shore, where a vessel can be loaded or unloaded on one side of the vessel only.",
+              "mimId": "EAID_FAC04387_A93D_4459_B272_B1936084E424",
+              "children": []
+            },
+            {
+              "id": "CAT_Slipway",
+              "name": "Slipway",
+              "kind": "category",
+              "source": "MIM 5.3",
+              "label": "Slipway",
+              "description": "The prepared and usually reinforced inclined plane upon which the keel blocks are laid for supporting a vessel under construction.",
+              "mimId": "EAID_EC386147_FCB4_4812_AB64_0474E05A940D",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7ad03b2f-a3bc-4185-88db-10c03a206099",
+      "name": "Aircraft",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "Aircraft",
+      "description": "A Vehicle that is designed to fly within the earth's atmosphere.",
+      "mimId": "EAID_AFBD4F3D_2DDA_474d_8FF0_016025FFF34D",
+      "children": []
+    },
+    {
+      "id": "0954d116-5852-4b2d-8c57-3181c37dac5d",
+      "name": "Vehicle",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "Vehicle",
+      "description": "A conveyance for transporting persons or things.",
+      "mimId": "EAID_688268E9_6203_43d6_9AA1_591912743744",
+      "children": []
+    },
+    {
+      "id": "CAT_ControlFeature",
+      "name": "Control feature",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "Control feature",
+      "description": "A non-tangible Feature of military interest that is administratively specified, may be represented by a geometric figure, and is associated with the conduct of military operations.",
+      "info": "A ControlFeature is an abstract object created or assigned by military authorities for the purposes of planning and coordination, especially in operational areas. It is a non-permanent point (e.g., start point for a road move, or a reserved demolition), line (e.g., a Main supply route or No fire line), area (e.g., a Slow-go area), or volume (e.g., an air corridor) that may be overlaid on a map. A ControlFeature would normally be drawn on a map overlay, traced, or superimposed onto digitised map data and assigned a descriptive title, symbol, or name (e.g., Line of departure, Corps boundary).",
+      "mimId": "EAID_F0BDAA35_6131_463e_A9A0_EA3BE7EB2C00",
+      "children": [
+        {
+          "id": "CAT_AirspaceControlFeature",
+          "name": "Airspace control feature",
+          "kind": "category",
+          "source": "MIM 5.3 (air control feature; orbit control feature; air route)",
+          "label": "Airspace control feature",
+          "description": "Control feature used to organise, enable, constrain, or deconflict air operations via routes, holds/orbits, and airspace volumes.",
+          "info": "Decision & alignment: Consolidates MIM 'air control feature', 'orbit control feature', and 'air route' into a single operational class focused on air C2 and deconfliction. Rationale: in exercises these are governed together (ACO/ACA), share geometry types (line/area/volume) and attributes (altitude bands, timing, controlling authority). Specific doctrinal terms (e.g., CAP orbit) should be captured as instance categories rather than separate classes.",
+          "children": []
+        },
+        {
+          "id": "CAT_C2BoundaryFeature",
+          "name": "C2 boundary feature",
+          "kind": "category",
+          "source": "MIM 5.3 (c2 control feature; organisation boundary)",
+          "label": "C2 boundary feature",
+          "description": "Control feature that delineates responsibilities, sectors, or areas of operation for command and control.",
+          "info": "Decision & alignment: Groups MIM 'c2 control feature' and 'organisation boundary' as a single class because both express C2 delimitations (AOs, sectors, limits of responsibility). Rationale: operational semantics are identical (named boundary/area with authority, timeframe); the exact doctrinal label (e.g., corps boundary, AO, FLOT/FEBA) is modelled as an instance category.",
+          "children": []
+        },
+        {
+          "id": "CAT_CBRNControlFeature",
+          "name": "CBRN control feature",
+          "kind": "category",
+          "source": "MIM 5.3 (cbrn control feature)",
+          "label": "CBRN control feature",
+          "description": "Control feature defining CBRN-related areas, routes, or volumes for protection, decontamination, or hazard management.",
+          "info": "Decision & alignment: Direct consolidation of MIM 'cbrn control feature'. Rationale: CBRN corridors, hazard areas, and decontamination zones share the same control semantics; the specific C/B/R/N modality and posture are instance attributes.",
+          "children": []
+        },
+        {
+          "id": "CAT_FiresCoordinationFeature",
+          "name": "Fires coordination feature",
+          "kind": "category",
+          "source": "MIM 5.3 (fires control feature)",
+          "label": "Fires coordination feature",
+          "description": "Control feature used to coordinate, permit, restrict, or deconflict fires and effects.",
+          "info": "Decision & alignment: Mirrors MIM 'fires control feature' while keeping FSCMs (e.g., CFL, FSCL, RFA, NFA) as instance-level categories, avoiding a class per FSCM. Rationale: common semantics (named line/area, authority, effective time) are shared; only the doctrinal code differs.",
+          "children": []
+        },
+        {
+          "id": "CAT_MobilityCountermobilityFeature",
+          "name": "Mobility / countermobility feature",
+          "kind": "category",
+          "source": "MIM 5.3 (obstacle control feature; barrier; obstacle; obstacle bypass; obstacle free area; obstacle gap; obstacle lane; obstacle restricted area)",
+          "label": "Mobility / countermobility feature",
+          "description": "Control feature that enables or impedes movement by designating obstacles, lanes, gaps, free areas, or bypasses.",
+          "info": "Decision & alignment: Consolidates MIM 'obstacle control feature' and its direct children (barrier, obstacle, bypass, free area, gap, lane, restricted area) into one class. Rationale: all are manoeuvre-control constructs with shared geometry and governance; the precise MIM subtype is retained as an instance category (e.g., 'obstacle lane'). Deeper subtypes (e.g., belts/zones) are intentionally not promoted to classes to keep the model compact.",
+          "children": []
+        },
+        {
+          "id": "CAT_ReferenceNavigationFix",
+          "name": "Reference & navigation fix",
+          "kind": "category",
+          "source": "MIM 5.3 (fix; acoustic fix; electromagnetic fix; optical fix)",
+          "label": "Reference & navigation fix",
+          "description": "Control feature acting as a reference for navigation, targeting, or coordination (point/line/area), including sensor-specific fixes.",
+          "info": "Decision & alignment: Consolidates MIM 'fix' and its direct children (acoustic/electromagnetic/optical). Rationale: same control concept differentiated only by sensing modality; the modality is captured as an instance attribute rather than new classes.",
+          "children": []
+        },
+        {
+          "id": "CAT_RouteControlFeature",
+          "name": "Route control feature",
+          "kind": "category",
+          "source": "MIM 5.3 (route; land route; maritime route; other route)",
+          "label": "Route control feature",
+          "description": "Control feature defining movement routes for forces or logistics across domains.",
+          "info": "Decision & alignment: Consolidates MIM 'route' and its direct children (land, maritime, other) under a single class. Rationale: operational semantics are identical (named line/corridor with restrictions, flow, timing). Domain and role (e.g., MSR/ASR) are captured as instance attributes. Air routes are handled under Airspace control feature to keep all air C2 together.",
+          "children": []
+        },
+        {
+          "id": "CAT_SustainmentControlFeature",
+          "name": "Sustainment control feature",
+          "kind": "category",
+          "source": "MIM 5.3 (sustainment control feature)",
+          "label": "Sustainment control feature",
+          "description": "Control feature used to designate sustainment corridors, areas, or nodes supporting logistics operations.",
+          "info": "Decision & alignment: Direct alignment with MIM 'sustainment control feature'. Rationale: logistics control constructs are kept as one class; the exact doctrinal term (e.g., MSR, ASR) remains an instance category to avoid class proliferation.",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "CAT_CommercialFacility",
+      "name": "Commercial facility",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "Commercial facility",
+      "description": "A facility designed to enable or support commercial business processes.",
+      "mimId": "EAID_BCFD00B5_EA43_45e7_B957_B59B4B7BB106",
+      "children": [
+        {
+          "id": "CAT_Bank",
+          "name": "Bank",
+          "kind": "category",
+          "source": "MIM 5.3",
+          "label": "Bank",
+          "description": "An establishment where money is stored for saving or commercial purposes.",
+          "mimId": "EAID_EDCC39F7_0077_49df_BCCC_50727631B9CB",
+          "children": []
+        },
+        {
+          "id": "CAT_Market",
+          "name": "Market",
+          "kind": "category",
+          "source": "MIM 5.3",
+          "label": "Market",
+          "description": "A facility where commercial activity is conducted and goods and services are bought and sold.",
+          "mimId": "EAID_68865E3E_E849_4b2f_8083_B4B0583ED3FE",
+          "children": []
+        },
+        {
+          "id": "CAT_Office",
+          "name": "Office",
+          "kind": "category",
+          "source": "MIM 5.3",
+          "label": "Office",
+          "description": "A place in which business, professional or clerical activities are conducted.",
+          "mimId": "EAID_E41FC38A_2692_46ec_BC9A_BA5715F7B7F6",
+          "children": []
+        },
+        {
+          "id": "CAT_Shop",
+          "name": "Shop",
+          "kind": "category",
+          "source": "MIM 5.3",
+          "label": "Shop",
+          "description": "A small retail store or a speciality department in a large store.",
+          "mimId": "EAID_FFD9B580_2F3D_4815_83AD_D42B193E0146",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "CAT_BuiltUpArea",
+      "name": "Built up area",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "Built up area",
+      "description": "A tract containing a concentration of buildings and/or other structures.",
+      "mimId": "EAID_44C33876_CA36_4575_AB59_3B8D51C654AF",
+      "children": [
+        {
+          "id": "CAT_BuiltUpAreaCity",
+          "name": "City",
+          "kind": "category",
+          "source": "MIM 5.3 (BuiltUpArea Category Code)",
+          "label": "City",
+          "description": "Facility representing a built-up area at city scale, typically with high population density and diverse administrative and economic functions.",
+          "children": []
+        },
+        {
+          "id": "CAT_BuiltUpAreaHamlet",
+          "name": "Hamlet",
+          "kind": "category",
+          "source": "MIM 5.3 (BuiltUpArea Category Code)",
+          "label": "Hamlet",
+          "description": "Facility representing a very small built-up area or settlement, usually a few dwellings with minimal services.",
+          "children": []
+        },
+        {
+          "id": "CAT_BuiltUpAreaTown",
+          "name": "Town",
+          "kind": "category",
+          "source": "MIM 5.3 (BuiltUpArea Category Code)",
+          "label": "Town",
+          "description": "Facility representing a medium-sized built-up area, larger than a village and smaller than a city, with local services and governance.",
+          "children": []
+        },
+        {
+          "id": "CAT_BuiltUpAreaUrbanArea",
+          "name": "Urban Area",
+          "kind": "category",
+          "source": "MIM 5.3 (BuiltUpArea Category Code)",
+          "label": "Urban Area",
+          "description": "Facility representing a contiguous built environment comprising cities, towns, and suburbs with predominantly non-rural land use.",
+          "children": []
+        },
+        {
+          "id": "CAT_BuiltUpAreaVillage",
+          "name": "Village",
+          "kind": "category",
+          "source": "MIM 5.3 (BuiltUpArea Category Code)",
+          "label": "Village",
+          "description": "Facility representing a small built-up area or settlement, typically rural, with limited services.",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "CAT_ControlMeasure",
+      "name": "Control measure",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "Control measure",
+      "description": "A Facility that also denotes a ControlMeasure.",
+      "mimId": "EAID_18788218_F374_421d_B97D_9316D8FB4D46",
+      "children": [
+        {
+          "id": "CAT_CannibalizationPoint",
+          "name": "Cannibalization point",
+          "kind": "category",
+          "source": "MIM 5.3 (Cannibalization Point)",
+          "label": "Cannibalization point",
+          "description": "Facility/Control measure for removal of serviceable parts from equipment to restore other systems.",
+          "info": "Equivalent to MIM 'Cannibalization Point'.",
+          "children": []
+        },
+        {
+          "id": "CAT_CasualtyCollectionPoint",
+          "name": "Casualty collection point",
+          "kind": "category",
+          "source": "MIM 5.3 (Casualty Collection Point)",
+          "label": "Casualty collection point",
+          "description": "Facility/Control measure where casualties are gathered, triaged and prepared for evacuation to higher medical echelons.",
+          "info": "Equivalent to MIM 'Casualty Collection Point' (CCP).",
+          "children": []
+        },
+        {
+          "id": "CAT_DecontaminationFacility",
+          "name": "Decontamination facility",
+          "kind": "category",
+          "source": "MIM 5.3 (Decontamination Facility)",
+          "label": "Decontamination facility",
+          "description": "Facility/Control measure for CBRN decontamination operations.",
+          "info": "Equivalent to MIM 'Decontamination Facility'.",
+          "children": []
+        },
+        {
+          "id": "CAT_ForwardArmingAndRefuellingPoint",
+          "name": "Forward arming and refuelling point",
+          "kind": "category",
+          "source": "MIM 5.3 (Forward Arming and Refuelling Point Facility)",
+          "label": "Forward arming and refuelling point",
+          "description": "Facility/Control measure for forward arming and refuelling of aviation assets (FARP).",
+          "info": "Equivalent to MIM 'Forward Arming and Refuelling Point Facility' (FARP) for aviation sustainment.",
+          "children": []
+        },
+        {
+          "id": "CAT_MaintenanceCollectionPoint",
+          "name": "Maintenance collection point",
+          "kind": "category",
+          "source": "MIM 5.3 (Maintenance Collection Point; Unit Maintenance Collection Point)",
+          "label": "Maintenance collection point",
+          "description": "Facility/Control measure where equipment is collected for repair/maintenance; may include unit-level maintenance nodes.",
+          "info": "Groups MIM 'Maintenance Collection Point' and 'Unit Maintenance Collection Point'.",
+          "children": []
+        },
+        {
+          "id": "CAT_MedicalEvacuationPickupPoint",
+          "name": "Medical evacuation pickup point",
+          "kind": "category",
+          "source": "MIM 5.3 (Medical Evacuation Pickup Point)",
+          "label": "Medical evacuation pickup point",
+          "description": "Facility/Control measure serving as the designated point for MEDEVAC pickup (air/ground).",
+          "info": "Equivalent to MIM 'Medical Evacuation Pickup Point' (MEDEVAC PP).",
+          "children": []
+        },
+        {
+          "id": "CAT_ObservationPost",
+          "name": "Observation post",
+          "kind": "category",
+          "source": "MIM 5.3 (Observation Post; Reconnaissance Outpost; Sensor Outpost/Listening Post; Forward Observer Position; Combat Outpost; Dismounted CBRN Observation Post)",
+          "label": "Observation post",
+          "description": "Facility/Control measure where observation, surveillance or reconnaissance is conducted (observer, recon, sensor, combat, CBRN, etc.).",
+          "info": "Consolidates MIM: Observation Post (OP), Reconnaissance Outpost, Sensor Outpost or Listening Post, Forward Observer Position, Combat Outpost, and Dismounted CBRN Observation Post.",
+          "children": []
+        },
+        {
+          "id": "CAT_PopulationHandlingArea",
+          "name": "Population handling area",
+          "kind": "category",
+          "source": "MIM 5.3 (Detainee Collection/Holding; POW Collection/Holding; Civilian Collection; Refugee Holding)",
+          "label": "Population handling area",
+          "description": "Facility/Control measure for handling non-combatants and detainees (collection/holding) including POW, detainees, civilians, and refugees.",
+          "info": "Consolidates MIM: Detainee Collection Point/Holding Area, Prisoner of War Collection Point/Holding Area, Civilian Collection Point, Refugee Holding Area.",
+          "children": []
+        },
+        {
+          "id": "CAT_RearmRefuelResupplyPoint",
+          "name": "Rearm refuel resupply point",
+          "kind": "category",
+          "source": "MIM 5.3 (Rearm Refuel and Resupply Point)",
+          "label": "Rearm refuel resupply point",
+          "description": "Facility/Control measure for on-station rearm/refuel/resupply of ground units.",
+          "info": "Equivalent to MIM 'Rearm Refuel and Resupply Point' for ground operations (on-station).",
+          "children": []
+        },
+        {
+          "id": "CAT_RefuelOnTheMovePoint",
+          "name": "Refuel on the move point",
+          "kind": "category",
+          "source": "MIM 5.3 (Refuel On the Move Point)",
+          "label": "Refuel on the move point",
+          "description": "Facility/Control measure enabling refuel operations while the unit remains in movement through designated lanes.",
+          "info": "Equivalent to MIM 'Refuel On the Move Point' (ROM); complements the on-station rearm/refuel point.",
+          "children": []
+        },
+        {
+          "id": "CAT_SupplyDistributionPoint",
+          "name": "Supply distribution point",
+          "kind": "category",
+          "source": "MIM 5.3 (Supply Point; Logistics Release Point; Ammunition Supply/Transfer Point; Trailer Transfer Point)",
+          "label": "Supply distribution point",
+          "description": "Facility/Control measure where classes of supply are issued or transferred to supported units (ammo, general supplies, LRP, trailer/transfer nodes).",
+          "info": "Groups MIM: Supply Point, Logistics Release Point (LRP), Ammunition Supply Point (ASP), Ammunition Transfer Point (ATP), Trailer Transfer Point. Keep the fine term as an instance category if needed.",
+          "children": []
+        },
+        {
+          "id": "CAT_SupportArea",
+          "name": "Support area",
+          "kind": "category",
+          "source": "MIM 5.3 (Support Area family)",
+          "label": "Support area",
+          "description": "Facility/Control measure designating the area where sustainment functions are staged and executed for a formation.",
+          "info": "Consolidates MIM 'Brigade Support Area', 'Division Support Area', and 'Regimental Support Area'. The echelon is carried as capability.",
+          "children": []
+        },
+        {
+          "id": "CAT_TrafficControlPost",
+          "name": "Traffic control post",
+          "kind": "category",
+          "source": "MIM 5.3 (Traffic Control Post)",
+          "label": "Traffic control post",
+          "description": "Facility/Control measure used to regulate movement along routes and control flows at critical nodes.",
+          "info": "Equivalent to MIM 'Traffic Control Post' (TCP).",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "76f3c67a-61c3-4f1e-a9d5-429db28d76f2",
+      "name": "Engineering",
+      "kind": "category",
+      "source": "MIM 5.3 (EngineeringCapability)",
+      "label": "Engineering capability",
+      "description": "A Capability, required for planning, of those Organisations and Persons that are deemed as having the ability to perform construction or destruction activities. This includes performing mobility and counter-mobility tasks. \n\nRemarks:\n\nEngineeringCapability provides additional information concerning the conditions for which the engineering capability is defined, that is, the type of facility which is being constructed or destroyed (or in the case of obstacles, breached) as well as the dimensions of that facility. Engineering capabilities can be described for different echelon levels. For instance, a bridge-building platoon may be capable of either constructing two bridges, each 20 metres long, or a single bridge that is 40 metres long. A company that is made up of three platoons may therefore be capable of building a single bridge that is 120 metres long. The first capability can be described at platoon level, the second at company level.",
+      "children": []
+    },
+    {
+      "id": "991ec71a-0a26-48c6-a621-9df524fe977a",
+      "name": "Fire",
+      "kind": "category",
+      "source": "MIM 5.3 (FireCapability)",
+      "label": "Fire capability",
+      "description": "A Capability, required for planning, of those Facilities, Equipment, Organisations and Persons that are deemed as having the ability to discharge or launch a projectile or missile. \n\nRemarks:\n\nFireCapability provides additional information about the type of projectile, which is being discharged or launched.",
+      "children": []
+    },
+    {
+      "id": "74e6cae0-3ab9-48d3-8ead-233e8cc16b09",
+      "name": "Handling",
+      "kind": "category",
+      "source": "MIM 5.3 (HandlingCapability)",
+      "label": "Handling capability",
+      "description": "A Capability, required for planning, of those Facilities and Equipment that are deemed as having the ability to move Materiel (raw materials, scrap, semi-finished, and finished) to, through, and from productive processes; in warehouses and storage; and in receiving and shipping areas.",
+      "children": []
+    },
+    {
+      "id": "a810fda6-3a23-4885-9abf-5d54280da723",
+      "name": "Maintenance",
+      "kind": "category",
+      "source": "MIM 5.3 (MaintenanceCapability)",
+      "label": "Maintenance capability",
+      "description": "A Capability, required for planning, of those Facilities, Equipment, Organisations and Persons that are deemed as having the ability to provide a range of activities required to restore or maintain operational usage.",
+      "children": []
+    },
+    {
+      "id": "3a34e6be-e4af-4f28-992a-533685094f10",
+      "name": "Mobility",
+      "kind": "category",
+      "source": "MIM 5.3 (MobilityCapability)",
+      "label": "Mobility capability",
+      "description": "A Capability, required for planning, of those Facilities, Materiel, Organisations and Persons that are deemed as having the nominal ability to move in space, air, on water, under water, or over a specific type of terrain. \n\nRemarks:\n\nMobilityCapability specifies additional information about the kind of mobility and, in certain cases, the conditions for which the manoeuvre capability is defined, in particular, the type of terrain that is being traversed.",
+      "children": []
+    },
+    {
+      "id": "48819cda-6f5c-48ba-916f-cfa74c67c714",
+      "name": "Operational",
+      "kind": "category",
+      "source": "MIM 5.3 (OperationalCapability)",
+      "label": "Operational capability",
+      "description": "A Capability, required for planning, of those Objects that are deemed as having the ability, the training and the equipment to perform an operation.\n\nRemarks:\n\nOperationalCapability permits operational roles to be assigned to units or types of units, or in addition to the roles that are inherent in the typing of units.",
+      "children": []
+    },
+    {
+      "id": "fd3dfe72-5de8-4fc7-90b8-e783a2558a28",
+      "name": "Storage",
+      "kind": "category",
+      "source": "MIM 5.3 (StorageCapability)",
+      "label": "Storage capability",
+      "description": "A Capability, required for planning, of those Facilities and Equipment that are deemed as having the ability to hold a specific type of Object.",
+      "children": []
+    },
+    {
+      "id": "ec9d8a05-df14-4bc3-be4b-6fe87f89ab8f",
+      "name": "Support",
+      "kind": "category",
+      "source": "MIM 5.3 (SupportCapability)",
+      "label": "Support capability",
+      "description": "A Capability, required for planning, of those Facilities, Equipment, Persons and Organisations that are deemed as having the ability to provide supplies or services.",
+      "children": []
+    },
+    {
+      "id": "4da833b4-d9f7-4019-a36e-c19912bedcab",
+      "name": "Transmission",
+      "kind": "category",
+      "source": "MIM 5.3 (TransmissionCapability)",
+      "label": "Transmission capability",
+      "description": "A Capability, required for planning, of that Materiel that is deemed as having the ability to generate, receive or affect signals in the electromagnetic spectrum.",
+      "children": []
+    },
+    {
+      "id": "CAT_Civilian",
+      "name": "Civilian",
+      "kind": "category",
+      "source": "MIM 5.3 (mim:PersonMilitaryStatusCode)",
+      "label": "Civilian",
+      "description": "A person who is not a member of the armed forces or other organized armed groups; generally protected from direct attack under the law of armed conflict.",
+      "children": []
+    },
+    {
+      "id": "aad2424d-da6d-4bde-80b6-d84cc17f9433",
+      "name": "Person",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "Person",
+      "description": "A human being of military or civilian significance.",
+      "mimId": "EAID_A97A2A69_33EB_4f94_B769_E3873B3712CA",
+      "children": []
+    },
+    {
+      "id": "CAT_GroupOrganisation",
+      "name": "Group organisation",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "Group organisation",
+      "description": "An Organisation that is non-formal in nature and classes together its members due to mutual or common circumstances.",
+      "mimId": "EAID_45329184_4EB4_44a3_B052_7EC3D96E48BD",
+      "children": [
+        {
+          "id": "CAT_CivilianConvoy",
+          "name": "Civilian convoy",
+          "kind": "category",
+          "source": "MIM 5.3",
+          "label": "Civilian convoy",
+          "description": "A group of vehicles organised for the purpose of control and orderly movement.",
+          "mimId": "EAID_E052DF96_560E_4839_BBEE_2B8FAACE32FF",
+          "children": []
+        },
+        {
+          "id": "CAT_MediaGroup",
+          "name": "Media group",
+          "kind": "category",
+          "source": "MIM 5.3",
+          "label": "Media group",
+          "description": "A GroupOrganisation that comprises persons that report for mass communications (especially television, radio, and newspapers).",
+          "mimId": "EAID_FED2F2A2_9234_41c3_BA95_45A40C0BD2D9",
+          "children": [
+            {
+              "id": "CAT_InternationalMediaGroup",
+              "name": "International media group",
+              "kind": "category",
+              "source": "MIM 5.3",
+              "label": "International media group",
+              "description": "A MediaGroup that comprises persons that report for international mass communications, but do not take part in the actions.",
+              "mimId": "EAID_B6B3D383_1D08_4b00_BD05_8FD7D14D0072",
+              "children": []
+            },
+            {
+              "id": "CAT_LocalMediaGroup",
+              "name": "Local media group",
+              "kind": "category",
+              "source": "MIM 5.3",
+              "label": "Local media group",
+              "description": "A MediaGroup that comprises persons that report for local mass communications, but do not take part in the actions.",
+              "mimId": "EAID_EBC22C30_9511_4a08_87E2_2DB3BEB4C441",
+              "children": []
+            },
+            {
+              "id": "CAT_NationalMediaGroup",
+              "name": "National media group",
+              "kind": "category",
+              "source": "MIM 5.3",
+              "label": "National media group",
+              "description": "A MediaGroup that comprises persons that report for national mass communications, but do not take part in the actions.",
+              "mimId": "EAID_3779A902_B9A5_43ee_B23D_91DE6D851697",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "CAT_OtherGroupOrganisation",
+          "name": "Other group organisation",
+          "kind": "category",
+          "source": "MIM 5.3",
+          "label": "Other group organisation",
+          "description": "A GroupOrganisation for which no further information is given other than its category.",
+          "mimId": "EAID_B7B9F6BE_AF87_4b13_9BE0_D60E83EF8E91",
+          "children": [
+            {
+              "id": "CAT_OtherGroupOrganisationContractorGroup",
+              "name": "Contractor group",
+              "kind": "category",
+              "source": "MIM 5.3 (Other Group Organisation Category Code)",
+              "label": "Contractor group",
+              "description": "A GroupOrganisation that contracts or undertakes to supply certain articles, or to perform any work or service (esp. for government or other public body) at a certain price or rate.",
+              "children": []
+            },
+            {
+              "id": "CAT_OtherGroupOrganisationCriminalGroup",
+              "name": "Criminal group",
+              "kind": "category",
+              "source": "MIM 5.3 (Other Group Organisation Category Code)",
+              "label": "Criminal group",
+              "description": "A GroupOrganisation that comprises persons who attempt to profit by violating the law.",
+              "children": []
+            },
+            {
+              "id": "CAT_OtherGroupOrganisationDisplacedPersonGroup",
+              "name": "Displaced person group",
+              "kind": "category",
+              "source": "MIM 5.3 (Other Group Organisation Category Code)",
+              "label": "Displaced person group",
+              "description": "A GroupOrganisation that comprises persons removed from their home country by military or political pressure.",
+              "children": []
+            },
+            {
+              "id": "CAT_OtherGroupOrganisationEducationalGroup",
+              "name": "Educational group",
+              "kind": "category",
+              "source": "MIM 5.3 (Other Group Organisation Category Code)",
+              "label": "Educational group",
+              "description": "A GroupOrganisation that provides labour and material for the educational process.",
+              "children": []
+            },
+            {
+              "id": "CAT_OtherGroupOrganisationFinancialGroup",
+              "name": "Financial group",
+              "kind": "category",
+              "source": "MIM 5.3 (Other Group Organisation Category Code)",
+              "label": "Financial group",
+              "description": "A GroupOrganisation that provides finance, financial advice and guidance, support for the procurement process, providing pay and disbursing support.",
+              "children": []
+            },
+            {
+              "id": "CAT_OtherGroupOrganisationForeignFightersGroup",
+              "name": "Foreign fighters group",
+              "kind": "category",
+              "source": "MIM 5.3 (Other Group Organisation Category Code)",
+              "label": "Foreign fighters group",
+              "description": "A GroupOrganisation that consists of fighters who are not from the country in which the fighting is taking place supporting belligerents or irregular forces.",
+              "children": []
+            },
+            {
+              "id": "CAT_OtherGroupOrganisationGangGroup",
+              "name": "Gang group",
+              "kind": "category",
+              "source": "MIM 5.3 (Other Group Organisation Category Code)",
+              "label": "Gang group",
+              "description": "A GroupOrganisation that comprises persons that go together or act in concert.",
+              "children": []
+            },
+            {
+              "id": "CAT_OtherGroupOrganisationInsurgentGroup",
+              "name": "Insurgent group",
+              "kind": "category",
+              "source": "MIM 5.3 (Other Group Organisation Category Code)",
+              "label": "Insurgent group",
+              "description": "A GroupOrganisation that rises in revolt against authority.",
+              "children": []
+            },
+            {
+              "id": "CAT_OtherGroupOrganisationIntellectualGroup",
+              "name": "Intellectual group",
+              "kind": "category",
+              "source": "MIM 5.3 (Other Group Organisation Category Code)",
+              "label": "Intellectual group",
+              "description": "A GroupOrganisation that comprises intellectual beings possessing superior powers of intellect.",
+              "children": []
+            },
+            {
+              "id": "CAT_OtherGroupOrganisationIntelligenceGroup",
+              "name": "Intelligence group",
+              "kind": "category",
+              "source": "MIM 5.3 (Other Group Organisation Category Code)",
+              "label": "Intelligence group",
+              "description": "A GroupOrganisation that is employed to gather information.",
+              "children": []
+            },
+            {
+              "id": "CAT_OtherGroupOrganisationInternallyDisplacedPersonGroup",
+              "name": "Internally displaced person group",
+              "kind": "category",
+              "source": "MIM 5.3 (Other Group Organisation Category Code)",
+              "label": "Internally displaced person group",
+              "description": "A GroupOrganisation that comprises persons who, as part of a mass movement, have been forced to flee their homes or place of habitual residence suddenly or unexpectedly as a result of armed conflict, internal strife, systematic violation of human rights, fear of such violation, or natural or manmade disasters, and have not crossed an internationally recognized State border.",
+              "children": []
+            },
+            {
+              "id": "CAT_OtherGroupOrganisationJournalistGroup",
+              "name": "Journalist group",
+              "kind": "category",
+              "source": "MIM 5.3 (Other Group Organisation Category Code)",
+              "label": "Journalist group",
+              "description": "A GroupOrganisation that comprises persons that earn their living by editing or writing for a public journal.",
+              "children": []
+            },
+            {
+              "id": "CAT_OtherGroupOrganisationJudicialGroup",
+              "name": "Judicial group",
+              "kind": "category",
+              "source": "MIM 5.3 (Other Group Organisation Category Code)",
+              "label": "Judicial group",
+              "description": "A GroupOrganisation that provides judgment in courts of justice or the administration of justice.",
+              "children": []
+            },
+            {
+              "id": "CAT_OtherGroupOrganisationLandownerGroup",
+              "name": "Landowner group",
+              "kind": "category",
+              "source": "MIM 5.3 (Other Group Organisation Category Code)",
+              "label": "Landowner group",
+              "description": "A GroupOrganisation that comprises persons that are owners or proprietors of land.",
+              "children": []
+            },
+            {
+              "id": "CAT_OtherGroupOrganisationLocalInhabitantGroup",
+              "name": "Local inhabitant group",
+              "kind": "category",
+              "source": "MIM 5.3 (Other Group Organisation Category Code)",
+              "label": "Local inhabitant group",
+              "description": "A GroupOrganisation of a particular place regarded with reference to that place.",
+              "children": []
+            },
+            {
+              "id": "CAT_OtherGroupOrganisationMedicalGroup",
+              "name": "Medical group",
+              "kind": "category",
+              "source": "MIM 5.3 (Other Group Organisation Category Code)",
+              "label": "Medical group",
+              "description": "A GroupOrganisation that provides a medical service.",
+              "children": []
+            },
+            {
+              "id": "CAT_OtherGroupOrganisationMerchantGroup",
+              "name": "Merchant group",
+              "kind": "category",
+              "source": "MIM 5.3 (Other Group Organisation Category Code)",
+              "label": "Merchant group",
+              "description": "A GroupOrganisation that comprises persons whose occupation is the purchase and sale of marketable commodities for profit.",
+              "children": []
+            },
+            {
+              "id": "CAT_OtherGroupOrganisationPoliceChiefGroup",
+              "name": "Police chief group",
+              "kind": "category",
+              "source": "MIM 5.3 (Other Group Organisation Category Code)",
+              "label": "Police chief group",
+              "description": "A GroupOrganisation that comprises persons that have the responsibility for the regulation, discipline, and control of a community for the enforcement of law and public order.",
+              "children": []
+            },
+            {
+              "id": "CAT_OtherGroupOrganisationPoliceGroup",
+              "name": "Police group",
+              "kind": "category",
+              "source": "MIM 5.3 (Other Group Organisation Category Code)",
+              "label": "Police group",
+              "description": "A GroupOrganisation that is responsible for the regulation, discipline and control of community, civil administration; enforcement of the law; public order.",
+              "children": []
+            },
+            {
+              "id": "CAT_OtherGroupOrganisationPoliticalGroup",
+              "name": "Political group",
+              "kind": "category",
+              "source": "MIM 5.3 (Other Group Organisation Category Code)",
+              "label": "Political group",
+              "description": "A GroupOrganisation that is identified as being involved within a political area of activity and concerned with politics or has ties to a political party.",
+              "children": []
+            },
+            {
+              "id": "CAT_OtherGroupOrganisationPrisonerGroup",
+              "name": "Prisoner group",
+              "kind": "category",
+              "source": "MIM 5.3 (Other Group Organisation Category Code)",
+              "label": "Prisoner group",
+              "description": "A GroupOrganisation in custody on a criminal charge and on trial.",
+              "children": []
+            },
+            {
+              "id": "CAT_OtherGroupOrganisationPrisonerOfWarGroup",
+              "name": "Prisoner of war group",
+              "kind": "category",
+              "source": "MIM 5.3 (Other Group Organisation Category Code)",
+              "label": "Prisoner of war group",
+              "description": "A GroupOrganisation that comprises persons that have fallen in the hands of or surrendered to an opponent.",
+              "children": []
+            },
+            {
+              "id": "CAT_OtherGroupOrganisationRefugeeGroup",
+              "name": "Refugee group",
+              "kind": "category",
+              "source": "MIM 5.3 (Other Group Organisation Category Code)",
+              "label": "Refugee group",
+              "description": "A GroupOrganisation that comprises persons who, owing to religious persecution or political troubles, seek refuge.",
+              "children": []
+            },
+            {
+              "id": "CAT_OtherGroupOrganisationShuraGroup",
+              "name": "Shura group",
+              "kind": "category",
+              "source": "MIM 5.3 (Other Group Organisation Category Code)",
+              "label": "Shura group",
+              "description": "A GroupOrganisation that is an Islamic consultative council or similar advisory body.",
+              "children": []
+            },
+            {
+              "id": "CAT_OtherGroupOrganisationSocialGroup",
+              "name": "Social group",
+              "kind": "category",
+              "source": "MIM 5.3 (Other Group Organisation Category Code)",
+              "label": "Social group",
+              "description": "A GroupOrganisation that promotes and is characterised by friendly companionship or relations between its members.",
+              "children": []
+            },
+            {
+              "id": "CAT_OtherGroupOrganisationTerroristGroup",
+              "name": "Terrorist group",
+              "kind": "category",
+              "source": "MIM 5.3 (Other Group Organisation Category Code)",
+              "label": "Terrorist group",
+              "description": "A GroupOrganisation that comprises persons that attempt to further their views by a system of coercive intimidation.",
+              "children": []
+            },
+            {
+              "id": "CAT_OtherGroupOrganisationTribalGroup",
+              "name": "Tribal group",
+              "kind": "category",
+              "source": "MIM 5.3 (Other Group Organisation Category Code)",
+              "label": "Tribal group",
+              "description": "A GroupOrganisation consisting of a number of families, clans, or other groups who share a common ancestry and culture.",
+              "children": []
+            },
+            {
+              "id": "CAT_OtherGroupOrganisationVillageElderGroup",
+              "name": "Village elder group",
+              "kind": "category",
+              "source": "MIM 5.3 (Other Group Organisation Category Code)",
+              "label": "Village elder group",
+              "description": "A GroupOrganisation that comprises persons that are of ripe years and experience whose counsel is therefore sought and valued.",
+              "children": []
+            },
+            {
+              "id": "CAT_OtherGroupOrganisationWriterGroup",
+              "name": "Writer group",
+              "kind": "category",
+              "source": "MIM 5.3 (Other Group Organisation Category Code)",
+              "label": "Writer group",
+              "description": "A GroupOrganisation that comprises persons that practice or perform writing.",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CAT_GovernmentFacility",
+      "name": "Government facility",
+      "kind": "category",
+      "source": "MIM 5.3 (Government facility)",
+      "label": "Government facility",
+      "description": "A facility designed to support services that are the exclusive prerogative of the authority governing a country, or state, or division thereof.",
+      "mimId": "EAID_FB310229_F318_417c_973C_69C14C8761C0",
+      "children": [
+        {
+          "id": "CAT_CivilianMilitaryCoordinationCentre",
+          "name": "Civilian military coordination centre",
+          "kind": "category",
+          "source": "MIM 5.3 (Civilian military coordination centre)",
+          "label": "Civilian military coordination centre",
+          "description": "Facility supporting coordination between civilian authorities/actors and military forces.",
+          "mimId": "EAID_082B58CC_4DC6_4b73_BB11_FD3C43EDFECA",
+          "children": []
+        },
+        {
+          "id": "CAT_GovernmentBuilding",
+          "name": "Government building",
+          "kind": "category",
+          "source": "MIM 5.3 (Government building)",
+          "label": "Government building",
+          "description": "Building used to house governmental departments, agencies, or services.",
+          "mimId": "EAID_216DEDD3_ED0B_4956_9BEF_6A3168A8BC8C",
+          "children": []
+        },
+        {
+          "id": "CAT_GovernmentalLeadership",
+          "name": "Governmental leadership",
+          "kind": "category",
+          "source": "MIM 5.3 (Governmental leadership)",
+          "label": "Governmental leadership",
+          "description": "Facility associated with the leadership of a government (executive, cabinet, or equivalent leadership hubs).",
+          "mimId": "EAID_F6D3D2F5_9027_42b2_8C35_9EBC2E028CDE",
+          "children": []
+        },
+        {
+          "id": "CAT_HeadquartersFacility",
+          "name": "Headquarters facility",
+          "kind": "category",
+          "source": "MIM 5.3 (Headquarters facility)",
+          "label": "Headquarters facility",
+          "description": "Facility serving as a headquarters for a governmental body or related command/administrative entity.",
+          "mimId": "EAID_B0E2C72C_1F1B_49d7_99C4_39FEBEC1ACF8",
+          "children": []
+        },
+        {
+          "id": "CAT_LawEnforcementFacility",
+          "name": "Law enforcement facility",
+          "kind": "category",
+          "source": "MIM 5.3 (Law enforcement facility)",
+          "label": "Law enforcement facility",
+          "description": "Facility used by law enforcement organizations to conduct policing, security, or judicial support functions.",
+          "mimId": "EAID_2375AB63_050E_4e86_BAA3_532619C2F01B",
+          "children": [
+            {
+              "id": "CAT_PoliceCheckPoint",
+              "name": "Police check point",
+              "kind": "category",
+              "source": "MIM 5.3 (Police check point)",
+              "label": "Police check point",
+              "description": "Law-enforcement position established to control/inspect traffic and persons at a specific location.",
+              "mimId": "EAID_9061B1A1_62B7_437a_A986_B0F9BB387DCB",
+              "children": []
+            },
+            {
+              "id": "CAT_PoliceStation",
+              "name": "Police station",
+              "kind": "category",
+              "source": "MIM 5.3 (Police station)",
+              "label": "Police station",
+              "description": "Facility serving as a base of operations for police units, including public service desks, custody, and administrative functions.",
+              "mimId": "EAID_B0CFCC82_4298_4b6a_A629_E680A331030E",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "CAT_TownHall",
+          "name": "Town hall",
+          "kind": "category",
+          "source": "MIM 5.3 (Town hall)",
+          "label": "Town hall",
+          "description": "Municipal government facility housing local administration and public services.",
+          "mimId": "EAID_1F2DD7F5_AA8C_4cb2_82EB_D46C45A96F71",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "CAT_CivilianPost",
+      "name": "Civilian post",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "Civilian post",
+      "description": "An Organisation with a set of duties that are intended to be fulfilled by one person in private sector and non-military government organisations.",
+      "mimId": "EAID_04464B5B_8E92_434d_B0D7_90EEB99B747F",
+      "children": []
+    },
+    {
+      "id": "792ce448-f028-42c8-b1b3-512ce6f8086e",
+      "name": "Organisation",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "Organisation",
+      "description": "An administrative or functional structure.",
+      "info": "An Organisation is constituted to accomplish an aim, purpose, or mission.",
+      "mimId": "EAID_A2894F76_CB9A_4bd9_BE09_A9D569D33100",
+      "children": []
+    },
+    {
+      "id": "CAT_CivilianTypeVehicle",
+      "name": "Civilian type vehicle",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "Civilian type vehicle",
+      "description": "A Vehicle primarily designed for civilian purposes.",
+      "mimId": "EAID_09A4A084_397D_4623_8367_DFFDD1C1E9AC",
+      "children": []
+    },
+    {
+      "id": "5590024d-50e5-453b-bab2-53f134bd1e0c",
+      "name": "Land vehicle",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "Land vehicle",
+      "description": "A vehicle that is designed to operate on the ground.",
+      "mimId": "EAID_F43C461A_FCE0_4270_B7E7_CE5ACC9105AE",
+      "children": []
+    },
+    {
+      "id": "CAT_GeographicFeature",
+      "name": "Geographic feature",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "Geographic feature",
+      "description": "Terrain characteristics of military significance.\n<b>Remarks:</b>\nA GeographicFeature is a permanent or durable natural feature. In general, it represents any natural object or configuration of ground or water represented on a map or chart.",
+      "mimId": "EAID_9232A0AF_2556_4aea_8E89_E6B3522B0645",
+      "children": [
+        {
+          "id": "CAT_CoastalZone",
+          "name": "Coastal zone",
+          "kind": "category",
+          "source": "MIM 5.3 (Geographic feature: coastal hydrographic feature)",
+          "label": "Coastal zone",
+          "description": "Littoral areas where land and sea interact (shorelines, beaches, estuaries, deltas) critical for amphibious operations and area denial.",
+          "info": "Consolidation vs. MIM: Maps MIM 'coastal hydrographic feature' to a single operational bucket. Fine-grained coastal forms (beach, cliff, estuary) are retained as instance categories.",
+          "children": []
+        },
+        {
+          "id": "CAT_Cryosphere",
+          "name": "Cryosphere",
+          "kind": "category",
+          "source": "MIM 5.3 (Geographic feature: snow ice feature)",
+          "label": "Cryosphere",
+          "description": "Snow and ice environments (glaciers, pack ice, snowfields) that constrain movement, logistics, and signatures.",
+          "info": "Alignment with MIM: Equivalent to MIM 'snow ice feature' but generalized into a single operational bucket for planning and mobility analysis.",
+          "children": []
+        },
+        {
+          "id": "CAT_InlandWater",
+          "name": "Inland water",
+          "kind": "category",
+          "source": "MIM 5.3 (Geographic feature: inland water)",
+          "label": "Inland water",
+          "description": "Non-coastal water bodies and flows (rivers, lakes, reservoirs, canals) that affect mobility, bridging, and supply.",
+          "info": "Alignment with MIM: Equivalent to MIM 'inland water'. Wetlands can be modeled either as a separate class (see Wetland) or as an instance category under Inland water when coastal influence is absent.",
+          "children": []
+        },
+        {
+          "id": "CAT_LandTerrain",
+          "name": "Land terrain",
+          "kind": "category",
+          "source": "MIM 5.3 (Geographic feature family)",
+          "label": "Land terrain",
+          "description": "Terrestrial surfaces relevant to maneuver, observation, and sustainment (e.g., plains, hills, mountains, deserts).",
+          "info": "Consolidation vs. MIM: Groups MIM 'landform' and also absorbs 'continent' (treated as a meta-geographic container when needed). We keep detailed relief types at instance level (e.g., category = mountain/ridge/plateau) to avoid class proliferation.",
+          "children": []
+        },
+        {
+          "id": "CAT_MaritimeWater",
+          "name": "Maritime water",
+          "kind": "category",
+          "source": "MIM 5.3 (Geographic feature family)",
+          "label": "Maritime water",
+          "description": "Open sea and ocean waters beyond the immediate coastal zone, relevant for sea control, SLOC protection, and maritime maneuver.",
+          "info": "Comparison to MIM: Not explicitly separated in MIM’s top list; introduced here to distinguish open-water operations from coastal/littoral features.",
+          "children": []
+        },
+        {
+          "id": "CAT_Wetland",
+          "name": "Wetland",
+          "kind": "category",
+          "source": "MIM 5.3 (Geographic feature: wetland)",
+          "label": "Wetland",
+          "description": "Areas with water-saturated soils (marshes, swamps, bogs) that significantly affect maneuver, concealment, and engineering tasks.",
+          "info": "Alignment with MIM: Keeps MIM 'wetland' as its own class due to its distinct impact on mobility. When wetlands are clearly coastal, they may be typed as Wetland with an additional instance category indicating littoral context.",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "daa72379-81fa-483e-8600-e15e4cd446d5",
+      "name": "Command post facility",
+      "kind": "category",
+      "source": "MIM 5.3 (Command post facility)",
+      "label": "Command post facility",
+      "description": "Facility used to host a command post (CP) and associated C2 services.",
+      "mimId": "EAID_D01AFD74_A7F5_445d_BB9E_B8461341B049",
+      "children": []
+    },
+    {
+      "id": "CAT_IndustrialFacility",
+      "name": "Industrial facility",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "Industrial facility",
+      "description": "A facility designed to enable or support industrial business processes.",
+      "mimId": "EAID_0ABB2D14_E289_497f_83BC_5A0D69C2DD65",
+      "children": [
+        {
+          "id": "CAT_CommercialManufacturingFacility",
+          "name": "Commercial manufacturing facility",
+          "kind": "category",
+          "source": "MIM 5.3 (Industrial facility family)",
+          "label": "Commercial manufacturing facility",
+          "description": "Civilian/market-oriented manufacturing or processing plants, including shipbuilding when not defense-dedicated.",
+          "info": "Consolidates MIM: 'equipment manufacture', 'industrial works', 'processing facility' (non-energy), 'general motor vehicle production complex', 'shipyard' (civilian). 'chemical production complex' belongs here unless explicitly petrochemical (then Energy industry).",
+          "children": []
+        },
+        {
+          "id": "CAT_EnergyIndustryFacility",
+          "name": "Energy industry facility",
+          "kind": "category",
+          "source": "MIM 5.3 (Industrial facility family)",
+          "label": "Energy industry facility",
+          "description": "Industrial facility devoted to petroleum and petrochemical transformation/production with strategic economic relevance.",
+          "info": "Consolidates MIM: 'petroleum production complex', 'petrochemical refinery'. If 'processing facility' refers to hydrocarbons in your dataset, treat it here; otherwise keep under Commercial manufacturing.",
+          "children": []
+        },
+        {
+          "id": "CAT_ExtractionFacility",
+          "name": "Extraction facility",
+          "kind": "category",
+          "source": "MIM 5.3 (Industrial facility family)",
+          "label": "Extraction facility",
+          "description": "Primary extraction or mining installations providing raw materials.",
+          "info": "Consolidates MIM: 'mining installation'.",
+          "children": []
+        },
+        {
+          "id": "CAT_MaintenanceAndRepairFacility",
+          "name": "Maintenance & repair facility",
+          "kind": "category",
+          "source": "MIM 5.3 (Industrial facility family)",
+          "label": "Maintenance & repair facility",
+          "description": "Industrial sites dedicated to maintenance, overhaul, and repair of platforms and infrastructure.",
+          "info": "Consolidates MIM: 'maintenance facility' (+ 'aircraft maintenance facility', 'motor vehicle maintenance facility'), 'repair rail facility'. Shipyard repair activities may be represented at instance level if needed.",
+          "children": []
+        },
+        {
+          "id": "CAT_MilitaryManufacturingFacility",
+          "name": "Military manufacturing facility",
+          "kind": "category",
+          "source": "MIM 5.3 (Industrial facility family)",
+          "label": "Military manufacturing facility",
+          "description": "Defense-oriented production plants for weapons, munitions, platforms, or military-configured vehicles/aircraft/ships.",
+          "info": "Consolidates MIM: 'military production facility', 'munitions complex'. Also classify here instances of 'aircraft production complex', 'general motor vehicle production complex', or 'shipyard' when output is military; otherwise keep them under Commercial manufacturing.",
+          "children": []
+        },
+        {
+          "id": "CAT_ResearchAndTechnologyFacility",
+          "name": "Research & technology facility",
+          "kind": "category",
+          "source": "MIM 5.3 (Industrial facility family)",
+          "label": "Research & technology facility",
+          "description": "Industrial/technology sites focused on research, development, testing, and high-tech capabilities.",
+          "info": "Consolidates MIM: 'technological research facility', 'service research or utility facility', 'high technology complex'.",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "CAT_ConsumableMateriel",
+      "name": "Consumable materiel",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "Consumable materiel",
+      "description": "An expendable supply.",
+      "info": "Consumables are meant to be used up in the normal conduct of operations other than through attrition. They can generally be issued in different standard quantities, each having its own packaging.",
+      "mimId": "EAID_26EFD3BB_F5DA_459a_9C46_0DF6AE8A05AA",
+      "children": []
+    },
+    {
+      "id": "e4e89048-64bc-4d86-8d19-1f8fb15545be",
+      "name": "Materiel",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "Materiel",
+      "description": "An apparatus, equipment or supply of military interest without distinction as to its application for administrative or combat purposes.",
+      "mimId": "EAID_53F96BF4_E5CD_4e74_A34D_9E6741586682",
+      "children": []
+    },
+    {
+      "id": "76334615-fbe8-4c94-89fa-4ce63f28288a",
+      "name": "Tactical data link",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "Tactical data link",
+      "description": "One or more data links organised within a given architecture and supporting a standard set of binary messages exchanged between users of that system, for use in military operations.",
+      "mimId": "EAID_F72215C6_AFAE_4703_9489_0F22E611F147",
+      "children": []
+    },
+    {
+      "id": "e38927f3-37af-4f95-9837-02a4ab06c073",
+      "name": "Data transfer",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "Data transfer",
+      "description": "A service for the electronic transfer of data.",
+      "mimId": "EAID_C04B41D1_1BF0_475e_9FEB_55A9A67291F8",
+      "children": []
+    },
+    {
+      "id": "ce6c8b51-122b-4e18-b47b-d7ab05869c39",
+      "name": "ICT service",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "ICT service",
+      "description": "The performance of work in the domain of information and/or communications technology.",
+      "mimId": "EAID_6A29A997_7F02_4655_9307_F39EF32412B7",
+      "children": []
+    },
+    {
+      "id": "03a4d6a8-b4bb-49f3-bf6d-da76df0a0c52",
+      "name": "Message handling service",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "Message handling service",
+      "description": "An application service that provides a generalised facility for exchanging electronic messages between systems.",
+      "mimId": "EAID_5D92802D_D489_4cd0_AB39_51D7FC0BEF7D",
+      "children": []
+    },
+    {
+      "id": "aeea9f90-4d79-4adb-aa50-2c19f6a6b1b3",
+      "name": "Equipment",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "Equipment",
+      "description": "Materiel that is neither intended for consumption nor an unexploded piece of ordnance.",
+      "info": "Expressed in another way, Equipment is a durable good and not intended for consumption.",
+      "mimId": "EAID_82F2EBF9_3D38_4113_9B46_5E6C7CCF3D77",
+      "children": []
+    },
+    {
+      "id": "CAT_Facsimile",
+      "name": "Facsimile",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "Facsimile",
+      "description": "A service provided by means of electronic scanning of a document, transmitting it as data by telecommunications links, and producing an exact copy at the receiver.",
+      "mimId": "EAID_5C26E809_F91C_461e_97F0_436046DDE4CF",
+      "children": []
+    },
+    {
+      "id": "CAT_GovernmentOrganisation",
+      "name": "Government organisation",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "Government organisation",
+      "description": "An Organisation that controls and administers public policy either under a national or international mandate.",
+      "mimId": "EAID_62D06577_C35A_4cd4_9CFC_C92ACC84E90E",
+      "children": [
+        {
+          "id": "CAT_InternalSecurityForcesOrganisation",
+          "name": "Internal security forces organisation",
+          "kind": "category",
+          "source": "MIM 5.3",
+          "label": "Internal security forces organisation",
+          "description": "A GovernmentOrganisation whose principal designation is to keep peace within the borders of a sovereign state or other self-governing territories, generally by upholding the national law and defending against internal security threats.",
+          "mimId": "EAID_17D1063D_47FF_476c_99E5_B2F479FAB1E5",
+          "children": []
+        },
+        {
+          "id": "CAT_InternationalCivilGovernmentalOrganisation",
+          "name": "International civil governmental organisation",
+          "kind": "category",
+          "source": "MIM 5.3",
+          "label": "International civil governmental organisation",
+          "description": "A GovernmentOrganisation that is officially involved in international civil affairs.",
+          "mimId": "EAID_61FDD835_7C7D_417f_9544_3B2279CAA275",
+          "children": []
+        },
+        {
+          "id": "CAT_InternationalCivilOrMilitaryGovernmentalOrganisation",
+          "name": "International civil or military governmental organisation",
+          "kind": "category",
+          "source": "MIM 5.3",
+          "label": "International civil or military governmental organisation",
+          "description": "A GovernmentOrganisation that is officially involved in international affairs that include both civil and military elements.",
+          "mimId": "EAID_88F55AC8_4489_48c5_B789_2649A364D89B",
+          "children": []
+        },
+        {
+          "id": "CAT_MilitaryOrganisation",
+          "name": "Military organisation",
+          "kind": "category",
+          "source": "MIM 5.3",
+          "label": "Military organisation",
+          "description": "A GovernmentOrganisation that is officially sanctioned and is trained and equipped to exert force.",
+          "mimId": "EAID_72F8F171_3AE8_44a9_842D_3502530C9B24",
+          "children": [
+            {
+              "id": "CAT_MilitaryPost",
+              "name": "Military post",
+              "kind": "category",
+              "source": "MIM 5.3",
+              "label": "Military post",
+              "description": "A MilitaryOrganisation with a set of duties that can be fulfilled by one person.",
+              "mimId": "EAID_9D93516D_4C87_4111_9260_63295C9AFC64",
+              "children": []
+            },
+            {
+              "id": "CAT_Unit",
+              "name": "Unit",
+              "kind": "category",
+              "source": "MIM 5.3",
+              "label": "Unit",
+              "description": "A MilitaryOrganisation whose structure is prescribed by competent authority.",
+              "info": "The structure is prescribed, e.g., in the form of a table of organisation and equipment; specifically, part of an organisation. A formation is specified as a Unit.\nOne aim of Unit is to permit unique specification of tables of organisation and equipment (referred to in this model as Establishment) for any unit of interest within the scope of the model. A second aim is to provide information that is necessary for generating unit symbology for situation displays.\n\nEach nation has a different way of classifying its own units. The model supports the representation of as many types of Units as possible (within the constraints of common sense). It should be recognised that the manner of classifying units may not correspond to national classification policy. However, national implementations of external displays for operational users can (and should) be built to support the national doctrine and naming conventions. The internal classification within a C2 application (based on the model) can be entirely invisible to the user of that application.",
+              "mimId": "EAID_4B936657_D82B_483f_B265_EC3DDA777A33",
+              "children": [
+                {
+                  "id": "CAT_CombatServiceSupportUnit",
+                  "name": "Combat service support unit",
+                  "kind": "category",
+                  "source": "MIM 5.3",
+                  "label": "Combat service support unit",
+                  "description": "A Unit tasked to provide support to combat forces, primarily in the fields of administration and logistics.",
+                  "mimId": "EAID_A11E490E_D0A7_446f_8E8D_6608D4E405D7",
+                  "children": []
+                },
+                {
+                  "id": "CAT_CombatSupportUnit",
+                  "name": "Combat support unit",
+                  "kind": "category",
+                  "source": "MIM 5.3",
+                  "label": "Combat support unit",
+                  "description": "A Unit that provides critical combat functions in conjunction with combat arms units and soldiers.",
+                  "mimId": "EAID_802418CC_5914_4cd2_A4A3_70BFFE55A54A",
+                  "children": []
+                },
+                {
+                  "id": "CAT_CombatUnit",
+                  "name": "Combat unit",
+                  "kind": "category",
+                  "source": "MIM 5.3",
+                  "label": "Combat unit",
+                  "description": "A Unit who closes with and destroys enemy forces or provides firepower and destructive capabilities in the battlespace.",
+                  "mimId": "EAID_1D669646_330A_4d46_8493_67E3C989D060",
+                  "children": []
+                },
+                {
+                  "id": "CAT_CommandSupportUnit",
+                  "name": "Command support unit",
+                  "kind": "category",
+                  "source": "MIM 5.3",
+                  "label": "Command support unit",
+                  "description": "A Unit that provides command support elements to assist commanders in the exercise of command.",
+                  "info": "Command support elements include:\n-all types of staff;\n-communications, intelligence and information systems that provide a range of command and control tools;\n-a life support element to protect, sustain and move the commander and his staff; and\n-standard procedures which focus command and staff effort.</li>",
+                  "mimId": "EAID_FAD147B4_D8AB_4906_9858_B2DD5DBA5931",
+                  "children": []
+                },
+                {
+                  "id": "CAT_ObserverUnit",
+                  "name": "Observer unit",
+                  "kind": "category",
+                  "source": "MIM 5.3",
+                  "label": "Observer unit",
+                  "description": "A Unit whose primary function is to perform observations.",
+                  "mimId": "EAID_DD7C2F3D_C321_4a9f_9652_C212927EDF4E",
+                  "children": []
+                },
+                {
+                  "id": "CAT_SpecialOperationsForcesUnit",
+                  "name": "Special operations forces unit",
+                  "kind": "category",
+                  "source": "MIM 5.3",
+                  "label": "Special operations forces unit",
+                  "description": "A Unit that provides unique capabilities of special reconnaissance, direct action and military assistance in order to undertake difficult, dangerous and sometimes politically sensitive missions for the theatre commander.",
+                  "mimId": "EAID_7A484E10_2CEF_4fe9_AC27_B06BCE66CFD2",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "CAT_NationalCivilGovernmentalOrganisation",
+          "name": "National civil governmental organisation",
+          "kind": "category",
+          "source": "MIM 5.3",
+          "label": "National civil governmental organisation",
+          "description": "A GovernmentOrganisation that is officially involved in national civil affairs.",
+          "mimId": "EAID_45777EE0_FE6E_4cf9_AE48_A5F4F04302FE",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "e5e86491-565b-44d0-b617-5024ba277eb4",
+      "name": "Identification friend or foe",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "Identification friend or foe",
+      "description": "A service for distinguishing friendly from enemy forces. This service is typically provided by a system using electromagnetic transmissions to which equipment carried by friendly forces automatically responds, for example, by emitting pulses.",
+      "mimId": "EAID_F76D2D8F_56EF_44e2_9172_C1D14EBB0BD6",
+      "children": []
+    },
+    {
+      "id": "989603b3-9e89-452e-afaf-9ff1cb55eb11",
+      "name": "Image",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "Image",
+      "description": "An imagery product.",
+      "mimId": "EAID_A66ABD62_3AB7_4713_AEB8_5DD917ED6E17",
+      "children": []
+    },
+    {
+      "id": "828c52ef-e687-40f5-a171-73a96c170c80",
+      "name": "Information resource",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "Information resource",
+      "description": "An Object that conveys meaning and which is broadly conceived as 'document'.",
+      "info": "This concept includes the full range of web resources (video, images, web pages, etc.) and physical resources such as books and objects like artworks.",
+      "mimId": "EAID_18E358B7_793D_47cf_9C29_F2F820ADFB15",
+      "children": []
+    },
+    {
+      "id": "ac7a0dec-671c-4f4a-acd4-3a29ac038f6b",
+      "name": "Image service",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "Image service",
+      "description": "A service for electronic transfer of static or slowly refreshed images.",
+      "mimId": "EAID_B8278164_23C6_4f16_A60A_11AA09D08CD6",
+      "children": []
+    },
+    {
+      "id": "CAT_MIP31Service",
+      "name": "MIP31 service",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "MIP31 service",
+      "description": "A MIPGatewayService based on MIP Baseline 3.1.",
+      "mimId": "EAID_7CD6C3A9_4954_42a0_9456_5342D23EC62C",
+      "children": []
+    },
+    {
+      "id": "CAT_MIP4IESService",
+      "name": "MIP4 iesservice",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "MIP4 iesservice",
+      "description": "A service defined by the MIP 4 Information Exchange Specification.",
+      "mimId": "EAID_350A0466_6A08_4a6b_AEC6_D739E03F8A89",
+      "children": []
+    },
+    {
+      "id": "CAT_MedicalFacility",
+      "name": "Medical facility",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "Medical facility",
+      "description": "A Facility used for treating illnesses and injuries.",
+      "mimId": "EAID_B1063FE6_C498_415c_B48D_D5B3F118698C",
+      "children": []
+    },
+    {
+      "id": "CAT_Military",
+      "name": "Military",
+      "kind": "category",
+      "source": "MIM 5.3 (mim:PersonMilitaryStatusCode)",
+      "label": "Military",
+      "description": "A person who serves in the regular armed forces of a state, subject to military law and organization.",
+      "children": []
+    },
+    {
+      "id": "CAT_MilitaryTypeVehicle",
+      "name": "Military type vehicle",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "Military type vehicle",
+      "description": "A Vehicle primarily designed for military purposes.",
+      "mimId": "EAID_06D86667_C2BA_454a_B165_21546C96090E",
+      "children": []
+    },
+    {
+      "id": "CAT_OtherFacility",
+      "name": "Other facility",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "Other facility",
+      "description": "A Facility for which no further information is given other than its category.",
+      "mimId": "EAID_7FC1F514_F52C_44f7_984C_13ECCC08B6FA",
+      "children": []
+    },
+    {
+      "id": "CAT_Paramilitary",
+      "name": "Paramilitary",
+      "kind": "category",
+      "source": "MIM 5.3 (mim:PersonMilitaryStatusCode)",
+      "label": "Paramilitary",
+      "description": "A person who belongs to a non-regular armed organization with military structure or functions (e.g., militias, gendarmerie, irregular forces), typically outside the standing armed forces.",
+      "children": []
+    },
+    {
+      "id": "CAT_PrivateSectorOrganisation",
+      "name": "Private sector organisation",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "Private sector organisation",
+      "description": "An Organisation that is a non-government organisation and is constituted for business, commerce, manufacturing, trade, relief or philanthropy.",
+      "mimId": "EAID_6F5628EB_3FF0_4155_B2CE_B594E136CCF3",
+      "children": []
+    },
+    {
+      "id": "0c897372-abb6-4d78-ad22-5c1daac3b192",
+      "name": "Sensor",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "Sensor",
+      "description": "A device that detects or measures a physical property and records, indicates, or otherwise responds to it.",
+      "mimId": "EAID_3267019F_D2F9_4ea7_BAD8_D82B79DC413D",
+      "children": []
+    },
+    {
+      "id": "CAT_Spacecraft",
+      "name": "Spacecraft",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "Spacecraft",
+      "description": "A Vehicle that is capable of operating beyond the earth's atmosphere.",
+      "mimId": "EAID_4243CEB9_C96B_452b_958B_590E65A6A57B",
+      "children": []
+    },
+    {
+      "id": "CAT_Tool",
+      "name": "Tool",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "description": "An instrument with which some operation is performed; a means of effecting something.",
+      "label": "Tool",
+      "mimId": "EAID_09904971_9854_4a6a_9285_66EF8C02D7A2",
+      "children": []
+    },
+    {
+      "id": "CAT_UnexplodedOrdnance",
+      "name": "Unexploded ordnance",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "Unexploded ordnance",
+      "description": "An explosive ordnance that has been primed, fused, armed, or otherwise prepared for action, and which has been fired, dropped, launched, placed in such a manner, as to constitute a hazard to operation, and remains unexploded either by malfunction or for any other cause. It is commonly abbreviated as UXO.",
+      "mimId": "EAID_7139B25E_0BA5_4ff7_9459_8C42C83D4C1B",
+      "children": []
+    },
+    {
+      "id": "CAT_Vessel",
+      "name": "Vessel",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "Vessel",
+      "description": "A Vehicle that is designed to operate on or under the water surface.",
+      "mimId": "EAID_A63C8E8C_AF84_467f_A2AC_A8E914D493E2",
+      "children": []
+    },
+    {
+      "id": "a755dd15-e72b-4063-b5ff-c8b2322a6192",
+      "name": "Video service",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "Video service",
+      "description": "A service for electronic transfer of video information.",
+      "mimId": "EAID_886F9980_B789_4f55_A939_0EF6A0F2208D",
+      "children": []
+    },
+    {
+      "id": "CAT_VoiceService",
+      "name": "Voice service",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "Voice service",
+      "description": "A service for electronic transfer of voice information.",
+      "mimId": "EAID_EEFB4961_53B4_47a3_8C29_D0CC871C17DD",
+      "children": []
+    },
+    {
+      "id": "1daf6e65-7da3-4cb7-94ad-f2e0b9bf2ce6",
+      "name": "Weapon",
+      "kind": "category",
+      "source": "MIM 5.3",
+      "label": "Weapon",
+      "description": "Equipment of any kind used in warfare or combat to attack and overcome an enemy.",
+      "mimId": "EAID_C5486CE3_4665_40ec_B04E_BBEFB47DD5E8",
+      "children": []
+    }
+  ]
+}
