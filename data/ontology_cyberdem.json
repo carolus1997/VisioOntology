@@ -1,0 +1,555 @@
+{
+  "source": "CYBERDEM",
+  "nodes": [
+    {
+      "id": "CAT_DataType",
+      "name": "DataType",
+      "kind": "category"
+    },
+    {
+      "id": "CAT_AcknowledgeResponseType",
+      "name": "AcknowledgeResponseType",
+      "kind": "category"
+    },
+    {
+      "id": "CAT_AdminType",
+      "name": "AdminType",
+      "kind": "category"
+    },
+    {
+      "id": "CAT_Application",
+      "name": "Application",
+      "kind": "category",
+      "comment": "Application represents a specific instance of a software program running on a device. Running processes are considered to be members of this class. At rest applications are considered to be members of the Data class with Data Type Code.",
+      "label": "Application"
+    },
+    {
+      "id": "CAT_CyberDEM",
+      "name": "CyberDEM",
+      "kind": "category",
+      "comment": "The multiplicity of an attribute is expressed in the form datatype[min..max], where the  default number is assumed to be [1..1] similarly to XML, min=1 and max=1 if not specified (UML)"
+    },
+    {
+      "id": "CAT_CyberEventPhaseType",
+      "name": "CyberEventPhaseType",
+      "kind": "category"
+    },
+    {
+      "id": "CAT_Data",
+      "name": "Data",
+      "kind": "category",
+      "comment": "Data represents information encapsulated in an instance or collection of file(s), message(s), or record(s) in a database. Data can represent a specific information object or a kind of information, e.g. a specific tactical message or messages that contain SPOTREP information. CyberObject.Name is the filename, subject, information kind, etc. At rest applications are considered to be members of this class with Data Type Code. Running processes are considered to be members of the Application class.",
+      "label": "Data"
+    },
+    {
+      "id": "CAT_DataLinkProtocolType",
+      "name": "DataLinkProtocolType",
+      "kind": "category"
+    },
+    {
+      "id": "CAT_DataStatusType",
+      "name": "DataStatusType",
+      "kind": "category"
+    },
+    {
+      "id": "CAT_Degrade",
+      "name": "Degrade",
+      "kind": "category",
+      "comment": "Degrade represets denying access to, or operation of, a target to a level represented as a percentage of capacity. [JP3-12]",
+      "label": "Degrade"
+    },
+    {
+      "id": "CAT_Deny",
+      "name": "Deny",
+      "kind": "category",
+      "comment": "Deny represents preventing access to, operation of, or availability of a target function by a specified level for a specified time, by degrade, disrupt, or destroy. Deny is an abstract class intended as an organizational construct; specific effects are instantiated as subclasses.",
+      "label": "Deny"
+    },
+    {
+      "id": "CAT_Destroy",
+      "name": "Destroy",
+      "kind": "category",
+      "comment": "Destroy represents completely and irreparably denying access to, or operation of, a target. [JP3-12] Destroy is an abstract class intended as an organizational construct; specific effects are instantiated as subclasses.",
+      "label": "Destroy"
+    },
+    {
+      "id": "CAT_Detect",
+      "name": "Detect",
+      "kind": "category",
+      "comment": "Detect represents discovering or discerning the existence, presence, or fact of an intrusion into information systems. [ATT&CK v13]",
+      "label": "Detect"
+    },
+    {
+      "id": "CAT_Device",
+      "name": "Device",
+      "kind": "category",
+      "comment": "Device represents an electronic device capable of operating in cyberspace.",
+      "label": "Device"
+    },
+    {
+      "id": "CAT_DeviceType",
+      "name": "DeviceType",
+      "kind": "category"
+    },
+    {
+      "id": "CAT_Disrupt",
+      "name": "Disrupt",
+      "kind": "category",
+      "comment": "Disrupt represents completely but temporarily denying access to, or operation of, a target for a period of time. [JP3-12] Disrupt is an abstract class intended as an organizational construct; specific effects are instantiated as subclasses.",
+      "label": "Disrupt"
+    },
+    {
+      "id": "CAT_EncryptionType",
+      "name": "EncryptionType",
+      "kind": "category"
+    },
+    {
+      "id": "CAT_Enumerations",
+      "name": "Enumerations",
+      "kind": "category",
+      "comment": "The following are the Cyber DEM enumerations at the time the standard was completed. Updates to the enumeration values may occur between versions of the standard via the Enumerations SWG. See the latest version of SISO-REF-010 for the current values."
+    },
+    {
+      "id": "CAT_HardwareDamageType",
+      "name": "HardwareDamageType",
+      "kind": "category"
+    },
+    {
+      "id": "CAT_HardwareDegradeType",
+      "name": "HardwareDegradeType",
+      "kind": "category"
+    },
+    {
+      "id": "CAT_KeyValuePair",
+      "name": "KeyValuePair",
+      "kind": "category",
+      "comment": "Key Value Pairs are for specifying additional criteria for targets and Detect Acquired Information."
+    },
+    {
+      "id": "CAT_LoadRateType",
+      "name": "LoadRateType",
+      "kind": "category"
+    },
+    {
+      "id": "CAT_Manipulate",
+      "name": "Manipulate",
+      "kind": "category",
+      "comment": "Manipulate represents the effect of controlling or changing information, information systems, and/or networks to create physical denial effects, using deception, decoying, conditioning, spoofing, falsification, and other similar techniques. [JP3-12] Manipulate is an abstract class intended as an organizational construct.",
+      "label": "Manipulate"
+    },
+    {
+      "id": "CAT_ManipulationType",
+      "name": "ManipulationType",
+      "kind": "category"
+    },
+    {
+      "id": "CAT_MessageType",
+      "name": "MessageType",
+      "kind": "category"
+    },
+    {
+      "id": "CAT_MitreID",
+      "name": "MitreID",
+      "kind": "category",
+      "comment": "A (String) ID from the MITRE ATT&CK or D3FEND matrix. Sub-technique IDs are formatted as T####.###. Mitigation IDs are formatted as M####. Detection IDs are formatted as D3-xxxxx."
+    },
+    {
+      "id": "CAT_Network",
+      "name": "Network",
+      "kind": "category",
+      "comment": "Network represents a data network including LANs, WANs, tactical radio data networks, cellular data networks, etc.; networks can be composed of other networks, e.g. a WAN is a collection of LANs. CyberObject.Name is the domain name or subnet address range.",
+      "label": "Network"
+    },
+    {
+      "id": "CAT_NetworkInterfaceStruct",
+      "name": "NetworkInterfaceStruct",
+      "kind": "category",
+      "comment": "Network Interface Struct represents a network interface, hardware and/or software, that enables a device to connect to a network link. A network interface can exist with or without a link, but not without a device."
+    },
+    {
+      "id": "CAT_NetworkProtocolType",
+      "name": "NetworkProtocolType",
+      "kind": "category"
+    },
+    {
+      "id": "CAT_OperatingSystemType",
+      "name": "OperatingSystemType",
+      "kind": "category"
+    },
+    {
+      "id": "CAT_PacketManipulationType",
+      "name": "PacketManipulationType",
+      "kind": "category"
+    },
+    {
+      "id": "CAT_Persona",
+      "name": "Persona",
+      "kind": "category",
+      "comment": "Persona represents a user or profile for a person within cyberspace. CyberObject.Name is the username, email address, etc. Persona is currently a placeholder and organizational construct for identifying personae. It has no attributes.",
+      "label": "Persona"
+    },
+    {
+      "id": "CAT_PhysicalLayerType",
+      "name": "PhysicalLayerType",
+      "kind": "category"
+    },
+    {
+      "id": "CAT_ReconType",
+      "name": "ReconType",
+      "kind": "category"
+    },
+    {
+      "id": "CAT_RelatedObjectStruct",
+      "name": "RelatedObjectStruct",
+      "kind": "category",
+      "comment": "Related Object Struct describes properties about a relationship between objects."
+    },
+    {
+      "id": "CAT_RelationshipType",
+      "name": "RelationshipType",
+      "kind": "category"
+    },
+    {
+      "id": "CAT_SensitivityType",
+      "name": "SensitivityType",
+      "kind": "category"
+    },
+    {
+      "id": "CAT_Service",
+      "name": "Service",
+      "kind": "category",
+      "comment": "Service represents an application that provides a service to network clients.",
+      "label": "Service"
+    },
+    {
+      "id": "CAT_ServiceType",
+      "name": "ServiceType",
+      "kind": "category"
+    },
+    {
+      "id": "CAT_System",
+      "name": "System",
+      "kind": "category",
+      "comment": "System represents a collection of Cyber Objects, i.e. components and / or subsystems, that work together.",
+      "label": "System"
+    },
+    {
+      "id": "CAT_SystemType",
+      "name": "SystemType",
+      "kind": "category"
+    },
+    {
+      "id": "CAT_TimeStruct",
+      "name": "TimeStruct",
+      "kind": "category",
+      "comment": "Time Struct is a placeholder for simulation time specified in a federation-specific format."
+    }
+  ],
+  "edges": [
+    {
+      "source": "CAT_AcknowledgeResponseType",
+      "target": "CAT_Enumerations",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_AdminType",
+      "target": "CAT_Enumerations",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Application",
+      "target": "CAT_CyberObject",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Application",
+      "target": "CAT_n3-5",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Application",
+      "target": "CAT_n3-6",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_CyberDEM",
+      "target": "CAT_DeprecatedClass",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_CyberEventPhaseType",
+      "target": "CAT_Enumerations",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Data",
+      "target": "CAT_CyberObject",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Data",
+      "target": "CAT_n3-21",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Data",
+      "target": "CAT_n3-22",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Data",
+      "target": "CAT_n3-23",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_DataLinkProtocolType",
+      "target": "CAT_Enumerations",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_DataStatusType",
+      "target": "CAT_Enumerations",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_DataType",
+      "target": "CAT_Enumerations",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Degrade",
+      "target": "CAT_Deny",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Degrade",
+      "target": "CAT_n3-24",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Degrade",
+      "target": "CAT_n3-25",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Deny",
+      "target": "CAT_CyberEffect",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Destroy",
+      "target": "CAT_Deny",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Detect",
+      "target": "CAT_CyberEffect",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Device",
+      "target": "CAT_CyberObject",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Device",
+      "target": "CAT_n3-27",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Device",
+      "target": "CAT_n3-28",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Device",
+      "target": "CAT_n3-29",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_DeviceType",
+      "target": "CAT_Enumerations",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Disrupt",
+      "target": "CAT_Deny",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_EncryptionType",
+      "target": "CAT_Enumerations",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Enumerations",
+      "target": "CAT_LOV",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_HardwareDamageType",
+      "target": "CAT_Enumerations",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_HardwareDegradeType",
+      "target": "CAT_Enumerations",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_KeyValuePair",
+      "target": "CAT_Component",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_KeyValuePair",
+      "target": "CAT_n3-32",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_KeyValuePair",
+      "target": "CAT_n3-33",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_LoadRateType",
+      "target": "CAT_Enumerations",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Manipulate",
+      "target": "CAT_CyberEffect",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_ManipulationType",
+      "target": "CAT_Enumerations",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_MessageType",
+      "target": "CAT_Enumerations",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_MitreID",
+      "target": "CAT_Component",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Network",
+      "target": "CAT_CyberObject",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Network",
+      "target": "CAT_n3-38",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_NetworkInterfaceStruct",
+      "target": "CAT_Component",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_NetworkInterfaceStruct",
+      "target": "CAT_n3-39",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_NetworkInterfaceStruct",
+      "target": "CAT_n3-40",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_NetworkProtocolType",
+      "target": "CAT_Enumerations",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_OperatingSystemType",
+      "target": "CAT_Enumerations",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_PacketManipulationType",
+      "target": "CAT_Enumerations",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Persona",
+      "target": "CAT_CyberObject",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_PhysicalLayerType",
+      "target": "CAT_Enumerations",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_PhysicalLayerType",
+      "target": "CAT_n3-48",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_ReconType",
+      "target": "CAT_Enumerations",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_RelatedObjectStruct",
+      "target": "CAT_Component",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_RelatedObjectStruct",
+      "target": "CAT_n3-50",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_RelatedObjectStruct",
+      "target": "CAT_n3-51",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_RelationshipType",
+      "target": "CAT_Enumerations",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_SensitivityType",
+      "target": "CAT_Enumerations",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Service",
+      "target": "CAT_Application",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Service",
+      "target": "CAT_n3-52",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_ServiceType",
+      "target": "CAT_Enumerations",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_System",
+      "target": "CAT_CyberObject",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_SystemType",
+      "target": "CAT_Enumerations",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_TimeStruct",
+      "target": "CAT_Component",
+      "type": "is_a"
+    }
+  ]
+}

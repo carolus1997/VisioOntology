@@ -1,0 +1,691 @@
+{
+  "source": "MIM",
+  "nodes": [
+    {
+      "id": "CAT_AccommodationFacility",
+      "name": "AccommodationFacility",
+      "kind": "category",
+      "label": "Accommodation facility",
+      "description": "A building or collection of buildings without a singular purpose, but generally used for accommodation."
+    },
+    {
+      "id": "CAT_Action",
+      "name": "Action",
+      "kind": "category",
+      "label": "Action",
+      "description": "An activity, or the occurrence of an activity, that may utilise resources and may be focused against an objective."
+    },
+    {
+      "id": "CAT_Actor",
+      "name": "Actor",
+      "kind": "category",
+      "label": "Actor",
+      "description": "Base actor category"
+    },
+    {
+      "id": "CAT_Aircraft",
+      "name": "Aircraft",
+      "kind": "category",
+      "label": "Aircraft",
+      "description": "A Vehicle that is designed to fly within the earth's atmosphere."
+    },
+    {
+      "id": "CAT_Airfield",
+      "name": "Airfield",
+      "kind": "category",
+      "label": "Airfield",
+      "description": "An area prepared for the accommodation (including buildings and installations) or equipment of landing and take-off of aircraft."
+    },
+    {
+      "id": "CAT_Anchorage",
+      "name": "Anchorage",
+      "kind": "category",
+      "label": "Anchorage",
+      "description": "A place where a vessel may anchor, usually designated in charts, offering suitable holding ground and shelter."
+    },
+    {
+      "id": "CAT_Apron",
+      "name": "Apron",
+      "kind": "category",
+      "label": "Apron",
+      "description": "A defined area on a land aerodrome intended to accommodate aircraft for the purposes of loading or unloading passengers, mail or cargo, fuelling, parking or maintenance."
+    },
+    {
+      "id": "CAT_Bank",
+      "name": "Bank",
+      "kind": "category",
+      "label": "Bank",
+      "description": "An establishment where money is stored for saving or commercial purposes."
+    },
+    {
+      "id": "CAT_Barracks",
+      "name": "Barracks",
+      "kind": "category",
+      "label": "Barracks",
+      "description": "Military accommodation facility for personnel and unit support."
+    },
+    {
+      "id": "CAT_Basin",
+      "name": "Basin",
+      "kind": "category",
+      "label": "Basin",
+      "description": "A partially enclosed, man-made or improved water area providing safe anchorage and berthing for vessels."
+    },
+    {
+      "id": "CAT_Berth",
+      "name": "Berth",
+      "kind": "category",
+      "label": "Berth",
+      "description": "A designated location in a port or harbour where a vessel may be moored, usually alongside a quay, pier, or jetty."
+    },
+    {
+      "id": "CAT_Bivouac",
+      "name": "Bivouac",
+      "kind": "category",
+      "label": "Bivouac",
+      "description": "Temporary encampment area for troops in the field."
+    },
+    {
+      "id": "CAT_Civilian",
+      "name": "Civilian",
+      "kind": "category",
+      "label": "Civilian",
+      "description": "A person who is not a member of the armed forces or other organized armed groups; generally protected from direct attack under the law of armed conflict."
+    },
+    {
+      "id": "CAT_Cropland",
+      "name": "Cropland",
+      "kind": "category",
+      "label": "cropland",
+      "description": "An area that has been tilled for the planting of crops."
+    },
+    {
+      "id": "CAT_Cryosphere",
+      "name": "Cryosphere",
+      "kind": "category",
+      "label": "Cryosphere",
+      "description": "Snow and ice environments (glaciers, pack ice, snowfields) that constrain movement, logistics, and signatures."
+    },
+    {
+      "id": "CAT_Ditch",
+      "name": "Ditch",
+      "kind": "category",
+      "label": "Ditch",
+      "description": "Linear excavation used as a military obstacle."
+    },
+    {
+      "id": "CAT_Equipment",
+      "name": "Equipment",
+      "kind": "category",
+      "label": "Equipment",
+      "description": "Materiel that is neither intended for consumption nor an unexploded piece of ordnance."
+    },
+    {
+      "id": "CAT_Facility",
+      "name": "Facility",
+      "kind": "category",
+      "label": "Facility",
+      "description": "Base facility category"
+    },
+    {
+      "id": "CAT_Facsimile",
+      "name": "Facsimile",
+      "kind": "category",
+      "label": "Facsimile",
+      "description": "A service provided by means of electronic scanning of a document, transmitting it as data by telecommunications links, and producing an exact copy at the receiver."
+    },
+    {
+      "id": "CAT_Farm",
+      "name": "Farm",
+      "kind": "category",
+      "label": "farm",
+      "description": "A tract of land, including buildings and structures, whose primary use is the production of food (for example: crops or livestock)."
+    },
+    {
+      "id": "CAT_Ford",
+      "name": "Ford",
+      "kind": "category",
+      "label": "Ford",
+      "description": "A shallow place in a river or stream allowing one to walk or drive across."
+    },
+    {
+      "id": "CAT_Fortification",
+      "name": "Fortification",
+      "kind": "category",
+      "label": "Fortification",
+      "description": "Military defensive works designed to strengthen a position against attack."
+    },
+    {
+      "id": "CAT_Harbour",
+      "name": "Harbour",
+      "kind": "category",
+      "label": "Harbour",
+      "description": "A sheltered area of water where ships, boats, and barges can be moored safely, often with port facilities."
+    },
+    {
+      "id": "CAT_Helipad",
+      "name": "Helipad",
+      "kind": "category",
+      "label": "Helipad",
+      "description": "A small, designated area (usually with a prepared surface) used for the take-off, landing, or parking of helicopters."
+    },
+    {
+      "id": "CAT_Heliport",
+      "name": "Heliport",
+      "kind": "category",
+      "label": "Heliport",
+      "description": "An aerodrome or defined area on a structure intended or used for the arrival, departure, and surface movement of helicopters."
+    },
+    {
+      "id": "CAT_Image",
+      "name": "Image",
+      "kind": "category",
+      "label": "Image",
+      "description": "An imagery product."
+    },
+    {
+      "id": "CAT_Jetty",
+      "name": "Jetty",
+      "kind": "category",
+      "label": "Jetty",
+      "description": "A structure projecting from the shore into a body of water to influence current or tide or to protect a harbour; also used for mooring vessels."
+    },
+    {
+      "id": "CAT_Lighthouse",
+      "name": "Lighthouse",
+      "kind": "category",
+      "label": "Lighthouse",
+      "description": "A tower or other structure with a powerful light that gives a continuous or intermittent signal to navigators."
+    },
+    {
+      "id": "CAT_Lock",
+      "name": "Lock",
+      "kind": "category",
+      "label": "Lock",
+      "description": "An enclosed section of waterway with gates at each end, by which the level of water can be altered to raise or lower vessels as they pass through."
+    },
+    {
+      "id": "CAT_Market",
+      "name": "Market",
+      "kind": "category",
+      "label": "Market",
+      "description": "A facility where commercial activity is conducted and goods and services are bought and sold."
+    },
+    {
+      "id": "CAT_Materiel",
+      "name": "Materiel",
+      "kind": "category",
+      "label": "Materiel",
+      "description": "An apparatus, equipment or supply of military interest without distinction as to its application for administrative or combat purposes."
+    },
+    {
+      "id": "CAT_Military",
+      "name": "Military",
+      "kind": "category",
+      "label": "Military",
+      "description": "A person who serves in the regular armed forces of a state, subject to military law and organization."
+    },
+    {
+      "id": "CAT_Minefield",
+      "name": "Minefield",
+      "kind": "category",
+      "label": "Minefield",
+      "description": "Area seeded with land or sea mines as an obstacle."
+    },
+    {
+      "id": "CAT_Object",
+      "name": "Object",
+      "kind": "category",
+      "label": "Object",
+      "description": "An individually identified object that has military or civilian significance."
+    },
+    {
+      "id": "CAT_Office",
+      "name": "Office",
+      "kind": "category",
+      "label": "Office",
+      "description": "A place in which business, professional or clerical activities are conducted."
+    },
+    {
+      "id": "CAT_Orchard",
+      "name": "Orchard",
+      "kind": "category",
+      "label": "orchard",
+      "description": "A tract covered by systematic plantings of trees that yield fruits (including nuts)."
+    },
+    {
+      "id": "CAT_Organisation",
+      "name": "Organisation",
+      "kind": "category",
+      "label": "Organisation",
+      "description": "An administrative or functional structure."
+    },
+    {
+      "id": "CAT_Paramilitary",
+      "name": "Paramilitary",
+      "kind": "category",
+      "label": "Paramilitary",
+      "description": "A person who belongs to a non-regular armed organization with military structure or functions (e.g., militias, gendarmerie, irregular forces), typically outside the standing armed forces."
+    },
+    {
+      "id": "CAT_Person",
+      "name": "Person",
+      "kind": "category",
+      "label": "Person",
+      "description": "A human being of military or civilian significance."
+    },
+    {
+      "id": "CAT_Pier",
+      "name": "Pier",
+      "kind": "category",
+      "label": "Pier",
+      "description": "A platform supported on pillars or girders leading out from the shore into a body of water, used as a landing stage for boats."
+    },
+    {
+      "id": "CAT_Port",
+      "name": "Port",
+      "kind": "category",
+      "label": "Port",
+      "description": "A town or city with a harbour where ships load or unload, especially one where customs officers are stationed."
+    },
+    {
+      "id": "CAT_Quay",
+      "name": "Quay",
+      "kind": "category",
+      "label": "Quay",
+      "description": "A solidly constructed platform, usually parallel to the shore, where a vessel can be loaded or unloaded on one side of the vessel only."
+    },
+    {
+      "id": "CAT_Railway",
+      "name": "Railway",
+      "kind": "category",
+      "label": "Railway",
+      "description": "A permanent track composed of a line of parallel metal rails fixed to sleepers, for transport of passengers and goods in trains."
+    },
+    {
+      "id": "CAT_Road",
+      "name": "Road",
+      "kind": "category",
+      "label": "Road",
+      "description": "A wide way leading from one place to another, especially one with a specially prepared surface which vehicles can use."
+    },
+    {
+      "id": "CAT_Runway",
+      "name": "Runway",
+      "kind": "category",
+      "label": "Runway",
+      "description": "A defined rectangular area on a land aerodrome prepared for the landing and take-off of aircraft."
+    },
+    {
+      "id": "CAT_Sensor",
+      "name": "Sensor",
+      "kind": "category",
+      "label": "Sensor",
+      "description": "A device that detects or measures a physical property and records, indicates, or otherwise responds to it."
+    },
+    {
+      "id": "CAT_Shop",
+      "name": "Shop",
+      "kind": "category",
+      "label": "Shop",
+      "description": "A small retail store or a speciality department in a large store."
+    },
+    {
+      "id": "CAT_Slipway",
+      "name": "Slipway",
+      "kind": "category",
+      "label": "Slipway",
+      "description": "The prepared and usually reinforced inclined plane upon which the keel blocks are laid for supporting a vessel under construction."
+    },
+    {
+      "id": "CAT_Spacecraft",
+      "name": "Spacecraft",
+      "kind": "category",
+      "label": "Spacecraft",
+      "description": "A Vehicle that is capable of operating beyond the earth's atmosphere."
+    },
+    {
+      "id": "CAT_Tool",
+      "name": "Tool",
+      "kind": "category",
+      "comment": "An instrument with which some operation is performed; a means of effecting something.",
+      "label": "Tool"
+    },
+    {
+      "id": "CAT_Trail",
+      "name": "Trail",
+      "kind": "category",
+      "label": "Trail",
+      "description": "A beaten path or track through rough country such as a forest or moor, used for travel or transport on foot, horseback, or by vehicle."
+    },
+    {
+      "id": "CAT_Tunnel",
+      "name": "Tunnel",
+      "kind": "category",
+      "label": "Tunnel",
+      "description": "An underground or underwater passage dug through the surrounding soil/earth/rock and enclosed except for entry and exit, commonly used for road and rail traffic."
+    },
+    {
+      "id": "CAT_Unit",
+      "name": "Unit",
+      "kind": "category",
+      "label": "Unit",
+      "description": "A MilitaryOrganisation whose structure is prescribed by competent authority."
+    },
+    {
+      "id": "CAT_Vehicle",
+      "name": "Vehicle",
+      "kind": "category",
+      "label": "Vehicle",
+      "description": "A conveyance for transporting persons or things."
+    },
+    {
+      "id": "CAT_Vessel",
+      "name": "Vessel",
+      "kind": "category",
+      "label": "Vessel",
+      "description": "A Vehicle that is designed to operate on or under the water surface."
+    },
+    {
+      "id": "CAT_Weapon",
+      "name": "Weapon",
+      "kind": "category",
+      "label": "Weapon",
+      "description": "Equipment of any kind used in warfare or combat to attack and overcome an enemy."
+    },
+    {
+      "id": "CAT_Wetland",
+      "name": "Wetland",
+      "kind": "category",
+      "label": "Wetland",
+      "description": "Areas with water-saturated soils (marshes, swamps, bogs) that significantly affect maneuver, concealment, and engineering tasks."
+    }
+  ],
+  "edges": [
+    {
+      "source": "CAT_AccommodationFacility",
+      "target": "CAT_Facility",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Action",
+      "target": "CAT_Category",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Actor",
+      "target": "CAT_Object",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Aircraft",
+      "target": "CAT_Vehicle",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Airfield",
+      "target": "CAT_AirTransportFacility",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Anchorage",
+      "target": "CAT_MaritimeTransportFacility",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Apron",
+      "target": "CAT_AirTransportFacility",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Bank",
+      "target": "CAT_CommercialFacility",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Barracks",
+      "target": "CAT_MilitaryFacility",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Basin",
+      "target": "CAT_MaritimeTransportFacility",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Berth",
+      "target": "CAT_MaritimeTransportFacility",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Bivouac",
+      "target": "CAT_MilitaryFacility",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Civilian",
+      "target": "CAT_Person",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Cropland",
+      "target": "CAT_AgricultureFacility",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Cryosphere",
+      "target": "CAT_GeographicFeature",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Ditch",
+      "target": "CAT_MilitaryObstacle",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Equipment",
+      "target": "CAT_Materiel",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Facility",
+      "target": "CAT_Object",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Facsimile",
+      "target": "CAT_ICTService",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Farm",
+      "target": "CAT_AgricultureFacility",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Ford",
+      "target": "CAT_GroundTransportFacility",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Fortification",
+      "target": "CAT_MilitaryFacility",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Harbour",
+      "target": "CAT_MaritimeTransportFacility",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Helipad",
+      "target": "CAT_AirTransportFacility",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Heliport",
+      "target": "CAT_AirTransportFacility",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Image",
+      "target": "CAT_InformationResource",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Jetty",
+      "target": "CAT_MaritimeTransportFacility",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Lighthouse",
+      "target": "CAT_MaritimeTransportFacility",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Lock",
+      "target": "CAT_MaritimeTransportFacility",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Market",
+      "target": "CAT_CommercialFacility",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Materiel",
+      "target": "CAT_Object",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Military",
+      "target": "CAT_Person",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Minefield",
+      "target": "CAT_MilitaryObstacle",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Object",
+      "target": "CAT_Category",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Office",
+      "target": "CAT_CommercialFacility",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Orchard",
+      "target": "CAT_AgricultureFacility",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Organisation",
+      "target": "CAT_Actor",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Paramilitary",
+      "target": "CAT_Person",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Person",
+      "target": "CAT_Actor",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Pier",
+      "target": "CAT_MaritimeTransportFacility",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Port",
+      "target": "CAT_MaritimeTransportFacility",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Quay",
+      "target": "CAT_MaritimeTransportFacility",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Railway",
+      "target": "CAT_GroundTransportFacility",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Road",
+      "target": "CAT_GroundTransportFacility",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Runway",
+      "target": "CAT_AirTransportFacility",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Sensor",
+      "target": "CAT_Equipment",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Shop",
+      "target": "CAT_CommercialFacility",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Slipway",
+      "target": "CAT_MaritimeTransportFacility",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Spacecraft",
+      "target": "CAT_Vehicle",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Tool",
+      "target": "CAT_Equipment",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Trail",
+      "target": "CAT_GroundTransportFacility",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Tunnel",
+      "target": "CAT_GroundTransportFacility",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Unit",
+      "target": "CAT_MilitaryOrganisation",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Vehicle",
+      "target": "CAT_Equipment",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Vessel",
+      "target": "CAT_Vehicle",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Weapon",
+      "target": "CAT_Equipment",
+      "type": "is_a"
+    },
+    {
+      "source": "CAT_Wetland",
+      "target": "CAT_GeographicFeature",
+      "type": "is_a"
+    }
+  ]
+}

@@ -3,7 +3,7 @@ window.TreeView = window.TreeView || (() => {
 
     let chart;
 
-    async function init(containerId = 'tree-chart', jsonPath = 'data/class-hierarchy2.json') {
+    async function init(containerId = 'tree-chart', jsonPath = 'data/class-hierarchy_final.json') {
         const el = document.getElementById(containerId);
         chart = echarts.init(el, null, { renderer: 'canvas' });
 
@@ -60,8 +60,22 @@ window.TreeView = window.TreeView || (() => {
                     node.children.forEach(child => applyLineColors(child, nodeColor));
                 }
             }
+            console.group("🎨 Coloreado inicial de ramas");
+            if (data.children) {
+                data.children.forEach(c => {
+                    console.log(`- ${c.name} | source: ${c.source || "(sin source)"}`);
+                });
+            } else {
+                console.warn("⚠️ No hay children para colorear.");
+            }
+            console.groupEnd();
 
             applyLineColors(data);
+            if (data.children) {
+                data.children.forEach(branch => {
+                    branch.itemStyle = { color: colorForOrigin(branch) };
+                });
+            }
 
             const option = {
                 backgroundColor: '#0c0c0c',
@@ -169,6 +183,34 @@ window.TreeView = window.TreeView || (() => {
 
 
             chart.setOption(option);
+            console.log("🧭 Render inicial completado →",
+                data.children ? data.children.length : 0,
+                "ramas raíz visibles"
+            );
+
+
+            // === NUEVO ===
+            // 🎛️ Panel de filtros por origen (MIM / CyberDEM / Propio)
+            function createTreeFilters() {
+                const panel = document.createElement('div');
+                panel.className = 'tree-filters';
+                panel.innerHTML = `
+    <label><input type="checkbox" value="mim" checked> MIM</label>
+    <label><input type="checkbox" value="cyberdem" checked> CyberDEM</label>
+    <label><input type="checkbox" value="propio" checked> Propio</label>
+  `;
+                const container = document.getElementById(containerId);
+                container.appendChild(panel);
+
+                panel.addEventListener('change', () => {
+                    const active = Array.from(panel.querySelectorAll('input:checked')).map(i => i.value);
+                    window.dispatchEvent(new CustomEvent('tree:filter', { detail: { active } }));
+                });
+            }
+
+            // Ejecutar el panel de filtros
+            createTreeFilters();
+
 
             // 🧮 Forzar el cálculo completo del layout de todos los nodos visibles
             setTimeout(() => {
@@ -408,7 +450,7 @@ window.TreeView = window.TreeView || (() => {
                 console.log(`[TreeView] Filtro raíz cambiado a: ${root}`);
 
                 try {
-                    const res = await fetch('data/class-hierarchy2.json');
+                    const res = await fetch('data/class-hierarchy_final.json');
                     const fullData = await res.json();
 
                     function findNodeByName(node, name) {
@@ -459,10 +501,82 @@ window.TreeView = window.TreeView || (() => {
                     );
                 }
             });
+
+            // === NUEVO ===
+            // 🧩 Gestión avanzada de combinaciones de filtros (MIM / CyberDEM / Propio)
+            window.addEventListener('tree:filter', e => {
+                const active = e.detail.active || [];
+                console.group("🧮 [Tree Filter Debug]");
+                console.log("🎛️ Filtros activos:", active);
+
+                // Log del estado actual de las raíces
+                if (data.children) {
+                    console.table(
+                        data.children.map(c => ({
+                            name: c.name,
+                            source: c.source || "(sin source)"
+                        }))
+                    );
+                } else {
+                    console.warn("⚠️ data.children no está definido");
+                }
+
+                // Caso: todos activos
+                if (active.length === 3) {
+                    chart.setOption({ series: [{ data: [data] }] });
+                    console.log("🌳 Mostrando jerarquía completa");
+                    console.groupEnd();
+                    return;
+                }
+
+                // Caso: ninguno activo
+                if (active.length === 0) {
+                    chart.clear();
+                    console.log("🚫 Árbol oculto (sin filtros)");
+                    console.groupEnd();
+                    return;
+                }
+
+                // 🔹 Filtrado con normalización en minúsculas
+                const filtered = structuredClone(data);
+                filtered.children = (data.children || []).filter(c =>
+                    active.includes((c.source || "").toLowerCase())
+                );
+
+                // Resultado tras el filtro
+                console.log("✅ Ramas resultantes tras filtrado:",
+                    filtered.children.map(c => c.name)
+                );
+
+                applyLineColors(filtered);
+                chart.setOption({ series: [{ data: [filtered] }] });
+                console.log("📈 Árbol renderizado →", filtered.children.length, "ramas visibles");
+                console.groupEnd();
+            });
+
+
+
         } catch (err) {
             console.error('❌ No se pudo cargar el árbol:', err);
             chart.hideLoading();
+            console.group("📦 Estructura inicial cargada desde JSON");
+            console.log("📄 Archivo:", jsonPath);
+            console.log("🔹 Root node:", data.name || "(sin nombre)");
+            if (data.children) {
+                console.table(
+                    data.children.map(c => ({
+                        name: c.name,
+                        source: c.source || "(sin source)",
+                        hijos: c.children ? c.children.length : 0
+                    }))
+                );
+            } else {
+                console.warn("⚠️ No hay children en la raíz.");
+            }
+            console.groupEnd();
+
         }
+
     }
 
     return { init };
