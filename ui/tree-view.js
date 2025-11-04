@@ -38,26 +38,87 @@ window.TreeView = window.TreeView || (() => {
                 });
             }
 
+
+            // 1) Cargar ontology2.json y construir índice por name/label/id (sin 'CAT_')
+            let metaByKey = new Map();
+            try {
+            const ontoRes = await fetch('data/ontology2.json');
+            const ontology = await ontoRes.json();
+
+            // Normalizador para claves
+            const k = v => (v ? String(v).trim().toLowerCase() : '');
+
+            (ontology.nodes || []).forEach(n => {
+                const name = k(n.name);
+                const label = k(n.label);
+                const id = k(String(n.id || '').replace(/^CAT_/i, '')); // id sin prefijo
+
+                const meta = { source: n.source || '', info: n.info || '' };
+
+                if (name) metaByKey.set(name, meta);
+                if (label) metaByKey.set(label, meta);
+                if (id) metaByKey.set(id, meta);
+            });
+
+            // 2) Enriquecer el árbol con source/info buscándolo por name y por variantes
+            function enrich(node) {
+                if (!node) return;
+
+                const nameKey = k(node.name);
+                // intenta por nombre directo, por última parte (por si viene algo jerárquico), y por id-like
+                const shortKey = nameKey.includes('.') ? nameKey.split('.').pop() : nameKey;
+
+                const meta =
+                metaByKey.get(nameKey) ||
+                metaByKey.get(shortKey);
+
+                if (meta) {
+                // solo sobreescribe si no existe ya en el nodo
+                if (!node.source && meta.source) node.source = meta.source;
+                if (!node.info && meta.info) node.info = meta.info;
+                }
+
+                (node.children || []).forEach(enrich);
+            }
+
+            enrich(data);
+
+            console.log('[TreeView] Metadatos añadidos desde ontology2.json');
+            } catch (e) {
+            console.warn('[TreeView] No se pudo cargar/mezclar ontology2.json:', e);
+            }
+
             // === 🎨 Colorea cada línea según el color del nodo padre ===
             function colorForOrigin(n) {
                 const src = (n?.source || n?.info || n?.data?.source || n?.data?.info || '').toLowerCase();
-                if (src.includes('mim')) return '#00e68a';           // Verde MIM
-                if (src.includes('cyberdem') || src.includes('cdem')) return '#00baff'; // Azul CDEM
+                if (src.includes('mim')) 
+                    return '#00e68a';           // Verde MIM
+                if (src.includes('cyberdem') || src.includes('cdem')) 
+                    return '#00baff'; // Azul CDEM
                 return '#ff9f1c';                                   // Naranja propio
             }
 
-            function applyLineColors(node, inheritedColor = null) {
+            function applyLineColors(node) {
                 if (!node) return;
 
-                // 🎯 El color del nodo actual: si tiene padre, hereda el color del padre
-                const nodeColor = inheritedColor || colorForOrigin(node);
+                // Calcula el color en base al origen (source/info)
+                //const nodeColor = inheritedColor || colorForOrigin(node);
+                const color = colorForOrigin(node);
 
-                // Asigna ese color a la línea que une este nodo con su padre
-                node.lineStyle = { color: nodeColor };
+                // Aplica color tanto a la línea como al punto (símbolo)
+                node.lineStyle = node.lineStyle || {};
+                node.lineStyle.color = color;
 
-                // Propaga el color a los hijos
+                node.itemStyle = node.itemStyle || {};
+                node.itemStyle.color = color; // 👈 color del punto
+
+                // Si quieres también borde o halo:
+                node.itemStyle.borderColor = color;
+                node.itemStyle.borderWidth = 1.5;
+
+                // Recursivo para hijos
                 if (node.children && node.children.length) {
-                    node.children.forEach(child => applyLineColors(child, nodeColor));
+                    node.children.forEach(child => applyLineColors(child));
                 }
             }
 
@@ -308,8 +369,10 @@ window.TreeView = window.TreeView || (() => {
                 // === Función para obtener color según origen ===
                 function colorForOrigin(n) {
                     const src = (n?.data?.source || n?.data?.info || n?.source || n?.info || '').toLowerCase();
-                    if (src.includes('mim')) return '#00e68a';
-                    if (src.includes('cyberdem') || src.includes('cdem')) return '#00baff';
+                    if (src.includes('mim')) 
+                        return '#00e68a';
+                    if (src.includes('cyberdem') || src.includes('cdem')) 
+                        return '#00baff';
                     return '#ff9f1c';
                 }
 
@@ -408,57 +471,86 @@ window.TreeView = window.TreeView || (() => {
                 console.log(`[TreeView] Filtro raíz cambiado a: ${root}`);
 
                 try {
+                    // 1) Cargar el árbol completo
                     const res = await fetch('data/class-hierarchy2.json');
                     const fullData = await res.json();
 
+                    // 2) Buscar la rama seleccionada
                     function findNodeByName(node, name) {
-                        if (!node) return null;
-                        if (node.name === name) return node;
-
-                        const children = node.children || [];
-                        for (const child of children) {
-                            const result = findNodeByName(child, name);
-                            if (result) return result;
-                        }
-                        return null;
+                    if (!node) return null;
+                    if (node.name === name) return node;
+                    const children = node.children || [];
+                    for (const child of children) {
+                        const r = findNodeByName(child, name);
+                        if (r) return r;
+                    }
+                    return null;
                     }
 
                     let branch = null;
                     if (Array.isArray(fullData)) {
-                        for (const n of fullData) {
-                            branch = findNodeByName(n, root);
-                            if (branch) break;
-                        }
+                    for (const n of fullData) { branch = findNodeByName(n, root); if (branch) break; }
                     } else {
-                        branch = findNodeByName(fullData, root);
+                    branch = findNodeByName(fullData, root);
+                    }
+                    if (!branch) {
+                    console.warn(`[TreeView] No se encontró el nodo "${root}" en ninguna rama`);
+                    return;
                     }
 
-                    if (branch) {
-                        chart.setOption({
-                            series: [{ data: [{ ...branch }] }]
-                        });
+                    // 3) Clonar la rama para no mutar el dataset original
+                    const clone = JSON.parse(JSON.stringify(branch));
 
-                        const nodeId =
-                            branch.id ||
-                            (branch.name.startsWith('CAT_')
-                                ? branch.name
-                                : 'CAT_' + branch.name);
-                        console.log(`🟣 Nodo activado desde Dropdown: ${nodeId}`);
-                        window.dispatchEvent(
-                            new CustomEvent('node:select', { detail: { id: nodeId } })
-                        );
-                    } else {
-                        console.warn(
-                            `[TreeView] No se encontró el nodo "${root}" en ninguna rama`
-                        );
+                    // 4) Cargar ontology2.json y construir índice para enriquecer la rama
+                    let metaByKey = new Map();
+                    const k = v => (v ? String(v).trim().toLowerCase() : '');
+
+                    try {
+                    const ontoRes = await fetch('data/ontology2.json');
+                    const ontology = await ontoRes.json();
+
+                    (ontology.nodes || []).forEach(n => {
+                        const name = k(n.name);
+                        const label = k(n.label);
+                        const id = k(String(n.id || '').replace(/^CAT_/i, ''));
+                        const meta = { source: n.source || '', info: n.info || '' };
+                        if (name) metaByKey.set(name, meta);
+                        if (label) metaByKey.set(label, meta);
+                        if (id) metaByKey.set(id, meta);
+                    });
+                    } catch (err) {
+                    console.warn('[TreeView] No se pudo cargar ontology2.json para enriquecer la rama:', err);
                     }
+
+                    function enrich(node) {
+                    if (!node) return;
+                    const nameKey = k(node.name);
+                    const shortKey = nameKey.includes('.') ? nameKey.split('.').pop() : nameKey;
+                    const meta = metaByKey.get(nameKey) || metaByKey.get(shortKey);
+                    if (meta) {
+                        if (!node.source && meta.source) node.source = meta.source;
+                        if (!node.info && meta.info) node.info = meta.info;
+                    }
+                    (node.children || []).forEach(enrich);
+                    }
+                    enrich(clone); // ✅ ya trae source/info
+
+                    // 5) Recalcular colores para líneas y puntos
+                    applyLineColors(clone);
+
+                    // 6) Pintar sólo esa rama
+                    chart.setOption({
+                    series: [{ data: [clone] }]
+                    });
+
+                    const nodeId = clone.id || (clone.name.startsWith('CAT_') ? clone.name : 'CAT_' + clone.name);
+                    console.log(`🟣 Nodo activado desde Dropdown: ${nodeId}`);
+                    window.dispatchEvent(new CustomEvent('node:select', { detail: { id: nodeId } }));
                 } catch (err) {
-                    console.error(
-                        '[TreeView] Error al cambiar raíz desde Dropdown:',
-                        err
-                    );
+                    console.error('[TreeView] Error al cambiar raíz desde Dropdown:', err);
                 }
             });
+
         } catch (err) {
             console.error('❌ No se pudo cargar el árbol:', err);
             chart.hideLoading();

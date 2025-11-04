@@ -231,16 +231,25 @@ window.RelationGraph = (() => {
       _chart.on('click', (params) => {
         if (params.dataType !== 'node') return;
         const id = params.data.id;
+
         currentCenter = id;
         clearVisible();
         addNode(id);
         expandDepth1(id);
         render(id);
 
+        // 🔹 Eventos existentes
         window.dispatchEvent(new CustomEvent('node:select', { detail: { id } }));
         window.dispatchEvent(new CustomEvent('tree:focus', { detail: { id } }));
         window.dispatchEvent(new CustomEvent('dropdown:highlight', { detail: { id } }));
+
+        // 🔹 NUEVO: notificar al árbol igual que hace el dropdown
+        const node = nodeById.get(id);
+        const nameFromId = id.replace(/^CAT_/, '');
+        const rootName = (node && node.name) ? node.name : nameFromId;
+        window.dispatchEvent(new CustomEvent('dropdown:change', { detail: { root: rootName } }));
       });
+
 
       window.addEventListener('node:select', (e) => {
         const id = e.detail?.id;
