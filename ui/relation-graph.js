@@ -240,7 +240,13 @@ window.RelationGraph = (() => {
         window.dispatchEvent(new CustomEvent('node:select', { detail: { id } }));
         window.dispatchEvent(new CustomEvent('tree:focus', { detail: { id } }));
         window.dispatchEvent(new CustomEvent('dropdown:highlight', { detail: { id } }));
+
+        // 🧭 Mostrar descriptor en overlay
+        if (window.DescriptorOverlay) {
+          window.DescriptorOverlay.show(id);
+        }
       });
+
 
       window.addEventListener('node:select', (e) => {
         const id = e.detail?.id;

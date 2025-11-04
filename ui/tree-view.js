@@ -395,7 +395,13 @@ window.TreeView = window.TreeView || (() => {
 
                 console.log(`🟠 Nodo seleccionado: ${nodeId}`);
                 window.dispatchEvent(new CustomEvent('node:select', { detail: { id: nodeId } }));
+
+                // 🧭 Mostrar descriptor en overlay
+                if (window.DescriptorOverlay) {
+                    window.DescriptorOverlay.show(nodeId);
+                }
             });
+
 
             // === Redibujo responsivo ===
             window.addEventListener('resize', () => chart.resize());
