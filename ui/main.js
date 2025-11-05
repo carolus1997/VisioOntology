@@ -56,43 +56,113 @@
 
 })();
 // ======================================================
-// 🔳 Botón genérico de Pantalla Completa para contenedores
+// 🔳 Pantalla completa con Descriptor lateral (usa scroll del layout base)
 // ======================================================
-function addFullscreenButton(containerId) {
-  const container = document.getElementById(containerId);
-  if (!container) return;
+async function addFullscreenButton(containerId) {
+  const baseContainer = document.getElementById(containerId);
+  if (!baseContainer) return;
 
-  if (container.querySelector('.fullscreen-btn')) return;
+  // Evita crear dos botones
+  if (baseContainer.querySelector('.fullscreen-btn')) return;
 
+  // Crear botón
   const btn = document.createElement('button');
   btn.className = 'fullscreen-btn';
   btn.textContent = '⛶';
   btn.title = 'Pantalla completa';
-  container.style.position = 'relative';
-  container.appendChild(btn);
+  baseContainer.style.position = 'relative';
+  baseContainer.appendChild(btn);
 
-  btn.addEventListener('click', () => {
-    const isActive = container.classList.contains('fullscreen-active');
+  // Evento de click
+  btn.addEventListener('click', async () => {
+    const isTree = containerId.includes('tree');
+    const ontologyPath = 'data/ontology2.json';
+    const hierarchyPath = 'data/class-hierarchy2.json';
 
-    if (!isActive) {
-      container.classList.add('fullscreen-active');
-      btn.textContent = '✕';
-      btn.title = 'Salir de pantalla completa';
-    } else {
-      // 🔹 reproducir animación inversa antes de salir
-      container.classList.add('closing');
-      btn.textContent = '⛶';
-      btn.title = 'Pantalla completa';
-      setTimeout(() => {
-        container.classList.remove('fullscreen-active', 'closing');
-        const chart = echarts.getInstanceByDom(container);
-        if (chart) chart.resize();
-      }, 300);
+    // === Estructura principal del modo fullscreen ===
+    const layout = document.createElement('div');
+    layout.classList.add('fullscreen-active', 'with-descriptor');
+
+    // Panel izquierdo: descriptor (scroll igual que layout base)
+    const descriptorPanel = document.createElement('div');
+    descriptorPanel.className = 'descriptor-inline descriptor-panel';
+    descriptorPanel.id = 'descriptor-inline';
+    layout.appendChild(descriptorPanel);
+
+    // Panel derecho: gráfico
+    const chartArea = document.createElement('div');
+    chartArea.className = 'echart-area';
+    const chartDiv = document.createElement('div');
+    chartDiv.id = `${containerId}-fullscreen`;
+    chartDiv.style.width = '100%';
+    chartDiv.style.height = '100%';
+    chartArea.appendChild(chartDiv);
+    layout.appendChild(chartArea);
+
+    // Botón de cerrar
+    const closeBtn = document.createElement('button');
+    closeBtn.className = 'fullscreen-btn';
+    closeBtn.textContent = '✕';
+    closeBtn.title = 'Cerrar pantalla completa';
+    layout.appendChild(closeBtn);
+
+    document.body.appendChild(layout);
+    document.body.classList.add('no-scroll');
+
+    // === Renderizado del Descriptor ===
+    try {
+      await Descriptor.init('descriptor-inline', ontologyPath);
+      console.log('📘 Descriptor cargado en fullscreen');
+    } catch (err) {
+      console.error('❌ Error cargando descriptor:', err);
     }
 
-    // 🔸 ajusta el tamaño del gráfico
-    const chart = echarts.getInstanceByDom(container);
-    if (chart) chart.resize();
-  });
+    // === Renderizado del gráfico (nuevo contenedor limpio) ===
+    try {
+      if (isTree) {
+        await TreeView.init(`${containerId}-fullscreen`, hierarchyPath);
+        console.log('🌳 TreeView renderizado correctamente');
+      } else {
+        await RelationGraph.init(`${containerId}-fullscreen`, ontologyPath);
+        console.log('🔗 RelationGraph renderizado correctamente');
+      }
+    } catch (err) {
+      console.error('❌ Error renderizando gráfico fullscreen:', err);
+    }
 
+    // === Sincronización de eventos globales ===
+    window.addEventListener('node:select', (e) => {
+      const id = e.detail?.id;
+      if (id && window.Descriptor?._render) {
+        window.Descriptor._render(id);
+      }
+    });
+
+    // === Redimensionar ECharts tras render ===
+    setTimeout(() => {
+      const chart = echarts.getInstanceByDom(chartDiv);
+      if (chart) chart.resize();
+    }, 400);
+
+    // === Cerrar pantalla completa ===
+    // dentro del listener del botón de cerrar en addFullscreenButton(...)
+    closeBtn.addEventListener('click', () => {
+      // 1) disponer el echarts del contenedor fullscreen
+      const chart = echarts.getInstanceByDom(chartDiv);
+      if (chart) chart.dispose();
+
+      // 2) si usas el dispose del módulo:
+      if (!isTree && window.RelationGraph?.dispose) {
+        RelationGraph.dispose(`${containerId}-fullscreen`);
+      }
+      if (isTree && window.TreeView?.dispose) {
+        // opcional: si haces TreeView multi-instancia también
+        TreeView.dispose?.(`${containerId}-fullscreen`);
+      }
+
+      layout.remove();
+      document.body.classList.remove('no-scroll');
+    });
+  });
 }
+

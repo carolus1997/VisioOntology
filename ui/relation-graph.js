@@ -2,14 +2,36 @@
 // RelationGraph v3.7.1 — Etiquetas radiales más separadas + layout circular estable
 
 window.RelationGraph = (() => {
-  let _chart, _container;
+  //let _chart, _container;
+
+  const instances = new Map(); // containerId -> { chart, container, visibleNodes, visibleEdges, currentCenter }
+
   const nodeById = new Map();
   const neighborsMap = new Map();
-  const visibleNodes = new Set();
-  const visibleEdges = new Map();
+  //const visibleNodes = new Set();
+  //const visibleEdges = new Map();
   let currentCenter = null;
 
   const MAX_VISIBLE_NODES = 150;
+
+
+  function getInst(containerId) { return instances.get(containerId); }
+
+  function clearVisible(inst){ inst.visibleNodes.clear(); inst.visibleEdges.clear(); }
+  function addNode(inst, id){ if (!nodeById.has(id)) return false;
+    if (inst.visibleNodes.size >= MAX_VISIBLE_NODES) return false;
+    inst.visibleNodes.add(id); return true; }
+  function addEdge(inst, s, t, kind){
+    const key = s < t ? `${s}|${t}` : `${t}|${s}`;
+    if (!inst.visibleEdges.has(key)) inst.visibleEdges.set(key, { source:s, target:t, kind });
+  }
+  function expandDepth1(inst, centerId){
+    const neigh = new Set(neighborsMap.get(centerId) || []);
+    for (const [src,set] of neighborsMap.entries()) if (set.has(centerId)) neigh.add(src);
+    const sorted = [...neigh].sort((a,b)=>(neighborsMap.get(b)?.size||0)-(neighborsMap.get(a)?.size||0));
+    for (const nb of sorted){ if (!addNode(inst, nb)) break; addEdge(inst, centerId, nb, 'bidirectional'); }
+  }
+
 
   function showError(msg) {
     console.error('[RelationGraph] ❌', msg);
@@ -91,194 +113,89 @@ window.RelationGraph = (() => {
     window.RelationGraph.__debug = { nodeById, neighborsMap };
   }
 
-
-  function clearVisible() {
-    visibleNodes.clear();
-    visibleEdges.clear();
-  }
-
-  function addNode(id) {
-    if (!nodeById.has(id)) return false;
-    if (visibleNodes.size >= MAX_VISIBLE_NODES) return false;
-    visibleNodes.add(id);
-    return true;
-  }
-
-  function addEdge(source, target, kind) {
-    const key = source < target ? `${source}|${target}` : `${target}|${source}`;
-    if (!visibleEdges.has(key)) visibleEdges.set(key, { source, target, kind });
-  }
-
-  function expandDepth1(centerId) {
-    const neigh = neighborsMap.get(centerId) || new Set();
-
-    // 🔹 Incluye también conexiones donde el nodo actual es el target
-    for (const [src, set] of neighborsMap.entries()) {
-      if (set.has(centerId)) neigh.add(src);
-    }
-
-    const sorted = [...neigh].sort(
-      (a, b) => (neighborsMap.get(b)?.size || 0) - (neighborsMap.get(a)?.size || 0)
-    );
-
-    for (const nb of sorted) {
-      if (!addNode(nb)) break;
-      addEdge(centerId, nb, 'bidirectional');
-    }
-  }
-
-
-  function render(centerId) {
-    if (!_chart) return;
-    const data = [];
-    const links = [];
-    const total = visibleNodes.size;
+  function render(inst, centerId){
+    const chart = inst.chart;
+    if (!chart) return;
+    const data = [], links = [];
+    const total = inst.visibleNodes.size;
     let i = 0;
-
-    for (const id of visibleNodes) {
-      const base = nodeById.get(id);
-      if (!base) continue;
+    for (const id of inst.visibleNodes){
+      const base = nodeById.get(id); if (!base) continue;
       const isCenter = id === centerId;
-
-      // 📐 Desplazamiento radial mayor (22 px)
-      const angle = (360 / total) * i;
-      const rad = (angle * Math.PI) / 180;
-      const offsetX = Math.cos(rad) * 22;
-      const offsetY = Math.sin(rad) * 22;
-      i++;
-
-      data.push({
-        ...base,
+      const angle = (360/total) * i; const rad = angle*Math.PI/180;
+      const offsetX = Math.cos(rad)*22, offsetY = Math.sin(rad)*22; i++;
+      data.push({ ...base,
         symbolSize: isCenter ? 16 : 9,
-        label: {
-          show: true,
-          color: '#ddd',
-          fontSize: 10,
-          formatter: '{b}',
-          offset: [offsetX, offsetY],
-        },
-        itemStyle: isCenter
-          ? {
-            color: base.itemStyle.color,
-            shadowBlur: 20,
-            shadowColor: base.itemStyle.color,
-          }
-          : base.itemStyle,
+        label: { show:true, color:'#ddd', fontSize:10, formatter:'{b}', offset:[offsetX, offsetY] },
+        itemStyle: isCenter ? { color: base.itemStyle.color, shadowBlur:20, shadowColor: base.itemStyle.color } : base.itemStyle
       });
     }
-
-    for (const e of visibleEdges.values()) {
-      const sourceNode = nodeById.get(e.source);
-      const targetNode = nodeById.get(e.target);
-      const sourceColor = colorForOrigin(sourceNode || {});
-      const targetColor = colorForOrigin(targetNode || {});
-
-      // 🎨 Opción 1 — color del origen del nodo fuente
-      let color = sourceColor;
-
-      // 🎨 Opción 2 (comentada): degradado entre source y target
-      // let color = new echarts.graphic.LinearGradient(0, 0, 1, 0, [
-      //   { offset: 0, color: sourceColor },
-      //   { offset: 1, color: targetColor }
-      // ]);
-
-      links.push({
-        source: e.source,
-        target: e.target,
-        lineStyle: {
-          color,
-          width: 1.3,
-          opacity: 0.85,
-          shadowBlur: 6,
-          shadowColor: color
-        },
-      });
+    for (const e of inst.visibleEdges.values()){
+      const sc = colorForOrigin(nodeById.get(e.source)||{});
+      links.push({ source:e.source, target:e.target,
+        lineStyle:{ color:sc, width:1.3, opacity:0.85, shadowBlur:6, shadowColor:sc }});
     }
-
-
-    _chart.setOption({
-      backgroundColor: '#000',
-      series: [
-        {
-          type: 'graph',
-          layout: 'circular',
-          circular: { rotateLabel: false },
-          data,
-          links,
-          roam: true,
-          focusNodeAdjacency: true,
-          lineStyle: { curveness: 0.25 },
-          emphasis: { scale: true, focus: 'adjacency' },
-        },
-      ],
-    }, true);
+    chart.setOption({ backgroundColor:'#000', series:[{ type:'graph', layout:'circular',
+      circular:{ rotateLabel:false }, data, links, roam:true, focusNodeAdjacency:true,
+      lineStyle:{ curveness:0.25 }, emphasis:{ scale:true, focus:'adjacency' } }]}, true);
   }
 
-  async function init(containerId = 'relation-graph', ontologyPath = '../data/ontology.json') {
-    _container = document.getElementById(containerId);
-    if (!_container) return showError(`No se encontró el contenedor #${containerId}`);
 
-    _chart = echarts.init(_container);
-    _chart.showLoading('default', { text: 'Cargando relaciones...' });
+  async function init(containerId='relation-graph', ontologyPath='../data/ontology.json'){
+    const container = document.getElementById(containerId);
+    if (!container) return showError(`No se encontró el contenedor #${containerId}`);
+    const chart = echarts.init(container);
+    chart.showLoading('default', { text:'Cargando relaciones...' });
+
+    // registra/obtiene instancia
+    const inst = { chart, container, visibleNodes:new Set(), visibleEdges:new Map(), currentCenter:null };
+    instances.set(containerId, inst);
 
     try {
       const res = await fetch(ontologyPath);
       const data = await res.json();
-      _chart.hideLoading();
-
+      chart.hideLoading();
       buildIndexes(data.nodes, data.edges);
 
-      _chart.on('click', (params) => {
+      chart.on('click', (params) => {
         if (params.dataType !== 'node') return;
         const id = params.data.id;
-
-        currentCenter = id;
-        clearVisible();
-        addNode(id);
-        expandDepth1(id);
-        render(id);
-
-        // 🔹 Eventos existentes
-        window.dispatchEvent(new CustomEvent('node:select', { detail: { id } }));
-        window.dispatchEvent(new CustomEvent('tree:focus', { detail: { id } }));
-        window.dispatchEvent(new CustomEvent('dropdown:highlight', { detail: { id } }));
-
-        // 🔹 NUEVO: notificar al árbol igual que hace el dropdown
+        inst.currentCenter = id;
+        clearVisible(inst); addNode(inst, id); expandDepth1(inst, id); render(inst, id);
+        window.dispatchEvent(new CustomEvent('node:select', { detail:{ id } }));
+        window.dispatchEvent(new CustomEvent('tree:focus', { detail:{ id } }));
+        window.dispatchEvent(new CustomEvent('dropdown:highlight', { detail:{ id } }));
         const node = nodeById.get(id);
-        const nameFromId = id.replace(/^CAT_/, '');
+        const nameFromId = id.replace(/^CAT_/,'');
         const rootName = (node && node.name) ? node.name : nameFromId;
-        window.dispatchEvent(new CustomEvent('dropdown:change', { detail: { root: rootName } }));
+        window.dispatchEvent(new CustomEvent('dropdown:change', { detail:{ root: rootName } }));
       });
 
-
+      // escuchar selección global, pero operar sobre ESTA instancia
       window.addEventListener('node:select', (e) => {
-        const id = e.detail?.id;
-        if (!id || !nodeById.has(id)) return;
-        currentCenter = id;
-        clearVisible();
-        addNode(id);
-        expandDepth1(id);
-        render(id);
+        const id = e.detail?.id; if (!id || !nodeById.has(id)) return;
+        inst.currentCenter = id;
+        clearVisible(inst); addNode(inst, id); expandDepth1(inst, id); render(inst, id);
       });
-
-
 
       const seedId = 'CAT_Action';
-      if (nodeById.has(seedId)) {
-        currentCenter = seedId;
-        clearVisible();
-        addNode(seedId);
-        expandDepth1(seedId);
-        render(seedId);
-        console.log('[RelationGraph] Render inicial en', seedId);
+      if (nodeById.has(seedId)){
+        inst.currentCenter = seedId;
+        clearVisible(inst); addNode(inst, seedId); expandDepth1(inst, seedId); render(inst, seedId);
       }
-
-    } catch (err) {
+    } catch(err){
       showError(`Error al cargar la ontología: ${err.message}`);
     }
   }
 
+  // expón un método para liberar una instancia
+  function dispose(containerId){
+    const inst = instances.get(containerId);
+    if (!inst) return;
+    try { inst.chart?.dispose(); } catch(_) {}
+    instances.delete(containerId);
+  }
 
+  return { init, dispose };
 
-  return { init };
 })();

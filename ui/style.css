@@ -503,3 +503,28 @@ h2 {
     opacity: 0;
   }
 }
+
+
+/* === Layout interno en modo pantalla completa con descriptor === */
+.fullscreen-active.with-descriptor {
+  display: flex !important;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.fullscreen-active.with-descriptor .descriptor-inline {
+  flex: 0 0 20%;
+  background: #111;
+  color: #eee;
+  border-right: 1px solid #00ffff33;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.fullscreen-active.with-descriptor .echart-area {
+  flex: 1;
+  background: #000;
+  position: relative;
+}

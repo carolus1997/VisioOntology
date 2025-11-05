@@ -1,17 +1,15 @@
 window.TreeView = window.TreeView || (() => {
     console.log('🟢 Definiendo TreeView global');
 
-    let chart;
-
     async function init(containerId = 'tree-chart', jsonPath = 'data/class-hierarchy2.json') {
         const el = document.getElementById(containerId);
-        chart = echarts.init(el, null, { renderer: 'canvas' });
-
+        const chart = echarts.init(el, null, { renderer: 'canvas' });
+        
         // === Botón dentro del contenedor ===
-        let resetBtn = document.getElementById('reset-tree-btn');
+        let resetBtn = el.querySelector('.reset-tree-btn'); // buscar solo dentro del contenedor
         if (!resetBtn) {
             resetBtn = document.createElement('button');
-            resetBtn.id = 'reset-tree-btn';
+            resetBtn.className = 'reset-tree-btn'; // evita colisión de ids
             resetBtn.textContent = 'Reiniciar vista';
             resetBtn.classList.add('reset-tree-btn');
             el.appendChild(resetBtn);
@@ -38,65 +36,63 @@ window.TreeView = window.TreeView || (() => {
                 });
             }
 
-
             // 1) Cargar ontology2.json y construir índice por name/label/id (sin 'CAT_')
             let metaByKey = new Map();
             try {
-            const ontoRes = await fetch('data/ontology2.json');
-            const ontology = await ontoRes.json();
+                const ontoRes = await fetch('data/ontology2.json');
+                const ontology = await ontoRes.json();
 
-            // Normalizador para claves
-            const k = v => (v ? String(v).trim().toLowerCase() : '');
+                // Normalizador para claves
+                const k = v => (v ? String(v).trim().toLowerCase() : '');
 
-            (ontology.nodes || []).forEach(n => {
-                const name = k(n.name);
-                const label = k(n.label);
-                const id = k(String(n.id || '').replace(/^CAT_/i, '')); // id sin prefijo
+                (ontology.nodes || []).forEach(n => {
+                    const name = k(n.name);
+                    const label = k(n.label);
+                    const id = k(String(n.id || '').replace(/^CAT_/i, '')); // id sin prefijo
 
-                const meta = { source: n.source || '', info: n.info || '' };
+                    const meta = { source: n.source || '', info: n.info || '' };
 
-                if (name) metaByKey.set(name, meta);
-                if (label) metaByKey.set(label, meta);
-                if (id) metaByKey.set(id, meta);
-            });
+                    if (name) metaByKey.set(name, meta);
+                    if (label) metaByKey.set(label, meta);
+                    if (id) metaByKey.set(id, meta);
+                });
 
-            // 2) Enriquecer el árbol con source/info buscándolo por name y por variantes
-            function enrich(node) {
-                if (!node) return;
+                // 2) Enriquecer el árbol con source/info buscándolo por name y por variantes
+                function enrich(node) {
+                    if (!node) return;
 
-                const nameKey = k(node.name);
-                // intenta por nombre directo, por última parte (por si viene algo jerárquico), y por id-like
-                const shortKey = nameKey.includes('.') ? nameKey.split('.').pop() : nameKey;
+                    const nameKey = k(node.name);
+                    // intenta por nombre directo, por última parte (por si viene algo jerárquico), y por id-like
+                    const shortKey = nameKey.includes('.') ? nameKey.split('.').pop() : nameKey;
 
-                const meta =
-                metaByKey.get(nameKey) ||
-                metaByKey.get(shortKey);
+                    const meta =
+                    metaByKey.get(nameKey) ||
+                    metaByKey.get(shortKey);
 
-                if (meta) {
-                // solo sobreescribe si no existe ya en el nodo
-                if (!node.source && meta.source) node.source = meta.source;
-                if (!node.info && meta.info) node.info = meta.info;
+                    if (meta) {
+                        // solo sobreescribe si no existe ya en el nodo
+                        if (!node.source && meta.source) node.source = meta.source;
+                        if (!node.info && meta.info) node.info = meta.info;
+                    }
+
+                    (node.children || []).forEach(enrich);
                 }
 
-                (node.children || []).forEach(enrich);
-            }
+                enrich(data);
 
-            enrich(data);
-
-            console.log('[TreeView] Metadatos añadidos desde ontology2.json');
+                console.log('[TreeView] Metadatos añadidos desde ontology2.json');
             } catch (e) {
-            console.warn('[TreeView] No se pudo cargar/mezclar ontology2.json:', e);
+                console.warn('[TreeView] No se pudo cargar/mezclar ontology2.json:', e);
             }
 
             // === 🎨 Colorea cada línea según el color del nodo padre ===
             function colorForOrigin(n) {
                 const src = (n?.source || n?.info || n?.data?.source || n?.data?.info || '').toLowerCase();
-                if (src.includes('mim')) 
-                    return '#00e68a';           // Verde MIM
-                if (src.includes('cyberdem') || src.includes('cdem')) 
-                    return '#00baff'; // Azul CDEM
+                if (src.includes('mim')) return '#00e68a';           // Verde MIM
+                if (src.includes('cyberdem') || src.includes('cdem')) return '#00baff'; // Azul CDEM
                 return '#ff9f1c';                                   // Naranja propio
             }
+
 
             function applyLineColors(node) {
                 if (!node) return;
@@ -288,9 +284,6 @@ window.TreeView = window.TreeView || (() => {
                 }
             });
 
-
-
-
             // 🔹 Al salir del nodo → limpia los resaltados
             chart.on('mouseout', () => {
                 lastHighlighted.forEach(name =>
@@ -312,7 +305,6 @@ window.TreeView = window.TreeView || (() => {
                 overlayGroups = [];
             }
 
-
             // 🔹 Dibuja una línea coloreada según el origen del nodo
             function drawConnectionLine(p1, p2, node) {
                 const color = colorForOrigin(node);
@@ -332,7 +324,6 @@ window.TreeView = window.TreeView || (() => {
                 zr.add(line);
                 overlayGroups.push(line);
             }
-
 
             // 🔹 Dibuja un punto brillante
             function drawGlowPoint(p) {
@@ -369,10 +360,8 @@ window.TreeView = window.TreeView || (() => {
                 // === Función para obtener color según origen ===
                 function colorForOrigin(n) {
                     const src = (n?.data?.source || n?.data?.info || n?.source || n?.info || '').toLowerCase();
-                    if (src.includes('mim')) 
-                        return '#00e68a';
-                    if (src.includes('cyberdem') || src.includes('cdem')) 
-                        return '#00baff';
+                    if (src.includes('mim')) return '#00e68a';
+                    if (src.includes('cyberdem') || src.includes('cdem')) return '#00baff';
                     return '#ff9f1c';
                 }
 
@@ -458,7 +447,13 @@ window.TreeView = window.TreeView || (() => {
 
                 console.log(`🟠 Nodo seleccionado: ${nodeId}`);
                 window.dispatchEvent(new CustomEvent('node:select', { detail: { id: nodeId } }));
+
+                // 🧭 Mostrar descriptor en overlay
+                if (window.DescriptorOverlay) {
+                    window.DescriptorOverlay.show(nodeId);
+                }
             });
+
 
             // === Redibujo responsivo ===
             window.addEventListener('resize', () => chart.resize());
@@ -489,13 +484,13 @@ window.TreeView = window.TreeView || (() => {
 
                     let branch = null;
                     if (Array.isArray(fullData)) {
-                    for (const n of fullData) { branch = findNodeByName(n, root); if (branch) break; }
-                    } else {
-                    branch = findNodeByName(fullData, root);
-                    }
-                    if (!branch) {
-                    console.warn(`[TreeView] No se encontró el nodo "${root}" en ninguna rama`);
-                    return;
+                        for (const n of fullData) { branch = findNodeByName(n, root); if (branch) break; }
+                        } else {
+                            branch = findNodeByName(fullData, root);
+                        }
+                        if (!branch) {
+                            console.warn(`[TreeView] No se encontró el nodo "${root}" en ninguna rama`);
+                        return;
                     }
 
                     // 3) Clonar la rama para no mutar el dataset original
@@ -550,7 +545,6 @@ window.TreeView = window.TreeView || (() => {
                     console.error('[TreeView] Error al cambiar raíz desde Dropdown:', err);
                 }
             });
-
         } catch (err) {
             console.error('❌ No se pudo cargar el árbol:', err);
             chart.hideLoading();
