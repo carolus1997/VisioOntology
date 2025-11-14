@@ -1,10 +1,25 @@
 window.TreeView = window.TreeView || (() => {
     console.log('🟢 Definiendo TreeView global');
 
+    // Control de instancias múltiples (modo normal / fullscreen)
+    const instances = new Map(); // containerId → { chart, container, currentNode }
+
+    function getInst(containerId) {
+        return instances.get(containerId);
+    }
+
+    function dispose(containerId) {
+        const inst = instances.get(containerId);
+        if (!inst) return;
+        try { inst.chart?.dispose(); } catch (_) { }
+        instances.delete(containerId);
+    }
+
+
     async function init(containerId = 'tree-chart', jsonPath = 'data/class-hierarchy2.json') {
         const el = document.getElementById(containerId);
         const chart = echarts.init(el, null, { renderer: 'canvas' });
-        
+
         // === Botón dentro del contenedor ===
         let resetBtn = el.querySelector('.reset-tree-btn'); // buscar solo dentro del contenedor
         if (!resetBtn) {
@@ -66,8 +81,8 @@ window.TreeView = window.TreeView || (() => {
                     const shortKey = nameKey.includes('.') ? nameKey.split('.').pop() : nameKey;
 
                     const meta =
-                    metaByKey.get(nameKey) ||
-                    metaByKey.get(shortKey);
+                        metaByKey.get(nameKey) ||
+                        metaByKey.get(shortKey);
 
                     if (meta) {
                         // solo sobreescribe si no existe ya en el nodo
@@ -440,19 +455,26 @@ window.TreeView = window.TreeView || (() => {
 
             // === Click en nodos ===
             chart.on('click', params => {
-                const baseName = params?.data?.id ?? params?.data?.name;
-                if (!baseName || params?.data?.invisibleRoot) return;
+                if (!params?.data || params.data.invisibleRoot) return;
 
-                const nodeId = baseName.startsWith('CAT_') ? baseName : 'CAT_' + baseName;
+                // 🔸 Aseguramos que todos los IDs van con prefijo CAT_
+                let nodeId = params.data.id || params.data.name;
+                if (!nodeId.startsWith('CAT_')) nodeId = 'CAT_' + nodeId;
 
-                console.log(`🟠 Nodo seleccionado: ${nodeId}`);
+                console.log(`🟢 TreeView seleccionó nodo: ${nodeId}`);
                 window.dispatchEvent(new CustomEvent('node:select', { detail: { id: nodeId } }));
 
-                // 🧭 Mostrar descriptor en overlay
-                if (window.DescriptorOverlay) {
+                // 🧭 Mostrar Descriptor (modo normal)
+                if (window.Descriptor && typeof window.Descriptor._render === 'function') {
+                    window.Descriptor._render(nodeId);
+                }
+
+                // 🧩 Si hay overlay (fullscreen)
+                if (window.DescriptorOverlay && document.querySelector('.fullscreen-active')) {
                     window.DescriptorOverlay.show(nodeId);
                 }
             });
+
 
 
             // === Redibujo responsivo ===
@@ -472,24 +494,24 @@ window.TreeView = window.TreeView || (() => {
 
                     // 2) Buscar la rama seleccionada
                     function findNodeByName(node, name) {
-                    if (!node) return null;
-                    if (node.name === name) return node;
-                    const children = node.children || [];
-                    for (const child of children) {
-                        const r = findNodeByName(child, name);
-                        if (r) return r;
-                    }
-                    return null;
+                        if (!node) return null;
+                        if (node.name === name) return node;
+                        const children = node.children || [];
+                        for (const child of children) {
+                            const r = findNodeByName(child, name);
+                            if (r) return r;
+                        }
+                        return null;
                     }
 
                     let branch = null;
                     if (Array.isArray(fullData)) {
                         for (const n of fullData) { branch = findNodeByName(n, root); if (branch) break; }
-                        } else {
-                            branch = findNodeByName(fullData, root);
-                        }
-                        if (!branch) {
-                            console.warn(`[TreeView] No se encontró el nodo "${root}" en ninguna rama`);
+                    } else {
+                        branch = findNodeByName(fullData, root);
+                    }
+                    if (!branch) {
+                        console.warn(`[TreeView] No se encontró el nodo "${root}" en ninguna rama`);
                         return;
                     }
 
@@ -501,32 +523,32 @@ window.TreeView = window.TreeView || (() => {
                     const k = v => (v ? String(v).trim().toLowerCase() : '');
 
                     try {
-                    const ontoRes = await fetch('data/ontology2.json');
-                    const ontology = await ontoRes.json();
+                        const ontoRes = await fetch('data/ontology2.json');
+                        const ontology = await ontoRes.json();
 
-                    (ontology.nodes || []).forEach(n => {
-                        const name = k(n.name);
-                        const label = k(n.label);
-                        const id = k(String(n.id || '').replace(/^CAT_/i, ''));
-                        const meta = { source: n.source || '', info: n.info || '' };
-                        if (name) metaByKey.set(name, meta);
-                        if (label) metaByKey.set(label, meta);
-                        if (id) metaByKey.set(id, meta);
-                    });
+                        (ontology.nodes || []).forEach(n => {
+                            const name = k(n.name);
+                            const label = k(n.label);
+                            const id = k(String(n.id || '').replace(/^CAT_/i, ''));
+                            const meta = { source: n.source || '', info: n.info || '' };
+                            if (name) metaByKey.set(name, meta);
+                            if (label) metaByKey.set(label, meta);
+                            if (id) metaByKey.set(id, meta);
+                        });
                     } catch (err) {
-                    console.warn('[TreeView] No se pudo cargar ontology2.json para enriquecer la rama:', err);
+                        console.warn('[TreeView] No se pudo cargar ontology2.json para enriquecer la rama:', err);
                     }
 
                     function enrich(node) {
-                    if (!node) return;
-                    const nameKey = k(node.name);
-                    const shortKey = nameKey.includes('.') ? nameKey.split('.').pop() : nameKey;
-                    const meta = metaByKey.get(nameKey) || metaByKey.get(shortKey);
-                    if (meta) {
-                        if (!node.source && meta.source) node.source = meta.source;
-                        if (!node.info && meta.info) node.info = meta.info;
-                    }
-                    (node.children || []).forEach(enrich);
+                        if (!node) return;
+                        const nameKey = k(node.name);
+                        const shortKey = nameKey.includes('.') ? nameKey.split('.').pop() : nameKey;
+                        const meta = metaByKey.get(nameKey) || metaByKey.get(shortKey);
+                        if (meta) {
+                            if (!node.source && meta.source) node.source = meta.source;
+                            if (!node.info && meta.info) node.info = meta.info;
+                        }
+                        (node.children || []).forEach(enrich);
                     }
                     enrich(clone); // ✅ ya trae source/info
 
@@ -535,7 +557,7 @@ window.TreeView = window.TreeView || (() => {
 
                     // 6) Pintar sólo esa rama
                     chart.setOption({
-                    series: [{ data: [clone] }]
+                        series: [{ data: [clone] }]
                     });
 
                     const nodeId = clone.id || (clone.name.startsWith('CAT_') ? clone.name : 'CAT_' + clone.name);
@@ -551,5 +573,54 @@ window.TreeView = window.TreeView || (() => {
         }
     }
 
-    return { init };
+    // ======================================================
+    // 🔹 Exportar estado del árbol (nodo activo, zoom, posición)
+    function getState(containerId) {
+        const inst = instances.get(containerId);
+        if (!inst) return null;
+
+        const opt = inst.chart?.getOption();
+        const series = opt?.series?.[0] || {};
+        return {
+            currentNode: inst.currentNode,
+            zoom: series.zoom ?? 1,
+            center: series.center ?? null,
+            data: opt.series?.[0]?.data?.[0] ?? null // dataset visible
+        };
+    }
+
+    // ======================================================
+    // 🔸 Restaurar estado en un nuevo contenedor (fullscreen)
+    async function restoreState(containerId, hierarchyPath, state) {
+        const el = document.getElementById(containerId);
+        if (!el) return console.warn(`[TreeView] No se encontró contenedor ${containerId}`);
+
+        const chart = echarts.init(el, null, { renderer: 'canvas' });
+        const inst = { chart, container: el, currentNode: state?.currentNode ?? null };
+        instances.set(containerId, inst);
+
+        try {
+            // Si tenemos datos previos, usamos esos; si no, recargamos
+            const data = state?.data ?? (await (await fetch(hierarchyPath)).json());
+            chart.setOption({ series: [{ type: 'tree', data: [data] }] });
+
+            // Reasignar eventos
+            chart.on('click', params => {
+                const base = params?.data?.id ?? params?.data?.name;
+                if (!base) return;
+                let nodeId = base.startsWith('CAT_') ? base : 'CAT_' + base;
+                inst.currentNode = nodeId;
+
+                console.log(`🌳 [TreeView] Nodo seleccionado: ${nodeId}`);
+                window.dispatchEvent(new CustomEvent('node:select', { detail: { id: nodeId } }));
+                if (window.Descriptor?._render) window.Descriptor._render(nodeId);
+            });
+
+            console.log('[TreeView] Estado restaurado correctamente');
+        } catch (err) {
+            console.error('[TreeView] ❌ Error restaurando estado:', err);
+        }
+    }
+
+    return { init, dispose, getState, restoreState };
 })();

@@ -17,19 +17,21 @@ window.RelationGraph = (() => {
 
   function getInst(containerId) { return instances.get(containerId); }
 
-  function clearVisible(inst){ inst.visibleNodes.clear(); inst.visibleEdges.clear(); }
-  function addNode(inst, id){ if (!nodeById.has(id)) return false;
+  function clearVisible(inst) { inst.visibleNodes.clear(); inst.visibleEdges.clear(); }
+  function addNode(inst, id) {
+    if (!nodeById.has(id)) return false;
     if (inst.visibleNodes.size >= MAX_VISIBLE_NODES) return false;
-    inst.visibleNodes.add(id); return true; }
-  function addEdge(inst, s, t, kind){
-    const key = s < t ? `${s}|${t}` : `${t}|${s}`;
-    if (!inst.visibleEdges.has(key)) inst.visibleEdges.set(key, { source:s, target:t, kind });
+    inst.visibleNodes.add(id); return true;
   }
-  function expandDepth1(inst, centerId){
+  function addEdge(inst, s, t, kind) {
+    const key = s < t ? `${s}|${t}` : `${t}|${s}`;
+    if (!inst.visibleEdges.has(key)) inst.visibleEdges.set(key, { source: s, target: t, kind });
+  }
+  function expandDepth1(inst, centerId) {
     const neigh = new Set(neighborsMap.get(centerId) || []);
-    for (const [src,set] of neighborsMap.entries()) if (set.has(centerId)) neigh.add(src);
-    const sorted = [...neigh].sort((a,b)=>(neighborsMap.get(b)?.size||0)-(neighborsMap.get(a)?.size||0));
-    for (const nb of sorted){ if (!addNode(inst, nb)) break; addEdge(inst, centerId, nb, 'bidirectional'); }
+    for (const [src, set] of neighborsMap.entries()) if (set.has(centerId)) neigh.add(src);
+    const sorted = [...neigh].sort((a, b) => (neighborsMap.get(b)?.size || 0) - (neighborsMap.get(a)?.size || 0));
+    for (const nb of sorted) { if (!addNode(inst, nb)) break; addEdge(inst, centerId, nb, 'bidirectional'); }
   }
 
 
@@ -113,42 +115,49 @@ window.RelationGraph = (() => {
     window.RelationGraph.__debug = { nodeById, neighborsMap };
   }
 
-  function render(inst, centerId){
+  function render(inst, centerId) {
     const chart = inst.chart;
     if (!chart) return;
     const data = [], links = [];
     const total = inst.visibleNodes.size;
     let i = 0;
-    for (const id of inst.visibleNodes){
+    for (const id of inst.visibleNodes) {
       const base = nodeById.get(id); if (!base) continue;
       const isCenter = id === centerId;
-      const angle = (360/total) * i; const rad = angle*Math.PI/180;
-      const offsetX = Math.cos(rad)*22, offsetY = Math.sin(rad)*22; i++;
-      data.push({ ...base,
+      const angle = (360 / total) * i; const rad = angle * Math.PI / 180;
+      const offsetX = Math.cos(rad) * 22, offsetY = Math.sin(rad) * 22; i++;
+      data.push({
+        ...base,
         symbolSize: isCenter ? 16 : 9,
-        label: { show:true, color:'#ddd', fontSize:10, formatter:'{b}', offset:[offsetX, offsetY] },
-        itemStyle: isCenter ? { color: base.itemStyle.color, shadowBlur:20, shadowColor: base.itemStyle.color } : base.itemStyle
+        label: { show: true, color: '#ddd', fontSize: 10, formatter: '{b}', offset: [offsetX, offsetY] },
+        itemStyle: isCenter ? { color: base.itemStyle.color, shadowBlur: 20, shadowColor: base.itemStyle.color } : base.itemStyle
       });
     }
-    for (const e of inst.visibleEdges.values()){
-      const sc = colorForOrigin(nodeById.get(e.source)||{});
-      links.push({ source:e.source, target:e.target,
-        lineStyle:{ color:sc, width:1.3, opacity:0.85, shadowBlur:6, shadowColor:sc }});
+    for (const e of inst.visibleEdges.values()) {
+      const sc = colorForOrigin(nodeById.get(e.source) || {});
+      links.push({
+        source: e.source, target: e.target,
+        lineStyle: { color: sc, width: 1.3, opacity: 0.85, shadowBlur: 6, shadowColor: sc }
+      });
     }
-    chart.setOption({ backgroundColor:'#000', series:[{ type:'graph', layout:'circular',
-      circular:{ rotateLabel:false }, data, links, roam:true, focusNodeAdjacency:true,
-      lineStyle:{ curveness:0.25 }, emphasis:{ scale:true, focus:'adjacency' } }]}, true);
+    chart.setOption({
+      backgroundColor: '#000', series: [{
+        type: 'graph', layout: 'circular',
+        circular: { rotateLabel: false }, data, links, roam: true, focusNodeAdjacency: true,
+        lineStyle: { curveness: 0.25 }, emphasis: { scale: true, focus: 'adjacency' }
+      }]
+    }, true);
   }
 
 
-  async function init(containerId='relation-graph', ontologyPath='../data/ontology.json'){
+  async function init(containerId = 'relation-graph', ontologyPath = '../data/ontology.json') {
     const container = document.getElementById(containerId);
     if (!container) return showError(`No se encontró el contenedor #${containerId}`);
     const chart = echarts.init(container);
-    chart.showLoading('default', { text:'Cargando relaciones...' });
+    chart.showLoading('default', { text: 'Cargando relaciones...' });
 
     // registra/obtiene instancia
-    const inst = { chart, container, visibleNodes:new Set(), visibleEdges:new Map(), currentCenter:null };
+    const inst = { chart, container, visibleNodes: new Set(), visibleEdges: new Map(), currentCenter: null };
     instances.set(containerId, inst);
 
     try {
@@ -161,15 +170,51 @@ window.RelationGraph = (() => {
         if (params.dataType !== 'node') return;
         const id = params.data.id;
         inst.currentCenter = id;
-        clearVisible(inst); addNode(inst, id); expandDepth1(inst, id); render(inst, id);
-        window.dispatchEvent(new CustomEvent('node:select', { detail:{ id } }));
-        window.dispatchEvent(new CustomEvent('tree:focus', { detail:{ id } }));
-        window.dispatchEvent(new CustomEvent('dropdown:highlight', { detail:{ id } }));
+
+        clearVisible(inst);
+        addNode(inst, id);
+        expandDepth1(inst, id);
+        render(inst, id);
+
+        // 🔸 Lanza eventos de sincronización global
+        window.dispatchEvent(new CustomEvent('node:select', { detail: { id } }));
+        window.dispatchEvent(new CustomEvent('tree:focus', { detail: { id } }));
+        window.dispatchEvent(new CustomEvent('dropdown:highlight', { detail: { id } }));
+
         const node = nodeById.get(id);
-        const nameFromId = id.replace(/^CAT_/,'');
+        const nameFromId = id.replace(/^CAT_/, '');
         const rootName = (node && node.name) ? node.name : nameFromId;
-        window.dispatchEvent(new CustomEvent('dropdown:change', { detail:{ root: rootName } }));
+        window.dispatchEvent(new CustomEvent('dropdown:change', { detail: { root: rootName } }));
+
+        // ======================================================
+        // 🟢 NUEVO: abrir automáticamente DescriptorOverlay
+        // ======================================================
+        // Si el overlay está disponible y activo, mostrar el nodo padre o actual
+        if (window.DescriptorOverlay) {
+          // Caso 1: si el nodo tiene conexiones visibles (es parte del grafo expandido)
+          const neighs = Array.from(inst.visibleEdges.values())
+            .filter(e => e.source === id || e.target === id)
+            .map(e => e.source === id ? e.target : e.source);
+
+          // Caso 2: escoger un "nodo padre" semántico, si existe
+          let parentId = null;
+          for (const n of neighs) {
+            const name = n.toLowerCase();
+            if (name.includes('action') || name.includes('operation') || name.includes('process')) {
+              parentId = n;
+              break;
+            }
+          }
+
+          // Si no se encuentra un padre lógico, mostrar el propio nodo clicado
+          const targetId = parentId || id;
+
+          // Mostrar overlay
+          window.DescriptorOverlay.show(targetId);
+          console.log(`🧩 DescriptorOverlay sincronizado con nodo: ${targetId}`);
+        }
       });
+
 
       // escuchar selección global, pero operar sobre ESTA instancia
       window.addEventListener('node:select', (e) => {
@@ -179,23 +224,106 @@ window.RelationGraph = (() => {
       });
 
       const seedId = 'CAT_Action';
-      if (nodeById.has(seedId)){
+      if (nodeById.has(seedId)) {
         inst.currentCenter = seedId;
         clearVisible(inst); addNode(inst, seedId); expandDepth1(inst, seedId); render(inst, seedId);
       }
-    } catch(err){
+    } catch (err) {
       showError(`Error al cargar la ontología: ${err.message}`);
     }
   }
 
   // expón un método para liberar una instancia
-  function dispose(containerId){
+  function dispose(containerId) {
     const inst = instances.get(containerId);
     if (!inst) return;
-    try { inst.chart?.dispose(); } catch(_) {}
+    try { inst.chart?.dispose(); } catch (_) { }
     instances.delete(containerId);
   }
+  // ======================================================
+  // 🔸 Exportar estado de una instancia existente
+  function getState(containerId) {
+    const inst = instances.get(containerId);
+    if (!inst) return null;
+    return {
+      center: inst.currentCenter,
+      visibleNodes: Array.from(inst.visibleNodes),
+      visibleEdges: Array.from(inst.visibleEdges.values())
+    };
+  }
 
-  return { init, dispose };
+
+  // ======================================================
+  // 🔹 Restaurar estado en un nuevo contenedor
+  async function restoreState(containerId, ontologyPath, state) {
+    const container = document.getElementById(containerId);
+    if (!container || !state) {
+      console.warn(`[RelationGraph] No se pudo restaurar: contenedor o estado nulo`);
+      return;
+    }
+
+    const chart = echarts.init(container);
+    const inst = { chart, container, visibleNodes: new Set(), visibleEdges: new Map(), currentCenter: state.center };
+    instances.set(containerId, inst);
+
+    try {
+      const res = await fetch(ontologyPath);
+      const data = await res.json();
+      buildIndexes(data.nodes, data.edges);
+
+      // Restaura los nodos y enlaces
+      for (const id of state.visibleNodes) inst.visibleNodes.add(id);
+      for (const e of state.visibleEdges) inst.visibleEdges.set(`${e.source}|${e.target}`, e);
+
+      render(inst, inst.currentCenter);
+
+      // ======================================================
+      // 🔹 Reactivar interacciones y sincronización global
+      // ======================================================
+      chart.on('click', (params) => {
+        if (params.dataType !== 'node') return;
+        const id = params.data.id;
+        inst.currentCenter = id;
+
+        clearVisible(inst);
+        addNode(inst, id);
+        expandDepth1(inst, id);
+        render(inst, id);
+
+        // Reenvío de eventos globales
+        window.dispatchEvent(new CustomEvent('node:select', { detail: { id } }));
+        window.dispatchEvent(new CustomEvent('tree:focus', { detail: { id } }));
+        window.dispatchEvent(new CustomEvent('dropdown:highlight', { detail: { id } }));
+
+        const node = nodeById.get(id);
+        const nameFromId = id.replace(/^CAT_/, '');
+        const rootName = (node && node.name) ? node.name : nameFromId;
+        window.dispatchEvent(new CustomEvent('dropdown:change', { detail: { root: rootName } }));
+
+        // 🟢 Mostrar DescriptorOverlay si existe
+        if (window.DescriptorOverlay) {
+          window.DescriptorOverlay.show(id);
+        }
+      });
+
+      // 🔸 Reacción a node:select externos
+      window.addEventListener('node:select', (e) => {
+        const id = e.detail?.id;
+        if (!id || !nodeById.has(id)) return;
+        inst.currentCenter = id;
+        clearVisible(inst);
+        addNode(inst, id);
+        expandDepth1(inst, id);
+        render(inst, id);
+      });
+
+      console.log('[RelationGraph] Estado restaurado y listeners reactivados');
+    } catch (err) {
+      console.error('[RelationGraph] ❌ Error restaurando estado:', err);
+    }
+  }
+
+
+  return { init, dispose, getState, restoreState };
 
 })();

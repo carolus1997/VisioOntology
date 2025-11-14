@@ -118,17 +118,26 @@ async function addFullscreenButton(containerId) {
     }
 
     // === Renderizado del gráfico (nuevo contenedor limpio) ===
+    // === Renderizado del gráfico con conservación de estado ===
     try {
       if (isTree) {
         await TreeView.init(`${containerId}-fullscreen`, hierarchyPath);
         console.log('🌳 TreeView renderizado correctamente');
       } else {
-        await RelationGraph.init(`${containerId}-fullscreen`, ontologyPath);
-        console.log('🔗 RelationGraph renderizado correctamente');
+        // Intentar copiar el estado del grafo existente
+        const state = window.RelationGraph?.getState(containerId);
+        if (state) {
+          await RelationGraph.restoreState(`${containerId}-fullscreen`, ontologyPath, state);
+          console.log('🔁 RelationGraph restaurado con su estado previo');
+        } else {
+          await RelationGraph.init(`${containerId}-fullscreen`, ontologyPath);
+          console.log('🔗 RelationGraph renderizado nuevo');
+        }
       }
     } catch (err) {
       console.error('❌ Error renderizando gráfico fullscreen:', err);
     }
+
 
     // === Sincronización de eventos globales ===
     window.addEventListener('node:select', (e) => {
@@ -147,22 +156,44 @@ async function addFullscreenButton(containerId) {
     // === Cerrar pantalla completa ===
     // dentro del listener del botón de cerrar en addFullscreenButton(...)
     closeBtn.addEventListener('click', () => {
-      // 1) disponer el echarts del contenedor fullscreen
+      // === 🔹 Capturar estado actual del RelationGraph fullscreen antes de cerrar ===
+      let lastState = null;
+      if (!isTree && window.RelationGraph?.getState) {
+        lastState = window.RelationGraph.getState(`${containerId}-fullscreen`);
+      }
+
+      // === 🔸 Destruir fullscreen ===
       const chart = echarts.getInstanceByDom(chartDiv);
       if (chart) chart.dispose();
-
-      // 2) si usas el dispose del módulo:
-      if (!isTree && window.RelationGraph?.dispose) {
-        RelationGraph.dispose(`${containerId}-fullscreen`);
-      }
-      if (isTree && window.TreeView?.dispose) {
-        // opcional: si haces TreeView multi-instancia también
-        TreeView.dispose?.(`${containerId}-fullscreen`);
-      }
-
       layout.remove();
       document.body.classList.remove('no-scroll');
+
+      // === 🔹 Propagar sincronización a vista principal ===
+      if (lastState) {
+        const id = lastState.center;
+        console.log(`🔁 Sincronizando con vista principal: ${id}`);
+
+        // 1. Actualizar Descriptor
+        if (window.Descriptor?._render) {
+          window.Descriptor._render(id);
+        }
+
+        // 🔹 Si existía overlay visible, ciérralo
+        if (window.DescriptorOverlay) {
+          window.DescriptorOverlay.hide();
+        }
+
+        // 2. Centrar TreeView (solo si existe)
+        window.dispatchEvent(new CustomEvent('node:select', { detail: { id } }));
+        window.dispatchEvent(new CustomEvent('tree:focus', { detail: { id } }));
+
+        // 3. Mantener Dropdown sincronizado
+        const node = id.replace(/^CAT_/, '');
+        window.dispatchEvent(new CustomEvent('dropdown:highlight', { detail: { id } }));
+        window.dispatchEvent(new CustomEvent('dropdown:change', { detail: { root: node } }));
+      }
     });
+
   });
 }
 

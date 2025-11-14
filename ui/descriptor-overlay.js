@@ -26,9 +26,9 @@ window.DescriptorOverlay = (() => {
     });
 
     // Inicializamos Descriptor dentro del overlay
-    if (window.Descriptor?.init) {
-      window.Descriptor.init('descriptor', 'data/ontology2.json');
-    }
+    // Ya no inicializamos otra instancia, reutilizamos el render global
+    console.log('🟢 DescriptorOverlay enlazado al Descriptor global');
+
 
     console.log('🟢 DescriptorOverlay inicializado');
   }
