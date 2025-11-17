@@ -5479,7 +5479,7 @@
       "categoryName": "LOV",
       "label": "List of values",
       "description": "Finite, governed set of atomic, typed values (LOV) used to constrain and normalize the range of data properties; codes are stable while labels may be multilingual and versioned.",
-      "useCase": "The LOV \"AcknowledgeResponseType\" comprises a closed list of values: \"AbleToComply\" and \"UnableToComply\". This enumerations is represented as a owl Class, subclass of  LOV. The two values are represented as indiviuals of the class AcknoledgeResponseType.\n\n\n:LOV_AcknowledgeResponseType rdf:type owl:Class ;\n   rdfs:subClassOf :LOV .\n\nLOV_AcknowledgeResponseType_AbleToComply rdf:type owl:NamedIndividual , :LOV_AcknowledgeResponseType .\n\nLOV_AcknowledgeResponseType_UnableToComply rdf:type owl:NamedIndividual , :LOV_AcknowledgeResponseType .\n\n* Warning: Do not use the IRI to extract the name. Use rdfs:label or :name instead."
+      "useCase": "The LOV \"AcknowledgeResponseType\" comprises a closed list of values: \"AbleToComply\" and \"UnableToComply\". This enumerations is represented as a owl Class, subclass of  LOV. The two values are represented as indiviuals of the class AcknoledgeResponseType.\r\n\r\n\r\n:LOV_AcknowledgeResponseType rdf:type owl:Class ;\r\n   rdfs:subClassOf :LOV .\r\n\r\nLOV_AcknowledgeResponseType_AbleToComply rdf:type owl:NamedIndividual , :LOV_AcknowledgeResponseType .\r\n\r\nLOV_AcknowledgeResponseType_UnableToComply rdf:type owl:NamedIndividual , :LOV_AcknowledgeResponseType .\r\n\r\n* Warning: Do not use the IRI to extract the name. Use rdfs:label or :name instead."
     },
     {
       "id": "CAT_Category",
@@ -5494,7 +5494,7 @@
       "categoryName": "Component",
       "label": "Component",
       "description": "A component is a Class that represents a Datatype composed of multiple relationships/properties.",
-      "useCase": "\"Waypoint\" is a property defined by 3 simple properties: latitude (double), longitude (double) and altitude (double). Waypoint is represented as a owl Class, subclass of Component and as domain of the 3 simple properties.\n\n:Component_Waypoint rdf:type owl:Class ;\n   rdfs:subClassOf :Component .\n\n:latitude rdfs:Domain :Component_Waypoint ;\n  rdfs:range xsd:double .\n\n:longitude rdfs:Domain :Component_Waypoint ;\n  rdfs:range xsd:double .\n\n:altitude rdfs:Domain :Component_Waypoint ;\n  rdfs:range xsd:double .\n\nThe category is linked to the component with a owl:Object property:\n\n?category :hasWaypoint :Component_Waypoint .\n\n:hasWaypoint rdf:type owl:ObjectProperty ;\n   rdfs:domain ?category ;\n   rdfs:range :Component_Waypoint .\n\n* Warning: Do not use the IRI to extract the name. Use rdfs:label or :name instead."
+      "useCase": "\"Waypoint\" is a property defined by 3 simple properties: latitude (double), longitude (double) and altitude (double). Waypoint is represented as a owl Class, subclass of Component and as domain of the 3 simple properties.\r\n\r\n:Component_Waypoint rdf:type owl:Class ;\r\n   rdfs:subClassOf :Component .\r\n\r\n:latitude rdfs:Domain :Component_Waypoint ;\r\n  rdfs:range xsd:double .\r\n\r\n:longitude rdfs:Domain :Component_Waypoint ;\r\n  rdfs:range xsd:double .\r\n\r\n:altitude rdfs:Domain :Component_Waypoint ;\r\n  rdfs:range xsd:double .\r\n\r\nThe category is linked to the component with a owl:Object property:\r\n\r\n?category :hasWaypoint :Component_Waypoint .\r\n\r\n:hasWaypoint rdf:type owl:ObjectProperty ;\r\n   rdfs:domain ?category ;\r\n   rdfs:range :Component_Waypoint .\r\n\r\n* Warning: Do not use the IRI to extract the name. Use rdfs:label or :name instead."
     },
     {
       "id": "CAT_DateTimeStamp",
@@ -5674,7 +5674,7 @@
       "name": "concept",
       "kind": "category",
       "categoryName": "concept",
-      "description": "Simplification of MIM categories.\nClean-up UUIDs from object/datatype properties.",
+      "description": "Simplification of MIM categories.\r\nClean-up UUIDs from object/datatype properties.",
       "label": "Core Ontology Concepts - v0"
     },
     {
@@ -6559,7 +6559,7 @@
       "kind": "category",
       "categoryName": "CyberDefend",
       "source": "CyberDEM (SISO-REF-072-2024)",
-      "description": "Cyber Defend is a cyberspace action taken within protected cyberspace to defeat specific threats that have breached or are threatening to breach the cyberspace security measures and include actions to detect, characterize, counter, and mitigate threats, including malware or the unauthorized activities of users, and to restore the system to a secure configuration. [JP3-12]\nMitigations represent security concepts and classes of technologies that can be used to prevent a technique or sub-technique from being successfully executed. Mitigations are identified by “M####” notation. [ATT&CK v13]",
+      "description": "Cyber Defend is a cyberspace action taken within protected cyberspace to defeat specific threats that have breached or are threatening to breach the cyberspace security measures and include actions to detect, characterize, counter, and mitigate threats, including malware or the unauthorized activities of users, and to restore the system to a secure configuration. [JP3-12]\r\nMitigations represent security concepts and classes of technologies that can be used to prevent a technique or sub-technique from being successfully executed. Mitigations are identified by “M####” notation. [ATT&CK v13]",
       "label": "Cyber defend"
     },
     {
@@ -8052,7 +8052,7 @@
       "source": "MIM 5.3",
       "label": "Object",
       "description": "An individually identified object that has military or civilian significance.",
-      "info": "This can range from a unit to a single person, an entire tank to a single bolt, and a mountain to a pile of dirt. Objects may not only be physical objects but also intangible or abstract objects such as rendezvous points, phase lines, and boundaries.\nClass Object is non-abstract to support tracking situations where, initially, the object being tracked cannot be definitively classified.",
+      "info": "This can range from a unit to a single person, an entire tank to a single bolt, and a mountain to a pile of dirt. Objects may not only be physical objects but also intangible or abstract objects such as rendezvous points, phase lines, and boundaries.\r\nClass Object is non-abstract to support tracking situations where, initially, the object being tracked cannot be definitively classified.",
       "mimId": "EAID_07140D2E_A0CF_4f9d_9D32_0927EA899D46"
     },
     {
@@ -8588,7 +8588,7 @@
       "categoryName": "Capability_Engineering",
       "source": "MIM 5.3 (EngineeringCapability)",
       "label": "Engineering capability",
-      "description": "A Capability, required for planning, of those Organisations and Persons that are deemed as having the ability to perform construction or destruction activities. This includes performing mobility and counter-mobility tasks. \n\nRemarks:\n\nEngineeringCapability provides additional information concerning the conditions for which the engineering capability is defined, that is, the type of facility which is being constructed or destroyed (or in the case of obstacles, breached) as well as the dimensions of that facility. Engineering capabilities can be described for different echelon levels. For instance, a bridge-building platoon may be capable of either constructing two bridges, each 20 metres long, or a single bridge that is 40 metres long. A company that is made up of three platoons may therefore be capable of building a single bridge that is 120 metres long. The first capability can be described at platoon level, the second at company level."
+      "description": "A Capability, required for planning, of those Organisations and Persons that are deemed as having the ability to perform construction or destruction activities. This includes performing mobility and counter-mobility tasks. \r\n\r\nRemarks:\r\n\r\nEngineeringCapability provides additional information concerning the conditions for which the engineering capability is defined, that is, the type of facility which is being constructed or destroyed (or in the case of obstacles, breached) as well as the dimensions of that facility. Engineering capabilities can be described for different echelon levels. For instance, a bridge-building platoon may be capable of either constructing two bridges, each 20 metres long, or a single bridge that is 40 metres long. A company that is made up of three platoons may therefore be capable of building a single bridge that is 120 metres long. The first capability can be described at platoon level, the second at company level."
     },
     {
       "id": "CAT_LOV_WarfareFuncion_Manoeuvre",
@@ -8605,7 +8605,7 @@
       "categoryName": "Capability_Fire",
       "source": "MIM 5.3 (FireCapability)",
       "label": "Fire capability",
-      "description": "A Capability, required for planning, of those Facilities, Equipment, Organisations and Persons that are deemed as having the ability to discharge or launch a projectile or missile. \n\nRemarks:\n\nFireCapability provides additional information about the type of projectile, which is being discharged or launched."
+      "description": "A Capability, required for planning, of those Facilities, Equipment, Organisations and Persons that are deemed as having the ability to discharge or launch a projectile or missile. \r\n\r\nRemarks:\r\n\r\nFireCapability provides additional information about the type of projectile, which is being discharged or launched."
     },
     {
       "id": "CAT_LOV_WarfareFuncion_Fires",
@@ -8640,7 +8640,7 @@
       "categoryName": "Capability_Mobility",
       "source": "MIM 5.3 (MobilityCapability)",
       "label": "Mobility capability",
-      "description": "A Capability, required for planning, of those Facilities, Materiel, Organisations and Persons that are deemed as having the nominal ability to move in space, air, on water, under water, or over a specific type of terrain. \n\nRemarks:\n\nMobilityCapability specifies additional information about the kind of mobility and, in certain cases, the conditions for which the manoeuvre capability is defined, in particular, the type of terrain that is being traversed."
+      "description": "A Capability, required for planning, of those Facilities, Materiel, Organisations and Persons that are deemed as having the nominal ability to move in space, air, on water, under water, or over a specific type of terrain. \r\n\r\nRemarks:\r\n\r\nMobilityCapability specifies additional information about the kind of mobility and, in certain cases, the conditions for which the manoeuvre capability is defined, in particular, the type of terrain that is being traversed."
     },
     {
       "id": "48819cda-6f5c-48ba-916f-cfa74c67c714",
@@ -8649,7 +8649,7 @@
       "categoryName": "Capability_Operational",
       "source": "MIM 5.3 (OperationalCapability)",
       "label": "Operational capability",
-      "description": "A Capability, required for planning, of those Objects that are deemed as having the ability, the training and the equipment to perform an operation.\n\nRemarks:\n\nOperationalCapability permits operational roles to be assigned to units or types of units, or in addition to the roles that are inherent in the typing of units."
+      "description": "A Capability, required for planning, of those Objects that are deemed as having the ability, the training and the equipment to perform an operation.\r\n\r\nRemarks:\r\n\r\nOperationalCapability permits operational roles to be assigned to units or types of units, or in addition to the roles that are inherent in the typing of units."
     },
     {
       "id": "CAT_LOV_WarfareFuncion_C2",
@@ -8849,7 +8849,7 @@
       "categoryName": "GeographicFeature",
       "source": "MIM 5.3",
       "label": "Geographic feature",
-      "description": "Terrain characteristics of military significance.\n<b>Remarks:</b>\nA GeographicFeature is a permanent or durable natural feature. In general, it represents any natural object or configuration of ground or water represented on a map or chart.",
+      "description": "Terrain characteristics of military significance.\r\n<b>Remarks:</b>\r\nA GeographicFeature is a permanent or durable natural feature. In general, it represents any natural object or configuration of ground or water represented on a map or chart.",
       "mimId": "EAID_9232A0AF_2556_4aea_8E89_E6B3522B0645"
     },
     {
@@ -8870,7 +8870,7 @@
       "source": "MIM 5.3",
       "label": "Unit",
       "description": "A MilitaryOrganisation whose structure is prescribed by competent authority.",
-      "info": "The structure is prescribed, e.g., in the form of a table of organisation and equipment; specifically, part of an organisation. A formation is specified as a Unit.\nOne aim of Unit is to permit unique specification of tables of organisation and equipment (referred to in this model as Establishment) for any unit of interest within the scope of the model. A second aim is to provide information that is necessary for generating unit symbology for situation displays.\n\nEach nation has a different way of classifying its own units. The model supports the representation of as many types of Units as possible (within the constraints of common sense). It should be recognised that the manner of classifying units may not correspond to national classification policy. However, national implementations of external displays for operational users can (and should) be built to support the national doctrine and naming conventions. The internal classification within a C2 application (based on the model) can be entirely invisible to the user of that application.",
+      "info": "The structure is prescribed, e.g., in the form of a table of organisation and equipment; specifically, part of an organisation. A formation is specified as a Unit.\r\nOne aim of Unit is to permit unique specification of tables of organisation and equipment (referred to in this model as Establishment) for any unit of interest within the scope of the model. A second aim is to provide information that is necessary for generating unit symbology for situation displays.\r\n\r\nEach nation has a different way of classifying its own units. The model supports the representation of as many types of Units as possible (within the constraints of common sense). It should be recognised that the manner of classifying units may not correspond to national classification policy. However, national implementations of external displays for operational users can (and should) be built to support the national doctrine and naming conventions. The internal classification within a C2 application (based on the model) can be entirely invisible to the user of that application.",
       "mimId": "EAID_4B936657_D82B_483f_B265_EC3DDA777A33"
     },
     {
@@ -8911,7 +8911,7 @@
       "source": "MIM 5.3",
       "label": "Command support unit",
       "description": "A Unit that provides command support elements to assist commanders in the exercise of command.",
-      "info": "Command support elements include:\n-all types of staff;\n-communications, intelligence and information systems that provide a range of command and control tools;\n-a life support element to protect, sustain and move the commander and his staff; and\n-standard procedures which focus command and staff effort.</li>",
+      "info": "Command support elements include:\r\n-all types of staff;\r\n-communications, intelligence and information systems that provide a range of command and control tools;\r\n-a life support element to protect, sustain and move the commander and his staff; and\r\n-standard procedures which focus command and staff effort.</li>",
       "mimId": "EAID_FAD147B4_D8AB_4906_9858_B2DD5DBA5931"
     },
     {
@@ -9018,7 +9018,7 @@
       "source": "MIM 5.3",
       "label": "Feature",
       "description": "An Object that encompasses meteorological, geographic, or control features of military significance.",
-      "info": "Features can be either natural features that may influence operations or artificial features representing administrative, political, or tactical constraints to be taken into account.\nFeatures are used to describe characteristics, phenomena, or other similar objects that are associated with a geographic location. These entities are of interest in the operational arena, and may be administratively defined or occur naturally.",
+      "info": "Features can be either natural features that may influence operations or artificial features representing administrative, political, or tactical constraints to be taken into account.\r\nFeatures are used to describe characteristics, phenomena, or other similar objects that are associated with a geographic location. These entities are of interest in the operational arena, and may be administratively defined or occur naturally.",
       "mimId": "EAID_E397B397_50D1_4560_87F3_4C09EAF174C5"
     },
     {
@@ -9197,7 +9197,7 @@
       "kind": "category",
       "categoryName": "DataExfiltration",
       "source": "CyberDEM (SISO-REF-072-2024)",
-      "description": "Data Exfiltration is the unauthorized copying, transfer or retrieval of data from a computer or server. Data exfiltration is a malicious activity performed through various different techniques, typically by cybercriminals over the Internet or other network. [Techopedia] Data Exfiltration is an abstract class intended as an organizational construct.\nCyberEvent.Target identifies the data being exfiltrated. CyberEvent.ActorID identifies the actor performing the exfiltration.",
+      "description": "Data Exfiltration is the unauthorized copying, transfer or retrieval of data from a computer or server. Data exfiltration is a malicious activity performed through various different techniques, typically by cybercriminals over the Internet or other network. [Techopedia] Data Exfiltration is an abstract class intended as an organizational construct.\r\nCyberEvent.Target identifies the data being exfiltrated. CyberEvent.ActorID identifies the actor performing the exfiltration.",
       "label": "Data exfiltration"
     },
     {

@@ -16,7 +16,7 @@ window.TreeView = window.TreeView || (() => {
     }
 
 
-    async function init(containerId = 'tree-chart', jsonPath = 'data/class-hierarchy2.json') {
+    async function init(containerId = 'tree-chart', jsonPath = 'data/class-hierarchy3.json') {
         const el = document.getElementById(containerId);
         const chart = echarts.init(el, null, { renderer: 'canvas' });
 

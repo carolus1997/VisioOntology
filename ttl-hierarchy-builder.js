@@ -4,11 +4,11 @@ import { Parser } from "n3";
 
 // === ⚙️ CONFIG ===
 const INPUT_FILES = [
-    "./core-ontology-schema_v03.ttl",
-    "./core-ontology-concepts_v0.7.ttl"
+    "./core-ontology-schema_v06.ttl",
+    "./core-ontology-concepts_v0.12.ttl"
 ];
-const OUTPUT_HIERARCHY = "./data/class-hierarchy2.json";
-const OUTPUT_ONTOLOGY = "./data/ontology2.json";
+const OUTPUT_HIERARCHY = "./data/class-hierarchy3.json";
+const OUTPUT_ONTOLOGY = "./data/ontology3.json";
 
 // === 🔧 AUXILIARES ===
 function simplify(uri) {

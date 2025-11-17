@@ -101,7 +101,7 @@ window.RelationGraph = (() => {
         neighborsMap.get(s).add(t);
         neighborsMap.get(t).add(s);
       }
-      // ⚙️ Si solo uno existe, se registra igualmente el otro
+      // Si solo uno existe, se registra igualmente el otro
       else if (hasS && !hasT) {
         if (!neighborsMap.has(s)) neighborsMap.set(s, new Set());
         neighborsMap.get(s).add(t);
@@ -150,7 +150,7 @@ window.RelationGraph = (() => {
   }
 
 
-  async function init(containerId = 'relation-graph', ontologyPath = '../data/ontology.json') {
+  async function init(containerId = 'relation-graph', ontologyPath = '../data/ontology3.json') {
     const container = document.getElementById(containerId);
     if (!container) return showError(`No se encontró el contenedor #${containerId}`);
     const chart = echarts.init(container);

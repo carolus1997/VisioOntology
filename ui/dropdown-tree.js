@@ -4,7 +4,7 @@
 window.DropdownTree = (() => {
   let container;
 
-  async function init(containerId = 'dropdown', hierarchyPath = 'data/class-hierarchy2.json'){
+  async function init(containerId = 'dropdown', hierarchyPath = 'data/class-hierarchy3.json'){
 
     container = document.getElementById(containerId);
     if (!container) return console.error('[DropdownTree] No se encontró el contenedor');

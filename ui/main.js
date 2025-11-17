@@ -117,7 +117,7 @@ async function addFullscreenButton(containerId) {
       console.error('❌ Error cargando descriptor:', err);
     }
 
-    // === Renderizado del gráfico (nuevo contenedor limpio) ===
+  
     // === Renderizado del gráfico con conservación de estado ===
     try {
       if (isTree) {
