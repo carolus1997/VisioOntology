@@ -1,5 +1,5 @@
 window.TreeView = window.TreeView || (() => {
-    console.log('🟢 Definiendo TreeView global');
+    console.log('Definiendo TreeView global');
 
     // Control de instancias múltiples (modo normal / fullscreen)
     const instances = new Map(); // containerId → { chart, container, currentNode }
@@ -100,7 +100,7 @@ window.TreeView = window.TreeView || (() => {
                 console.warn('[TreeView] No se pudo cargar/mezclar ontology2.json:', e);
             }
 
-            // === 🎨 Colorea cada línea según el color del nodo padre ===
+            // === Colorea cada línea según el color del nodo padre ===
             function colorForOrigin(n) {
                 const src = (n?.source || n?.info || n?.data?.source || n?.data?.info || '').toLowerCase();
                 if (src.includes('mim')) return '#00e68a';           // Verde MIM
@@ -158,7 +158,7 @@ window.TreeView = window.TreeView || (() => {
                         scaleLimit: { min: 0.5, max: 3 },
                         zoom: 1.1,
 
-                        // 🌈 Coloreado dinámico
+                        //  Coloreado dinámico
                         lineStyle: {
                             color: params => {
                                 // 🔹 Usar directamente el color ya calculado en applyLineColors()
@@ -229,7 +229,7 @@ window.TreeView = window.TreeView || (() => {
                 ]
             };
 
-            console.log('📊 Datos del árbol cargados:', data);
+            console.log(' Datos del árbol cargados:', data);
 
 
 
@@ -242,7 +242,7 @@ window.TreeView = window.TreeView || (() => {
 
             chart.setOption(option);
 
-            // 🧮 Forzar el cálculo completo del layout de todos los nodos visibles
+            //  Forzar el cálculo completo del layout de todos los nodos visibles
             setTimeout(() => {
                 chart.dispatchAction({ type: 'highlight', seriesIndex: 0, dataIndex: 0 });
                 chart.dispatchAction({ type: 'downplay', seriesIndex: 0, dataIndex: 0 });
@@ -251,18 +251,18 @@ window.TreeView = window.TreeView || (() => {
             }, 500);
 
 
-            // 🔧 Asegura que el canvas no limite el renderizado de líneas externas
+            //  Asegura que el canvas no limite el renderizado de líneas externas
             const canvas = el.querySelector('canvas');
             if (canvas) {
                 canvas.style.overflow = 'visible';
                 canvas.style.position = 'relative';
             }
 
-            // === 🧭 Interacción: highlight hacia los padres ===
+            // ===  Interacción: highlight hacia los padres ===
             let parentMap = {};   // hijo → padre
             let lastHighlighted = [];
 
-            // 🔹 Construye el mapa de padres (ejecutar tras cargar el JSON)
+            //  Construye el mapa de padres (ejecutar tras cargar el JSON)
             function buildParentMap(node, parent = null) {
                 if (!node) return;
                 if (node.name) parentMap[node.name] = parent ? parent.name : null;
@@ -271,7 +271,7 @@ window.TreeView = window.TreeView || (() => {
             // Llamar a buildParentMap(data) justo después de cargar los datos del árbol
 
 
-            // 🔹 Hover sobre un nodo → resalta toda su cadena de padres
+            //  Hover sobre un nodo → resalta toda su cadena de padres
             chart.on('mouseover', params => {
                 if (!params?.data || params.data.invisibleRoot) return;
 
@@ -279,16 +279,16 @@ window.TreeView = window.TreeView || (() => {
                 const tree = series.getData().tree;
                 const node = tree.getNodeByDataIndex(params.dataIndex);
 
-                // ✅ Esperar a que ECharts termine completamente el render
+                //  Esperar a que ECharts termine completamente el render
                 const drawOnce = () => {
-                    // ⚙️ Forzar un pequeño retraso para asegurar que layout esté disponible
+                    //  Forzar un pequeño retraso para asegurar que layout esté disponible
                     requestAnimationFrame(() => {
                         drawParentLines(tree, series.getData(), node);
                     });
                     chart.off('finished', drawOnce); // desconectamos tras ejecutarse
                 };
 
-                // 🔸 Si el gráfico ya está listo, no esperamos el evento
+                //  Si el gráfico ya está listo, no esperamos el evento
                 if (chart.isDisposed()) return;
                 if (chart._chartsViews?.length) {
                     // Si ya hay datos renderizados, dibuja directamente con 1 frame de retardo
@@ -299,7 +299,7 @@ window.TreeView = window.TreeView || (() => {
                 }
             });
 
-            // 🔹 Al salir del nodo → limpia los resaltados
+            //  Al salir del nodo → limpia los resaltados
             chart.on('mouseout', () => {
                 lastHighlighted.forEach(name =>
                     chart.dispatchAction({ type: 'downplay', name })
@@ -310,17 +310,17 @@ window.TreeView = window.TreeView || (() => {
 
             buildParentMap(data);
 
-            // === ✳️ Overlay de líneas ascendentes (añadir tras buildParentMap y chart.setOption) ===
+            // ===  Overlay de líneas ascendentes (añadir tras buildParentMap y chart.setOption) ===
             const zr = chart.getZr();
             let overlayGroups = [];
 
-            // 🔹 Limpia líneas y puntos previos
+            //  Limpia líneas y puntos previos
             function clearOverlay() {
                 overlayGroups.forEach(g => zr.remove(g));
                 overlayGroups = [];
             }
 
-            // 🔹 Dibuja una línea coloreada según el origen del nodo
+            //  Dibuja una línea coloreada según el origen del nodo
             function drawConnectionLine(p1, p2, node) {
                 const color = colorForOrigin(node);
 
@@ -340,7 +340,7 @@ window.TreeView = window.TreeView || (() => {
                 overlayGroups.push(line);
             }
 
-            // 🔹 Dibuja un punto brillante
+            //  Dibuja un punto brillante
             function drawGlowPoint(p) {
                 const dot = new echarts.graphic.Circle({
                     shape: { cx: p.x, cy: p.y, r: 3.5 },
@@ -356,7 +356,7 @@ window.TreeView = window.TreeView || (() => {
                 overlayGroups.push(dot);
             }
 
-            // === 🩵 Función auxiliar para dibujar desde un nodo hacia sus padres (con color del padre) ===
+            // ===  Función auxiliar para dibujar desde un nodo hacia sus padres (con color del padre) ===
             function drawParentLines(tree, data, node) {
                 if (!tree || !data || !node) {
                     console.warn('[TreeView] drawParentLines: parámetros inválidos', { tree: !!tree, data: !!data, node });
@@ -457,19 +457,19 @@ window.TreeView = window.TreeView || (() => {
             chart.on('click', params => {
                 if (!params?.data || params.data.invisibleRoot) return;
 
-                // 🔸 Aseguramos que todos los IDs van con prefijo CAT_
+                //  Aseguramos que todos los IDs van con prefijo CAT_
                 let nodeId = params.data.id || params.data.name;
                 if (!nodeId.startsWith('CAT_')) nodeId = 'CAT_' + nodeId;
 
                 console.log(`🟢 TreeView seleccionó nodo: ${nodeId}`);
                 window.dispatchEvent(new CustomEvent('node:select', { detail: { id: nodeId } }));
 
-                // 🧭 Mostrar Descriptor (modo normal)
+                //  Mostrar Descriptor (modo normal)
                 if (window.Descriptor && typeof window.Descriptor._render === 'function') {
                     window.Descriptor._render(nodeId);
                 }
 
-                // 🧩 Si hay overlay (fullscreen)
+                //  Si hay overlay (fullscreen)
                 if (window.DescriptorOverlay && document.querySelector('.fullscreen-active')) {
                     window.DescriptorOverlay.show(nodeId);
                 }
@@ -590,7 +590,7 @@ window.TreeView = window.TreeView || (() => {
     }
 
     // ======================================================
-    // 🔸 Restaurar estado en un nuevo contenedor (fullscreen)
+    //  Restaurar estado en un nuevo contenedor (fullscreen)
     async function restoreState(containerId, hierarchyPath, state) {
         const el = document.getElementById(containerId);
         if (!el) return console.warn(`[TreeView] No se encontró contenedor ${containerId}`);
@@ -611,7 +611,7 @@ window.TreeView = window.TreeView || (() => {
                 let nodeId = base.startsWith('CAT_') ? base : 'CAT_' + base;
                 inst.currentNode = nodeId;
 
-                console.log(`🌳 [TreeView] Nodo seleccionado: ${nodeId}`);
+                console.log(` [TreeView] Nodo seleccionado: ${nodeId}`);
                 window.dispatchEvent(new CustomEvent('node:select', { detail: { id: nodeId } }));
                 if (window.Descriptor?._render) window.Descriptor._render(nodeId);
             });

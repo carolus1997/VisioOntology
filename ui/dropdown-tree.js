@@ -75,7 +75,7 @@ window.DropdownTree = (() => {
       label.textContent = node.name;
       label.dataset.nodeId = node.id || ('CAT_' + node.name);
       label.addEventListener('click', () => {
-        console.log(`📂 Nodo desde DropdownTree: ${node.name}`);
+        console.log(`Nodo desde DropdownTree: ${node.name}`);
         window.dispatchEvent(new CustomEvent('dropdown:change', { detail: { root: node.name } }));
       });
       li.appendChild(label);
@@ -91,7 +91,7 @@ window.DropdownTree = (() => {
     return ul;
   }
 
-  // === 🌀 Animación altura real ===
+  // === Animación altura real ===
   function toggleNode(li) {
     const ul = li.querySelector(':scope > ul');
     const isExpanding = !li.classList.contains('expanded');
@@ -154,7 +154,7 @@ window.DropdownTree = (() => {
     container.querySelectorAll('li.expanded').forEach(li => collapseBranch(li));
   }
 
-  // === 🟢 Resaltar desde TreeView ===
+  // === Resaltar desde TreeView ===
   function highlightNode(nodeId) {
     if (!container || !nodeId) return;
 

@@ -76,8 +76,8 @@ async function addFullscreenButton(containerId) {
   // Evento de click
   btn.addEventListener('click', async () => {
     const isTree = containerId.includes('tree');
-    const ontologyPath = 'data/ontology2.json';
-    const hierarchyPath = 'data/class-hierarchy2.json';
+    const ontologyPath = 'data/ontology3.json';
+    const hierarchyPath = 'data/class-hierarchy3.json';
 
     // === Estructura principal del modo fullscreen ===
     const layout = document.createElement('div');
@@ -117,7 +117,7 @@ async function addFullscreenButton(containerId) {
       console.error('❌ Error cargando descriptor:', err);
     }
 
-  
+
     // === Renderizado del gráfico con conservación de estado ===
     try {
       if (isTree) {
@@ -128,6 +128,7 @@ async function addFullscreenButton(containerId) {
         const state = window.RelationGraph?.getState(containerId);
         if (state) {
           await RelationGraph.restoreState(`${containerId}-fullscreen`, ontologyPath, state);
+        
           console.log('🔁 RelationGraph restaurado con su estado previo');
         } else {
           await RelationGraph.init(`${containerId}-fullscreen`, ontologyPath);
@@ -156,13 +157,13 @@ async function addFullscreenButton(containerId) {
     // === Cerrar pantalla completa ===
     // dentro del listener del botón de cerrar en addFullscreenButton(...)
     closeBtn.addEventListener('click', () => {
-      // === 🔹 Capturar estado actual del RelationGraph fullscreen antes de cerrar ===
+
       let lastState = null;
       if (!isTree && window.RelationGraph?.getState) {
         lastState = window.RelationGraph.getState(`${containerId}-fullscreen`);
       }
 
-      // === 🔸 Destruir fullscreen ===
+      // Ahora SÍ puedes destruir:
       const chart = echarts.getInstanceByDom(chartDiv);
       if (chart) chart.dispose();
       layout.remove();
@@ -171,14 +172,14 @@ async function addFullscreenButton(containerId) {
       // === 🔹 Propagar sincronización a vista principal ===
       if (lastState) {
         const id = lastState.center;
-        console.log(`🔁 Sincronizando con vista principal: ${id}`);
+        console.log(`Sincronizando con vista principal: ${id}`);
 
         // 1. Actualizar Descriptor
         if (window.Descriptor?._render) {
           window.Descriptor._render(id);
         }
 
-        // 🔹 Si existía overlay visible, ciérralo
+        // Cerrar overlay antes de sincronizar el descriptor normal
         if (window.DescriptorOverlay) {
           window.DescriptorOverlay.hide();
         }

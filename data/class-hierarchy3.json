@@ -1,233 +1,291 @@
 [
   {
     "name": "Capability",
+    "id": "Capability",
     "children": [
       {
-        "name": "CapabilityCyberC2",
+        "name": "CyberC2",
+        "id": "Capability_CyberC2",
         "children": []
       },
       {
-        "name": "CapabilityCyberDefensive",
+        "name": "CyberDefensive",
+        "id": "Capability_CyberDefensive",
         "children": []
       },
       {
-        "name": "CapabilityCyberForceProtection",
+        "name": "CyberForceProtection",
+        "id": "Capability_CyberForceProtection",
         "children": []
       },
       {
-        "name": "CapabilityCyberISR",
+        "name": "CyberISR",
+        "id": "Capability_CyberISR",
         "children": []
       },
       {
-        "name": "CapabilityCyberOffensive",
+        "name": "CyberOffensive",
+        "id": "Capability_CyberOffensive",
         "children": []
       },
       {
-        "name": "CapabilityCyberSupportCoordination",
+        "name": "CyberSupportCoordination",
+        "id": "Capability_CyberSupportCoordination",
         "children": []
       },
       {
-        "name": "CapabilityEngineering",
+        "name": "Engineering",
+        "id": "Capability_Engineering",
         "children": []
       },
       {
-        "name": "CapabilityFire",
+        "name": "Fire",
+        "id": "Capability_Fire",
         "children": []
       },
       {
-        "name": "CapabilityHandling",
+        "name": "Handling",
+        "id": "Capability_Handling",
         "children": []
       },
       {
-        "name": "CapabilityMaintenance",
+        "name": "Maintenance",
+        "id": "Capability_Maintenance",
         "children": []
       },
       {
-        "name": "CapabilityMobility",
+        "name": "Mobility",
+        "id": "Capability_Mobility",
         "children": []
       },
       {
-        "name": "CapabilityOperational",
+        "name": "Operational",
+        "id": "Capability_Operational",
         "children": []
       },
       {
-        "name": "CapabilityStorage",
+        "name": "Storage",
+        "id": "Capability_Storage",
         "children": []
       },
       {
-        "name": "CapabilitySupport",
+        "name": "Support",
+        "id": "Capability_Support",
         "children": []
       },
       {
-        "name": "CapabilitySurveillance",
+        "name": "Surveillance",
+        "id": "Capability_Surveillance",
         "children": []
       },
       {
-        "name": "CapabilityTransmission",
+        "name": "Transmission",
+        "id": "Capability_Transmission",
         "children": []
       }
     ]
   },
   {
     "name": "Category",
+    "id": "Category",
     "children": [
       {
         "name": "Action",
+        "id": "Action",
         "children": [
           {
             "name": "DualUseAction",
+            "id": "DualUseAction",
             "children": [
               {
                 "name": "Accident",
+                "id": "Accident",
                 "children": []
               },
               {
                 "name": "AttemptedCriminalActivity",
+                "id": "AttemptedCriminalActivity",
                 "children": []
               },
               {
                 "name": "Crime",
+                "id": "Crime",
                 "children": []
               },
               {
                 "name": "Incident",
+                "id": "Incident",
                 "children": []
               }
             ]
           },
           {
             "name": "MilitaryAction",
+            "id": "MilitaryAction",
             "children": [
               {
                 "name": "Combat",
+                "id": "Combat",
                 "children": []
               },
               {
                 "name": "CommandAndControl",
+                "id": "CommandAndControl",
                 "children": []
               },
               {
                 "name": "ProvideCombatServiceSupport",
+                "id": "ProvideCombatServiceSupport",
                 "children": [
                   {
                     "name": "Movement",
+                    "id": "Movement",
                     "children": []
                   },
                   {
                     "name": "Sustainment",
+                    "id": "Sustainment",
                     "children": []
                   }
                 ]
               },
               {
                 "name": "ProvideCombatSupport",
+                "id": "ProvideCombatSupport",
                 "children": [
                   {
-                    "name": "CBRNEvent",
+                    "name": "CBRN",
+                    "id": "CBRNEvent",
                     "children": []
                   },
                   {
                     "name": "CombatSearchAndRescue",
+                    "id": "CombatSearchAndRescue",
                     "children": []
                   },
                   {
-                    "name": "CyberEvent",
+                    "name": "Cyber",
+                    "id": "CyberEvent",
                     "children": [
                       {
                         "name": "CyberAcknowledge",
+                        "id": "CyberAcknowledge",
                         "children": []
                       },
                       {
                         "name": "CyberAction",
+                        "id": "CyberAction",
                         "children": [
                           {
                             "name": "CyberAdmin",
+                            "id": "CyberAdmin",
                             "children": []
                           },
                           {
                             "name": "CyberAttack",
+                            "id": "CyberAttack",
                             "children": [
                               {
                                 "name": "DataExfiltration",
+                                "id": "DataExfiltration",
                                 "children": []
                               },
                               {
                                 "name": "ManipulationAttack",
+                                "id": "ManipulationAttack",
                                 "children": []
                               },
                               {
                                 "name": "PhishingAttack",
+                                "id": "PhishingAttack",
                                 "children": []
                               }
                             ]
                           },
                           {
                             "name": "CyberDefend",
+                            "id": "CyberDefend",
                             "children": []
                           },
                           {
                             "name": "CyberRecon",
+                            "id": "CyberRecon",
                             "children": []
                           }
                         ]
                       },
                       {
                         "name": "CyberEffect",
+                        "id": "CyberEffect",
                         "children": [
                           {
                             "name": "Deny",
+                            "id": "Deny",
                             "children": [
                               {
                                 "name": "Degrade",
+                                "id": "Degrade",
                                 "children": [
                                   {
                                     "name": "CPULoadEffect",
+                                    "id": "CPULoadEffect",
                                     "children": []
                                   },
                                   {
                                     "name": "DelayEffect",
+                                    "id": "DelayEffect",
                                     "children": []
                                   },
                                   {
                                     "name": "DropEffect",
+                                    "id": "DropEffect",
                                     "children": []
                                   },
                                   {
                                     "name": "HardwareDegradeEffect",
+                                    "id": "HardwareDegradeEffect",
                                     "children": []
                                   },
                                   {
                                     "name": "JitterEffect",
+                                    "id": "JitterEffect",
                                     "children": []
                                   },
                                   {
                                     "name": "LoadRateEffect",
+                                    "id": "LoadRateEffect",
                                     "children": []
                                   },
                                   {
                                     "name": "MemoryUseEffect",
+                                    "id": "MemoryUseEffect",
                                     "children": []
                                   },
                                   {
                                     "name": "OtherDegradeEffect",
+                                    "id": "OtherDegradeEffect",
                                     "children": []
                                   }
                                 ]
                               },
                               {
                                 "name": "Destroy",
+                                "id": "Destroy",
                                 "children": [
                                   {
                                     "name": "HardwareDamageEffect",
+                                    "id": "HardwareDamageEffect",
                                     "children": []
                                   }
                                 ]
                               },
                               {
                                 "name": "Disrupt",
+                                "id": "Disrupt",
                                 "children": [
                                   {
                                     "name": "BlockTrafficEffect",
+                                    "id": "BlockTrafficEffect",
                                     "children": []
                                   }
                                 ]
@@ -236,13 +294,16 @@
                           },
                           {
                             "name": "Detect",
+                            "id": "Detect",
                             "children": []
                           },
                           {
                             "name": "Manipulate",
+                            "id": "Manipulate",
                             "children": [
                               {
                                 "name": "ManipulationEffect",
+                                "id": "ManipulationEffect",
                                 "children": []
                               }
                             ]
@@ -251,57 +312,70 @@
                       },
                       {
                         "name": "CyberOrder",
+                        "id": "CyberOrder",
                         "children": []
                       }
                     ]
                   },
                   {
                     "name": "Engineering",
+                    "id": "Engineering",
                     "children": []
                   },
                   {
-                    "name": "ExplosiveEvent",
+                    "name": "Explosive",
+                    "id": "ExplosiveEvent",
                     "children": []
                   },
                   {
                     "name": "WeaponFire",
+                    "id": "WeaponFire",
                     "children": []
                   }
                 ]
               },
               {
                 "name": "ProvideCommandSupport",
+                "id": "ProvideCommandSupport",
                 "children": [
                   {
                     "name": "ApplyOperationsSecurityMeasures",
+                    "id": "ApplyOperationsSecurityMeasures",
                     "children": []
                   },
                   {
                     "name": "CISAction",
+                    "id": "CISAction",
                     "children": []
                   },
                   {
                     "name": "GeographicSupport",
+                    "id": "GeographicSupport",
                     "children": []
                   },
                   {
                     "name": "ISR",
+                    "id": "ISR",
                     "children": []
                   },
                   {
                     "name": "InformationOperation",
+                    "id": "InformationOperation",
                     "children": []
                   },
                   {
                     "name": "LegalAction",
+                    "id": "LegalAction",
                     "children": []
                   },
                   {
                     "name": "PerformCivilMilitaryCooperation",
+                    "id": "PerformCivilMilitaryCooperation",
                     "children": []
                   },
                   {
                     "name": "Training",
+                    "id": "Training",
                     "children": []
                   }
                 ]
@@ -310,87 +384,109 @@
           },
           {
             "name": "SociopoliticalAction",
+            "id": "SociopoliticalAction",
             "children": []
           }
         ]
       },
       {
         "name": "Mitre",
+        "id": "Mitre",
         "children": [
           {
-            "name": "MitreDefense",
+            "name": "Defense",
+            "id": "MitreDefense",
             "children": []
           },
           {
-            "name": "MitreMitigation",
+            "name": "Mitigation",
+            "id": "MitreMitigation",
             "children": []
           },
           {
-            "name": "MitreSubtechnique",
+            "name": "Subtechnique",
+            "id": "MitreSubtechnique",
             "children": []
           }
         ]
       },
       {
         "name": "Object",
+        "id": "Object",
         "children": [
           {
             "name": "Actor",
+            "id": "Actor",
             "children": [
               {
                 "name": "Organisation",
+                "id": "Organisation",
                 "children": [
                   {
-                    "name": "CivilianPost",
+                    "name": "Civilian",
+                    "id": "CivilianPost",
                     "children": []
                   },
                   {
-                    "name": "GovernmentOrganisation",
+                    "name": "Government",
+                    "id": "GovernmentOrganisation",
                     "children": [
                       {
-                        "name": "InternalSecurityForcesOrganisation",
+                        "name": "InternalSecurityForces",
+                        "id": "InternalSecurityForcesOrganisation",
                         "children": []
                       },
                       {
-                        "name": "InternationalCivilGovernmentalOrganisation",
+                        "name": "InternationalCivilGovernmental",
+                        "id": "InternationalCivilGovernmentalOrganisation",
                         "children": []
                       },
                       {
-                        "name": "InternationalCivilOrMilitaryGovernmentalOrganisation",
+                        "name": "InternationalCivilOrMilitaryGovernmental",
+                        "id": "InternationalCivilOrMilitaryGovernmentalOrganisation",
                         "children": []
                       },
                       {
-                        "name": "MilitaryOrganisation",
+                        "name": "Military",
+                        "id": "MilitaryOrganisation",
                         "children": [
                           {
-                            "name": "MilitaryPost",
+                            "name": "Military",
+                            "id": "MilitaryPost",
                             "children": []
                           },
                           {
                             "name": "Unit",
+                            "id": "Unit",
                             "children": [
                               {
-                                "name": "CombatServiceSupportUnit",
+                                "name": "CombatServiceSupport",
+                                "id": "CombatServiceSupportUnit",
                                 "children": []
                               },
                               {
-                                "name": "CombatSupportUnit",
+                                "name": "CombatSupport",
+                                "id": "CombatSupportUnit",
                                 "children": []
                               },
                               {
-                                "name": "CombatUnit",
+                                "name": "Combat",
+                                "id": "CombatUnit",
                                 "children": []
                               },
                               {
-                                "name": "CommandSupportUnit",
+                                "name": "CommandSupport",
+                                "id": "CommandSupportUnit",
                                 "children": []
                               },
                               {
-                                "name": "ObserverUnit",
+                                "name": "Observer",
+                                "id": "ObserverUnit",
                                 "children": []
                               },
                               {
-                                "name": "SpecialOperationsForcesUnit",
+                                "name": "SpecialOperationsForces",
+                                "id": "SpecialOperationsForcesUnit",
                                 "children": []
                               }
                             ]
@@ -398,152 +494,189 @@
                         ]
                       },
                       {
-                        "name": "NationalCivilGovernmentalOrganisation",
+                        "name": "NationalCivilGovernmental",
+                        "id": "NationalCivilGovernmentalOrganisation",
                         "children": []
                       }
                     ]
                   },
                   {
                     "name": "GroupOrganisation",
+                    "id": "GroupOrganisation",
                     "children": [
                       {
                         "name": "CivilianConvoy",
+                        "id": "CivilianConvoy",
                         "children": []
                       },
                       {
-                        "name": "MediaGroup",
+                        "name": "Media",
+                        "id": "MediaGroup",
                         "children": [
                           {
-                            "name": "InternationalMediaGroup",
+                            "name": "InternationalMedia",
+                            "id": "InternationalMediaGroup",
                             "children": []
                           },
                           {
-                            "name": "LocalMediaGroup",
+                            "name": "LocalMedia",
+                            "id": "LocalMediaGroup",
                             "children": []
                           },
                           {
-                            "name": "NationalMediaGroup",
+                            "name": "NationalMedia",
+                            "id": "NationalMediaGroup",
                             "children": []
                           }
                         ]
                       },
                       {
-                        "name": "OtherGroupOrganisation",
+                        "name": "Other",
+                        "id": "OtherGroupOrganisation",
                         "children": [
                           {
-                            "name": "OtherGroupOrganisationContractorGroup",
+                            "name": "Contractor",
+                            "id": "OtherGroupOrganisation_ContractorGroup",
                             "children": []
                           },
                           {
-                            "name": "OtherGroupOrganisationCriminalGroup",
+                            "name": "Criminal",
+                            "id": "OtherGroupOrganisation_CriminalGroup",
                             "children": []
                           },
                           {
-                            "name": "OtherGroupOrganisationDisplacedPersonGroup",
+                            "name": "DisplacedPerson",
+                            "id": "OtherGroupOrganisation_DisplacedPersonGroup",
                             "children": []
                           },
                           {
-                            "name": "OtherGroupOrganisationEducationalGroup",
+                            "name": "Educational",
+                            "id": "OtherGroupOrganisation_EducationalGroup",
                             "children": []
                           },
                           {
-                            "name": "OtherGroupOrganisationFinancialGroup",
+                            "name": "Financial",
+                            "id": "OtherGroupOrganisation_FinancialGroup",
                             "children": []
                           },
                           {
-                            "name": "OtherGroupOrganisationForeignFightersGroup",
+                            "name": "ForeignFighters",
+                            "id": "OtherGroupOrganisation_ForeignFightersGroup",
                             "children": []
                           },
                           {
-                            "name": "OtherGroupOrganisationGangGroup",
+                            "name": "Gang",
+                            "id": "OtherGroupOrganisation_GangGroup",
                             "children": []
                           },
                           {
-                            "name": "OtherGroupOrganisationInsurgentGroup",
+                            "name": "Insurgent",
+                            "id": "OtherGroupOrganisation_InsurgentGroup",
                             "children": []
                           },
                           {
-                            "name": "OtherGroupOrganisationIntellectualGroup",
+                            "name": "Intellectual",
+                            "id": "OtherGroupOrganisation_IntellectualGroup",
                             "children": []
                           },
                           {
-                            "name": "OtherGroupOrganisationIntelligenceGroup",
+                            "name": "Intelligence",
+                            "id": "OtherGroupOrganisation_IntelligenceGroup",
                             "children": []
                           },
                           {
-                            "name": "OtherGroupOrganisationInternallyDisplacedPersonGroup",
+                            "name": "InternallyDisplacedPerson",
+                            "id": "OtherGroupOrganisation_InternallyDisplacedPersonGroup",
                             "children": []
                           },
                           {
-                            "name": "OtherGroupOrganisationJournalistGroup",
+                            "name": "Journalist",
+                            "id": "OtherGroupOrganisation_JournalistGroup",
                             "children": []
                           },
                           {
-                            "name": "OtherGroupOrganisationJudicialGroup",
+                            "name": "Judicial",
+                            "id": "OtherGroupOrganisation_JudicialGroup",
                             "children": []
                           },
                           {
-                            "name": "OtherGroupOrganisationLandownerGroup",
+                            "name": "Landowner",
+                            "id": "OtherGroupOrganisation_LandownerGroup",
                             "children": []
                           },
                           {
-                            "name": "OtherGroupOrganisationLocalInhabitantGroup",
+                            "name": "LocalInhabitant",
+                            "id": "OtherGroupOrganisation_LocalInhabitantGroup",
                             "children": []
                           },
                           {
-                            "name": "OtherGroupOrganisationMedicalGroup",
+                            "name": "Medical",
+                            "id": "OtherGroupOrganisation_MedicalGroup",
                             "children": []
                           },
                           {
-                            "name": "OtherGroupOrganisationMerchantGroup",
+                            "name": "Merchant",
+                            "id": "OtherGroupOrganisation_MerchantGroup",
                             "children": []
                           },
                           {
-                            "name": "OtherGroupOrganisationPoliceChiefGroup",
+                            "name": "PoliceChief",
+                            "id": "OtherGroupOrganisation_PoliceChiefGroup",
                             "children": []
                           },
                           {
-                            "name": "OtherGroupOrganisationPoliceGroup",
+                            "name": "Police",
+                            "id": "OtherGroupOrganisation_PoliceGroup",
                             "children": []
                           },
                           {
-                            "name": "OtherGroupOrganisationPoliticalGroup",
+                            "name": "Political",
+                            "id": "OtherGroupOrganisation_PoliticalGroup",
                             "children": []
                           },
                           {
-                            "name": "OtherGroupOrganisationPrisonerGroup",
+                            "name": "Prisoner",
+                            "id": "OtherGroupOrganisation_PrisonerGroup",
                             "children": []
                           },
                           {
-                            "name": "OtherGroupOrganisationPrisonerOfWarGroup",
+                            "name": "PrisonerOfWar",
+                            "id": "OtherGroupOrganisation_PrisonerOfWarGroup",
                             "children": []
                           },
                           {
-                            "name": "OtherGroupOrganisationRefugeeGroup",
+                            "name": "Refugee",
+                            "id": "OtherGroupOrganisation_RefugeeGroup",
                             "children": []
                           },
                           {
-                            "name": "OtherGroupOrganisationShuraGroup",
+                            "name": "Shura",
+                            "id": "OtherGroupOrganisation_ShuraGroup",
                             "children": []
                           },
                           {
-                            "name": "OtherGroupOrganisationSocialGroup",
+                            "name": "Social",
+                            "id": "OtherGroupOrganisation_SocialGroup",
                             "children": []
                           },
                           {
-                            "name": "OtherGroupOrganisationTerroristGroup",
+                            "name": "Terrorist",
+                            "id": "OtherGroupOrganisation_TerroristGroup",
                             "children": []
                           },
                           {
-                            "name": "OtherGroupOrganisationTribalGroup",
+                            "name": "Tribal",
+                            "id": "OtherGroupOrganisation_TribalGroup",
                             "children": []
                           },
                           {
-                            "name": "OtherGroupOrganisationVillageElderGroup",
+                            "name": "VillageElder",
+                            "id": "OtherGroupOrganisation_VillageElderGroup",
                             "children": []
                           },
                           {
-                            "name": "OtherGroupOrganisationWriterGroup",
+                            "name": "Writer",
+                            "id": "OtherGroupOrganisation_WriterGroup",
                             "children": []
                           }
                         ]
@@ -551,24 +684,29 @@
                     ]
                   },
                   {
-                    "name": "PrivateSectorOrganisation",
+                    "name": "PrivateSector",
+                    "id": "PrivateSectorOrganisation",
                     "children": []
                   }
                 ]
               },
               {
                 "name": "Person",
+                "id": "Person",
                 "children": [
                   {
                     "name": "Civilian",
+                    "id": "Civilian",
                     "children": []
                   },
                   {
                     "name": "Military",
+                    "id": "Military",
                     "children": []
                   },
                   {
                     "name": "Paramilitary",
+                    "id": "Paramilitary",
                     "children": []
                   }
                 ]
@@ -577,130 +715,162 @@
           },
           {
             "name": "CyberObject",
+            "id": "CyberObject",
             "children": [
               {
                 "name": "Application",
+                "id": "Application",
                 "children": [
                   {
                     "name": "OperatingSystem",
+                    "id": "OperatingSystem",
                     "children": []
                   },
                   {
                     "name": "Service",
+                    "id": "Service",
                     "children": [
                       {
-                        "name": "ICTService",
+                        "name": "ICT",
+                        "id": "ICTService",
                         "children": [
                           {
                             "name": "DataTransfer",
+                            "id": "DataTransfer",
                             "children": [
                               {
                                 "name": "FileTransferProtocol",
+                                "id": "FileTransferProtocol",
                                 "children": []
                               },
                               {
                                 "name": "HypertextTransferProtocol",
+                                "id": "HypertextTransferProtocol",
                                 "children": []
                               },
                               {
                                 "name": "RemoteAccess",
+                                "id": "RemoteAccess",
                                 "children": []
                               },
                               {
                                 "name": "Telnet",
+                                "id": "Telnet",
                                 "children": []
                               }
                             ]
                           },
                           {
                             "name": "Facsimile",
+                            "id": "Facsimile",
                             "children": []
                           },
                           {
                             "name": "IdentificationFriendOrFoe",
+                            "id": "IdentificationFriendOrFoe",
                             "children": [
                               {
                                 "name": "IFFMode1",
+                                "id": "IFFMode1",
                                 "children": []
                               },
                               {
                                 "name": "IFFMode2",
+                                "id": "IFFMode2",
                                 "children": []
                               },
                               {
                                 "name": "IFFMode4",
+                                "id": "IFFMode4",
                                 "children": []
                               },
                               {
                                 "name": "IFFMode5",
+                                "id": "IFFMode5",
                                 "children": []
                               },
                               {
                                 "name": "IFFModeS",
+                                "id": "IFFModeS",
                                 "children": []
                               }
                             ]
                           },
                           {
-                            "name": "ImageService",
+                            "name": "Image",
+                            "id": "ImageService",
                             "children": []
                           },
                           {
-                            "name": "MIP31Service",
+                            "name": "MIP31",
+                            "id": "MIP31Service",
                             "children": []
                           },
                           {
-                            "name": "MIP4IESService",
+                            "name": "MIP4IES",
+                            "id": "MIP4IESService",
                             "children": []
                           },
                           {
-                            "name": "MessageHandlingService",
+                            "name": "MessageHandling",
+                            "id": "MessageHandlingService",
                             "children": [
                               {
                                 "name": "Directory",
+                                "id": "Directory",
                                 "children": []
                               },
                               {
                                 "name": "ElectronicMail",
+                                "id": "ElectronicMail",
                                 "children": []
                               }
                             ]
                           },
                           {
                             "name": "TacticalDataLink",
+                            "id": "TacticalDataLink",
                             "children": [
                               {
                                 "name": "DataLink16",
+                                "id": "DataLink16",
                                 "children": []
                               },
                               {
                                 "name": "Link1",
+                                "id": "Link1",
                                 "children": []
                               },
                               {
                                 "name": "Link11B",
+                                "id": "Link11B",
                                 "children": []
                               },
                               {
                                 "name": "Link22",
+                                "id": "Link22",
                                 "children": []
                               },
                               {
                                 "name": "Link4",
+                                "id": "Link4",
                                 "children": []
                               },
                               {
                                 "name": "VoiceLink16",
+                                "id": "VoiceLink16",
                                 "children": []
                               }
                             ]
                           },
                           {
-                            "name": "VideoService",
+                            "name": "Video",
+                            "id": "VideoService",
                             "children": []
                           },
                           {
-                            "name": "VoiceService",
+                            "name": "Voice",
+                            "id": "VoiceService",
                             "children": []
                           }
                         ]
@@ -711,563 +881,700 @@
               },
               {
                 "name": "Data",
+                "id": "Data",
                 "children": [
                   {
                     "name": "CommunicationData",
+                    "id": "CommunicationData",
                     "children": []
                   }
                 ]
               },
               {
                 "name": "Device",
+                "id": "Device",
                 "children": []
               },
               {
                 "name": "Network",
+                "id": "Network",
                 "children": []
               },
               {
                 "name": "NetworkLink",
+                "id": "NetworkLink",
                 "children": [
                   {
                     "name": "LogicalNetworkLink",
+                    "id": "LogicalNetworkLink",
                     "children": []
                   },
                   {
                     "name": "PhysicalNetworkLink",
+                    "id": "PhysicalNetworkLink",
                     "children": []
                   }
                 ]
               },
               {
                 "name": "Persona",
+                "id": "Persona",
                 "children": []
               },
               {
                 "name": "System",
+                "id": "System",
                 "children": []
               }
             ]
           },
           {
             "name": "Facility",
+            "id": "Facility",
             "children": [
               {
-                "name": "AccommodationFacility",
+                "name": "Accommodation",
+                "id": "AccommodationFacility",
                 "children": [
                   {
-                    "name": "AccommodationFacilityApartmentBuilding",
+                    "name": "ApartmentBuilding",
+                    "id": "AccommodationFacility_ApartmentBuilding",
                     "children": []
                   },
                   {
-                    "name": "AccommodationFacilityBuilding",
+                    "name": "Building",
+                    "id": "AccommodationFacility_Building",
                     "children": []
                   },
                   {
-                    "name": "AccommodationFacilityCamp",
+                    "name": "Camp",
+                    "id": "AccommodationFacility_Camp",
                     "children": []
                   },
                   {
-                    "name": "AccommodationFacilityCompound",
+                    "name": "Compound",
+                    "id": "AccommodationFacility_Compound",
                     "children": []
                   },
                   {
-                    "name": "AccommodationFacilityHouse",
+                    "name": "House",
+                    "id": "AccommodationFacility_House",
                     "children": []
                   },
                   {
-                    "name": "AccommodationFacilityHut",
+                    "name": "Hut",
+                    "id": "AccommodationFacility_Hut",
                     "children": []
                   },
                   {
-                    "name": "AccommodationFacilityRowHouse",
+                    "name": "RowHouse",
+                    "id": "AccommodationFacility_RowHouse",
                     "children": []
                   },
                   {
-                    "name": "AccommodationFacilityShed",
+                    "name": "Shed",
+                    "id": "AccommodationFacility_Shed",
                     "children": []
                   },
                   {
-                    "name": "AccommodationFacilityUnitOfAccommodation",
+                    "name": "UnitOfAccommodation",
+                    "id": "AccommodationFacility_UnitOfAccommodation",
                     "children": []
                   }
                 ]
               },
               {
-                "name": "AgricultureFacility",
+                "name": "Agriculture",
+                "id": "AgricultureFacility",
                 "children": [
                   {
                     "name": "Cropland",
+                    "id": "Cropland",
                     "children": []
                   },
                   {
                     "name": "Farm",
+                    "id": "Farm",
                     "children": []
                   },
                   {
                     "name": "Orchard",
+                    "id": "Orchard",
                     "children": []
                   }
                 ]
               },
               {
                 "name": "BuiltUpArea",
+                "id": "BuiltUpArea",
                 "children": [
                   {
-                    "name": "BuiltUpAreaCity",
+                    "name": "City",
+                    "id": "BuiltUpArea_City",
                     "children": []
                   },
                   {
-                    "name": "BuiltUpAreaHamlet",
+                    "name": "Hamlet",
+                    "id": "BuiltUpArea_Hamlet",
                     "children": []
                   },
                   {
-                    "name": "BuiltUpAreaTown",
+                    "name": "Town",
+                    "id": "BuiltUpArea_Town",
                     "children": []
                   },
                   {
-                    "name": "BuiltUpAreaUrbanArea",
+                    "name": "UrbanArea",
+                    "id": "BuiltUpArea_UrbanArea",
                     "children": []
                   },
                   {
-                    "name": "BuiltUpAreaVillage",
+                    "name": "Village",
+                    "id": "BuiltUpArea_Village",
                     "children": []
                   }
                 ]
               },
               {
-                "name": "CommercialFacility",
+                "name": "Commercial",
+                "id": "CommercialFacility",
                 "children": [
                   {
                     "name": "Bank",
+                    "id": "Bank",
                     "children": []
                   },
                   {
                     "name": "Market",
+                    "id": "Market",
                     "children": []
                   },
                   {
                     "name": "Office",
+                    "id": "Office",
                     "children": []
                   },
                   {
                     "name": "Shop",
+                    "id": "Shop",
                     "children": []
                   }
                 ]
               },
               {
                 "name": "ControlMeasure",
+                "id": "ControlMeasure",
                 "children": [
                   {
                     "name": "CannibalizationPoint",
+                    "id": "CannibalizationPoint",
                     "children": []
                   },
                   {
                     "name": "CasualtyCollectionPoint",
+                    "id": "CasualtyCollectionPoint",
                     "children": []
                   },
                   {
-                    "name": "DecontaminationFacility",
+                    "name": "Decontamination",
+                    "id": "DecontaminationFacility",
                     "children": []
                   },
                   {
                     "name": "ForwardArmingAndRefuellingPoint",
+                    "id": "ForwardArmingAndRefuellingPoint",
                     "children": []
                   },
                   {
                     "name": "MaintenanceCollectionPoint",
+                    "id": "MaintenanceCollectionPoint",
                     "children": []
                   },
                   {
                     "name": "MedicalEvacuationPickupPoint",
+                    "id": "MedicalEvacuationPickupPoint",
                     "children": []
                   },
                   {
-                    "name": "ObservationPost",
+                    "name": "Observation",
+                    "id": "ObservationPost",
                     "children": []
                   },
                   {
                     "name": "PopulationHandlingArea",
+                    "id": "PopulationHandlingArea",
                     "children": []
                   },
                   {
                     "name": "RearmRefuelResupplyPoint",
+                    "id": "RearmRefuelResupplyPoint",
                     "children": []
                   },
                   {
                     "name": "RefuelOnTheMovePoint",
+                    "id": "RefuelOnTheMovePoint",
                     "children": []
                   },
                   {
                     "name": "SupplyDistributionPoint",
+                    "id": "SupplyDistributionPoint",
                     "children": []
                   },
                   {
                     "name": "SupportArea",
+                    "id": "SupportArea",
                     "children": []
                   },
                   {
-                    "name": "TrafficControlPost",
+                    "name": "TrafficControl",
+                    "id": "TrafficControlPost",
                     "children": []
                   }
                 ]
               },
               {
-                "name": "GovernmentFacility",
+                "name": "Government",
+                "id": "GovernmentFacility",
                 "children": [
                   {
                     "name": "CivilianMilitaryCoordinationCentre",
+                    "id": "CivilianMilitaryCoordinationCentre",
                     "children": []
                   },
                   {
                     "name": "GovernmentBuilding",
+                    "id": "GovernmentBuilding",
                     "children": []
                   },
                   {
                     "name": "GovernmentalLeadership",
+                    "id": "GovernmentalLeadership",
                     "children": []
                   },
                   {
-                    "name": "HeadquartersFacility",
+                    "name": "Headquarters",
+                    "id": "HeadquartersFacility",
                     "children": []
                   },
                   {
-                    "name": "LawEnforcementFacility",
+                    "name": "LawEnforcement",
+                    "id": "LawEnforcementFacility",
                     "children": [
                       {
                         "name": "PoliceCheckPoint",
+                        "id": "PoliceCheckPoint",
                         "children": []
                       },
                       {
                         "name": "PoliceStation",
+                        "id": "PoliceStation",
                         "children": []
                       }
                     ]
                   },
                   {
                     "name": "TownHall",
+                    "id": "TownHall",
                     "children": []
                   }
                 ]
               },
               {
-                "name": "IndustrialFacility",
+                "name": "Industrial",
+                "id": "IndustrialFacility",
                 "children": [
                   {
-                    "name": "CommercialManufacturingFacility",
+                    "name": "CommercialManufacturing",
+                    "id": "CommercialManufacturingFacility",
                     "children": []
                   },
                   {
-                    "name": "EnergyIndustryFacility",
+                    "name": "EnergyIndustry",
+                    "id": "EnergyIndustryFacility",
                     "children": []
                   },
                   {
-                    "name": "ExtractionFacility",
+                    "name": "Extraction",
+                    "id": "ExtractionFacility",
                     "children": []
                   },
                   {
-                    "name": "MaintenanceAndRepairFacility",
+                    "name": "MaintenanceAndRepair",
+                    "id": "MaintenanceAndRepairFacility",
                     "children": []
                   },
                   {
-                    "name": "MilitaryManufacturingFacility",
+                    "name": "MilitaryManufacturing",
+                    "id": "MilitaryManufacturingFacility",
                     "children": []
                   },
                   {
-                    "name": "ResearchAndTechnologyFacility",
+                    "name": "ResearchAndTechnology",
+                    "id": "ResearchAndTechnologyFacility",
                     "children": []
                   }
                 ]
               },
               {
-                "name": "MedicalFacility",
+                "name": "Medical",
+                "id": "MedicalFacility",
                 "children": []
               },
               {
-                "name": "MilitaryFacility",
+                "name": "Military",
+                "id": "MilitaryFacility",
                 "children": [
                   {
-                    "name": "AirDefenceRadarSite",
+                    "name": "AirDefenceRadar",
+                    "id": "AirDefenceRadarSite",
                     "children": []
                   },
                   {
-                    "name": "AirborneEarlyWarningGroundFacility",
+                    "name": "AirborneEarlyWarningGround",
+                    "id": "AirborneEarlyWarningGroundFacility",
                     "children": []
                   },
                   {
-                    "name": "ArmyMilitaryBaseOrFacility",
+                    "name": "ArmyMilitaryBaseOr",
+                    "id": "ArmyMilitaryBaseOrFacility",
                     "children": []
                   },
                   {
-                    "name": "ArtilleryLocatingSite",
+                    "name": "ArtilleryLocating",
+                    "id": "ArtilleryLocatingSite",
                     "children": []
                   },
                   {
                     "name": "Barracks",
+                    "id": "Barracks",
                     "children": []
                   },
                   {
                     "name": "Bivouac",
+                    "id": "Bivouac",
                     "children": []
                   },
                   {
-                    "name": "CommandPostFacility",
+                    "name": "Command",
+                    "id": "CommandPostFacility",
                     "children": []
                   },
                   {
-                    "name": "ElectronicWarfareSite",
+                    "name": "ElectronicWarfare",
+                    "id": "ElectronicWarfareSite",
                     "children": []
                   },
                   {
                     "name": "Fortification",
+                    "id": "Fortification",
                     "children": []
                   },
                   {
                     "name": "ForwardOperatingBase",
+                    "id": "ForwardOperatingBase",
                     "children": []
                   },
                   {
-                    "name": "GroundSurveillanceRadarSite",
+                    "name": "GroundSurveillanceRadar",
+                    "id": "GroundSurveillanceRadarSite",
                     "children": []
                   },
                   {
-                    "name": "LogisticsOrSupplyFacility",
+                    "name": "LogisticsOrSupply",
+                    "id": "LogisticsOrSupplyFacility",
                     "children": []
                   },
                   {
-                    "name": "MilitaryBaseOrFacility",
+                    "name": "MilitaryBaseOr",
+                    "id": "MilitaryBaseOrFacility",
                     "children": []
                   },
                   {
-                    "name": "MilitaryBridgingSite",
+                    "name": "MilitaryBridging",
+                    "id": "MilitaryBridgingSite",
                     "children": []
                   },
                   {
                     "name": "MilitaryObstacle",
+                    "id": "MilitaryObstacle",
                     "children": [
                       {
                         "name": "ComposedAntiTankObstacle",
+                        "id": "ComposedAntiTankObstacle",
                         "children": []
                       },
                       {
                         "name": "Ditch",
+                        "id": "Ditch",
                         "children": []
                       },
                       {
                         "name": "Minefield",
+                        "id": "Minefield",
                         "children": []
                       },
                       {
                         "name": "OtherMilitaryObstacle",
+                        "id": "OtherMilitaryObstacle",
                         "children": []
                       },
                       {
                         "name": "WireObstacle",
+                        "id": "WireObstacle",
                         "children": []
                       }
                     ]
                   },
                   {
                     "name": "MilitarySeaportOrNavalBase",
+                    "id": "MilitarySeaportOrNavalBase",
                     "children": []
                   },
                   {
-                    "name": "MissileSite",
+                    "name": "Missile",
+                    "id": "MissileSite",
                     "children": []
                   },
                   {
                     "name": "NavalAirStation",
+                    "id": "NavalAirStation",
                     "children": []
                   },
                   {
                     "name": "ObservationTower",
+                    "id": "ObservationTower",
                     "children": []
                   },
                   {
                     "name": "PrisonerOfWarCamp",
+                    "id": "PrisonerOfWarCamp",
                     "children": []
                   },
                   {
-                    "name": "SensorFusionPost",
+                    "name": "SensorFusion",
+                    "id": "SensorFusionPost",
                     "children": []
                   },
                   {
                     "name": "ShoranStation",
+                    "id": "ShoranStation",
                     "children": []
                   },
                   {
-                    "name": "SubmarineMilitaryBaseOrFacility",
+                    "name": "SubmarineMilitaryBaseOr",
+                    "id": "SubmarineMilitaryBaseOrFacility",
                     "children": []
                   },
                   {
                     "name": "SurfaceSurveillanceJammer",
+                    "id": "SurfaceSurveillanceJammer",
                     "children": []
                   },
                   {
-                    "name": "SurfaceToSurfaceMissileSite",
+                    "name": "SurfaceToSurfaceMissile",
+                    "id": "SurfaceToSurfaceMissileSite",
                     "children": []
                   },
                   {
                     "name": "TacanStation",
+                    "id": "TacanStation",
                     "children": []
                   },
                   {
                     "name": "TacticalIntelligenceCentre",
+                    "id": "TacticalIntelligenceCentre",
                     "children": []
                   }
                 ]
               },
               {
-                "name": "OtherFacility",
+                "name": "Other",
+                "id": "OtherFacility",
                 "children": []
               },
               {
-                "name": "TransportFacility",
+                "name": "Transport",
+                "id": "TransportFacility",
                 "children": [
                   {
-                    "name": "AirTransportFacility",
+                    "name": "AirTransport",
+                    "id": "AirTransportFacility",
                     "children": [
                       {
                         "name": "Airfield",
+                        "id": "Airfield",
                         "children": []
                       },
                       {
                         "name": "AirportOrAirbase",
+                        "id": "AirportOrAirbase",
                         "children": []
                       },
                       {
                         "name": "Apron",
+                        "id": "Apron",
                         "children": []
                       },
                       {
                         "name": "Helipad",
+                        "id": "Helipad",
                         "children": []
                       },
                       {
                         "name": "Heliport",
+                        "id": "Heliport",
                         "children": []
                       },
                       {
                         "name": "Runway",
+                        "id": "Runway",
                         "children": []
                       }
                     ]
                   },
                   {
-                    "name": "GeneralTransportFacility",
+                    "name": "GeneralTransport",
+                    "id": "GeneralTransportFacility",
                     "children": []
                   },
                   {
-                    "name": "GroundTransportFacility",
+                    "name": "GroundTransport",
+                    "id": "GroundTransportFacility",
                     "children": [
                       {
                         "name": "ClearedWay",
+                        "id": "ClearedWay",
                         "children": []
                       },
                       {
                         "name": "CrossingPlatform",
+                        "id": "CrossingPlatform",
                         "children": []
                       },
                       {
                         "name": "Ford",
+                        "id": "Ford",
                         "children": []
                       },
                       {
-                        "name": "RailFacility",
+                        "name": "Rail",
+                        "id": "RailFacility",
                         "children": []
                       },
                       {
                         "name": "RailHead",
+                        "id": "RailHead",
                         "children": []
                       },
                       {
                         "name": "Railway",
+                        "id": "Railway",
                         "children": []
                       },
                       {
                         "name": "RailwayCrossing",
+                        "id": "RailwayCrossing",
                         "children": []
                       },
                       {
                         "name": "RailwayJunction",
+                        "id": "RailwayJunction",
                         "children": []
                       },
                       {
                         "name": "Road",
+                        "id": "Road",
                         "children": []
                       },
                       {
                         "name": "RoadInterchange",
+                        "id": "RoadInterchange",
                         "children": []
                       },
                       {
                         "name": "Trail",
+                        "id": "Trail",
                         "children": []
                       },
                       {
                         "name": "Tunnel",
+                        "id": "Tunnel",
                         "children": []
                       }
                     ]
                   },
                   {
-                    "name": "MaritimeTransportFacility",
+                    "name": "MaritimeTransport",
+                    "id": "MaritimeTransportFacility",
                     "children": [
                       {
                         "name": "Anchorage",
+                        "id": "Anchorage",
                         "children": []
                       },
                       {
                         "name": "Basin",
+                        "id": "Basin",
                         "children": []
                       },
                       {
                         "name": "Berth",
+                        "id": "Berth",
                         "children": []
                       },
                       {
                         "name": "DryDock",
+                        "id": "DryDock",
                         "children": []
                       },
                       {
                         "name": "FerryOrFordAccess",
+                        "id": "FerryOrFordAccess",
                         "children": []
                       },
                       {
                         "name": "FerryStation",
+                        "id": "FerryStation",
                         "children": []
                       },
                       {
                         "name": "Harbour",
+                        "id": "Harbour",
                         "children": []
                       },
                       {
                         "name": "Jetty",
+                        "id": "Jetty",
                         "children": []
                       },
                       {
                         "name": "Lighthouse",
+                        "id": "Lighthouse",
                         "children": []
                       },
                       {
                         "name": "Lock",
+                        "id": "Lock",
                         "children": []
                       },
                       {
                         "name": "Pier",
+                        "id": "Pier",
                         "children": []
                       },
                       {
                         "name": "Port",
+                        "id": "Port",
                         "children": []
                       },
                       {
                         "name": "Quay",
+                        "id": "Quay",
                         "children": []
                       },
                       {
                         "name": "Slipway",
+                        "id": "Slipway",
                         "children": []
                       }
                     ]
@@ -1278,69 +1585,86 @@
           },
           {
             "name": "Feature",
+            "id": "Feature",
             "children": [
               {
-                "name": "ControlFeature",
+                "name": "Control",
+                "id": "ControlFeature",
                 "children": [
                   {
-                    "name": "AirspaceControlFeature",
+                    "name": "AirspaceControl",
+                    "id": "AirspaceControlFeature",
                     "children": []
                   },
                   {
-                    "name": "C2BoundaryFeature",
+                    "name": "C2Boundary",
+                    "id": "C2BoundaryFeature",
                     "children": []
                   },
                   {
-                    "name": "CBRNControlFeature",
+                    "name": "CBRNControl",
+                    "id": "CBRNControlFeature",
                     "children": []
                   },
                   {
-                    "name": "FiresCoordinationFeature",
+                    "name": "FiresCoordination",
+                    "id": "FiresCoordinationFeature",
                     "children": []
                   },
                   {
-                    "name": "MobilityCountermobilityFeature",
+                    "name": "MobilityCountermobility",
+                    "id": "MobilityCountermobilityFeature",
                     "children": []
                   },
                   {
                     "name": "ReferenceNavigationFix",
+                    "id": "ReferenceNavigationFix",
                     "children": []
                   },
                   {
-                    "name": "RouteControlFeature",
+                    "name": "RouteControl",
+                    "id": "RouteControlFeature",
                     "children": []
                   },
                   {
-                    "name": "SustainmentControlFeature",
+                    "name": "SustainmentControl",
+                    "id": "SustainmentControlFeature",
                     "children": []
                   }
                 ]
               },
               {
-                "name": "GeographicFeature",
+                "name": "Geographic",
+                "id": "GeographicFeature",
                 "children": [
                   {
                     "name": "CoastalZone",
+                    "id": "CoastalZone",
                     "children": []
                   },
                   {
                     "name": "Cryosphere",
+                    "id": "Cryosphere",
                     "children": []
                   },
                   {
                     "name": "InlandWater",
+                    "id": "InlandWater",
                     "children": []
                   },
                   {
                     "name": "LandTerrain",
+                    "id": "LandTerrain",
                     "children": []
                   },
                   {
                     "name": "MaritimeWater",
+                    "id": "MaritimeWater",
                     "children": []
                   },
                   {
                     "name": "Wetland",
+                    "id": "Wetland",
                     "children": []
                   }
                 ]
@@ -1349,74 +1673,91 @@
           },
           {
             "name": "InformationResource",
+            "id": "InformationResource",
             "children": [
               {
                 "name": "Image",
+                "id": "Image",
                 "children": []
               }
             ]
           },
           {
             "name": "Materiel",
+            "id": "Materiel",
             "children": [
               {
                 "name": "ConsumableMateriel",
+                "id": "ConsumableMateriel",
                 "children": []
               },
               {
                 "name": "Equipment",
+                "id": "Equipment",
                 "children": [
                   {
                     "name": "Sensor",
+                    "id": "Sensor",
                     "children": [
                       {
                         "name": "Radar",
+                        "id": "Radar",
                         "children": []
                       }
                     ]
                   },
                   {
                     "name": "Tool",
+                    "id": "Tool",
                     "children": []
                   },
                   {
                     "name": "Vehicle",
+                    "id": "Vehicle",
                     "children": [
                       {
                         "name": "Aircraft",
+                        "id": "Aircraft",
                         "children": []
                       },
                       {
                         "name": "LandVehicle",
+                        "id": "LandVehicle",
                         "children": [
                           {
                             "name": "CivilianTypeVehicle",
+                            "id": "CivilianTypeVehicle",
                             "children": []
                           },
                           {
                             "name": "MilitaryTypeVehicle",
+                            "id": "MilitaryTypeVehicle",
                             "children": []
                           }
                         ]
                       },
                       {
                         "name": "Spacecraft",
+                        "id": "Spacecraft",
                         "children": []
                       },
                       {
                         "name": "Vessel",
+                        "id": "Vessel",
                         "children": []
                       }
                     ]
                   },
                   {
                     "name": "Weapon",
+                    "id": "Weapon",
                     "children": []
                   }
                 ]
               },
               {
                 "name": "UnexplodedOrdnance",
+                "id": "UnexplodedOrdnance",
                 "children": []
               }
             ]
@@ -1425,256 +1766,319 @@
       },
       {
         "name": "Source",
+        "id": "Source",
         "children": []
       },
       {
         "name": "Target",
+        "id": "Target",
         "children": []
       }
     ]
   },
   {
     "name": "Component",
+    "id": "Component",
     "children": [
       {
         "name": "Area",
+        "id": "Area",
         "children": []
       },
       {
         "name": "Geopose",
+        "id": "Geopose",
         "children": []
       },
       {
         "name": "Geoposition",
+        "id": "Geoposition",
         "children": []
       },
       {
         "name": "KeyValuePair",
+        "id": "KeyValuePair",
         "children": []
       },
       {
         "name": "Maneuver",
+        "id": "Maneuver",
         "children": []
       },
       {
         "name": "Motion",
+        "id": "Motion",
         "children": []
       },
       {
-        "name": "NetworkInterfaceStruct",
+        "name": "NetworkInterface",
+        "id": "NetworkInterfaceStruct",
         "children": []
       },
       {
         "name": "Orientation",
+        "id": "Orientation",
         "children": []
       },
       {
-        "name": "RelatedObjectStruct",
+        "name": "RelatedObject",
+        "id": "RelatedObjectStruct",
         "children": []
       },
       {
         "name": "Route",
+        "id": "Route",
         "children": []
       },
       {
-        "name": "TimeStruct",
+        "name": "Time",
+        "id": "TimeStruct",
         "children": []
       },
       {
         "name": "Vector3D",
+        "id": "Vector3D",
         "children": []
       },
       {
         "name": "Waypoint",
+        "id": "Waypoint",
         "children": []
       }
     ]
   },
   {
     "name": "DeprecatedClass",
+    "id": "DeprecatedClass",
     "children": [
       {
-        "name": "DeprecatedComponent",
+        "name": "Deprecated",
+        "id": "DeprecatedComponent",
         "children": [
           {
-            "name": "ComplexDetectionReplayEvent",
+            "name": "Complex_DetectionReplay",
+            "id": "Complex_DetectionReplayEvent",
             "children": []
           },
           {
-            "name": "ComplexPositionReplayEvent",
+            "name": "Complex_PositionReplay",
+            "id": "Complex_PositionReplayEvent",
             "children": []
           },
           {
-            "name": "ComplexUuidPair",
+            "name": "Complex_UuidPair",
+            "id": "Complex_UuidPair",
             "children": []
           },
           {
-            "name": "ComponentActivationTimestamp",
+            "name": "Component_ActivationTimestamp",
+            "id": "Component_ActivationTimestamp",
             "children": []
           },
           {
-            "name": "ComponentAirMotion",
+            "name": "Component_AirMotion",
+            "id": "Component_AirMotion",
             "children": []
           },
           {
-            "name": "ComponentAreaInfoContainer",
+            "name": "Component_AreaInfoContainer",
+            "id": "Component_AreaInfoContainer",
             "children": []
           },
           {
-            "name": "ComponentAssetAttacked",
+            "name": "Component_AssetAttacked",
+            "id": "Component_AssetAttacked",
             "children": []
           },
           {
-            "name": "ComponentAssetControlColumn",
+            "name": "Component_AssetControlColumn",
+            "id": "Component_AssetControlColumn",
             "children": []
           },
           {
-            "name": "ComponentChildrenContainer",
+            "name": "Component_ChildrenContainer",
+            "id": "Component_ChildrenContainer",
             "children": []
           },
           {
-            "name": "ComponentClusterRender",
+            "name": "Component_ClusterRender",
+            "id": "Component_ClusterRender",
             "children": []
           },
           {
-            "name": "ComponentClustersMemberContainer",
+            "name": "Component_ClustersMemberContainer",
+            "id": "Component_ClustersMemberContainer",
             "children": []
           },
           {
-            "name": "ComponentConditionPosition",
+            "name": "Component_ConditionPosition",
+            "id": "Component_ConditionPosition",
             "children": []
           },
           {
-            "name": "ComponentDetectionEventsReplay",
+            "name": "Component_DetectionEventsReplay",
+            "id": "Component_DetectionEventsReplay",
             "children": []
           },
           {
-            "name": "ComponentDistanceEntities",
+            "name": "Component_DistanceEntities",
+            "id": "Component_DistanceEntities",
             "children": []
           },
           {
-            "name": "ComponentEntityVisibility",
+            "name": "Component_EntityVisibility",
+            "id": "Component_EntityVisibility",
             "children": []
           },
           {
-            "name": "ComponentFollowRoute",
+            "name": "Component_FollowRoute",
+            "id": "Component_FollowRoute",
             "children": []
           },
           {
-            "name": "ComponentHoldPosition",
+            "name": "Component_HoldPosition",
+            "id": "Component_HoldPosition",
             "children": []
           },
           {
-            "name": "ComponentIdentification",
+            "name": "Component_Identification",
+            "id": "Component_Identification",
             "children": []
           },
           {
-            "name": "ComponentLandMotion",
+            "name": "Component_LandMotion",
+            "id": "Component_LandMotion",
             "children": []
           },
           {
-            "name": "ComponentLineRepresentationComponent",
+            "name": "Component_LineRepresentation",
+            "id": "Component_LineRepresentationComponent",
             "children": []
           },
           {
-            "name": "ComponentMembersContainer",
+            "name": "Component_MembersContainer",
+            "id": "Component_MembersContainer",
             "children": []
           },
           {
-            "name": "ComponentOrderComponent",
+            "name": "Component_Order",
+            "id": "Component_OrderComponent",
             "children": []
           },
           {
-            "name": "ComponentPositionEventsReplay",
+            "name": "Component_PositionEventsReplay",
+            "id": "Component_PositionEventsReplay",
             "children": []
           },
           {
-            "name": "ComponentRadar",
+            "name": "Component_Radar",
+            "id": "Component_Radar",
             "children": []
           },
           {
-            "name": "ComponentRoadDensityComponent",
+            "name": "Component_RoadDensity",
+            "id": "Component_RoadDensityComponent",
             "children": []
           },
           {
-            "name": "ComponentSurfaceMotion",
+            "name": "Component_SurfaceMotion",
+            "id": "Component_SurfaceMotion",
             "children": []
           },
           {
-            "name": "ComponentTriageData",
+            "name": "Component_TriageData",
+            "id": "Component_TriageData",
             "children": []
           },
           {
-            "name": "ComponentVisualizationInfo",
+            "name": "Component_VisualizationInfo",
+            "id": "Component_VisualizationInfo",
             "children": []
           },
           {
-            "name": "ComponentVisualizationInfoData",
+            "name": "Component_VisualizationInfoData",
+            "id": "Component_VisualizationInfoData",
             "children": []
           },
           {
-            "name": "ComponentWaitCondition",
+            "name": "Component_WaitCondition",
+            "id": "Component_WaitCondition",
             "children": []
           }
         ]
       },
       {
         "name": "Unclassified",
+        "id": "Unclassified",
         "children": [
           {
-            "name": "UnclassifiedFunctionalPerson",
+            "name": "FunctionalPerson",
+            "id": "UnclassifiedFunctionalPerson",
             "children": [
               {
                 "name": "AirborneMissionCommander",
+                "id": "AirborneMissionCommander",
                 "children": []
               },
               {
                 "name": "AuthorisedCommander",
+                "id": "AuthorisedCommander",
                 "children": []
               },
               {
                 "name": "CyberOperator",
+                "id": "CyberOperator",
                 "children": []
               },
               {
                 "name": "GroundManoeuvreCommander",
+                "id": "GroundManoeuvreCommander",
                 "children": []
               }
             ]
           },
           {
-            "name": "UnclassifiedMilitaryUnit",
+            "name": "Military",
+            "id": "UnclassifiedMilitaryUnit",
             "children": [
               {
-                "name": "InfantryUnit",
+                "name": "Infantry",
+                "id": "InfantryUnit",
                 "children": []
               },
               {
-                "name": "InformationWarfareUnit",
+                "name": "InformationWarfare",
+                "id": "InformationWarfareUnit",
                 "children": []
               }
             ]
           },
           {
-            "name": "UnclassifiedVehicle",
+            "name": "Vehicle",
+            "id": "UnclassifiedVehicle",
             "children": [
               {
                 "name": "ArmouredPersonnelCarrier",
+                "id": "ArmouredPersonnelCarrier",
                 "children": []
               },
               {
                 "name": "Tank",
+                "id": "Tank",
                 "children": []
               },
               {
                 "name": "Truck",
+                "id": "Truck",
                 "children": []
               },
               {
                 "name": "UAV",
+                "id": "UAV",
                 "children": [
                   {
                     "name": "TacticalUAV",
+                    "id": "TacticalUAV",
                     "children": []
                   }
                 ]
@@ -1682,13 +2086,16 @@
             ]
           },
           {
-            "name": "UnclassifiedWeapon",
+            "name": "Weapon",
+            "id": "UnclassifiedWeapon",
             "children": [
               {
                 "name": "Cannon",
+                "id": "Cannon",
                 "children": [
                   {
                     "name": "AssaultGun",
+                    "id": "AssaultGun",
                     "children": []
                   }
                 ]
@@ -1701,117 +2108,146 @@
   },
   {
     "name": "LOV",
+    "id": "LOV",
     "children": [
       {
-        "name": "AcknowledgeResponseType",
+        "name": "AcknowledgeResponse",
+        "id": "AcknowledgeResponseType",
         "children": []
       },
       {
-        "name": "AdminType",
+        "name": "Admin",
+        "id": "AdminType",
         "children": []
       },
       {
         "name": "AirModel",
+        "id": "AirModel",
         "children": []
       },
       {
-        "name": "CapabilityType",
+        "name": "Capability",
+        "id": "CapabilityType",
         "children": []
       },
       {
-        "name": "CyberEventPhaseType",
+        "name": "CyberEventPhase",
+        "id": "CyberEventPhaseType",
         "children": []
       },
       {
-        "name": "DataLinkProtocolType",
+        "name": "DataLinkProtocol",
+        "id": "DataLinkProtocolType",
         "children": []
       },
       {
-        "name": "DataStatusType",
+        "name": "DataStatus",
+        "id": "DataStatusType",
         "children": []
       },
       {
-        "name": "DataType",
+        "name": "Data",
+        "id": "DataType",
         "children": [
           {
             "name": "Boolean",
+            "id": "Boolean",
             "children": []
           },
           {
             "name": "Component",
+            "id": "Component",
             "children": [
               {
                 "name": "Area",
+                "id": "Area",
                 "children": []
               },
               {
                 "name": "Geopose",
+                "id": "Geopose",
                 "children": []
               },
               {
                 "name": "Geoposition",
+                "id": "Geoposition",
                 "children": []
               },
               {
                 "name": "KeyValuePair",
+                "id": "KeyValuePair",
                 "children": []
               },
               {
                 "name": "Maneuver",
+                "id": "Maneuver",
                 "children": []
               },
               {
                 "name": "Motion",
+                "id": "Motion",
                 "children": []
               },
               {
-                "name": "NetworkInterfaceStruct",
+                "name": "NetworkInterface",
+                "id": "NetworkInterfaceStruct",
                 "children": []
               },
               {
                 "name": "Orientation",
+                "id": "Orientation",
                 "children": []
               },
               {
-                "name": "RelatedObjectStruct",
+                "name": "RelatedObject",
+                "id": "RelatedObjectStruct",
                 "children": []
               },
               {
                 "name": "Route",
+                "id": "Route",
                 "children": []
               },
               {
-                "name": "TimeStruct",
+                "name": "Time",
+                "id": "TimeStruct",
                 "children": []
               },
               {
                 "name": "Vector3D",
+                "id": "Vector3D",
                 "children": []
               },
               {
                 "name": "Waypoint",
+                "id": "Waypoint",
                 "children": []
               }
             ]
           },
           {
             "name": "DateTimeStamp",
+            "id": "DateTimeStamp",
             "children": []
           },
           {
             "name": "Decimal",
+            "id": "Decimal",
             "children": []
           },
           {
             "name": "Double",
+            "id": "Double",
             "children": []
           },
           {
             "name": "Geometry",
+            "id": "Geometry",
             "children": []
           },
           {
             "name": "Int",
+            "id": "Int",
             "children": []
           },
           {
@@ -1819,116 +2255,144 @@
           },
           {
             "name": "String",
+            "id": "String",
             "children": []
           },
           {
             "name": "UUID",
+            "id": "UUID",
             "children": []
           }
         ]
       },
       {
-        "name": "DeviceType",
+        "name": "Device",
+        "id": "DeviceType",
         "children": []
       },
       {
         "name": "Domain",
+        "id": "Domain",
         "children": []
       },
       {
-        "name": "EncryptionType",
+        "name": "Encryption",
+        "id": "EncryptionType",
         "children": []
       },
       {
-        "name": "HardwareDamageType",
+        "name": "HardwareDamage",
+        "id": "HardwareDamageType",
         "children": []
       },
       {
-        "name": "HardwareDegradeType",
+        "name": "HardwareDegrade",
+        "id": "HardwareDegradeType",
         "children": []
       },
       {
-        "name": "LoadRateType",
+        "name": "LoadRate",
+        "id": "LoadRateType",
         "children": []
       },
       {
-        "name": "ManeuverType",
+        "name": "Maneuver",
+        "id": "ManeuverType",
         "children": []
       },
       {
-        "name": "ManipulationType",
+        "name": "Manipulation",
+        "id": "ManipulationType",
         "children": []
       },
       {
-        "name": "MessageType",
+        "name": "Message",
+        "id": "MessageType",
         "children": []
       },
       {
-        "name": "NetworkProtocolType",
+        "name": "NetworkProtocol",
+        "id": "NetworkProtocolType",
         "children": []
       },
       {
-        "name": "OperatingSystemType",
+        "name": "OperatingSystem",
+        "id": "OperatingSystemType",
         "children": []
       },
       {
-        "name": "PacketManipulationType",
+        "name": "PacketManipulation",
+        "id": "PacketManipulationType",
         "children": []
       },
       {
-        "name": "PhysicalLayerType",
+        "name": "PhysicalLayer",
+        "id": "PhysicalLayerType",
         "children": []
       },
       {
-        "name": "RadarType",
+        "name": "Radar",
+        "id": "RadarType",
         "children": []
       },
       {
-        "name": "ReconType",
+        "name": "Recon",
+        "id": "ReconType",
         "children": []
       },
       {
-        "name": "RelationshipType",
+        "name": "Relationship",
+        "id": "RelationshipType",
         "children": []
       },
       {
         "name": "RoadState",
+        "id": "RoadState",
         "children": []
       },
       {
-        "name": "SensitivityType",
+        "name": "Sensitivity",
+        "id": "SensitivityType",
         "children": []
       },
       {
         "name": "ServiceType",
+        "id": "ServiceType",
         "children": []
       },
       {
-        "name": "SideType",
+        "name": "Side",
+        "id": "SideType",
         "children": []
       },
       {
         "name": "SurfaceModel",
+        "id": "SurfaceModel",
         "children": []
       },
       {
-        "name": "SystemType",
+        "name": "System",
+        "id": "SystemType",
         "children": []
       },
       {
         "name": "TriagePriority",
+        "id": "TriagePriority",
         "children": []
       },
       {
-        "name": "TriageType",
+        "name": "Triage",
+        "id": "TriageType",
         "children": []
       },
       {
         "name": "WarfareFunction",
+        "id": "WarfareFunction",
         "children": []
       },
       {
-        "name": "WaypointType",
+        "name": "Waypoint",
+        "id": "WaypointType",
         "children": []
       }
     ]

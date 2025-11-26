@@ -43,12 +43,9 @@ window.RelationGraph = (() => {
   }
 
   function normalizeId(id) {
-    if (!id) return null;
-    let clean = String(id).trim();
-    clean = clean.replace(/^cat_/i, '').replace(/^CAT_/i, '');
-    clean = clean.charAt(0).toUpperCase() + clean.slice(1);
-    return `CAT_${clean}`;
-  }
+    return String(id).trim();  // usar UUID real sin tocarlo
+}
+
 
   function colorForCategory(cat) {
     switch (cat) {
@@ -187,7 +184,7 @@ window.RelationGraph = (() => {
         window.dispatchEvent(new CustomEvent('dropdown:change', { detail: { root: rootName } }));
 
         // ======================================================
-        // 🟢 NUEVO: abrir automáticamente DescriptorOverlay
+        // NUEVO: abrir automáticamente DescriptorOverlay
         // ======================================================
         // Si el overlay está disponible y activo, mostrar el nodo padre o actual
         if (window.DescriptorOverlay) {
@@ -211,7 +208,7 @@ window.RelationGraph = (() => {
 
           // Mostrar overlay
           window.DescriptorOverlay.show(targetId);
-          console.log(`🧩 DescriptorOverlay sincronizado con nodo: ${targetId}`);
+          console.log(`DescriptorOverlay sincronizado con nodo: ${targetId}`);
         }
       });
 
@@ -300,7 +297,7 @@ window.RelationGraph = (() => {
         const rootName = (node && node.name) ? node.name : nameFromId;
         window.dispatchEvent(new CustomEvent('dropdown:change', { detail: { root: rootName } }));
 
-        // 🟢 Mostrar DescriptorOverlay si existe
+        // Mostrar DescriptorOverlay si existe
         if (window.DescriptorOverlay) {
           window.DescriptorOverlay.show(id);
         }

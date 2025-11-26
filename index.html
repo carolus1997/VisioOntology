@@ -27,8 +27,41 @@
 
     <!-- Panel derecho -->
     <aside class="panel right">
+      <!-- Selector de paneles -->
+      <div id="right-panel-switcher">
+        <button class="rps-btn active" data-target="panel-ontology">
+          <img src="./icons/OntoBrain.svg" alt="Ontología">
+        </button>
+
+        <button class="rps-btn" data-target="panel-compositions">
+          <img src="./icons/Components.svg" alt="Composiciones">
+        </button>
+
+        <button class="rps-btn" data-target="panel-catalog">
+          <img src="./icons/ORBAT.svg" alt="Catálogo">
+        </button>
+      </div>
+
+      <!-- Contenedor de vistas -->
+      <div id="right-panel-container">
+
+        <!-- Vista 1: Ontología (Dropdown actual) -->
+        <div id="panel-ontology" class="rpanel active">
+          <div id="dropdown"></div>
+        </div>
+
+        <!-- Vista 2: Composiciones -->
+        <div id="panel-compositions" class="rpanel">
+          
+        </div>
+
+        <!-- Vista 3: Catálogo -->
+        <div id="panel-catalog" class="rpanel">
+          
+        </div>
+      </div>
+
       
-      <div id="dropdown"></div>
     </aside>
   </div>
 

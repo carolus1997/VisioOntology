@@ -27,10 +27,10 @@ window.DescriptorOverlay = (() => {
 
     // Inicializamos Descriptor dentro del overlay
     // Ya no inicializamos otra instancia, reutilizamos el render global
-    console.log('🟢 DescriptorOverlay enlazado al Descriptor global');
+    console.log('DescriptorOverlay enlazado al Descriptor global');
 
 
-    console.log('🟢 DescriptorOverlay inicializado');
+    console.log('DescriptorOverlay inicializado');
   }
 
   function show(nodeId) {

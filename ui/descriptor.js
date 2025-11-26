@@ -17,7 +17,7 @@
     .replace(/>/g, '&gt;').replace(/"/g, '&quot;')
     .replace(/'/g, '&#039;');
 
-  async function init(containerId = 'descriptor', ontologyPath = 'data/ontology2.json') {
+  async function init(containerId = 'descriptor', ontologyPath = 'data/ontology3.json') {
     STATE.container = document.getElementById(containerId);
     if (!STATE.container) {
       console.warn(`[Descriptor] No se encontró el contenedor #${containerId}`);
@@ -153,7 +153,7 @@
     const rdfHTML = rdfEntries.length
       ? `
   <div class="meta-attrs">
-    <b>📘 Metadatos RDF</b>
+    <b>Metadatos RDF</b>
     <ul>
       ${rdfEntries.map(([k, v]) => `<li><b>${esc(k)}:</b> ${esc(v)}</li>`).join('')}
     </ul>

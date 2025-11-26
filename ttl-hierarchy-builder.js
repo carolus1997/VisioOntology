@@ -14,9 +14,9 @@ const OUTPUT_ONTOLOGY = "./data/ontology3.json";
 function simplify(uri) {
     if (!uri) return uri;
     return uri
-        .replace(/^.*[#/]/, "")           // corta namespace
-        .replace(/_/g, "")                // quita underscores
-        .replace(/[^a-zA-Z0-9]/g, "")     // limpia símbolos raros
+        .replace(/^.*[#/]/, "")
+        .replace(/_/g, "")
+        .replace(/[^a-zA-Z0-9]/g, "")
         .trim();
 }
 
@@ -31,17 +31,15 @@ function addPrefixIfMissing(id, prefix = "CAT_") {
     return id.startsWith(prefix) ? id : (prefix + id);
 }
 
-
 const nodes = new Map();
 const edges = [];
 const subclasses = new Map();
 const allClasses = new Set();
-const allParents = new Set();
 const relationTypes = new Set();
 
-function ensureNode(id, name, kind = "category") {
+function ensureNode(id, rawName, kind = "category") {
     if (!nodes.has(id)) {
-        nodes.set(id, { id, name, kind });
+        nodes.set(id, { id, name: simplify(rawName), rawName, kind });
     }
     return nodes.get(id);
 }
@@ -54,34 +52,41 @@ function parseTTL(path) {
     console.log(`📄 Procesando ${path} (${triples.length} triples)`);
 
     for (const t of triples) {
-        const s = simplify(t.subject?.value);
+        const rawSubject = t.subject?.value?.replace(/^.*[#/]/, "") || null;
+        const rawObject = t.object?.value?.replace(/^.*[#/]/, "") || null;
+
+        const s = simplify(rawSubject);
         const p = simplify(t.predicate?.value);
-        const o = t.object?.value ? simplify(t.object.value) : null;
+        const o = rawObject ? simplify(rawObject) : null;
+
         const oLiteral = t.object?.termType === "Literal";
 
         // --- Clases ---
         if (p === "type" && ["Class", "OwlClass", "RdfsClass"].includes(o)) {
-            ensureNode(prefixes.category + s, s, "category");
+            ensureNode(prefixes.category + s, rawSubject);
+            allClasses.add(rawSubject);
             continue;
         }
 
         // --- Subclases ---
         if (p === "subClassOf") {
-            const parent = addPrefixIfMissing(prefixes.category + o, "CAT_");
-            const child = addPrefixIfMissing(prefixes.category + s, "CAT_");
-            ensureNode(parent, o);
-            ensureNode(child, s);
-            edges.push({ source: child, target: parent, type: "is_a" });
+            const parentId = addPrefixIfMissing(prefixes.category + o);
+            const childId = addPrefixIfMissing(prefixes.category + s);
+
+            ensureNode(parentId, rawObject);
+            ensureNode(childId, rawSubject);
+
+            edges.push({ source: childId, target: parentId, type: "is_a" });
             relationTypes.add("is_a");
 
-            allClasses.add(s);
-            allClasses.add(o);
-            allParents.add(o);
-            if (!subclasses.has(o)) subclasses.set(o, []);
-            subclasses.get(o).push(s);
+            allClasses.add(rawSubject);
+            allClasses.add(rawObject);
+
+            if (!subclasses.has(rawObject)) subclasses.set(rawObject, []);
+            subclasses.get(rawObject).push(rawSubject);
+
             continue;
         }
-
 
         // --- Propiedades RDF/OWL ---
         if (
@@ -89,89 +94,62 @@ function parseTTL(path) {
             ["ObjectProperty", "DatatypeProperty", "Property"].includes(o)
         ) {
             const id = prefixes.relation + s;
-            ensureNode(id, s, "relation");
+            ensureNode(id, rawSubject, "relation");
             relationTypes.add(s);
             continue;
         }
 
         // --- Dominios y rangos ---
         if (p === "domain") {
-            const source = addPrefixIfMissing(prefixes.category + o, "CAT_");
-            const target = addPrefixIfMissing(prefixes.relation + s, "REL_");
-            ensureNode(source, o);
-            ensureNode(target, s, "relation");
+            const source = addPrefixIfMissing(prefixes.category + o);
+            const target = addPrefixIfMissing(prefixes.relation + s);
+            ensureNode(source, rawObject);
+            ensureNode(target, rawSubject, "relation");
             edges.push({ source, target, type: "domainOf" });
             relationTypes.add("domainOf");
             continue;
         }
 
         if (p === "range") {
-            const source = addPrefixIfMissing(prefixes.relation + s, "REL_");
-            const target = addPrefixIfMissing(prefixes.category + o, "CAT_");
-            ensureNode(source, s, "relation");
-            ensureNode(target, o);
+            const source = addPrefixIfMissing(prefixes.relation + s);
+            const target = addPrefixIfMissing(prefixes.category + o);
+            ensureNode(source, rawSubject, "relation");
+            ensureNode(target, rawObject);
             edges.push({ source, target, type: "rangeOf" });
             relationTypes.add("rangeOf");
             continue;
         }
 
-
         // --- Etiquetas y descripciones ---
         if (["label"].includes(p)) {
-            const id = addPrefixIfMissing(prefixes.category + s, "CAT_");
-            ensureNode(id, s);
-            nodes.get(id).label = t.object.value;
+            const node = ensureNode(prefixes.category + s, rawSubject);
+            node.label = t.object.value;
             continue;
         }
 
         if (["comment", "description"].includes(p)) {
-            const id = addPrefixIfMissing(prefixes.category + s, "CAT_");
-            ensureNode(id, s);
-            nodes.get(id).description = t.object.value;
+            const node = ensureNode(prefixes.category + s, rawSubject);
+            node.description = t.object.value;
             continue;
         }
 
-
         // --- Literales generales ---
         if (oLiteral && !p.startsWith("rdf") && !p.startsWith("owl")) {
-            const id = prefixes.category + s;
-            ensureNode(id, s);
-            nodes.get(id)[p] = t.object.value;
+            const node = ensureNode(prefixes.category + s, rawSubject);
+            node[p] = t.object.value;
             continue;
         }
 
         // --- Relaciones genéricas ---
         if (s && o && s !== o && !p.startsWith("rdf") && !p.startsWith("owl")) {
-            const source = addPrefixIfMissing(prefixes.category + s, "CAT_");
-            const target = addPrefixIfMissing(prefixes.category + o, "CAT_");
-            ensureNode(source, s);
-            ensureNode(target, o);
+            const source = addPrefixIfMissing(prefixes.category + s);
+            const target = addPrefixIfMissing(prefixes.category + o);
+            ensureNode(source, rawSubject);
+            ensureNode(target, rawObject);
             edges.push({ source, target, type: p });
             relationTypes.add(p);
         }
-
     }
-}
-
-// === 🔄 FUSIÓN DE NODOS EQUIVALENTES ===
-function mergeEquivalentNodes() {
-    const uriMap = new Map();
-    for (const node of nodes.values()) {
-        const simple = simplify(node.name);
-        if (!uriMap.has(simple)) {
-            uriMap.set(simple, node);
-        } else {
-            const target = uriMap.get(simple);
-            target.description ||= node.description;
-            target.kind ||= node.kind;
-            for (const e of edges) {
-                if (e.source === node.id) e.source = target.id;
-                if (e.target === node.id) e.target = target.id;
-            }
-            nodes.delete(node.id);
-        }
-    }
-    console.log(`🧩 Nodos fusionados por URI simplificada: ${nodes.size}`);
 }
 
 // === 🌳 CONSTRUIR JERARQUÍA ===
@@ -185,39 +163,90 @@ function buildHierarchy() {
         "uuid"
     ];
 
-
-    // Identificar raíces explícitas o forzadas
     let roots = rootsCandidates.filter(c => allClasses.has(c));
-    if (roots.length === 0) {
-        roots = rootsCandidates; // fallback
-        console.warn(`⚠️ No se detectaron raíces por herencia. Usando predeterminadas: ${roots.join(", ")}`);
-    } else {
-        console.log(`🌳 Raíces detectadas: ${roots.length}`);
-    }
+    if (roots.length === 0) roots = rootsCandidates;
 
-    function buildTree(node, visited = new Set()) {
-        if (!node || visited.has(node)) return { name: node + " (loop)" };
-        visited.add(node);
+    // === 🧼 LIMPIADOR DEFINITIVO DE NOMBRES ===
 
-        // 🧩 Obtener hijos seguros
-        const children = (subclasses.get(node) || []).filter(c => c !== node);
-        children.sort();
+    const baseClassesProtect = [
+        "Facility",
+        "Feature",
+        "Organisation",
+        "Group",
+        "Person",
+        "Actor",
+        "Object",
+        "Materiel",
+        "CyberObject"
+    ];
 
-        // ⚠️ Log de detección de ciclos directos
-        if (children.includes(node)) {
-            console.warn(`⚠️ Ciclo directo detectado en ${node}`);
+    function cleanRawClassName(rawName, parentRawName = null) {
+        if (!rawName) return "";
+
+        let name = rawName;
+
+        // 1) Quitar prefijos "_"
+        name = name.replace(/^_+/, "");
+
+        // 2) Quitar patrón Padre_Hijo
+        if (parentRawName && name.startsWith(parentRawName + "_")) {
+            name = name.slice((parentRawName + "_").length);
         }
 
-        // 🌳 Construcción recursiva
-        return {
-            name: node,
-            children: children.map(c => buildTree(c, visited))
-        };
+        // 3) Quitar sufijo del padre concatenado
+        if (parentRawName && name.startsWith(parentRawName)) {
+            name = name.slice(parentRawName.length);
+        }
+
+        // 4) Si es clase base protegida → no limpiar semántica
+        if (baseClassesProtect.includes(rawName)) {
+            return rawName;
+        }
+
+        // 5) Limpiar sufijos SEMÁNTICOS SOLO A LOS HIJOS
+        name = name
+            .replace(/Facility$/, "")
+            .replace(/Feature$/, "")
+            .replace(/Organisation$/, "")
+            .replace(/GroupOrganisation$/, "Group")
+            .replace(/Group$/, "")
+            .replace(/Event$/, "")
+            .replace(/Unit$/, "")
+            .replace(/Post$/, "")
+            .replace(/Site$/, "")
+            .replace(/Type$/, "")
+            .replace(/Struct$/, "")
+            .replace(/Service$/, "")
+            .replace(/Component$/, "")
+            .trim();
+
+        // 6) Si se quedó vacío → dejar el rawName
+        if (!name) name = rawName;
+
+        return name;
     }
 
+    // construcción recursiva
+    function buildTree(nodeRaw, parentRaw = null, visited = new Set()) {
+        if (!nodeRaw || visited.has(nodeRaw))
+            return { name: nodeRaw + " (loop)" };
 
+        visited.add(nodeRaw);
 
-    const forest = roots.map(r => buildTree(r));
+        const childrenRaw = (subclasses.get(nodeRaw) || []).filter(c => c !== nodeRaw);
+        childrenRaw.sort();
+
+        const displayName = cleanRawClassName(nodeRaw, parentRaw);
+
+        return {
+            name: displayName,
+            id: nodeRaw, // si quieres ID explícito
+            children: childrenRaw.map(c => buildTree(c, nodeRaw, visited))
+        };
+
+    }
+
+    const forest = roots.map(r => buildTree(r, null));
     fs.mkdirSync("./data", { recursive: true });
     fs.writeFileSync(OUTPUT_HIERARCHY, JSON.stringify(forest, null, 2), "utf8");
     console.log(`✅ Jerarquía exportada a ${OUTPUT_HIERARCHY}`);
@@ -239,13 +268,11 @@ function buildOntology() {
 
     fs.writeFileSync(OUTPUT_ONTOLOGY, JSON.stringify(ontology, null, 2), "utf8");
     console.log(`✅ Ontología exportada a ${OUTPUT_ONTOLOGY}`);
-    console.log(`📊 Nodos: ${nodes.size} | Relaciones: ${edges.length}`);
 }
 
 // === 🚀 EJECUCIÓN ===
 (function main() {
     INPUT_FILES.forEach(parseTTL);
-    mergeEquivalentNodes();
     buildHierarchy();
     buildOntology();
 })();
